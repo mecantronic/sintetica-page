@@ -1,0 +1,1 @@
+# sintetica-page
