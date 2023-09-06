@@ -5,6 +5,7 @@ import { useMediaQuery } from "react-responsive";
 import Details1Button from "./buttons/Details1Button";
 import Details2Button from "./buttons/Details2Button";
 import theme from "../styles/theme";
+import { Link } from "react-router-dom";
 
 const NavbarContainer = styled.div`
   position: fixed;
@@ -17,43 +18,82 @@ const NavbarContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  height: 50px;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.04);
 `;
 
-const Logo = styled.div`
+const Logo = styled(Link)`
   font-size: 1.5rem;
   font-weight: bold;
+  img {
+    height: 4rem;
+  }
 `;
 
-const Menu = styled.div`
+const MenuButton = styled.button`
+  background: none;
+  border: none;
+  color: ${theme.colors.primary};
+  font-size: 24px;
+  cursor: pointer;
+  display: none; // Inicialmente oculto en dispositivos móviles
+
+  @media (max-width: ${theme.bp.medium}) {
+    display: block; // Mostrar en dispositivos móviles
+  }
+`;
+
+const NavLinks = styled.div`
   display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: ${theme.bp.medium}) {
+    display: ${({ showMenu }) => (showMenu ? "none" : "flex")};
+    flex-direction: column;
+    position: absolute;
+    top: 500px;
+    left: 0;
+    background-color: ${theme.colors.background};
+    width: 100%;
+    padding: 10px;
+    transform: ${({ showMenu }) =>
+      showMenu ? "translateY(0)" : "translateY(-100%)"};
+    transition: transform 0.3s ease-in-out;
+  }
+`;
+
+const NavLink = styled(Link)`
+display: flex;
+align-items: center;
+  color: ${theme.colors.primary};
+  text-decoration: none;
+  height: 40px;
+  margin: 10px;
+  
+  &:hover{
+    border-bottom: 1px solid #f0a308;
+  }
+`;
+
+const NavDiv = styled.div`
+  width: 2px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.04);
+`;
+
+const UserButtons = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
-
-const MenuItem = styled.div`
-  cursor: pointer;
-  &:hover {
-    text-decoration: underline;
-  }
-`;
-
-const MobileMenuIcon = styled(IoMdMenu)`
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: none;
-
-  @media (max-width: 768px) {
-    display: block;
-  }
 `;
 
 const Navbar = () => {
-  const [showMenu, setShowMenu] = useState(false);
+  const [showMenu, setShowMenu] = useState(true);
 
-  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const isMobile = useMediaQuery({ maxWidth: theme.bp.medium });
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -61,35 +101,46 @@ const Navbar = () => {
 
   return (
     <NavbarContainer>
-      <Logo>Logo</Logo>
+      <Logo to='/'>
+        <img src='../../public/assets/logotipo.svg' alt='Logo Sintética' />
+      </Logo>
       {isMobile ? (
         <>
-          <Details1Button buttonText='Login' to='/' />
-          <Details2Button buttonText='Signup' to='/' />
-          <MobileMenuIcon onClick={toggleMenu} />
+          <MenuButton onClick={toggleMenu}>{showMenu ? "✕" : "☰"}</MenuButton>
           {showMenu && (
-            <Menu>
-              <MenuItem>Voice Cloning</MenuItem>
-              <MenuItem>Experiencia TTS</MenuItem>
-              <MenuItem>AI & Salud</MenuItem>
-              <MenuItem>Investigación</MenuItem>
-              <MenuItem>Nosotros</MenuItem>
-              <MenuItem>Contacto</MenuItem>
-            </Menu>
+            <NavLinks>
+              <NavLink to='/'>Voice Cloning</NavLink>
+              <NavLink to='/'>Experiencia TTS</NavLink>
+              <NavLink to='/'>AI & Salud</NavLink>
+              <NavLink to='/'>Investigación</NavLink>
+              <NavLink to='/'>Nosotros</NavLink>
+              <NavLink to='/'>Contacto</NavLink>
+              <UserButtons>
+                <Details1Button buttonText='Login' to='/' />
+                <Details2Button buttonText='Signup' to='/' />
+              </UserButtons>
+            </NavLinks>
           )}
         </>
       ) : (
         <>
-          <Menu>
-            <MenuItem>Voice Cloning</MenuItem>
-            <MenuItem>Experiencia TTS</MenuItem>
-            <MenuItem>AI & Salud</MenuItem>
-            <MenuItem>Investigación</MenuItem>
-            <MenuItem>Nosotros</MenuItem>
-            <MenuItem>Contacto</MenuItem>
-          </Menu>
-          <Details1Button buttonText='Login' to='/' />
-          <Details2Button buttonText='Signup' to='/' />
+          <NavLinks>
+            <NavLink to='/'>Voice Cloning</NavLink>
+            <NavDiv> </NavDiv>
+            <NavLink to='/'>Experiencia TTS</NavLink>
+            <NavDiv> </NavDiv>
+            <NavLink to='/'>AI & Salud</NavLink>
+            <NavDiv> </NavDiv>
+            <NavLink to='/'>Investigación</NavLink>
+            <NavDiv> </NavDiv>
+            <NavLink to='/'>Nosotros</NavLink>
+            <NavDiv> </NavDiv>
+            <NavLink to='/'>Contacto</NavLink>
+          </NavLinks>
+          <UserButtons>
+            <Details1Button buttonText='Login' to='/' />
+            <Details2Button buttonText='Signup' to='/' />
+          </UserButtons>
         </>
       )}
     </NavbarContainer>

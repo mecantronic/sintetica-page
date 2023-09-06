@@ -27,6 +27,12 @@ const theme = {
     normal: 1.5,
     high: 1.8,
   },
+  bp: {
+    "x-small": "576px",
+    small: "767px",
+    medium: "992px",
+    large: "1200px",
+  }
   // Agrega más propiedades según sea necesario
 };
 
