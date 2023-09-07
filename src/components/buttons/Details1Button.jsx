@@ -13,9 +13,9 @@ const Button = styled(Link)`
   -ms-user-select: none;
   border: 0px;
   padding: 0 32px;
-  font-size: ${theme.fontSize.small};
-  line-height: ${theme.lineHeight.high};
-  color: ${theme.colors.background};
+  font-size: 20px;
+  line-height: 36px;
+  color: ${theme.colors.background[1]};
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.4s ease-out 0s;

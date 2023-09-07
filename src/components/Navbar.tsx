@@ -12,7 +12,7 @@ const NavbarContainer = styled.div`
   top: 0;
   left: 0;
   right: 0;
-  background-color: ${theme.colors.background};
+  background-color: ${theme.colors.background[1]};
   color: ${theme.colors.primary};
   display: flex;
   justify-content: space-between;
@@ -20,13 +20,19 @@ const NavbarContainer = styled.div`
   padding: 1rem;
   height: 50px;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.04);
+
+  @media (max-width: ${theme.bp["x-small"]}) {
+    height: 30px;
+  }
 `;
 
 const Logo = styled(Link)`
-  font-size: 1.5rem;
-  font-weight: bold;
   img {
-    height: 4rem;
+    height: 50px;
+
+    @media (max-width: ${theme.bp["x-small"]}) {
+      height: 40px;
+    }
   }
 `;
 
@@ -34,12 +40,16 @@ const MenuButton = styled.button`
   background: none;
   border: none;
   color: ${theme.colors.primary};
-  font-size: 24px;
+  font-size: 50px;
   cursor: pointer;
   display: none; // Inicialmente oculto en dispositivos móviles
 
   @media (max-width: ${theme.bp.medium}) {
     display: block; // Mostrar en dispositivos móviles
+  }
+
+  @media (max-width: ${theme.bp["x-small"]}) {
+    font-size: 40px;
   }
 `;
 
@@ -55,24 +65,28 @@ const NavLinks = styled.div`
     position: absolute;
     top: 500px;
     left: 0;
-    background-color: ${theme.colors.background};
+    background-color: ${theme.colors.background[1]};
     width: 100%;
     padding: 10px;
     transform: ${({ showMenu }) =>
       showMenu ? "translateY(0)" : "translateY(-100%)"};
     transition: transform 0.3s ease-in-out;
   }
+  @media (max-width: ${theme.bp["x-small"]}) {
+    top: 463px;
+  }
 `;
 
 const NavLink = styled(Link)`
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
   color: ${theme.colors.primary};
   text-decoration: none;
   height: 40px;
   margin: 10px;
-  
-  &:hover{
+  font-size: 24px;
+
+  &:hover {
     border-bottom: 1px solid #f0a308;
   }
 `;
@@ -91,7 +105,7 @@ const UserButtons = styled.div`
 `;
 
 const Navbar = () => {
-  const [showMenu, setShowMenu] = useState(true);
+  const [showMenu, setShowMenu] = useState(false);
 
   const isMobile = useMediaQuery({ maxWidth: theme.bp.medium });
 
@@ -102,7 +116,7 @@ const Navbar = () => {
   return (
     <NavbarContainer>
       <Logo to='/'>
-        <img src='../../public/assets/logotipo.svg' alt='Logo Sintética' />
+        <img src='assets/logotipo.svg' alt='Logo Sintética' />
       </Logo>
       {isMobile ? (
         <>
