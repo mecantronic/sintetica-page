@@ -11,7 +11,7 @@ const Container = styled.section`
   margin-top: 50px;
   height: calc(100vh - 50px);
   width: 100vw;
-  
+
   img {
     height: 400px;
 
@@ -33,7 +33,7 @@ const Title = styled.h1`
 function BannerSection() {
   return (
     <Container>
-      <img src='/assets/logotipo.svg' alt='' />
+      <img src='assets/logotipo.svg' alt='' />
       <Title>Síntesis de voces potenciadas por AI</Title>
     </Container>
   );

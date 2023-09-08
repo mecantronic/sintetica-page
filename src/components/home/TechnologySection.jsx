@@ -52,17 +52,17 @@ function TechnologySection() {
   return (
     <Container>
       <Technology to='/'>
-        <img src='../../../public/assets/home/2.svg' alt='icon' />
+        <img src='assets/home/2.svg' alt='icon' />
         <h3>Sistemas entrenados en</h3>
         <h3>Español Latinoamericano</h3>
       </Technology>
       <Technology to='/'>
-        <img src='../../../public/assets/home/3.svg' alt='icon' />
+        <img src='assets/home/3.svg' alt='icon' />
         <h3>Inteligencia Artificial</h3>
         <h3>desarrollada desde la ética</h3>
       </Technology>
       <Technology to='/'>
-        <img src='../../../public/assets/home/4.svg' alt='icon' />
+        <img src='assets/home/4.svg' alt='icon' />
         <h3>Herramientas de impacto social</h3>
         <h3>Salud e Inclusión</h3>
       </Technology>

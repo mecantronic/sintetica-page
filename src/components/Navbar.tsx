@@ -20,6 +20,7 @@ const NavbarContainer = styled.div`
   padding: 1rem;
   height: 50px;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.04);
+  z-index: 100;
 
   @media (max-width: ${theme.bp["x-small"]}) {
     height: 30px;

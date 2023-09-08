@@ -1,8 +1,10 @@
-import styled from 'styled-components';
-import theme from '../styles/theme';
-import Navbar from '../components/Navbar';
-import BannerSection from '../components/home/BannerSection';
-import TechnologySection from '../components/home/TechnologySection';
+import styled from "styled-components";
+import theme from "../styles/theme";
+import Navbar from "../components/Navbar";
+import BannerSection from "../components/home/BannerSection";
+import TechnologySection from "../components/home/TechnologySection";
+import WhatIsSection from "../components/home/WhatIsSection";
+import HeroSection from "../components/home/MisionSection";
 
 const HomeWrapper = styled.div`
   display: flex;
@@ -16,9 +18,11 @@ const HomeWrapper = styled.div`
 function Home() {
   return (
     <HomeWrapper>
-    <Navbar />
-    <BannerSection />
-    <TechnologySection />
+      <Navbar />
+      <BannerSection />
+      <TechnologySection />
+      <WhatIsSection />
+      <HeroSection />
     </HomeWrapper>
   );
 }
