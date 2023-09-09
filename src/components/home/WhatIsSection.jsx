@@ -32,12 +32,18 @@ const BalloonCloud = styled.div`
 const Balloons = styled.img`
   position: relative;
   width: 600px;
-`;
+  @media (max-width: ${theme.bp.small}) {
+    width: 100vw;
+  }
+  `;
 
 const Waves = styled.img`
   position: relative;
   top: -110px;
   width: 600px;
+  @media (max-width: ${theme.bp.small}) {
+    width: 100vw;
+  }
 `;
 
 const Details = styled.div`
@@ -155,7 +161,7 @@ function WhatIsSection() {
 
         <Service>
           <ServiceIcon
-            src='../../../public/assets/home/5.svg'
+            src='assets/home/5.svg'
             alt='text-icon'
           />
           <ServiceCTA>
@@ -176,7 +182,7 @@ function WhatIsSection() {
 
         <Service>
           <ServiceIcon
-            src='../../../public/assets/home/7.svg'
+            src='assets/home/7.svg'
             alt='text-icon'
           />
           <ServiceCTA>
@@ -200,7 +206,7 @@ function WhatIsSection() {
 
         <Service>
           <ServiceIcon
-            src='../../../public/assets/home/8_1.png'
+            src='assets/home/8_1.png'
             alt='text-icon'
           />
           <ServiceCTA>

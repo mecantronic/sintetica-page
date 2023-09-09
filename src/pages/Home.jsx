@@ -5,6 +5,7 @@ import BannerSection from "../components/home/BannerSection";
 import TechnologySection from "../components/home/TechnologySection";
 import WhatIsSection from "../components/home/WhatIsSection";
 import HeroSection from "../components/home/MisionSection";
+import ContactSection from "../components/ContactSection";
 
 const HomeWrapper = styled.div`
   display: flex;
@@ -23,6 +24,7 @@ function Home() {
       <TechnologySection />
       <WhatIsSection />
       <HeroSection />
+      <ContactSection />
     </HomeWrapper>
   );
 }
