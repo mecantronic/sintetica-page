@@ -54,12 +54,6 @@ const TitleDetails = styled.h3`
   padding-top: 5px;
   margin: 0;
 `;
-const ResumeDetails = styled.p`
-  font-size: 18px;
-  line-height: 30px;
-  margin: 0;
-  padding-bottom: 20px;
-`;
 
 const Item = styled.div`
   display: flex;
@@ -103,14 +97,6 @@ function HeroSection() {
       </Hero>
       <Details>
         <TitleDetails>Tecnología y futuro: Nuestro compromiso</TitleDetails>
-        <ResumeDetails>
-          Sintética es un laboratorio de síntesis de voces. Nuestra pasión por
-          la innovación está arraigada en el compromiso de transformar vidas.
-          Impulsamos investigaciones vanguardistas, creamos productos
-          revolucionarios y promovemos la inclusión en la salud. Transformamos
-          voces en posibilidades.
-        </ResumeDetails>
-
         <Item>
           <ItemIcon src='assets/home/9.svg' alt='icon' />
           <ItemText>

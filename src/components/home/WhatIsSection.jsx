@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import theme from "../../styles/theme";
-import { MdArrowForwardIos } from "react-icons/md";
 import Details2Button from "../buttons/Details2Button";
 
 const Container = styled.section`
@@ -152,8 +151,8 @@ function WhatIsSection() {
             </ServiceResume>
             <PositionBTN>
               <Details2Button
-                buttonText={<MdArrowForwardIos size={14} />}
-                to='/'
+                rightArrow={true}
+                to='/NotFound'
               />
             </PositionBTN>
           </ServiceCTA>
@@ -173,8 +172,8 @@ function WhatIsSection() {
             </ServiceResume>
             <PositionBTN>
               <Details2Button
-                buttonText={<MdArrowForwardIos size={14} />}
-                to='/'
+                rightArrow={true}
+                to='/VoiceCloning'
               />
             </PositionBTN>
           </ServiceCTA>
@@ -197,8 +196,8 @@ function WhatIsSection() {
             </ServiceResume>
             <PositionBTN>
               <Details2Button
-                buttonText={<MdArrowForwardIos size={14} />}
-                to='/'
+                rightArrow={true}
+                to='/IA'
               />
             </PositionBTN>
           </ServiceCTA>
@@ -221,8 +220,8 @@ function WhatIsSection() {
             </ServiceResume>
             <PositionBTN>
               <Details2Button
-                buttonText={<MdArrowForwardIos size={14} />}
-                to='/'
+                rightArrow={true}
+                to='/NotFound'
               />
             </PositionBTN>
           </ServiceCTA>

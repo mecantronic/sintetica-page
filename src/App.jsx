@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
+import VoiceCloning from "./pages/VoiceCloning";
+import IA from "./pages/IA";
+import NotFound from "./pages/NotFound";
 
 
 const AppWrapper = styled.div`
@@ -13,7 +16,9 @@ function App() {
       <AppWrapper>
         <Routes>
           <Route exact path='/' element={<Home />} />
-          {/* Agrega más rutas según sea necesario */}
+          <Route exact path='/VoiceCloning' element={<VoiceCloning />} />
+          <Route exact path='/IA' element={<IA />} />
+          <Route exact path='/NotFound' element={<NotFound />} />
         </Routes>
       </AppWrapper>
     </Router>

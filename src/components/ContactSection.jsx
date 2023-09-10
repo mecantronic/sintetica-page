@@ -10,7 +10,7 @@ const Container = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  margin: 100px 0;
   width: 100vw;
 `;
 

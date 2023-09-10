@@ -33,7 +33,7 @@ const Title = styled.h1`
 function BannerSection() {
   return (
     <Container>
-      <img src='assets/logotipo.svg' alt='' />
+      <img src='assets/logotipo.svg' alt='logo' />
       <Title>Síntesis de voces potenciadas por AI</Title>
     </Container>
   );

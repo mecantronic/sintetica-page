@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
-import { IoMdMenu } from "react-icons/io";
 import { useMediaQuery } from "react-responsive";
 import Details1Button from "./buttons/Details1Button";
 import Details2Button from "./buttons/Details2Button";
@@ -124,15 +123,15 @@ const Navbar = () => {
           <MenuButton onClick={toggleMenu}>{showMenu ? "✕" : "☰"}</MenuButton>
           {showMenu && (
             <NavLinks>
-              <NavLink to='/'>Voice Cloning</NavLink>
-              <NavLink to='/'>Experiencia TTS</NavLink>
-              <NavLink to='/'>AI & Salud</NavLink>
-              <NavLink to='/'>Investigación</NavLink>
-              <NavLink to='/'>Nosotros</NavLink>
-              <NavLink to='/'>Contacto</NavLink>
+              <NavLink to='/VoiceCloning'>Voice Cloning</NavLink>
+              <NavLink to='/NotFound'>Experiencia TTS</NavLink>
+              <NavLink to='/IA'>AI & Salud</NavLink>
+              <NavLink to='/NotFound'>Investigación</NavLink>
+              <NavLink to='/NotFound'>Nosotros</NavLink>
+              <NavLink to='/NotFound'>Contacto</NavLink>
               <UserButtons>
-                <Details1Button buttonText='Login' to='/' />
-                <Details2Button buttonText='Signup' to='/' />
+                <Details1Button buttonText='Login' to='/NotFound' />
+                <Details2Button buttonText='Signup' to='/NotFound' />
               </UserButtons>
             </NavLinks>
           )}
@@ -140,21 +139,21 @@ const Navbar = () => {
       ) : (
         <>
           <NavLinks>
-            <NavLink to='/'>Voice Cloning</NavLink>
+            <NavLink to='/VoiceCloning'>Voice Cloning</NavLink>
             <NavDiv> </NavDiv>
-            <NavLink to='/'>Experiencia TTS</NavLink>
+            <NavLink to='/NotFound'>Experiencia TTS</NavLink>
             <NavDiv> </NavDiv>
-            <NavLink to='/'>AI & Salud</NavLink>
+            <NavLink to='/IA'>AI & Salud</NavLink>
             <NavDiv> </NavDiv>
-            <NavLink to='/'>Investigación</NavLink>
+            <NavLink to='/NotFound'>Investigación</NavLink>
             <NavDiv> </NavDiv>
-            <NavLink to='/'>Nosotros</NavLink>
+            <NavLink to='/NotFound'>Nosotros</NavLink>
             <NavDiv> </NavDiv>
-            <NavLink to='/'>Contacto</NavLink>
+            <NavLink to='/NotFound'>Contacto</NavLink>
           </NavLinks>
           <UserButtons>
-            <Details1Button buttonText='Login' to='/' />
-            <Details2Button buttonText='Signup' to='/' />
+            <Details1Button buttonText='Login' to='/NotFound' />
+            <Details2Button buttonText='Signup' to='/NotFound' />
           </UserButtons>
         </>
       )}
