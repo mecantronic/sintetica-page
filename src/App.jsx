@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import VoiceCloning from "./pages/VoiceCloning";
 import IA from "./pages/IA";
 import NotFound from "./pages/NotFound";
+import GlobalStyles from "./styles/GlobalStyle";
 
 
 const AppWrapper = styled.div`
@@ -13,6 +14,7 @@ const AppWrapper = styled.div`
 function App() {
   return (
     <Router>
+      <GlobalStyles />
       <AppWrapper>
         <Routes>
           <Route exact path='/' element={<Home />} />
