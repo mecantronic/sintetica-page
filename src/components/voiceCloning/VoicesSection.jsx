@@ -15,7 +15,7 @@ const Container = styled.section`
     padding-top: 100px;
   }
   @media (max-width: ${theme.bp.small}) {
-    padding-top: 50px;
+    padding-top: 80px;
   }
 `;
 

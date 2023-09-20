@@ -8,7 +8,7 @@ const Container = styled.section`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100vw;
+  width: 90vw;
   @media (max-width: ${theme.bp.medium}) {
       flex-direction: column;
     }
@@ -42,7 +42,8 @@ const Technology = styled(Link)`
   }
 
   @media (max-width: ${theme.bp.medium}) {
-    box-shadow: none;
+    //box-shadow: none;
+    margin: 30px 0px;
     height: 300px;
   width: 400px;
     }

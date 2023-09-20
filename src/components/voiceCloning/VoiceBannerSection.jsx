@@ -58,18 +58,22 @@ const Details = styled.div`
 `;
 
 const TitleDetails = styled.h3`
-  font-size: 50px;
+  font-size: 60px;
   line-height: 60px;
   font-weight: 600;
   letter-spacing: -1px;
   padding-top: 5px;
   margin: 0;
+  @media (max-width: ${theme.bp["x-small"]}) {
+    font-size: 40px;
+  }
 `;
 const ResumeDetails = styled.p`
   font-size: 18px;
   line-height: 30px;
   margin: 0;
   padding-bottom: 20px;
+  padding-top: 20px;
 `;
 
 const Right = styled.div`

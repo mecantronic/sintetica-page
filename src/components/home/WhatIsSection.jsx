@@ -6,12 +6,15 @@ const Container = styled.section`
   background-color: ${theme.colors.background[1]};
   color: ${theme.colors.primary};
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   width: 100vw;
   margin-top: 200px;
   @media (max-width: ${theme.bp.medium}) {
     flex-direction: column;
+  }
+  @media (max-width: ${theme.bp.small}) {
+    margin-top: 100px;
   }
 `;
 
@@ -20,9 +23,8 @@ const BalloonCloud = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: calc(90vw / 2);
+  width: 30vw;
   height: 400px;
-
   @media (max-width: ${theme.bp.large}) {
     width: 80%;
   }
@@ -36,24 +38,16 @@ const Balloons = styled.img`
   }
   `;
 
-const Waves = styled.img`
-  position: relative;
-  top: -110px;
-  width: 600px;
-  @media (max-width: ${theme.bp.small}) {
-    width: 100vw;
-  }
-`;
 
 const Details = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: calc(90vw / 2);
+  width: 60vw;
 
   @media (max-width: ${theme.bp.large}) {
-    width: 80%;
+    width: 90%;
   }
 `;
 const WhatIs = styled.span`
@@ -64,12 +58,15 @@ const WhatIs = styled.span`
   letter-spacing: 1px;
 `;
 const TitleWhat = styled.h3`
-  font-size: 50px;
+  font-size: 60px;
   line-height: 60px;
   font-weight: 600;
   letter-spacing: -1px;
   padding-top: 5px;
   margin: 0;
+  @media (max-width: ${theme.bp["x-small"]}) {
+    font-size: 40px;
+  }
 `;
 const ResumeWhat = styled.p`
   font-size: 18px;
@@ -82,6 +79,7 @@ const Service = styled.div`
   display: flex;
   flex-direction: row;
   padding-bottom: 20px;
+  margin: 20px 0px;
 
   @media (max-width: ${theme.bp["x-small"]}) {
     flex-direction: column;
@@ -100,9 +98,10 @@ const ServiceCTA = styled.div`
 
 const ServiceTitle = styled.h5`
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   margin: 0;
+  margin-bottom: 10px;
 `;
 const ServiceResume = styled.p`
   font-size: 18px;
@@ -122,7 +121,6 @@ function WhatIsSection() {
     <Container>
       <BalloonCloud>
         <Balloons src='assets/home/globos.svg' alt='globos' />
-        <Waves src='assets/home/onda_amarilla.svg' alt='ondas' />
       </BalloonCloud>
       <Details>
         <WhatIs>*** ¿QUÉ ES SINTÉTICA? ***</WhatIs>
