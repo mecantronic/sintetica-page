@@ -3,7 +3,8 @@ import theme from "../../styles/theme";
 import Details2Button from "../buttons/Details2Button";
 
 const Container = styled.section`
-  background-color: ${theme.colors.background[1]};
+  //background-color: ${theme.colors.background[1]};
+  background: none;
   color: ${theme.colors.primary};
   display: flex;
   justify-content: center;

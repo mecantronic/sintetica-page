@@ -2,7 +2,8 @@ import styled from "styled-components";
 import theme from "../../styles/theme";
 
 const Container = styled.section`
-  background-color: ${theme.colors.background[1]};
+  //background-color: ${theme.colors.background[1]};
+  background: none;
   color: ${theme.colors.primary};
   display: flex;
   flex-direction: column;

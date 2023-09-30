@@ -13,7 +13,12 @@ const HomeWrapper = styled.div`
   align-items: center;
   justify-content: flex-start;
   min-height: 100vh;
-  background-color: ${theme.colors.background[1]};
+  background: linear-gradient(
+    to top,
+    ${theme.colors.prueba3} 0%,
+    
+    ${theme.colors.prueba2} 100%
+  );
 `;
 
 function Home() {

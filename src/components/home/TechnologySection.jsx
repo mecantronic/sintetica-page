@@ -3,7 +3,7 @@ import theme from "../../styles/theme";
 import { Link } from "react-router-dom";
 
 const Container = styled.section`
-  background-color: ${theme.colors.background[1]};
+  background: none;
   color: ${theme.colors.primary};
   display: flex;
   justify-content: space-around;
