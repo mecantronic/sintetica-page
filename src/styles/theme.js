@@ -1,13 +1,25 @@
 const theme = {
   colors: {
-    primary: "#41048F",
-    detail1: { 1: "#f0a308", 2: "#f5cb5c", 3: "#f1c47b" },
-    detail2: { 1: "#d95d3a", 2: "#ff9b85", 3: "#e7ad99" },
+    white: "#FEFEFF",
+    seasalt: "#F9F9F9",
+    lavender: "#EFECFF",
+    platinum: "#E2DFDF",
+
+    gray: "#797979",
+    raisinblack: "#242331",
+    
+    lavenderfloral: "#B06EFE",
+    electricindigo: "#5236FF",
+    cinnabar: "#D05938",
+    
     background: { 1: "#F3F3F8", 2: "#F1E7FE", 3: "#FAEAE4" },
-    text: { 1:"#333", 2:"#C0C0C0", error: "#de00ac"},
+    text: { 1: "#333", 2: "#C0C0C0", error: "#de00ac" },
+    
+    detail1: {1: "#F0A308", 2: "#F5CB5C", 3: "#F1C47B"},
+    detail2: {1: "#F0A308", 2: "#F5CB5C", 3: "#F1C47B"},
     prueba1: "#CED4DA",
     prueba2: "#FAF7FC",
-    prueba3: "#302A40"
+    prueba3: "#302A40",
   },
   bp: {
     "x-small": "576px",

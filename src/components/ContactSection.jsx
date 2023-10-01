@@ -6,7 +6,7 @@ import { MdArrowForwardIos } from "react-icons/md";
 const Container = styled.section`
   //background-color: ${theme.colors.background[1]};
   background: none;
-  color: ${theme.colors.primary};
+  color: ${theme.colors.gray};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,7 +60,7 @@ const InfoItem = styled.a`
   justify-content: center;
   font-size: 24px;
   font-weight: 600;
-  color: ${theme.colors.primary};
+  color: ${theme.colors.gray};
 `;
 
 const Icon = styled.img`

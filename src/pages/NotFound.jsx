@@ -19,7 +19,7 @@ const HomeWrapper = styled.div`
   }
   span {
     font-size: 60px;
-    color: ${theme.colors.primary};
+    color: ${theme.colors.electricindigo};
     padding-bottom: 19px;
   }
   p {

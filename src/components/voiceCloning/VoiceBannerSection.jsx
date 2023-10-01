@@ -4,7 +4,7 @@ import Details2Button from "../buttons/Details2Button";
 
 const Container = styled.section`
   background-color: ${theme.colors.background[1]};
-  color: ${theme.colors.primary};
+  color: ${theme.colors.electricindigo};
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

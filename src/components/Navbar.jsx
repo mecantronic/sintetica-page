@@ -10,28 +10,29 @@ const NavbarContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  background-color: ${theme.colors.background[1]};
-  color: ${theme.colors.primary};
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  height: 50px;
-  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.04);
+  height: 32px;
+  width: 100vw;
+  padding: 1rem 0;
+  margin: 0;
   z-index: 100;
 
+  background-color: ${theme.colors.seasalt};
+
   @media (max-width: ${theme.bp["x-small"]}) {
-    height: 30px;
+    height: 20px;
   }
 `;
 
 const Logo = styled(Link)`
+  padding-left: 1rem;
   img {
-    height: 50px;
+    height: 40px;
 
     @media (max-width: ${theme.bp["x-small"]}) {
-      height: 40px;
+      height: 30px;
     }
   }
 `;
@@ -39,8 +40,8 @@ const Logo = styled(Link)`
 const MenuButton = styled.button`
   background: none;
   border: none;
-  color: ${theme.colors.primary};
-  font-size: 50px;
+  color: ${theme.colors.raisinblack};
+  font-size: 40px;
   cursor: pointer;
   display: none; // Inicialmente oculto en dispositivos móviles
 
@@ -49,7 +50,7 @@ const MenuButton = styled.button`
   }
 
   @media (max-width: ${theme.bp["x-small"]}) {
-    font-size: 40px;
+    font-size: 30px;
   }
 `;
 
@@ -65,7 +66,7 @@ const NavLinks = styled.div`
     position: absolute;
     top: 500px;
     left: 0;
-    background-color: ${theme.colors.background[1]};
+    background-color: ${theme.colors.white};
     width: 100%;
     padding: 10px;
     transform: ${({ showMenu }) =>
@@ -73,31 +74,44 @@ const NavLinks = styled.div`
     transition: transform 0.3s ease-in-out;
   }
   @media (max-width: ${theme.bp["x-small"]}) {
-    top: 463px;
+    top: 408px;
   }
 `;
 
 const NavLink = styled(Link)`
   display: flex;
   align-items: center;
-  color: ${theme.colors.primary};
+  color: ${theme.colors.raisinblack};
   text-decoration: none;
-  height: 40px;
+  height: 30px;
   margin: 10px;
-  font-size: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  text-transform: uppercase;
 
-  &:hover {
-    border-bottom: 1px solid #f0a308;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    border-bottom: 2px solid ${theme.colors.electricindigo};
+    transition: all 1s ease;
+  }
+  &:hover:before {
+    width: 100%;
   }
 `;
 
 const NavDiv = styled.div`
   width: 2px;
   height: 40px;
-  background-color: rgba(0, 0, 0, 0.04);
+  padding: 0px 10px;
 `;
 
 const UserButtons = styled.div`
+  padding-right: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -115,23 +129,23 @@ const Navbar = () => {
 
   return (
     <NavbarContainer>
-      <Logo to='/'>
-        <img src='assets/logotipo.svg' alt='Logo Sintética' />
+      <Logo to="/">
+        <img src="assets/logotipo.svg" alt="Logo Sintética" />
       </Logo>
       {isMobile ? (
         <>
           <MenuButton onClick={toggleMenu}>{showMenu ? "✕" : "☰"}</MenuButton>
           {showMenu && (
             <NavLinks>
-              <NavLink to='/VoiceCloning'>Voice Cloning</NavLink>
-              <NavLink to='/NotFound'>Experiencia TTS</NavLink>
-              <NavLink to='/IA'>AI & Salud</NavLink>
-              <NavLink to='/NotFound'>Investigación</NavLink>
-              <NavLink to='/NotFound'>Nosotros</NavLink>
-              <NavLink to='/NotFound'>Contacto</NavLink>
+              <NavLink to="/VoiceCloning">Voice Cloning</NavLink>
+              <NavLink to="/NotFound">Experiencia TTS</NavLink>
+              <NavLink to="/IA">AI & Salud</NavLink>
+              <NavLink to="/NotFound">Investigación</NavLink>
+              <NavLink to="/NotFound">Nosotros</NavLink>
+              <NavLink to="/NotFound">Contacto</NavLink>
               <UserButtons>
-                <Details1Button buttonText='Login' to='/NotFound' />
-                <Details2Button buttonText='Signup' to='/NotFound' />
+                <Details1Button buttonText="Login" to="/NotFound" />
+                <Details2Button buttonText="Signup" to="/NotFound" />
               </UserButtons>
             </NavLinks>
           )}
@@ -139,21 +153,21 @@ const Navbar = () => {
       ) : (
         <>
           <NavLinks>
-            <NavLink to='/VoiceCloning'>Voice Cloning</NavLink>
+            <NavLink to="/VoiceCloning">Voice Cloning</NavLink>
             <NavDiv> </NavDiv>
-            <NavLink to='/NotFound'>Experiencia TTS</NavLink>
+            <NavLink to="/NotFound">Experiencia TTS</NavLink>
             <NavDiv> </NavDiv>
-            <NavLink to='/IA'>AI & Salud</NavLink>
+            <NavLink to="/IA">AI & Salud</NavLink>
             <NavDiv> </NavDiv>
-            <NavLink to='/NotFound'>Investigación</NavLink>
+            <NavLink to="/NotFound">Investigación</NavLink>
             <NavDiv> </NavDiv>
-            <NavLink to='/NotFound'>Nosotros</NavLink>
+            <NavLink to="/NotFound">Nosotros</NavLink>
             <NavDiv> </NavDiv>
-            <NavLink to='/NotFound'>Contacto</NavLink>
+            <NavLink to="/NotFound">Contacto</NavLink>
           </NavLinks>
           <UserButtons>
-            <Details1Button buttonText='Login' to='/NotFound' />
-            <Details2Button buttonText='Signup' to='/NotFound' />
+            <Details1Button buttonText="Login" to="/NotFound" />
+            <Details2Button buttonText="Signup" to="/NotFound" />
           </UserButtons>
         </>
       )}

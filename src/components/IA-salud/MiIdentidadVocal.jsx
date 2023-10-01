@@ -3,7 +3,7 @@ import theme from "../../styles/theme";
 
 const Container = styled.section`
   background-color: ${theme.colors.background[1]};
-  color: ${theme.colors.primary};
+  color: ${theme.colors.electricindigo};
   display: flex;
   flex-direction: column;
   justify-content: center;

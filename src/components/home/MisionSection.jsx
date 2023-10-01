@@ -4,7 +4,7 @@ import theme from "../../styles/theme";
 const Container = styled.section`
   //background-color: ${theme.colors.background[1]};
   background: none;
-  color: ${theme.colors.primary};
+  color: ${theme.colors.electricindigo};
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -14,6 +14,8 @@ const Container = styled.section`
     flex-direction: column;
   }
 `;
+
+
 
 const Hero = styled.div`
   display: flex;

@@ -13,19 +13,29 @@ const Button = styled(Link)`
   -ms-user-select: none;
   border: 0px;
   padding: 0 32px;
-  font-size: 20px;
+  font-size: 14px;
+  font-weight: 700;
   line-height: 36px;
-  color: ${theme.colors.background[1]};
-  border-radius: 4px;
+  color: ${theme.colors.white};
+  border-radius: 20px;
   cursor: pointer;
   transition: all 0.4s ease-out 0s;
-  background: linear-gradient(
-    to right,
-    ${theme.colors.detail1[1]} 0%,
-    ${theme.colors.detail1[2]} 50%,
-    ${theme.colors.detail1[3]} 100%
-  );
+  background: ${theme.colors.raisinblack};
   text-decoration: none;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 100%;
+  background: rgba(255, 255, 255, 0.3);    transition: all 1s ease;
+  }
+  &:hover:before {
+    width: 100%;
+  }
 `;
 
 function Details1Button({ to, buttonText }) {

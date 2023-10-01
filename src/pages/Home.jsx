@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import theme from "../styles/theme";
 import Navbar from "../components/Navbar";
 import BannerSection from "../components/home/BannerSection";
 import TechnologySection from "../components/home/TechnologySection";
@@ -11,14 +10,10 @@ const HomeWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0;
+  margin: 0;
   justify-content: flex-start;
   min-height: 100vh;
-  background: linear-gradient(
-    to top,
-    ${theme.colors.prueba3} 0%,
-    
-    ${theme.colors.prueba2} 100%
-  );
 `;
 
 function Home() {
