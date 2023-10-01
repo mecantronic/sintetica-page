@@ -42,7 +42,7 @@ const TextLogo = styled.div`
     margin: 0;
     font-size: 32px;
     font-weight: 700;
-    color: ${theme.colors.cinnabar};
+    color: ${theme.colors.electricindigo};
     text-transform: uppercase;
   }
 `;
@@ -83,7 +83,7 @@ function BannerSection() {
   return (
     <Container>
       <Left>
-        <Robot src="assets/logotipo.svg" alt="logo" />
+        <Robot src="assets/sintetica-black-logo.svg" alt="logo" />
         <TextLogo>
           <h1>Sintética</h1>
           <p>Laboratorio de voces</p>

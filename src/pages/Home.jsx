@@ -3,7 +3,6 @@ import Navbar from "../components/Navbar";
 import BannerSection from "../components/home/BannerSection";
 import TechnologySection from "../components/home/TechnologySection";
 import WhatIsSection from "../components/home/WhatIsSection";
-import HeroSection from "../components/home/MisionSection";
 import ContactSection from "../components/ContactSection";
 
 const HomeWrapper = styled.div`
@@ -23,7 +22,6 @@ function Home() {
       <BannerSection />
       <TechnologySection />
       <WhatIsSection />
-      <HeroSection />
       <ContactSection />
     </HomeWrapper>
   );

@@ -4,7 +4,6 @@ import { MdArrowForwardIos } from "react-icons/md";
 //import { Link } from "react-router-dom";
 
 const Container = styled.section`
-  //background-color: ${theme.colors.background[1]};
   background: none;
   color: ${theme.colors.gray};
   display: flex;
@@ -15,12 +14,18 @@ const Container = styled.section`
   width: 100vw;
 `;
 
-const Contact = styled.span`
-  font-size: 20px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: ${theme.colors.detail1[1]};
-  letter-spacing: 1px;
+const NameSection = styled.h3`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 15px 30px;
+  margin: 0;
+  border-radius: 25px;
+  color: ${theme.colors.lavenderfloral};
+  background-color: ${theme.colors.lavender};
 `;
 
 const Title = styled.h3`
@@ -28,11 +33,12 @@ const Title = styled.h3`
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 50px;
+  color: ${theme.colors.raisinblack};
+  font-size: 45px;
   line-height: 60px;
   font-weight: 600;
   letter-spacing: -1px;
-  padding-top: 5px;
+  padding: 15px 0;
   margin: 0;
 `;
 
@@ -57,13 +63,28 @@ const InfoItem = styled.a`
   gap: 10px;
   text-decoration: none;
   align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  font-weight: 600;
-  color: ${theme.colors.gray};
+  border: 2px solid ${theme.colors.platinum};
+  border-radius: 20px;
+  padding: 0px 18px;
+  width: 50%;
+  height: 80px;
+  
 `;
 
+const TagCTA = styled.h5`
+  font-size: 16px;
+  font-weight: 600;
+  color: ${theme.colors.raisinblack};
+`
+const TagInfo = styled.p`
+  margin-left: auto;
+  font-size: 16px;
+  font-weight: 400;
+  color: ${theme.colors.gray};
+`
+
 const Icon = styled.img`
+  align-items: flex-start;
   width: 50px;
 `;
 
@@ -72,7 +93,7 @@ const ContactForm = styled.form`
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 80vw;
+  width: 60vw;
   @media (max-width: ${theme.bp.large}) {
     width: 90vw;
   }
@@ -152,29 +173,32 @@ const BigInput = styled.textarea`
 function ContactSection() {
   return (
     <Container>
-      <Contact>***Contacto***</Contact>
+      <NameSection>Contacto</NameSection>
       <Title>Dejanos tu consulta</Title>
       <ContactInfo>
-        <InfoItem href='tel:+61383766284'>
-          <Icon src='assets/icons/phone.svg' alt='phone-icon' />
-          +54 9 11 5 739 7834
+        <InfoItem href="tel:+61383766284">
+          <Icon src="assets/icons/phoneicon.svg" alt="phone-icon" />
+          <TagCTA>Llámanos</TagCTA>
+          <TagInfo>+54 9 11 5 739 7834</TagInfo>
         </InfoItem>
-        <InfoItem href='info@mecantronic.com.ar'>
-          <Icon src='assets/icons/mail.svg' alt='phone-icon' />
-          info@mecantronic.com.ar
+        <InfoItem href="info@mecantronic.com.ar">
+          <Icon src="assets/icons/emailicon.svg" alt="phone-icon" />
+          <TagCTA>Escríbenos</TagCTA>
+          <TagInfo>info@mecantronic.com.ar</TagInfo>
+          
         </InfoItem>
       </ContactInfo>
       <ContactForm>
-        <SmallInput type='text' placeholder='Nombre' id='name' />
-        <SmallInput type='text' placeholder='Email' id='email' />
-        <SmallInput type='text' placeholder='Teléfono' id='phone' />
-        <SmallInput type='text' placeholder='Asunto' id='subject' />
+        <SmallInput type="text" placeholder="Nombre" id="name" />
+        <SmallInput type="text" placeholder="Email" id="email" />
+        <SmallInput type="text" placeholder="Teléfono" id="phone" />
+        <SmallInput type="text" placeholder="Asunto" id="subject" />
         <BigInput
-          name='#'
-          id='message'
-          cols='30'
-          rows='5'
-          placeholder='Mensaje'
+          name="#"
+          id="message"
+          cols="30"
+          rows="5"
+          placeholder="Mensaje"
         />
         <Center>
           <ButtonForm>

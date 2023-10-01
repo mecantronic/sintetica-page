@@ -7,6 +7,7 @@ const theme = {
 
     gray: "#797979",
     raisinblack: "#242331",
+    onyx: "#413F50",
     
     lavenderfloral: "#B06EFE",
     electricindigo: "#5236FF",

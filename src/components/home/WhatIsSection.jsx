@@ -96,7 +96,8 @@ padding: 0 20px;
   line-height: 30px;
   color: ${theme.colors.gray};
   margin: 0;
-  padding-bottom: 20px;
+  padding: 0;
+  padding: 20px 0px;
 `;
 
 const Services = styled.div`
@@ -110,14 +111,15 @@ const Services = styled.div`
 const Service = styled.div`
   display: flex;
   flex-direction: row;
-  width: 600px;
-  height: 350px;
+  width: 60vw;
+  
   padding-bottom: 20px;
   margin: 20px 0px;
   border: 2px solid ${theme.colors.platinum};
   background-color: ${theme.colors.seasalt};
   border-radius: 20px;
   padding: 15px;
+  padding-top: 40px;
 
   @media (max-width: ${theme.bp["x-small"]}) {
     flex-direction: column;
@@ -154,7 +156,7 @@ const PositionBTN = styled.div`
   height: 35px;
   display: flex;
   justify-content: flex-end;
-  padding-top: 10px;
+  padding-top: 50px;
 `;
 
 function WhatIsSection() {

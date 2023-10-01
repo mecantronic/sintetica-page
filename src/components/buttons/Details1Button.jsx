@@ -20,7 +20,7 @@ const Button = styled(Link)`
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.4s ease-out 0s;
-  background: ${theme.colors.raisinblack};
+  background: ${theme.colors.onyx};
   text-decoration: none;
   position: relative;
 
