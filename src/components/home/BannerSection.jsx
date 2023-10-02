@@ -55,6 +55,12 @@ const Right = styled.div`
   text-align: center;
   padding: 30px 30px;
   width: 50vw;
+  height: 600px;
+
+  background-image: url('assets/backgrounds/Background1.svg');
+  background-size: 103%;
+  background-repeat: no-repeat;
+  background-position:  right;
 `;
 
 const Title = styled.h4`
@@ -65,12 +71,14 @@ const Title = styled.h4`
   color: ${theme.colors.raisinblack};
 `;
 const Resume = styled.p`
-  text-align: center;
+  text-align: left;
   margin: 0;
   font-size: 24px;
   font-weight: 500;
-  color: ${theme.colors.gray};
-  padding: 30px 0px;
+  color: ${theme.colors.platinum};
+  padding: 30px 0px 30px 130px;  
+  justify-content: flex-end;
+
 `;
 const BTN = styled.div`
   height: 35px;

@@ -78,8 +78,10 @@ gap: 20px;
   left: 0px;
   width: 0px;
   height: 100%;
-background: rgba(255, 255, 255, 0.3);    transition: all 1s ease;
+  background: rgba(255, 255, 255, 0.3);    
+  transition: all 1s ease;
 }
+border-radius: 20px; /* Agregamos el border radius aquí */
 &:hover:before {
   width: 100%;
 }

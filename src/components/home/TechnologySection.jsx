@@ -10,6 +10,12 @@ const Container = styled.section`
   align-items: center;
   width: 100vw;
   min-height: 100vh;
+
+  background-image: url('assets/backgrounds/Background3.svg');
+  background-size: 40%;
+  background-repeat: repeat;
+  background-position:   bottom;
+
   @media (max-width: ${theme.bp.medium}) {
     flex-direction: column;
   }

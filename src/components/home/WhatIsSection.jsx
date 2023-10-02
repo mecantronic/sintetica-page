@@ -11,6 +11,13 @@ const Container = styled.section`
   justify-content: center;
   align-items: center;
   width: 100vw;
+
+  background-image: url('assets/backgrounds/Background3.svg');
+  background-size: 40%;
+  background-repeat: repeat;
+  background-position:   bottom;
+
+
   @media (max-width: ${theme.bp.medium}) {
     flex-direction: column;
   }

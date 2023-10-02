@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import theme from "../styles/theme";
-import { MdArrowForwardIos } from "react-icons/md";
+import Details2Button from "./buttons/Details2Button";
 //import { Link } from "react-router-dom";
 
 const Container = styled.section`
@@ -12,6 +12,11 @@ const Container = styled.section`
   align-items: center;
   margin: 100px 0;
   width: 100vw;
+
+  background-image: url('assets/backgrounds/Background2.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position:   right;
 `;
 
 const NameSection = styled.h3`
@@ -49,6 +54,8 @@ const ContactInfo = styled.div`
   width: 60vw;
   gap: 10px;
   margin-bottom: 20px;
+  background-color: ${theme.colors.white};
+  border-radius: 25px;
 
   @media (max-width: ${theme.bp.large}) {
     width: 80vw;
@@ -91,41 +98,22 @@ const Icon = styled.img`
 const ContactForm = styled.form`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   width: 60vw;
+  border: 2px solid ${theme.colors.platinum};
+  border-radius: 20px;
+  padding: 40px 0px 0px 0px;
+  row-gap: 50px;
+  column-gap: 20px;
+  background-color: ${theme.colors.white};
+
+  
   @media (max-width: ${theme.bp.large}) {
     width: 90vw;
   }
 `;
 
-const ButtonForm = styled.button`
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  text-align: center;
-  white-space: nowrap;
-  text-transform: uppercase;
-  vertical-align: middle;
-  user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  border: 0px;
-  padding: 0 20px;
-  font-size: 20px;
-  line-height: 36px;
-  color: ${theme.colors.background[1]};
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.4s ease-out 0s;
-  background: linear-gradient(
-    to right,
-    ${theme.colors.detail1[1]} 0%,
-    ${theme.colors.detail1[2]} 50%,
-    ${theme.colors.detail1[3]} 100%
-  );
-  text-decoration: none;
-`;
 
 const Center = styled.div`
   display: flex;
@@ -135,13 +123,14 @@ const Center = styled.div`
 `;
 
 const SmallInput = styled.input`
+  height: 40px;
+  width: 40%;
+  
   line-height: 24px;
-  background-color: ${theme.colors.background[3]};
-  border-radius: 4px;
-  border: 0;
-  color: ${theme.colors.text[1]};
-  margin: 10px 0;
-  width: 48%;
+  border-radius: 15px;
+  border: 2px solid ${theme.colors.platinum};
+  color: ${theme.colors.onyx};
+  padding: 0 15px;
 
   @media (max-width: ${theme.bp.large}) {
     width: 46%;
@@ -151,22 +140,20 @@ const SmallInput = styled.input`
   }
   &::placeholder {
     opacity: 1;
-    color: ${theme.colors.text[2]};
+    color: ${theme.colors.platinum};
   }
 `;
 
 const BigInput = styled.textarea`
+  width: calc(80% + 50px);
   line-height: 24px;
-  background-color: ${theme.colors.background[3]};
-  border-radius: 4px;
-  border: 0;
-  color: ${theme.colors.text[1]};
-  margin-top: 10px;
-  margin-bottom: 20px;
-  width: 100%;
+  border-radius: 15px;
+  border: 2px solid ${theme.colors.platinum};
+  color: ${theme.colors.onyx};
+  padding: 10px 15px;
   &::placeholder {
     opacity: 1;
-    color: ${theme.colors.text[2]};
+    color: ${theme.colors.platinum};
   }
 `;
 
@@ -189,22 +176,19 @@ function ContactSection() {
         </InfoItem>
       </ContactInfo>
       <ContactForm>
-        <SmallInput type="text" placeholder="Nombre" id="name" />
-        <SmallInput type="text" placeholder="Email" id="email" />
-        <SmallInput type="text" placeholder="Teléfono" id="phone" />
-        <SmallInput type="text" placeholder="Asunto" id="subject" />
+        <SmallInput type="text" placeholder="Nombre*" id="name" />
+        <SmallInput type="text" placeholder="Email*" id="email" />
+        <SmallInput type="text" placeholder="Teléfono*" id="phone" />
+        <SmallInput type="text" placeholder="Asunto*" id="subject" />
         <BigInput
           name="#"
           id="message"
           cols="30"
           rows="5"
-          placeholder="Mensaje"
+          placeholder="Mensaje*"
         />
         <Center>
-          <ButtonForm>
-            {" "}
-            Enviar mensaje <MdArrowForwardIos size={20} />
-          </ButtonForm>
+        <Details2Button rightArrow={true} to="/NotFound" buttonText="Enviar mensaje" />
         </Center>
       </ContactForm>
     </Container>
