@@ -111,6 +111,9 @@ const Technology = styled(Link)`
     margin: 30px 0px;
     width: 300px;
     height: 400px;
+    h3{
+      font-size: 16px;
+    }
   }
 `;
 

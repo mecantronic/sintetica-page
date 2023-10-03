@@ -12,13 +12,16 @@ const Container = styled.section`
   align-items: center;
   width: 100vw;
 
-  background-image: url('assets/backgrounds/Background3.svg');
+  background-image: url("assets/backgrounds/Background3.svg");
   background-size: 40%;
   background-repeat: repeat;
-  background-position:   bottom;
+  background-position: bottom;
 
-
+  @media (max-width: ${theme.bp.large}) {
+    padding-top: 100px ;
+  }
   @media (max-width: ${theme.bp.medium}) {
+    padding-top: ;
     flex-direction: column;
   }
   @media (max-width: ${theme.bp.small}) {
@@ -31,22 +34,34 @@ const Banner = styled.div`
   align-items: center;
   text-align: center;
   justify-content: center;
+  width: 80vw;
+  @media (max-width: ${theme.bp.medium}) {
+    flex-direction: column;
+  }
 `;
 const BalloonCloud = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 30vw;
+  width: 30%;
   height: 400px;
-  @media (max-width: ${theme.bp.large}) {
-    width: 80%;
+  @media (max-width: ${theme.bp.medium}) {
+    width: 90%;
+    height: 400px;
+  }
+  @media (max-width: ${theme.bp["x-small"]}) {
+    width: 90%;
+    height: 250px;
   }
 `;
 
 const Balloons = styled.img`
   position: relative;
   width: 600px;
+  @media (max-width: ${theme.bp.large}) {
+    width: 450px;
+  }
   @media (max-width: ${theme.bp.small}) {
     width: 100vw;
   }
@@ -57,10 +72,15 @@ const Details = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 60vw;
+  width: 60%;
+  padding-left: 10%;
 
   @media (max-width: ${theme.bp.large}) {
     width: 90%;
+  }
+  @media (max-width: ${theme.bp.medium}) {
+    width: 90%;
+    padding: 0 ;
   }
 `;
 
@@ -69,21 +89,15 @@ const NameSection = styled.h3`
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 700;
   padding: 15px 30px;
   margin: 0;
   border-radius: 25px;
   color: ${theme.colors.lavenderfloral};
   background-color: ${theme.colors.lavender};
 `;
-/* const WhatIs = styled.span`
-  font-size: 20px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: ${theme.colors.detail1[1]};
-  letter-spacing: 1px;
-`; */
+
 const TitleWhat = styled.h3`
   font-size: 50px;
   line-height: 60px;
@@ -92,19 +106,28 @@ const TitleWhat = styled.h3`
   color: ${theme.colors.raisinblack};
   padding-top: 5px;
   margin: 0;
+  text-align: left;
+  
+  @media (max-width: ${theme.bp.small}) {
+    line-height: 44px;
+    font-size: 36px;
+  }
   @media (max-width: ${theme.bp["x-small"]}) {
-    font-size: 40px;
+    line-height: 36px;
+    font-size: 30px;
   }
 `;
 const ResumeWhat = styled.p`
-padding: 0 20px;
+  width: 100%;
   text-align: left;
-  font-size: 18px;
-  line-height: 30px;
-  color: ${theme.colors.gray};
   margin: 0;
-  padding: 0;
   padding: 20px 0px;
+  p {
+    font-size: 18px;
+    line-height: 30px;
+    color: ${theme.colors.gray};
+    margin: 0;
+  }
 `;
 
 const Services = styled.div`
@@ -119,7 +142,7 @@ const Service = styled.div`
   display: flex;
   flex-direction: row;
   width: 60vw;
-  
+
   padding-bottom: 20px;
   margin: 20px 0px;
   border: 2px solid ${theme.colors.platinum};
@@ -128,7 +151,12 @@ const Service = styled.div`
   padding: 15px;
   padding-top: 40px;
 
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp.large}) {
+    width: 80vw;
+  }
+
+  @media (max-width: ${theme.bp.small}) {
+    width: 60vw;
     flex-direction: column;
     align-items: center;
   }
@@ -169,7 +197,7 @@ const PositionBTN = styled.div`
 function WhatIsSection() {
   return (
     <Container>
-      <NameSection>¿QUÉ ES SINTÉTICA?</NameSection>
+      <NameSection>¿Qué es Sintética?</NameSection>
       <Banner>
         <BalloonCloud>
           <Balloons src="assets/home/globos.svg" alt="globos" />
@@ -177,11 +205,13 @@ function WhatIsSection() {
         <Details>
           <TitleWhat>Síntesis de voces en Español Rioplatense</TitleWhat>
           <ResumeWhat>
-            Sintética es un laboratorio de síntesis de voces. Nuestra pasión por
-            la innovación está arraigada en el compromiso de transformar vidas.
-            Impulsamos investigaciones vanguardistas, creamos productos
-            revolucionarios y promovemos la inclusión en la salud. Transformamos
-            voces en posibilidades.
+            <p>
+              Sintética es un laboratorio de síntesis de voces. Nuestra pasión
+              por la innovación está arraigada en el compromiso de transformar
+              vidas. Impulsamos investigaciones vanguardistas, creamos productos
+              revolucionarios y promovemos la inclusión en la salud.
+            </p>
+            <p>Transformamos voces en posibilidades.</p>
           </ResumeWhat>
         </Details>
       </Banner>
