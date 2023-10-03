@@ -11,13 +11,19 @@ const Container = styled.section`
   width: 100vw;
   min-height: 100vh;
 
-  background-image: url('assets/backgrounds/Background3.svg');
+  background-image: url("assets/backgrounds/Background3.svg");
   background-size: 40%;
   background-repeat: repeat;
-  background-position:   bottom;
+  background-position: bottom;
 
   @media (max-width: ${theme.bp.medium}) {
     flex-direction: column;
+  }
+  @media (max-width: ${theme.bp.small}) {
+    margin-top: 80px;
+  }
+  @media (max-width: ${theme.bp["x-small"]}) {
+    margin-top: 100px;
   }
 `;
 
@@ -26,8 +32,8 @@ const NameSection = styled.h3`
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 700;
   padding: 15px 30px;
   margin: 0;
   border-radius: 25px;
@@ -36,11 +42,18 @@ const NameSection = styled.h3`
 `;
 
 const Title = styled.h4`
-font-size: 32px;
-    font-weight: 700;
-    color: ${theme.colors.raisinblack};
-    margin: 0;
-    padding: 15px 0px 70px 0px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: ${theme.colors.raisinblack};
+  margin: 0;
+  padding: 15px 0px 70px 0px;
+  @media (max-width: ${theme.bp.small}) {
+    font-size: 28px;
+  }
+  @media (max-width: ${theme.bp["x-small"]}) {
+    font-size: 24px;
+  }
 `;
 
 const Technologies = styled.div`
@@ -67,7 +80,7 @@ const Technology = styled(Link)`
   box-shadow: 0px 10px 10px 2px rgba(0, 0, 0, 0.15);
 
   &.selected {
-    background-color: ${theme.colors.platinum};
+    background-color: ${theme.colors.white};
   }
 
   img {
@@ -80,6 +93,7 @@ const Technology = styled(Link)`
     font-weight: 600;
     color: ${theme.colors.gray};
     margin: 0;
+    text-transform: uppercase;
   }
   &:hover {
     img {
@@ -89,9 +103,14 @@ const Technology = styled(Link)`
   }
 
   @media (max-width: ${theme.bp.medium}) {
-    //box-shadow: none;
     margin: 30px 0px;
     width: 400px;
+  }
+
+  @media (max-width: ${theme.bp["x-small"]}) {
+    margin: 30px 0px;
+    width: 300px;
+    height: 400px;
   }
 `;
 
