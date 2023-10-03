@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import theme from "../../styles/theme";
-import Details2Button from "../buttons/Details2Button";
+import Details1Button from "../buttons/Details1Button";
 
 const Container = styled.section`
   background-color: ${theme.colors.white};
-  //color: ${theme.colors.primary};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,6 +11,10 @@ const Container = styled.section`
   margin-top: 80px;
   min-height: calc(100vh - 80px);
   width: 100vw;
+
+  @media (max-width: ${theme.bp.medium}) {
+    flex-direction: column;
+  }
 `;
 
 const Left = styled.div`
@@ -21,12 +24,19 @@ const Left = styled.div`
   align-items: center;
   text-align: center;
   width: 40vw;
+
+  @media (max-width: ${theme.bp.medium}) {
+    width: 100vw;
+  }
 `;
 
 const Robot = styled.img`
-  width: 400px;
-  @media (max-width: ${theme.bp["x-small"]}) {
+  width: 300px;
+  @media (max-width: ${theme.bp.small}) {
     width: 240px;
+  }
+  @media (max-width: ${theme.bp["x-small"]}) {
+    width: 200px;
   }
 `;
 
@@ -34,16 +44,33 @@ const TextLogo = styled.div`
   h1 {
     text-align: center;
     margin: 0;
-    font-size: 128px;
+    font-size: 95px;
     color: ${theme.colors.raisinblack};
   }
   p {
     text-align: center;
     margin: 0;
-    font-size: 32px;
+    font-size: 26px;
     font-weight: 700;
     color: ${theme.colors.electricindigo};
     text-transform: uppercase;
+  }
+
+  @media (max-width: ${theme.bp.small}) {
+    h1 {
+      font-size: 80px;
+    }
+    p{
+      font-size: 22px;
+    }
+  }
+  @media (max-width: ${theme.bp["x-small"]}) {
+    h1 {
+      font-size: 65px;
+    }
+    p{
+      font-size: 18px;
+    }
   }
 `;
 
@@ -55,12 +82,23 @@ const Right = styled.div`
   text-align: center;
   padding: 30px 30px;
   width: 50vw;
-  height: 600px;
+  height: 60vh;
 
   background-image: url('assets/backgrounds/Background1.svg');
   background-size: 103%;
   background-repeat: no-repeat;
   background-position:  right;
+
+  @media (max-width: ${theme.bp.medium}) {
+    width: 100vw;
+    background-size: 98%;
+    height: 40vh;
+  }
+
+  @media (max-width: ${theme.bp["x-small"]}) {
+    background-size: 130%;
+    
+  }
 `;
 
 const Title = styled.h4`
@@ -69,6 +107,20 @@ const Title = styled.h4`
   font-size: 32px;
   font-weight: 600;
   color: ${theme.colors.raisinblack};
+
+  @media (max-width: ${theme.bp.large}) {
+    font-size: 28px;
+  }
+  @media (max-width: ${theme.bp.medium}) {
+    font-size: 32px;
+  }
+  @media (max-width: ${theme.bp.small}) {
+    font-size: 28px;
+  }
+
+  @media (max-width: ${theme.bp["x-small"]}) {
+    font-size: 20px;
+  }
 `;
 const Resume = styled.p`
   text-align: left;
@@ -79,12 +131,34 @@ const Resume = styled.p`
   padding: 30px 0px 30px 130px;  
   justify-content: flex-end;
 
+  @media (max-width: ${theme.bp.large}) {
+    padding: 10px 20px 10px 130px;
+    font-size: 20px;
+  }
+
+  @media (max-width: ${theme.bp.medium}) {
+    font-size: 22px;
+    padding: 30px 20px 30px 190px;
+  }
+  @media (max-width: ${theme.bp.small}) {
+    font-size: 22px;
+  }
+
+  @media (max-width: ${theme.bp["x-small"]}) {
+    padding: 20px 20px 20px 20px; 
+    font-size: 20px;
+  }
 `;
 const BTN = styled.div`
   height: 35px;
   width: 100%;
   display: flex;
   justify-content: flex-end;
+
+  @media (max-width: ${theme.bp.medium}) {
+    margin-right: 50px;
+  }
+  
 `;
 
 function BannerSection() {
@@ -103,7 +177,7 @@ function BannerSection() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </Resume>
-        <BTN><Details2Button buttonText="Contactanos" to="/NotFound" /></BTN>
+        <BTN><Details1Button buttonText="Contactanos" to="/NotFound" /></BTN>
       </Right>
     </Container>
   );

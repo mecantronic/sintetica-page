@@ -64,7 +64,7 @@ const NavLinks = styled.div`
     display: ${({ showMenu }) => (showMenu ? "none" : "flex")};
     flex-direction: column;
     position: absolute;
-    top: 500px;
+    top: 400px;
     left: 0;
     background-color: ${theme.colors.white};
     width: 100%;
@@ -102,12 +102,19 @@ const NavLink = styled(Link)`
   &:hover:before {
     width: 100%;
   }
+
+  @media (max-width: ${theme.bp.large}) {
+    font-size: 12px;
+  }
 `;
 
 const NavDiv = styled.div`
   width: 2px;
   height: 40px;
   padding: 0px 10px;
+  @media (max-width: ${theme.bp.large}) {
+    padding: 0px 0px;
+  }
 `;
 
 const UserButtons = styled.div`
