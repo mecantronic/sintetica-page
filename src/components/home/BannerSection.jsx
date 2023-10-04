@@ -23,7 +23,7 @@ const Left = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 40vw;
+  width: 50vw;
 
   @media (max-width: ${theme.bp.medium}) {
     width: 100vw;
@@ -60,7 +60,7 @@ const TextLogo = styled.div`
     h1 {
       font-size: 80px;
     }
-    p{
+    p {
       font-size: 22px;
     }
   }
@@ -68,7 +68,7 @@ const TextLogo = styled.div`
     h1 {
       font-size: 65px;
     }
-    p{
+    p {
       font-size: 18px;
     }
   }
@@ -80,14 +80,14 @@ const Right = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 30px 30px;
+  padding: 0px 30px 30px 30px;
   width: 50vw;
   height: 60vh;
 
-  background-image: url('assets/backgrounds/Background1.svg');
+  background-image: url("assets/backgrounds/Background1.svg");
   background-size: 103%;
   background-repeat: no-repeat;
-  background-position:  right;
+  background-position: right;
 
   @media (max-width: ${theme.bp.medium}) {
     width: 100vw;
@@ -97,7 +97,6 @@ const Right = styled.div`
 
   @media (max-width: ${theme.bp["x-small"]}) {
     background-size: 130%;
-    
   }
 `;
 
@@ -128,7 +127,7 @@ const Resume = styled.p`
   font-size: 24px;
   font-weight: 500;
   color: ${theme.colors.platinum};
-  padding: 30px 0px 30px 130px;  
+  padding: 30px 0px 30px 130px;
   justify-content: flex-end;
 
   @media (max-width: ${theme.bp.large}) {
@@ -145,7 +144,7 @@ const Resume = styled.p`
   }
 
   @media (max-width: ${theme.bp["x-small"]}) {
-    padding: 20px 20px 20px 20px; 
+    padding: 20px 20px 20px 20px;
     font-size: 20px;
   }
 `;
@@ -158,7 +157,6 @@ const BTN = styled.div`
   @media (max-width: ${theme.bp.medium}) {
     margin-right: 50px;
   }
-  
 `;
 
 function BannerSection() {
@@ -174,10 +172,12 @@ function BannerSection() {
       <Right>
         <Title>Síntesis de voces potenciadas por AI</Title>
         <Resume>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Desde Argentina al mundo: Líderes en el desarrollo de voces
+          artificiales en nuestro idioma.
         </Resume>
-        <BTN><Details1Button buttonText="Contactanos" to="/NotFound" /></BTN>
+        <BTN>
+          <Details1Button buttonText="Contactanos" to="/NotFound" />
+        </BTN>
       </Right>
     </Container>
   );

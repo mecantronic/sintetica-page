@@ -3,8 +3,6 @@ import theme from "../../styles/theme";
 import Details2Button from "../buttons/Details2Button";
 
 const Container = styled.section`
-  //background-color: ${theme.colors.background[1]};
-  background: none;
   color: ${theme.colors.electricindigo};
   display: flex;
   flex-direction: column;
@@ -12,16 +10,10 @@ const Container = styled.section`
   align-items: center;
   width: 100vw;
 
-  background-image: url("assets/backgrounds/Background3.svg");
-  background-size: 40%;
-  background-repeat: repeat;
-  background-position: bottom;
-
   @media (max-width: ${theme.bp.large}) {
     padding-top: 100px ;
   }
   @media (max-width: ${theme.bp.medium}) {
-    padding-top: ;
     flex-direction: column;
   }
   @media (max-width: ${theme.bp.small}) {
@@ -99,7 +91,7 @@ const NameSection = styled.h3`
 `;
 
 const TitleWhat = styled.h3`
-  font-size: 50px;
+  font-size: 46px;
   line-height: 60px;
   font-weight: 600;
   letter-spacing: -1px;
@@ -107,6 +99,7 @@ const TitleWhat = styled.h3`
   padding-top: 5px;
   margin: 0;
   text-align: left;
+  text-transform: uppercase;
   
   @media (max-width: ${theme.bp.small}) {
     line-height: 44px;
@@ -203,7 +196,7 @@ function WhatIsSection() {
           <Balloons src="assets/home/globos.svg" alt="globos" />
         </BalloonCloud>
         <Details>
-          <TitleWhat>Síntesis de voces en Español Rioplatense</TitleWhat>
+          <TitleWhat>Voces en Español Rioplatense</TitleWhat>
           <ResumeWhat>
             <p>
               Sintética es un laboratorio de síntesis de voces. Nuestra pasión

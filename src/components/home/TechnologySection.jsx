@@ -3,18 +3,12 @@ import theme from "../../styles/theme";
 import { Link } from "react-router-dom";
 
 const Container = styled.section`
-  background-color: ${theme.colors.white};
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100vw;
   min-height: 100vh;
-
-  background-image: url("assets/backgrounds/Background3.svg");
-  background-size: 40%;
-  background-repeat: repeat;
-  background-position: bottom;
 
   @media (max-width: ${theme.bp.medium}) {
     flex-direction: column;
@@ -89,7 +83,7 @@ const Technology = styled(Link)`
   }
 
   h3 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     color: ${theme.colors.gray};
     margin: 0;

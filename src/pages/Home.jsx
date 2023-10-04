@@ -15,14 +15,26 @@ const HomeWrapper = styled.div`
   min-height: 100vh;
 `;
 
+const BackcgroundImage = styled.div`
+  padding: 0;
+  margin: 0;
+
+  background-image: url("assets/backgrounds/Background3.svg");
+  background-size: 40%;
+  background-repeat: repeat;
+  background-position: top;
+`;
+
 function Home() {
   return (
     <HomeWrapper>
       <Navbar />
+      <BackcgroundImage>
       <BannerSection />
-      <TechnologySection />
-      <WhatIsSection />
+        <TechnologySection />
+        <WhatIsSection />
       <ContactSection />
+      </BackcgroundImage>
     </HomeWrapper>
   );
 }
