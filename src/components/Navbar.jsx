@@ -146,7 +146,7 @@ const Navbar = () => {
             <NavLinks>
               <NavLink to="/VoiceCloning">Voice Cloning</NavLink>
               <NavLink to="/Maintenance">Experiencia TTS</NavLink>
-              <NavLink to="/IA">AI & Salud</NavLink>
+              <NavLink to="/Maintenance">AI & Salud</NavLink>
               <NavLink to="/Maintenance">Investigación</NavLink>
               <NavLink to="/Maintenance">Nosotros</NavLink>
               <UserButtons>
@@ -163,7 +163,7 @@ const Navbar = () => {
             <NavDiv> </NavDiv>
             <NavLink to="/Maintenance">Experiencia TTS</NavLink>
             <NavDiv> </NavDiv>
-            <NavLink to="/IA">AI & Salud</NavLink>
+            <NavLink to="/Maintenance">AI & Salud</NavLink>
             <NavDiv> </NavDiv>
             <NavLink to="/Maintenance">Investigación</NavLink>
             <NavDiv> </NavDiv>
