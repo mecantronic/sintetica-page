@@ -2,7 +2,7 @@ import styled from "styled-components";
 import theme from "../../styles/theme";
 
 const Container = styled.section`
-  background-color: ${theme.colors.background[1]};
+  background-color: ${theme.colors.white};
   color: ${theme.colors.electricindigo};
   display: flex;
   flex-wrap: wrap;
@@ -23,12 +23,14 @@ const Title = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  font-size: 20px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: ${theme.colors.detail1[1]};
-  letter-spacing: 1px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 15px 30px;
+  margin: 0;
+  border-radius: 25px;
+  color: ${theme.colors.lavenderfloral};
+  background-color: ${theme.colors.lavender};
 `;
 
 const VocesContainer = styled.div`
@@ -46,8 +48,9 @@ const Item = styled.div`
   gap: 10px;
   width: 330px;
   padding: 15px;
-  background-color: ${theme.colors.background[3]};
+  background-color: ${theme.colors.seasalt};
   border-radius: 15px;
+  box-shadow: 0px 10px 10px 2px rgba(0, 0, 0, 0.15);
 `;
 
 const AudioItem = styled.audio`
@@ -58,17 +61,19 @@ const ItemTitle = styled.h4`
   font-size: 32px;
   font-weight: 600;
   margin: 0;
+  color: ${theme.colors.raisinblack};
 `;
 const ItemText = styled.span`
   font-size: 20px;
   font-weight: 500;
   margin: 0;
+  color: ${theme.colors.electricindigo};
 `;
 
 function VoicesSection() {
   return (
     <Container>
-      <Title>*** Nuestras voces ***</Title>
+      <Title>Nuestras voces</Title>
       <VocesContainer>
         <Item>
           <AudioItem controls>

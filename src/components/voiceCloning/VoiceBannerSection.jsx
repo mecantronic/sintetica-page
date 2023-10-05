@@ -3,7 +3,7 @@ import theme from "../../styles/theme";
 import Details2Button from "../buttons/Details2Button";
 
 const Container = styled.section`
-  background-color: ${theme.colors.background[1]};
+  background-color: ${theme.colors.white};
   color: ${theme.colors.electricindigo};
   display: flex;
   flex-wrap: wrap;
@@ -62,6 +62,7 @@ const TitleDetails = styled.h3`
   line-height: 60px;
   font-weight: 600;
   letter-spacing: -1px;
+  color: ${theme.colors.raisinblack};
   padding-top: 5px;
   margin: 0;
   @media (max-width: ${theme.bp["x-small"]}) {
@@ -74,6 +75,7 @@ const ResumeDetails = styled.p`
   margin: 0;
   padding-bottom: 20px;
   padding-top: 20px;
+  color: ${theme.colors.gray};
 `;
 
 const Right = styled.div`

@@ -291,9 +291,9 @@ function ContactSection() {
 
   const submitForm = () => {
     const { name, email, phone, subject, message } = formData;
-    console.log( "serviceID",import.meta.env.VITE_EMAILJS_SERVICE_ID)
-    console.log( "templateID",import.meta.env.VITE_EMAILJS_TEMPLATE_ID)
-    console.log( "userID",import.meta.env.VITE_EMAILJS_USER_ID)
+    console.log("serviceID", import.meta.env.VITE_EMAILJS_SERVICE_ID);
+    console.log("templateID", import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
+    console.log("userID", import.meta.env.VITE_EMAILJS_USER_ID);
     toast.info("Enviando mensaje");
     emailjs
       .send(
