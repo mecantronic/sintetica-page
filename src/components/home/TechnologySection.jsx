@@ -122,7 +122,7 @@ function TechnologySection() {
           <h3>Sistemas entrenados en</h3>
           <h3>Español Latinoamericano</h3>
         </Technology>
-        <Technology to="/NotFound" className="selected">
+        <Technology to="/Maintenance" className="selected">
           <img src="assets/home/3.svg" alt="icon" />
           <h3>Inteligencia Artificial</h3>
           <h3>desarrollada desde la ética</h3>

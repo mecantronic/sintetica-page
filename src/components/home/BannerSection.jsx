@@ -176,7 +176,7 @@ function BannerSection() {
           artificiales en nuestro idioma.
         </Resume>
         <BTN>
-          <Details1Button buttonText="Contactanos" to="/NotFound" />
+          <Details1Button buttonText="Contactanos" to="/#ContactUs" />
         </BTN>
       </Right>
     </Container>

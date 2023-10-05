@@ -145,14 +145,14 @@ const Navbar = () => {
           {showMenu && (
             <NavLinks>
               <NavLink to="/VoiceCloning">Voice Cloning</NavLink>
-              <NavLink to="/NotFound">Experiencia TTS</NavLink>
+              <NavLink to="/Maintenance">Experiencia TTS</NavLink>
               <NavLink to="/IA">AI & Salud</NavLink>
-              <NavLink to="/NotFound">Investigación</NavLink>
-              <NavLink to="/NotFound">Nosotros</NavLink>
-              <NavLink to="/NotFound">Contacto</NavLink>
+              <NavLink to="/Maintenance">Investigación</NavLink>
+              <NavLink to="/Maintenance">Nosotros</NavLink>
+              <NavLink to="/Maintenance">Contacto</NavLink>
               <UserButtons>
-                <Details1Button buttonText="Login" to="/NotFound" />
-                <Details2Button buttonText="Signup" to="/NotFound" />
+                <Details1Button buttonText="Login" to="/Maintenance" />
+                <Details2Button buttonText="Signup" to="/Maintenance" />
               </UserButtons>
             </NavLinks>
           )}
@@ -162,19 +162,19 @@ const Navbar = () => {
           <NavLinks>
             <NavLink to="/VoiceCloning">Voice Cloning</NavLink>
             <NavDiv> </NavDiv>
-            <NavLink to="/NotFound">Experiencia TTS</NavLink>
+            <NavLink to="/Maintenance">Experiencia TTS</NavLink>
             <NavDiv> </NavDiv>
             <NavLink to="/IA">AI & Salud</NavLink>
             <NavDiv> </NavDiv>
-            <NavLink to="/NotFound">Investigación</NavLink>
+            <NavLink to="/Maintenance">Investigación</NavLink>
             <NavDiv> </NavDiv>
-            <NavLink to="/NotFound">Nosotros</NavLink>
+            <NavLink to="/Maintenance">Nosotros</NavLink>
             <NavDiv> </NavDiv>
-            <NavLink to="/NotFound">Contacto</NavLink>
+            <NavLink to="/Maintenance">Contacto</NavLink>
           </NavLinks>
           <UserButtons>
-            <Details1Button buttonText="Login" to="/NotFound" />
-            <Details2Button buttonText="Signup" to="/NotFound" />
+            <Details1Button buttonText="Login" to="/Maintenance" />
+            <Details2Button buttonText="Signup" to="/Maintenance" />
           </UserButtons>
         </>
       )}

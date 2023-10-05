@@ -1,13 +1,11 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import styled from "styled-components";
 import theme from "../styles/theme";
-
-emailjs.init(import.meta.env.EMAILJS_USER_ID);
-
+emailjs.init(import.meta.env.VITE_EMAILJS_USER_ID);
 const Container = styled.section`
   background: none;
   color: ${theme.colors.gray};
@@ -231,6 +229,8 @@ const ContatcButton = styled.button`
 `;
 
 function ContactSection() {
+  const form = useRef();
+  const [formErrors, setFormErrors] = useState({});
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -240,56 +240,92 @@ function ContactSection() {
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const sendEmail = (e) => {
+  const handleErrors = (e, values) => {
     e.preventDefault();
-    toast.success("¡clickeaste el botón con éxito!");
-    console.log("¡clickeaste el botón con éxito!")
-    
-    // Validación de campos aquí (por ejemplo, verificar el formato del correo electrónico).
-    /* if (!formData.name) {
-      toast.error("Por favor, ingresa un correo electrónico válido.");
-      console.log("No hay nombre")
-      return;
-    }
-    if (!formData.email.match(/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/)) {
-      toast.error("Por favor, ingresa un correo electrónico válido.");
-      return;
-    } */
+    const errors = {};
 
+    const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if (!values.name) {
+      errors.name = "Por favor, completa tu nombre";
+      toast.error(errors.name);
+    }
+    if (!values.email) {
+      errors.email = "Por favor, completa tu email";
+      toast.error(errors.email);
+    } else if (!regex.test(values.email)) {
+      errors.email = "El formato del email no es valido";
+      toast.error(errors.email);
+    }
+    if (!values.message) {
+      errors.message = "Por favor, contanos cómo podemos ayudarte";
+      toast.error(errors.message);
+    }
+    if (!values.phone) {
+      errors.phone = "Por favor, completa tu teléfono";
+      toast.error(errors.phone);
+    }
+    if (!values.subject) {
+      errors.subject = "Por favor, escribe un asunto";
+      toast.error(errors.subject);
+    }
+    if (values.message.length < 8) {
+      errors.message =
+        "Por favor, completa el mensaje con al menos 8 caracteres";
+      toast.error(errors.message);
+    }
+    if (values.message.length > 200) {
+      errors.message =
+        "Mensaje demasiado largo, debe contener menos de 200 caracteres";
+      toast.error(errors.message);
+    }
+    setFormErrors(errors);
+
+    if (Object.keys(errors).length === 0) {
+      submitForm();
+    }
+  };
+
+  const submitForm = () => {
+    const { name, email, phone, subject, message } = formData;
+    console.log( "serviceID",import.meta.env.VITE_EMAILJS_SERVICE_ID)
+    console.log( "templateID",import.meta.env.VITE_EMAILJS_TEMPLATE_ID)
+    console.log( "userID",import.meta.env.VITE_EMAILJS_USER_ID)
+    toast.info("Enviando mensaje");
     emailjs
-      .sendForm(
-        import.meta.env.EMAILJS_SERVICE_ID,
-        import.meta.env.EMAILJS_TEMPLATE_ID,
-        formData
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        { name, email, message, phone, subject },
+        import.meta.env.VITE_EMAILJS_USER_ID
       )
       .then(
         (result) => {
-          console.log("Correo electrónico enviado correctamente", result);
-          toast.success("¡Mensaje enviado con éxito!");
+          console.log(result.text);
+          toast.success(
+            "¡Gracias por escribirnos, pronto estaremos respondiendo!"
+          );
         },
         (error) => {
-          console.error("Error al enviar el correo electrónico", error);
+          console.log(error.text);
           toast.error(
             "Error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde."
           );
         }
       );
+    clearForm();
+  };
 
-    // Restablecer el estado del formulario después de enviar el correo electrónico.
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      subject: "",
-      message: "",
-    });
+  const clearForm = () => {
+    setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+
+    // Puedes restablecer los campos del formulario utilizando las refs si es necesario.
+    if (form.current) {
+      form.current.reset();
+    }
   };
 
   return (
@@ -312,7 +348,7 @@ function ContactSection() {
           </TagText>
         </InfoItem>
       </ContactInfo>
-      <ContactForm onSubmit={sendEmail}>
+      <ContactForm ref={form} onSubmit={(e) => handleErrors(e, formData)}>
         <SmallInput
           type="text"
           placeholder="Nombre*"
@@ -355,12 +391,10 @@ function ContactSection() {
           onChange={handleChange}
         />
         <Center>
-          <ContatcButton type="submit" onClick={(e) => sendEmail(e)}>
-            Enviar mensaje
-          </ContatcButton>
+          <ContatcButton type="submit">Enviar mensaje</ContatcButton>
         </Center>
       </ContactForm>
-      <ToastContainer position="bottom-right"/>
+      <ToastContainer position="bottom-right" />
     </Container>
   );
 }

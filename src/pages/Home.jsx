@@ -30,10 +30,10 @@ function Home() {
     <HomeWrapper>
       <Navbar />
       <BackcgroundImage>
-      <BannerSection />
+        <BannerSection />
         <TechnologySection />
         <WhatIsSection />
-      <ContactSection />
+        <ContactSection id="ContactUs" />
       </BackcgroundImage>
     </HomeWrapper>
   );

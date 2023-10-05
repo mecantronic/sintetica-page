@@ -110,7 +110,7 @@ const TitleWhat = styled.h3`
     font-size: 30px;
   }
 `;
-const ResumeWhat = styled.p`
+const ResumeWhat = styled.div`
   width: 100%;
   text-align: left;
   margin: 0;
@@ -224,7 +224,7 @@ function WhatIsSection() {
               ideas en tu propio idioma.
             </ServiceResume>
             <PositionBTN>
-              <Details2Button rightArrow={true} to="/NotFound" />
+              <Details2Button rightArrow={true} to="/Maintenance" />
             </PositionBTN>
           </ServiceCTA>
         </Service>
@@ -275,7 +275,7 @@ function WhatIsSection() {
               idiomas? Lo hacemos posible.
             </ServiceResume>
             <PositionBTN>
-              <Details2Button rightArrow={true} to="/NotFound" />
+              <Details2Button rightArrow={true} to="/Maintenance" />
             </PositionBTN>
           </ServiceCTA>
         </Service>
