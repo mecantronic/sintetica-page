@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import styled from "styled-components";
 import theme from "../styles/theme";
 emailjs.init(import.meta.env.VITE_EMAILJS_USER_ID);
+
 const Container = styled.section`
   background: none;
   color: ${theme.colors.gray};
@@ -13,8 +14,6 @@ const Container = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 100px 0;
-  width: 100vw;
 
   background-image: url("assets/backgrounds/Background2.svg");
   background-size: contain;
@@ -26,27 +25,13 @@ const Container = styled.section`
   }
 `;
 
-const NameSection = styled.h3`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 700;
-  padding: 15px 30px;
-  margin: 0;
-  border-radius: 25px;
-  color: ${theme.colors.lavenderfloral};
-  background-color: ${theme.colors.lavender};
-`;
-
 const Title = styled.h3`
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: ${theme.colors.raisinblack};
-  font-size: 45px;
+  font-size: 30px;
   line-height: 60px;
   font-weight: 600;
   letter-spacing: -1px;
@@ -56,13 +41,16 @@ const Title = styled.h3`
 
   @media (max-width: ${theme.bp.small}) {
     line-height: 44px;
-    font-size: 36px;
+    font-size: 24px;
+    padding: 10px 0;
   }
   @media (max-width: ${theme.bp["x-small"]}) {
-    line-height: 36px;
-    font-size: 30px;
-  }
+    line-height: 30px;
+    font-size: 20px;
+    padding: 5px 0;
+      }
 `;
+
 
 const ContactInfo = styled.div`
   display: flex;
@@ -95,6 +83,10 @@ const InfoItem = styled.a`
   @media (max-width: ${theme.bp.medium}) {
     width: 85vw;
   }
+  @media (max-width: ${theme.bp["x-small"]}) {
+    height: 50px;
+    width: 80vw;
+  }
 `;
 
 const TagText = styled.div`
@@ -103,7 +95,7 @@ const TagText = styled.div`
   flex-direction: row;
   align-items: center;
   text-align: center;
-  justify-content: space-around;
+  justify-content: center;
 `;
 
 const TagCTA = styled.h5`
@@ -126,9 +118,12 @@ const TagInfo = styled.p`
 const Icon = styled.img`
   align-items: flex-start;
   width: 50px;
+  @media (max-width: ${theme.bp["x-small"]}) {
+    width: 30px;
+  }
 `;
 
-const ContactForm = styled.form`
+const Form = styled.form`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -137,12 +132,22 @@ const ContactForm = styled.form`
   border: 2px solid ${theme.colors.platinum};
   border-radius: 20px;
   padding: 40px 0px 40px 0px;
-  row-gap: 50px;
+  row-gap: 40px;
   column-gap: 20px;
   background-color: ${theme.colors.white};
 
   @media (max-width: ${theme.bp.large}) {
     width: 90vw;
+    row-gap: 30px;
+  }
+  @media (max-width: ${theme.bp.medium}) {
+    row-gap: 20px;
+  }
+  @media (max-width: ${theme.bp.small}) {
+    row-gap: 20px;
+  }
+  @media (max-width: ${theme.bp["x-small"]}) {
+    row-gap: 10px;
   }
 `;
 
@@ -171,7 +176,9 @@ const SmallInput = styled.input`
   }
   @media (max-width: ${theme.bp["x-small"]}) {
     width: 80%;
+    height: 30px;
   }
+
   &::placeholder {
     opacity: 1;
     color: ${theme.colors.platinum};
@@ -185,9 +192,11 @@ const BigInput = styled.textarea`
   border: 2px solid ${theme.colors.platinum};
   color: ${theme.colors.onyx};
   padding: 10px 15px;
+
   @media (max-width: ${theme.bp["x-small"]}) {
     width: 80%;
   }
+
   &::placeholder {
     opacity: 1;
     color: ${theme.colors.platinum};
@@ -234,7 +243,7 @@ const ContatcButton = styled.button`
   }
 `;
 
-function ContactSection() {
+function ContactForm() {
   const form = useRef();
   const [formErrors, setFormErrors] = useState({});
   const [formData, setFormData] = useState({
@@ -336,7 +345,6 @@ function ContactSection() {
 
   return (
     <Container>
-      <NameSection>Contacto</NameSection>
       <Title>Dejanos tu consulta</Title>
       <ContactInfo>
         <InfoItem href="tel:+61383766284">
@@ -354,7 +362,7 @@ function ContactSection() {
           </TagText>
         </InfoItem>
       </ContactInfo>
-      <ContactForm ref={form} onSubmit={(e) => handleErrors(e, formData)}>
+      <Form ref={form} onSubmit={(e) => handleErrors(e, formData)}>
         <SmallInput
           type="text"
           placeholder="Nombre*"
@@ -399,10 +407,10 @@ function ContactSection() {
         <Center>
           <ContatcButton type="submit">Enviar mensaje</ContatcButton>
         </Center>
-      </ContactForm>
+      </Form>
       <ToastContainer position="bottom-right" />
     </Container>
   );
 }
 
-export default ContactSection;
+export default ContactForm;

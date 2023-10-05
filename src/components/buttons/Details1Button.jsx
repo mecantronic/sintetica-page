@@ -43,7 +43,7 @@ function Details1Button({ to, buttonText }) {
 }
 
 Details1Button.propTypes = {
-  to: PropTypes.string.isRequired,
+  to: PropTypes.string,
   buttonText: PropTypes.string,
 };
 

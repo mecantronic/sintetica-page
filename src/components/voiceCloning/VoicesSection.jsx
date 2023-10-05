@@ -40,6 +40,7 @@ const VocesContainer = styled.div`
   flex-wrap: wrap;
   gap: 20px;
   padding: 50px 0px;
+  max-width: 90vw;
 `;
 
 const Item = styled.div`

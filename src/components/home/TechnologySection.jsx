@@ -41,6 +41,7 @@ const Title = styled.h4`
   font-weight: 700;
   color: ${theme.colors.raisinblack};
   margin: 0;
+  max-width: 90vw;
   padding: 15px 0px 70px 0px;
   @media (max-width: ${theme.bp.small}) {
     font-size: 28px;
@@ -114,8 +115,8 @@ const Technology = styled(Link)`
 function TechnologySection() {
   return (
     <Container>
-      <NameSection>Integraciónes</NameSection>
-      <Title>Nisi porta lorem mollis aliquam ut porttitor leo</Title>
+      <NameSection>Nuestros objetivos</NameSection>
+      <Title>Queremos reducir la brecha tecnológica de las voces sintéticas en nuestro idioma</Title>
       <Technologies>
         <Technology to="/VoiceCloning">
           <img src="assets/home/2.svg" alt="icon" />

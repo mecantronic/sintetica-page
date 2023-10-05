@@ -64,7 +64,7 @@ const NavLinks = styled.div`
     display: ${({ showMenu }) => (showMenu ? "none" : "flex")};
     flex-direction: column;
     position: absolute;
-    top: 400px;
+    top: 370px;
     left: 0;
     background-color: ${theme.colors.white};
     width: 100%;
@@ -74,7 +74,7 @@ const NavLinks = styled.div`
     transition: transform 0.3s ease-in-out;
   }
   @media (max-width: ${theme.bp["x-small"]}) {
-    top: 408px;
+    top: 360px;
   }
 `;
 
@@ -149,7 +149,6 @@ const Navbar = () => {
               <NavLink to="/IA">AI & Salud</NavLink>
               <NavLink to="/Maintenance">Investigación</NavLink>
               <NavLink to="/Maintenance">Nosotros</NavLink>
-              <NavLink to="/Maintenance">Contacto</NavLink>
               <UserButtons>
                 <Details1Button buttonText="Login" to="/Maintenance" />
                 <Details2Button buttonText="Signup" to="/Maintenance" />
@@ -170,7 +169,6 @@ const Navbar = () => {
             <NavDiv> </NavDiv>
             <NavLink to="/Maintenance">Nosotros</NavLink>
             <NavDiv> </NavDiv>
-            <NavLink to="/Maintenance">Contacto</NavLink>
           </NavLinks>
           <UserButtons>
             <Details1Button buttonText="Login" to="/Maintenance" />

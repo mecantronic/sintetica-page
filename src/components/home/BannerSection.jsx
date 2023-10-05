@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import theme from "../../styles/theme";
 import Details1Button from "../buttons/Details1Button";
+import PropTypes from "prop-types";
+
 
 const Container = styled.section`
   background-color: ${theme.colors.white};
@@ -159,7 +161,8 @@ const BTN = styled.div`
   }
 `;
 
-function BannerSection() {
+function BannerSection({ openModal }) {
+  
   return (
     <Container>
       <Left>
@@ -175,12 +178,16 @@ function BannerSection() {
           Desde Argentina al mundo: Líderes en el desarrollo de voces
           artificiales en nuestro idioma.
         </Resume>
-        <BTN>
-          <Details1Button buttonText="Contactanos" to="/#ContactUs" />
+        <BTN onClick={openModal} >
+          <Details1Button buttonText="Contactanos" />
         </BTN>
       </Right>
     </Container>
   );
 }
+BannerSection.propTypes = {
+  openModal: PropTypes.node.isRequired,
+  };
+
 
 export default BannerSection;

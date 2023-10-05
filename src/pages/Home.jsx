@@ -4,6 +4,9 @@ import BannerSection from "../components/home/BannerSection";
 import TechnologySection from "../components/home/TechnologySection";
 import WhatIsSection from "../components/home/WhatIsSection";
 import ContactSection from "../components/ContactSection";
+import ContactForm from "../components/ContactForm";
+import { useState } from "react";
+import Modal from "../components/Modal";
 
 const HomeWrapper = styled.div`
   display: flex;
@@ -26,15 +29,32 @@ const BackcgroundImage = styled.div`
 `;
 
 function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    document.body.style.overflow = 'auto';
+  };
+
   return (
     <HomeWrapper>
       <Navbar />
+      <BannerSection openModal={openModal} />
       <BackcgroundImage>
-        <BannerSection />
         <TechnologySection />
         <WhatIsSection />
-        <ContactSection id="ContactUs" />
+        <ContactSection />
       </BackcgroundImage>
+      {isModalOpen && (
+        <Modal closeModal={closeModal}>
+          <ContactForm />
+        </Modal>
+      )}
     </HomeWrapper>
   );
 }
