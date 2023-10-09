@@ -50,12 +50,12 @@ const BalloonCloud = styled.div`
 
 const Balloons = styled.img`
   position: relative;
-  width: 600px;
+  width: 400px;
   @media (max-width: ${theme.bp.large}) {
-    width: 450px;
+    width: 350px;
   }
   @media (max-width: ${theme.bp.small}) {
-    width: 100vw;
+    width: 90vw;
   }
 `;
 
@@ -197,7 +197,7 @@ function WhatIsSection() {
       <NameSection>¿Qué es Sintética?</NameSection>
       <Banner>
         <BalloonCloud>
-          <Balloons src="assets/home/globos.svg" alt="globos" />
+          <Balloons src="assets/home/card5.svg" alt="globos" />
         </BalloonCloud>
         <Details>
           <TitleWhat>Voces en Español Rioplatense</TitleWhat>
@@ -234,7 +234,7 @@ function WhatIsSection() {
         </Service>
 
         <Service>
-          <ServiceIcon src="assets/home/card5.svg" alt="text-icon" />
+          <ServiceIcon src="assets/voiceCloning/bannerVoice.svg" alt="text-icon" />
           <ServiceCTA>
             <ServiceTitle>Voice Cloning - Español Latinoamericano</ServiceTitle>
             <ServiceResume>

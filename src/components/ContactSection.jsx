@@ -162,10 +162,7 @@ const SmallInput = styled.input`
   border: 2px solid ${theme.colors.platinum};
   color: ${theme.colors.onyx};
   padding: 0 15px;
-
-  @media (max-width: ${theme.bp.large}) {
-    width: 46%;
-  }
+  
   @media (max-width: ${theme.bp.medium}) {
     width: calc(80% + 50px);
   }
