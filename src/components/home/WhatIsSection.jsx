@@ -157,6 +157,10 @@ const Service = styled.div`
 const ServiceIcon = styled.img`
   width: 150px;
   height: 150px;
+  padding-right: 15px;
+  @media (max-width: ${theme.bp.small}) {
+    padding: 0;
+  }
 `;
 
 const ServiceCTA = styled.div`
@@ -211,7 +215,7 @@ function WhatIsSection() {
       <Services>
         <Service>
           <ServiceIcon
-            src="../../../public/assets/home/6.svg"
+            src="../../../public/assets/home/card4.svg"
             alt="text-icon"
           />
           <ServiceCTA>
@@ -230,7 +234,7 @@ function WhatIsSection() {
         </Service>
 
         <Service>
-          <ServiceIcon src="assets/home/5.svg" alt="text-icon" />
+          <ServiceIcon src="assets/home/card5.svg" alt="text-icon" />
           <ServiceCTA>
             <ServiceTitle>Voice Cloning - Español Latinoamericano</ServiceTitle>
             <ServiceResume>
@@ -245,7 +249,7 @@ function WhatIsSection() {
         </Service>
 
         <Service>
-          <ServiceIcon src="assets/home/7.svg" alt="text-icon" />
+          <ServiceIcon src="assets/home/card6.svg" alt="text-icon" />
           <ServiceCTA>
             <ServiceTitle>
               AI al servicio de la salud y la inclusión
@@ -263,7 +267,7 @@ function WhatIsSection() {
         </Service>
 
         <Service>
-          <ServiceIcon src="assets/home/8_1.png" alt="text-icon" />
+          <ServiceIcon src="assets/home/card7.svg" alt="text-icon" />
           <ServiceCTA>
             <ServiceTitle>Toolkit para voces</ServiceTitle>
             <ServiceResume>
