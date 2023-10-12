@@ -14,6 +14,7 @@ const Container = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 
   background-image: url("assets/backgrounds/Background2.svg");
   background-size: contain;
@@ -35,7 +36,7 @@ const Title = styled.h3`
   line-height: 60px;
   font-weight: 600;
   letter-spacing: -1px;
-  padding: 30px 0;
+  padding: 0 0 10px 0;
   margin: 0;
   text-transform: uppercase;
 
@@ -48,18 +49,17 @@ const Title = styled.h3`
     line-height: 30px;
     font-size: 20px;
     padding: 5px 0;
-      }
+  }
 `;
-
 
 const ContactInfo = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: 60vw;
+
   gap: 10px;
   margin-bottom: 20px;
-  background-color: ${theme.colors.white};
   border-radius: 25px;
 
   @media (max-width: ${theme.bp.large}) {
@@ -76,6 +76,8 @@ const InfoItem = styled.a`
   text-decoration: none;
   align-items: center;
   border: 2px solid ${theme.colors.platinum};
+  background-color: ${theme.colors.white};
+
   border-radius: 20px;
   padding: 0px 18px;
   width: 50%;
@@ -131,8 +133,8 @@ const Form = styled.form`
   width: 60vw;
   border: 2px solid ${theme.colors.platinum};
   border-radius: 20px;
-  padding: 40px 0px 40px 0px;
-  row-gap: 40px;
+  padding: 20px 0px 20px 0px;
+  row-gap: 20px;
   column-gap: 20px;
   background-color: ${theme.colors.white};
 
@@ -242,6 +244,7 @@ const ContatcButton = styled.button`
 
 function ContactForm() {
   const form = useRef();
+  // eslint-disable-next-line no-unused-vars
   const [formErrors, setFormErrors] = useState({});
   const [formData, setFormData] = useState({
     name: "",
@@ -259,6 +262,7 @@ function ContactForm() {
     e.preventDefault();
     const errors = {};
 
+    // eslint-disable-next-line no-useless-escape
     const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     if (!values.name) {
@@ -303,9 +307,6 @@ function ContactForm() {
 
   const submitForm = () => {
     const { name, email, phone, subject, message } = formData;
-    console.log("serviceID", import.meta.env.VITE_EMAILJS_SERVICE_ID);
-    console.log("templateID", import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
-    console.log("userID", import.meta.env.VITE_EMAILJS_USER_ID);
     toast.info("Enviando mensaje");
     emailjs
       .send(
