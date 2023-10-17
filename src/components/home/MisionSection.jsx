@@ -2,8 +2,9 @@ import styled from "styled-components";
 import theme from "../../styles/theme";
 
 const Container = styled.section`
-  background-color: ${theme.colors.background[1]};
-  color: ${theme.colors.primary};
+  //background-color: ${theme.colors.background[1]};
+  background: none;
+  color: ${theme.colors.electricindigo};
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -14,16 +15,21 @@ const Container = styled.section`
   }
 `;
 
+
+
 const Hero = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: calc(90vw / 2);
+  width: 30vw;
   height: 400px;
 
   @media (max-width: ${theme.bp.large}) {
     width: 80%;
+  }
+  @media (max-width: ${theme.bp.small}) {
+    margin-top: 100px;
   }
 `;
 
@@ -39,20 +45,24 @@ const Details = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: calc(90vw / 2);
+  width: 60vw;
 
   @media (max-width: ${theme.bp.large}) {
-    width: 80%;
+    width: 90%;
   }
 `;
 
 const TitleDetails = styled.h3`
-  font-size: 50px;
+  font-size: 60px;
   line-height: 60px;
   font-weight: 600;
   letter-spacing: -1px;
   padding-top: 5px;
   margin: 0;
+  margin-bottom: 50px;
+  @media (max-width: ${theme.bp["x-small"]}) {
+    font-size: 40px;
+  }
 `;
 
 const Item = styled.div`
@@ -78,7 +88,7 @@ const ItemText = styled.div`
 
 const ItemTitle = styled.h5`
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 800;
   text-transform: uppercase;
   margin: 0;
 `;

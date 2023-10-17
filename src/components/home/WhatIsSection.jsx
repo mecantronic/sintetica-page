@@ -3,45 +3,59 @@ import theme from "../../styles/theme";
 import Details2Button from "../buttons/Details2Button";
 
 const Container = styled.section`
-  background-color: ${theme.colors.background[1]};
-  color: ${theme.colors.primary};
+  color: ${theme.colors.electricindigo};
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100vw;
-  margin-top: 200px;
+
+  @media (max-width: ${theme.bp.large}) {
+    padding-top: 100px ;
+  }
+  @media (max-width: ${theme.bp.medium}) {
+    flex-direction: column;
+  }
+  @media (max-width: ${theme.bp.small}) {
+    margin-top: 100px;
+  }
+`;
+
+const Banner = styled.div`
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 80vw;
   @media (max-width: ${theme.bp.medium}) {
     flex-direction: column;
   }
 `;
-
 const BalloonCloud = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: calc(90vw / 2);
+  width: 30%;
   height: 400px;
-
-  @media (max-width: ${theme.bp.large}) {
-    width: 80%;
+  @media (max-width: ${theme.bp.medium}) {
+    width: 90%;
+    height: 400px;
+  }
+  @media (max-width: ${theme.bp["x-small"]}) {
+    width: 90%;
+    height: 250px;
   }
 `;
 
 const Balloons = styled.img`
   position: relative;
-  width: 600px;
-  @media (max-width: ${theme.bp.small}) {
-    width: 100vw;
+  width: 400px;
+  @media (max-width: ${theme.bp.large}) {
+    width: 350px;
   }
-  `;
-
-const Waves = styled.img`
-  position: relative;
-  top: -110px;
-  width: 600px;
   @media (max-width: ${theme.bp.small}) {
-    width: 100vw;
+    width: 90vw;
   }
 `;
 
@@ -50,40 +64,92 @@ const Details = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: calc(90vw / 2);
+  width: 60%;
+  padding-left: 10%;
 
   @media (max-width: ${theme.bp.large}) {
-    width: 80%;
+    width: 90%;
+  }
+  @media (max-width: ${theme.bp.medium}) {
+    width: 90%;
+    padding: 0 ;
   }
 `;
-const WhatIs = styled.span`
-  font-size: 20px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: ${theme.colors.detail1[1]};
-  letter-spacing: 1px;
+
+const NameSection = styled.h3`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 15px 30px;
+  margin: 0;
+  border-radius: 25px;
+  color: ${theme.colors.lavenderfloral};
+  background-color: ${theme.colors.lavender};
 `;
+
 const TitleWhat = styled.h3`
-  font-size: 50px;
+  font-size: 46px;
   line-height: 60px;
   font-weight: 600;
   letter-spacing: -1px;
+  color: ${theme.colors.raisinblack};
   padding-top: 5px;
   margin: 0;
+  text-align: left;
+  text-transform: uppercase;
+  
+  @media (max-width: ${theme.bp.small}) {
+    line-height: 44px;
+    font-size: 36px;
+  }
+  @media (max-width: ${theme.bp["x-small"]}) {
+    line-height: 36px;
+    font-size: 30px;
+  }
 `;
-const ResumeWhat = styled.p`
-  font-size: 18px;
-  line-height: 30px;
+const ResumeWhat = styled.div`
+  width: 100%;
+  text-align: left;
   margin: 0;
-  padding-bottom: 20px;
+  padding: 20px 0px;
+  p {
+    font-size: 18px;
+    line-height: 30px;
+    color: ${theme.colors.gray};
+    margin: 0;
+  }
+`;
+
+const Services = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Service = styled.div`
   display: flex;
   flex-direction: row;
-  padding-bottom: 20px;
+  width: 60vw;
 
-  @media (max-width: ${theme.bp["x-small"]}) {
+  padding-bottom: 20px;
+  margin: 20px 0px;
+  border: 2px solid ${theme.colors.platinum};
+  background-color: ${theme.colors.seasalt};
+  border-radius: 20px;
+  padding: 15px;
+  padding-top: 40px;
+
+  @media (max-width: ${theme.bp.large}) {
+    width: 80vw;
+  }
+
+  @media (max-width: ${theme.bp.small}) {
+    width: 60vw;
     flex-direction: column;
     align-items: center;
   }
@@ -91,6 +157,10 @@ const Service = styled.div`
 const ServiceIcon = styled.img`
   width: 150px;
   height: 150px;
+  padding-right: 15px;
+  @media (max-width: ${theme.bp.small}) {
+    padding: 0;
+  }
 `;
 
 const ServiceCTA = styled.div`
@@ -100,13 +170,16 @@ const ServiceCTA = styled.div`
 
 const ServiceTitle = styled.h5`
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
+  color: ${theme.colors.raisinblack};
   text-transform: uppercase;
   margin: 0;
+  margin-bottom: 10px;
 `;
 const ServiceResume = styled.p`
-  font-size: 18px;
+  font-size: 16px;
   line-height: 30px;
+  color: ${theme.colors.gray};
   padding-top: 3px;
   margin: 0;
 `;
@@ -115,30 +188,35 @@ const PositionBTN = styled.div`
   height: 35px;
   display: flex;
   justify-content: flex-end;
+  padding-top: 50px;
 `;
 
 function WhatIsSection() {
   return (
     <Container>
-      <BalloonCloud>
-        <Balloons src='assets/home/globos.svg' alt='globos' />
-        <Waves src='assets/home/onda_amarilla.svg' alt='ondas' />
-      </BalloonCloud>
-      <Details>
-        <WhatIs>*** ¿QUÉ ES SINTÉTICA? ***</WhatIs>
-        <TitleWhat>Síntesis de voces en Español Rioplatense</TitleWhat>
-        <ResumeWhat>
-          Sintética es un laboratorio de síntesis de voces. Nuestra pasión por
-          la innovación está arraigada en el compromiso de transformar vidas.
-          Impulsamos investigaciones vanguardistas, creamos productos
-          revolucionarios y promovemos la inclusión en la salud. Transformamos
-          voces en posibilidades.
-        </ResumeWhat>
-
+      <NameSection>¿Qué es Sintética?</NameSection>
+      <Banner>
+        <BalloonCloud>
+          <Balloons src="assets/home/card5.svg" alt="globos" />
+        </BalloonCloud>
+        <Details>
+          <TitleWhat>Voces en Español Rioplatense</TitleWhat>
+          <ResumeWhat>
+            <p>
+              Sintética es un laboratorio de síntesis de voces. Nuestra pasión
+              por la innovación está arraigada en el compromiso de transformar
+              vidas. Impulsamos investigaciones vanguardistas, creamos productos
+              revolucionarios y promovemos la inclusión en la salud.
+            </p>
+            <p>Transformamos voces en posibilidades.</p>
+          </ResumeWhat>
+        </Details>
+      </Banner>
+      <Services>
         <Service>
           <ServiceIcon
-            src='../../../public/assets/home/6.svg'
-            alt='text-icon'
+            src="../../../public/assets/home/card4.svg"
+            alt="text-icon"
           />
           <ServiceCTA>
             <ServiceTitle>Tex To Speech - Español Latinoamericano</ServiceTitle>
@@ -150,19 +228,13 @@ function WhatIsSection() {
               ideas en tu propio idioma.
             </ServiceResume>
             <PositionBTN>
-              <Details2Button
-                rightArrow={true}
-                to='/NotFound'
-              />
+              <Details2Button rightArrow={true} to="/Maintenance" />
             </PositionBTN>
           </ServiceCTA>
         </Service>
 
         <Service>
-          <ServiceIcon
-            src='assets/home/5.svg'
-            alt='text-icon'
-          />
+          <ServiceIcon src="assets/voiceCloning/bannerVoice.svg" alt="text-icon" />
           <ServiceCTA>
             <ServiceTitle>Voice Cloning - Español Latinoamericano</ServiceTitle>
             <ServiceResume>
@@ -171,19 +243,13 @@ function WhatIsSection() {
               proyectos con voces familiares o icónicas en español rioplatense.
             </ServiceResume>
             <PositionBTN>
-              <Details2Button
-                rightArrow={true}
-                to='/VoiceCloning'
-              />
+              <Details2Button rightArrow={true} to="/VoiceCloning" />
             </PositionBTN>
           </ServiceCTA>
         </Service>
 
         <Service>
-          <ServiceIcon
-            src='assets/home/7.svg'
-            alt='text-icon'
-          />
+          <ServiceIcon src="assets/home/card6.svg" alt="text-icon" />
           <ServiceCTA>
             <ServiceTitle>
               AI al servicio de la salud y la inclusión
@@ -195,19 +261,13 @@ function WhatIsSection() {
               inclusiva.
             </ServiceResume>
             <PositionBTN>
-              <Details2Button
-                rightArrow={true}
-                to='/IA'
-              />
+              <Details2Button rightArrow={true} to="/Maintenance" />
             </PositionBTN>
           </ServiceCTA>
         </Service>
 
         <Service>
-          <ServiceIcon
-            src='assets/home/8_1.png'
-            alt='text-icon'
-          />
+          <ServiceIcon src="assets/home/card7.svg" alt="text-icon" />
           <ServiceCTA>
             <ServiceTitle>Toolkit para voces</ServiceTitle>
             <ServiceResume>
@@ -219,14 +279,11 @@ function WhatIsSection() {
               idiomas? Lo hacemos posible.
             </ServiceResume>
             <PositionBTN>
-              <Details2Button
-                rightArrow={true}
-                to='/NotFound'
-              />
+              <Details2Button rightArrow={true} to="/Maintenance" />
             </PositionBTN>
           </ServiceCTA>
         </Service>
-      </Details>
+      </Services>
     </Container>
   );
 }

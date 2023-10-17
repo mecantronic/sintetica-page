@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import theme from "../../styles/theme";
 import Details2Button from "../buttons/Details2Button";
+import PropTypes from "prop-types";
 
 const Container = styled.section`
-  background-color: ${theme.colors.background[1]};
-  color: ${theme.colors.primary};
+  background-color: ${theme.colors.white};
+  color: ${theme.colors.electricindigo};
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -33,9 +34,9 @@ const Graphic = styled.div`
 `;
 
 const HeroIMG = styled.img`
-  width: 600px;
+  width: 500px;
   @media (max-width: ${theme.bp.large}) {
-    width: 600px;
+    width: 500px;
   }
   @media (max-width: ${theme.bp.medium}) {
     width: 450px;
@@ -58,18 +59,24 @@ const Details = styled.div`
 `;
 
 const TitleDetails = styled.h3`
-  font-size: 50px;
+  font-size: 60px;
   line-height: 60px;
   font-weight: 600;
   letter-spacing: -1px;
+  color: ${theme.colors.raisinblack};
   padding-top: 5px;
   margin: 0;
+  @media (max-width: ${theme.bp["x-small"]}) {
+    font-size: 40px;
+  }
 `;
 const ResumeDetails = styled.p`
   font-size: 18px;
   line-height: 30px;
   margin: 0;
   padding-bottom: 20px;
+  padding-top: 20px;
+  color: ${theme.colors.gray};
 `;
 
 const Right = styled.div`
@@ -79,11 +86,22 @@ const Right = styled.div`
   justify-content: flex-end;
 `;
 
-function VoiceBanner() {
+const BTN = styled.div`
+  height: 35px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  @media (max-width: ${theme.bp.medium}) {
+    margin-right: 50px;
+  }
+`;
+
+function VoiceBanner({ openModal }) {
   return (
     <Container>
       <Graphic>
-        <HeroIMG src='assets/voiceCloning/logo.png' />
+        <HeroIMG src='assets/voiceCloning/bannerVoice.svg' />
       </Graphic>
       <Details>
         <TitleDetails>Inteligencia Artificial para alzar tu voz</TitleDetails>
@@ -94,11 +112,16 @@ function VoiceBanner() {
           realista en tu propio idioma.
         </ResumeDetails>
         <Right>
+        <BTN onClick={openModal} >
           <Details2Button to='' buttonText='Cloná tu voz ' rightArrow={true} />
+          </BTN>
         </Right>
       </Details>
     </Container>
   );
 }
+VoiceBanner.propTypes = {
+  openModal: PropTypes.node.isRequired,
+  };
 
 export default VoiceBanner;

@@ -3,12 +3,13 @@ import theme from "../../styles/theme";
 
 const Container = styled.section`
   background-color: ${theme.colors.background[1]};
-  color: ${theme.colors.primary};
+  color: ${theme.colors.electricindigo};
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100vw;
-  margin-top: 200px;
+  //margin-top: 200px;
+  min-height: 100vh;
   @media (max-width: ${theme.bp.medium}) {
     flex-direction: column;
   }
@@ -22,8 +23,7 @@ const ImageContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: calc(90vw / 2);
-
+  width: 30vw;
   @media (max-width: ${theme.bp.large}) {
     width: 80%;
   }
@@ -31,7 +31,7 @@ const ImageContainer = styled.div`
 
 const Image = styled.img`
   position: relative;
-  width: 600px;
+  width: 430px;
   @media (max-width: ${theme.bp.large}) {
     width: 400px;
   }
@@ -45,10 +45,10 @@ const Details = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: calc(90vw / 2);
+  width: 60vw;
 
   @media (max-width: ${theme.bp.large}) {
-    width: 80%;
+    width: 90%;
   }
 `;
 
@@ -61,12 +61,16 @@ const Why = styled.span`
 `;
 
 const TitleWhy = styled.h3`
-  font-size: 50px;
+  font-size: 60px;
   line-height: 60px;
   font-weight: 600;
   letter-spacing: -1px;
-  padding-top: 5px;
+  padding: 20px 0 ;
   margin: 0;
+  @media (max-width: ${theme.bp["x-small"]}) {
+    font-size: 40px;
+    line-height: 50px;
+  }
 `;
 
 const ResumeWhy = styled.p`

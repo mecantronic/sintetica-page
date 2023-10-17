@@ -3,7 +3,7 @@ import theme from "../../styles/theme";
 
 const Container = styled.section`
   background-color: ${theme.colors.background[1]};
-  color: ${theme.colors.primary};
+  color: ${theme.colors.electricindigo};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,12 +13,15 @@ const Container = styled.section`
 `;
 
 const Title = styled.h3`
-  font-size: 50px;
+  font-size: 60px;
   line-height: 60px;
   font-weight: 600;
   letter-spacing: -1px;
-  padding-top: 5px;
+  padding: 20px 0 ;
   margin: 0;
+  @media (max-width: ${theme.bp["x-small"]}) {
+    font-size: 40px;
+  }
 `;
 
 const Resume = styled.p`
