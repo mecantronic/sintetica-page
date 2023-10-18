@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import theme from "../styles/theme";
-import Details2Button from "../components/buttons/Details2Button";
+import Details2Link from "../components/buttons/Details2Link";
 import Navbar from "../components/Navbar";
 
 const HomeWrapper = styled.div`
@@ -83,7 +83,7 @@ function Maintenance() {
           <h2>¡Lo sentimos!</h2>
           <span>Sección en mantenimiento.</span>
           <BTN>
-            <Details2Button to="/" buttonText="Volver a Inicio" />
+            <Details2Link to="/" buttonText="Volver a Inicio" />
           </BTN>
         </Text>
       </Container>

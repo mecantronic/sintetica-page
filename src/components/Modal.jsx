@@ -1,10 +1,12 @@
-import styled from 'styled-components';
-import PropTypes from "prop-types";
+import styled from "styled-components";
+import theme from "../styles/theme";
+import LoginForm from "./LoginForm";
+import { useSelector, useDispatch } from "react-redux";
+import { closeModal } from "../redux/modalSlice";
+import ContactForm from "./ContactForm";
 
 const ModalOverlay = styled.div`
-  position: fixed;
-  margin: 0;
-  padding: 0;
+  position: sticky;
   top: 0;
   left: 0;
   min-height: 100vh;
@@ -13,40 +15,61 @@ const ModalOverlay = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 10000;
 `;
 
 const ModalContent = styled.div`
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   position: relative;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3), 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 `;
 
 const CloseIcon = styled.span`
   position: absolute;
   top: 10px;
   right: 10px;
+  border: none;
   cursor: pointer;
-  font-size: 24px;
-  color: #333;
+  font-size: 20px;
+  color: ${theme.colors.onyx};
+  z-index: 12;
 `;
 
-const Modal = ({ children, closeModal}) => {
-  return (
+const Modal = () => {
+  const dispatch = useDispatch();
+  const modalType = useSelector((state) => state.modal.modalType);
+
+  const handleClose = () => {
+    dispatch(closeModal());
+  };
+  let contentToRender;
+
+  switch (modalType) {
+    case "contact":
+      contentToRender = <ContactForm />;
+      break;
+    case "login":
+      contentToRender = <LoginForm initialType={"login"} />;
+      break;
+    case "signup":
+      contentToRender = <LoginForm initialType={"signup"} />;
+      break;
+    default:
+      contentToRender = <></>;
+  }
+
+  return modalType === "closed" ? (
+    <></>
+  ) : (
     <ModalOverlay>
       <ModalContent>
-      <CloseIcon onClick={closeModal}>x</CloseIcon>
-        {children}
+        <CloseIcon onClick={handleClose}>x</CloseIcon>
+        {contentToRender}
       </ModalContent>
     </ModalOverlay>
   );
 };
-
-Modal.propTypes = {
-  children: PropTypes.node.isRequired,
-  closeModal: PropTypes.node.isRequired,
-  };
 
 export default Modal;
