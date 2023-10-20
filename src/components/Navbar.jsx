@@ -158,7 +158,7 @@ const Navbar = () => {
           {showMenu && (
             <NavLinks>
               <NavLink to="/VoiceCloning">Voice Cloning</NavLink>
-              <NavLink to="/Maintenance">Experiencia TTS</NavLink>
+              <NavLink to="/TTS">Experiencia TTS</NavLink>
               <NavLink to="/Maintenance">AI & Salud</NavLink>
               <NavLink to="/Maintenance">Investigación</NavLink>
               <NavLink to="/Maintenance">Nosotros</NavLink>
@@ -174,7 +174,7 @@ const Navbar = () => {
           <NavLinks>
             <NavLink to="/VoiceCloning">Voice Cloning</NavLink>
             <NavDiv> </NavDiv>
-            <NavLink to="/Maintenance">Experiencia TTS</NavLink>
+            <NavLink to="/TTS">Experiencia TTS</NavLink>
             <NavDiv> </NavDiv>
             <NavLink to="/Maintenance">AI & Salud</NavLink>
             <NavDiv> </NavDiv>

@@ -8,6 +8,7 @@ import GlobalStyles from "./styles/GlobalStyle";
 import Modal from "./components/Modal";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
+import Tts from "./pages/tts";
 
 const AppWrapper = styled.div`
   /* Agrega tus estilos aquí */
@@ -26,6 +27,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/VoiceCloning" element={<VoiceCloning />} />
           <Route exact path="/IA" element={<IA />} />
+          <Route exact path='/TTS' element={<Tts />} />
           <Route exact path="/Maintenance" element={<Maintenance />} />
         </Routes>
       </AppWrapper>
