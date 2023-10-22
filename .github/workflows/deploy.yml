@@ -20,7 +20,7 @@ jobs:
           CI: false
 
       - name: Push
-        uses: s0/git-publish-subdir-action@develop
+        uses: s0/git-publish-subdir-action@react
         env:
           REPO: self
           BRANCH: build # The branch name where you want to push the assets
