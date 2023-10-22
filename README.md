@@ -1,17 +1,12 @@
 # SINTÉTICA - Landing Page 
 
-![Logo de la Startup](static/img/logo.png)
+![Logo de la Startup](sinteticaHTML/static/img/logo.png)
 
 ## Descripción del Proyecto 📝
 
 Sintética es un proyecto enfocado al sintetizado de voces utilizando inteligencia artificial.
 
-Este repositorio contiene el código fuente de la página web de nuestra startup.
-
-## Características 🚀
-
-> [Agregar info]
-
+Este repositorio contiene el código fuente de la página web.
 
 ## Tecnologías Utilizadas 🛠️
 
@@ -22,7 +17,6 @@ Este repositorio contiene el código fuente de la página web de nuestra startup
 
 - `index.html`: Página principal de la landing page.
 - `src/styles/theme.js`: Archivo con tema personalizado para CSS.
-- `static/img/logo.png`: Logo de la startup (pueden haber más imágenes en el futuro).
 - `/public/assets/logotipo.svg`: Carpeta de imágenes.
 
 ## 🌱 **Developer mode**
@@ -33,7 +27,7 @@ Este repositorio contiene el código fuente de la página web de nuestra startup
     cd sintetica-page
     ```
 
-2. Obtener Node.js (en linux):
+2. Obtener Node.js (en [linux](https://github.com/nodesource/distributions)):
     ``` bash
     sudo apt install npm 
     ```
@@ -64,7 +58,7 @@ Este proyecto implementa CI/CD, usando [Github Actions](https://github.com/featu
 
 > El despliegue automatizado esta definido en el archivo `/.github/workflows/deploy.yml` y se realiza sobre la rama `build`.
 
-> La rama `build` contiene la versión optimizadapara desplegar en el servidor.
+> La rama `build` contiene la versión optimizada para desplegar en el servidor.
 
 1. Clonar repositorio y posicionarse en la branch `develop`.
 
