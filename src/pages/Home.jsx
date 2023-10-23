@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import Navbar from "../components/Navbar";
 import BannerSection from "../components/home/BannerSection";
 import TechnologySection from "../components/home/TechnologySection";
@@ -7,38 +6,19 @@ import ContactSection from "../components/ContactSection";
 import ContactForm from "../components/ContactForm";
 import { useState } from "react";
 import Modal from "../components/Modal";
-
-const HomeWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  justify-content: flex-start;
-  min-height: 100vh;
-`;
-
-const BackcgroundImage = styled.div`
-  padding: 0;
-  margin: 0;
-
-  background-image: url("assets/backgrounds/Background3.svg");
-  background-size: 40%;
-  background-repeat: repeat;
-  background-position: top;
-`;
+import { BackcgroundImage, HomeWrapper } from "../styles/pages/home.style";
 
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
     setIsModalOpen(true);
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = "auto";
   };
 
   return (

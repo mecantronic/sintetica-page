@@ -1,41 +1,12 @@
-import styled from "styled-components";
-import theme from "../styles/theme";
 import LoginForm from "./LoginForm";
 import { useSelector, useDispatch } from "react-redux";
 import { closeModal } from "../redux/modalSlice";
 import ContactForm from "./ContactForm";
-
-const ModalOverlay = styled.div`
-  position: sticky;
-  top: 0;
-  left: 0;
-  min-height: 100vh;
-  min-width: 100vw;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10000;
-`;
-
-const ModalContent = styled.div`
-  position: relative;
-  background-color: white;
-  border-radius: 20px;
-  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3), 0 4px 10px 0 rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-`;
-
-const CloseIcon = styled.span`
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  border: none;
-  cursor: pointer;
-  font-size: 20px;
-  color: ${theme.colors.onyx};
-  z-index: 12;
-`;
+import {
+  CloseIcon,
+  ModalContent,
+  ModalOverlay,
+} from "../styles/components/modal.style";
 
 const Modal = () => {
   const dispatch = useDispatch();

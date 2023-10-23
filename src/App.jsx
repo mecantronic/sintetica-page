@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import VoiceCloning from "./pages/VoiceCloning";
 import IA from "./pages/IA";
@@ -10,7 +10,6 @@ import { useEffect } from "react";
 import { useSelector } from "react-redux";
 
 const AppWrapper = styled.div`
-  /* Agrega tus estilos aquí */
 `;
 
 function App() {

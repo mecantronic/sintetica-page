@@ -1,75 +1,12 @@
-import styled from "styled-components";
-import theme from "../../styles/theme";
-
-const Container = styled.section`
-  background-color: ${theme.colors.white};
-  color: ${theme.colors.electricindigo};
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-
-  @media (max-width: ${theme.bp.large}) {
-    height: auto;
-    padding-top: 100px;
-  }
-  @media (max-width: ${theme.bp.small}) {
-    padding-top: 80px;
-  }
-`;
-
-const Title = styled.span`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 700;
-  padding: 15px 30px;
-  margin: 0;
-  border-radius: 25px;
-  color: ${theme.colors.lavenderfloral};
-  background-color: ${theme.colors.lavender};
-`;
-
-const VocesContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 50px 0px;
-  max-width: 90vw;
-`;
-
-const Item = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 330px;
-  padding: 15px;
-  background-color: ${theme.colors.seasalt};
-  border-radius: 15px;
-  box-shadow: 0px 10px 10px 2px rgba(0, 0, 0, 0.15);
-`;
-
-const AudioItem = styled.audio`
-  width: 330px;
-`;
-
-const ItemTitle = styled.h4`
-  font-size: 32px;
-  font-weight: 600;
-  margin: 0;
-  color: ${theme.colors.raisinblack};
-`;
-const ItemText = styled.span`
-  font-size: 20px;
-  font-weight: 500;
-  margin: 0;
-  color: ${theme.colors.electricindigo};
-`;
+import {
+  AudioItem,
+  Container,
+  Item,
+  ItemText,
+  ItemTitle,
+  Title,
+  VocesContainer,
+} from "../../styles/components/voiceCloning/voicesSection.style";
 
 function VoicesSection() {
   return (
@@ -78,7 +15,10 @@ function VoicesSection() {
       <VocesContainer>
         <Item>
           <AudioItem controls>
-            <source src='../../../public/audios-voice/fem1.wav' type='audio/mpeg' />
+            <source
+              src="audios-voice/fem1.wav"
+              type="audio/mpeg"
+            />
             Tu navegador no soporta la reproducción de audio.
           </AudioItem>
           <ItemTitle>Ana</ItemTitle>
@@ -88,8 +28,8 @@ function VoicesSection() {
         <Item>
           <AudioItem controls>
             <source
-              src='../../../public/audios-voice/fem1_cloned (enhanced).wav'
-              type='audio/mpeg'
+              src="audios-voice/fem1_cloned(enhanced).wav"
+              type="audio/mpeg"
             />
             Tu navegador no soporta la reproducción de audio.
           </AudioItem>
@@ -99,7 +39,10 @@ function VoicesSection() {
 
         <Item>
           <AudioItem controls>
-            <source src='../../../public/audios-voice/mas1.wav' type='audio/mpeg' />
+            <source
+              src="audios-voice/mas1.wav"
+              type="audio/mpeg"
+            />
             Tu navegador no soporta la reproducción de audio.
           </AudioItem>
           <ItemTitle>Franco</ItemTitle>
@@ -109,8 +52,8 @@ function VoicesSection() {
         <Item>
           <AudioItem controls>
             <source
-              src='../../../public/audios-voice/mas1_cloned (enhanced).wav'
-              type='audio/mpeg'
+              src="audios-voice/mas1_cloned(enhanced).wav"
+              type="audio/mpeg"
             />
             Tu navegador no soporta la reproducción de audio.
           </AudioItem>
@@ -120,7 +63,10 @@ function VoicesSection() {
 
         <Item>
           <AudioItem controls>
-            <source src='../../../public/audios-voice/fem2.wav' type='audio/mpeg' />
+            <source
+              src="audios-voice/fem2.wav"
+              type="audio/mpeg"
+            />
             Tu navegador no soporta la reproducción de audio.
           </AudioItem>
           <ItemTitle>Paula</ItemTitle>
@@ -130,8 +76,8 @@ function VoicesSection() {
         <Item>
           <AudioItem controls>
             <source
-              src='../../../public/audios-voice/fem2_cloned (enhanced).wav'
-              type='audio/mpeg'
+              src="audios-voice/fem2_cloned(enhanced).wav"
+              type="audio/mpeg"
             />
             Tu navegador no soporta la reproducción de audio.
           </AudioItem>
@@ -141,7 +87,10 @@ function VoicesSection() {
 
         <Item>
           <AudioItem controls>
-            <source src='../../../public/audios-voice/mas2.wav' type='audio/mpeg' />
+            <source
+              src="audios-voice/mas2.wav"
+              type="audio/mpeg"
+            />
             Tu navegador no soporta la reproducción de audio.
           </AudioItem>
           <ItemTitle>Darío</ItemTitle>
@@ -151,8 +100,8 @@ function VoicesSection() {
         <Item>
           <AudioItem controls>
             <source
-              src='../../../public/audios-voice/mas2_cloned (enhanced).wav'
-              type='audio/mpeg'
+              src="audios-voice/mas2_cloned(enhanced).wav"
+              type="audio/mpeg"
             />
             Tu navegador no soporta la reproducción de audio.
           </AudioItem>
@@ -162,7 +111,10 @@ function VoicesSection() {
 
         <Item>
           <AudioItem controls>
-            <source src='../../../public/audios-voice/fem3.wav' type='audio/mpeg' />
+            <source
+              src="audios-voice/fem3.wav"
+              type="audio/mpeg"
+            />
             Tu navegador no soporta la reproducción de audio.
           </AudioItem>
           <ItemTitle>Luciana</ItemTitle>
@@ -172,8 +124,8 @@ function VoicesSection() {
         <Item>
           <AudioItem controls>
             <source
-              src='../../../public/audios-voice/fem3_cloned (enhanced).wav'
-              type='audio/mpeg'
+              src="audios-voice/fem3_cloned(enhanced).wav"
+              type="audio/mpeg"
             />
             Tu navegador no soporta la reproducción de audio.
           </AudioItem>
@@ -183,7 +135,10 @@ function VoicesSection() {
 
         <Item>
           <AudioItem controls>
-            <source src='../../../public/audios-voice/mas3.wav' type='audio/mpeg' />
+            <source
+              src="audios-voice/mas3.wav"
+              type="audio/mpeg"
+            />
             Tu navegador no soporta la reproducción de audio.
           </AudioItem>
           <ItemTitle>Hernán</ItemTitle>
@@ -193,8 +148,8 @@ function VoicesSection() {
         <Item>
           <AudioItem controls>
             <source
-              src='../../../public/audios-voice/mas3_cloned (enhanced).wav'
-              type='audio/mpeg'
+              src="audios-voice/mas3_cloned(enhanced).wav"
+              type="audio/mpeg"
             />
             Tu navegador no soporta la reproducción de audio.
           </AudioItem>

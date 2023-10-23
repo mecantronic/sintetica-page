@@ -1,42 +1,9 @@
-import { styled } from "styled-components";
-import theme from "../../styles/theme";
-
-const Container = styled.section`
-  background-color: ${theme.colors.background[1]};
-  color: ${theme.colors.electricindigo};
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 90vw;
-  margin-top: 100px;
-`;
-
-const Title = styled.h3`
-  font-size: 60px;
-  line-height: 60px;
-  font-weight: 600;
-  letter-spacing: -1px;
-  padding: 20px 0 ;
-  margin: 0;
-  @media (max-width: ${theme.bp["x-small"]}) {
-    font-size: 40px;
-  }
-`;
-
-const Resume = styled.p`
-  font-size: 18px;
-  line-height: 30px;
-  margin: 0;
-  padding-bottom: 20px;
-`;
-
-const Video = styled.iframe`
-  width: 80vw;
-  height: 50vw;
-  padding-top: 50px;
-
-`;
+import {
+  Container,
+  Resume,
+  Title,
+  Video,
+} from "../../styles/components/ia-salud/miIdentidadVocal.style";
 
 function MiIdentidadVocal() {
   return (
@@ -78,10 +45,10 @@ function MiIdentidadVocal() {
         población que se ve imposibilitado en su desarrollo cotidiano.
       </Resume>
       <Video
-        src='https://www.youtube.com/embed/-KylP16dxj0?si=CDhRIkNFvzT6ZUnR'
-        title='YouTube video player'
-        frameborder='0'
-        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+        src="https://www.youtube.com/embed/-KylP16dxj0?si=CDhRIkNFvzT6ZUnR"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
       />
     </Container>
