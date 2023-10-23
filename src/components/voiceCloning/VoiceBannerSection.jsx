@@ -2,6 +2,8 @@ import styled from "styled-components";
 import theme from "../../styles/theme";
 import Details2Button from "../buttons/Details2Button";
 import PropTypes from "prop-types";
+import { useDispatch } from "react-redux";
+import { contactModal } from "../../redux/modalSlice";
 
 const Container = styled.section`
   background-color: ${theme.colors.white};
@@ -98,6 +100,11 @@ const BTN = styled.div`
 `;
 
 function VoiceBanner({ openModal }) {
+  const dispatch = useDispatch()
+
+  const handleOpenContact = () => {
+    dispatch(contactModal());
+  };
   return (
     <Container>
       <Graphic>
@@ -113,7 +120,7 @@ function VoiceBanner({ openModal }) {
         </ResumeDetails>
         <Right>
         <BTN onClick={openModal} >
-          <Details2Button to='' buttonText='Cloná tu voz ' rightArrow={true} />
+          <Details2Button buttonText='Cloná tu voz ' rightArrow={true} handleClick={handleOpenContact} />
           </BTN>
         </Right>
       </Details>

@@ -5,6 +5,8 @@ import Details1Button from "./buttons/Details1Button";
 import Details2Button from "./buttons/Details2Button";
 import theme from "../styles/theme";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { loginModal, signupModal } from "../redux/modalSlice";
 
 const NavbarContainer = styled.div`
   position: fixed;
@@ -127,11 +129,22 @@ const UserButtons = styled.div`
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const dispatch = useDispatch()
 
   const isMobile = useMediaQuery({ maxWidth: theme.bp.medium });
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
+  };
+
+  const handleOpenLogin = () => {
+    console.log("Intentando cambiar estado");
+    dispatch(loginModal());
+  };
+
+  const handleOpenSignUp = () => {
+    console.log("Intentando cambiar estado");
+    dispatch(signupModal());
   };
 
   return (
@@ -150,8 +163,8 @@ const Navbar = () => {
               <NavLink to="/Maintenance">Investigación</NavLink>
               <NavLink to="/Maintenance">Nosotros</NavLink>
               <UserButtons>
-                <Details1Button buttonText="Login" to="/Maintenance" />
-                <Details2Button buttonText="Signup" to="/Maintenance" />
+                <Details1Button buttonText="Login" handleClick={handleOpenLogin} />
+                <Details2Button buttonText="Signup" handleClick={handleOpenSignUp}/>
               </UserButtons>
             </NavLinks>
           )}
@@ -171,8 +184,8 @@ const Navbar = () => {
             <NavDiv> </NavDiv>
           </NavLinks>
           <UserButtons>
-            <Details1Button buttonText="Login" to="/Maintenance" />
-            <Details2Button buttonText="Signup" to="/Maintenance" />
+            <Details1Button buttonText="Login" handleClick={handleOpenLogin}/>
+            <Details2Button buttonText="Signup" handleClick={handleOpenSignUp} />
           </UserButtons>
         </>
       )}

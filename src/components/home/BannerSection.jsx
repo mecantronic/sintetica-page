@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import theme from "../../styles/theme";
 import Details1Button from "../buttons/Details1Button";
-import PropTypes from "prop-types";
-
+import { useDispatch } from "react-redux";
+import { contactModal } from "../../redux/modalSlice";
 
 const Container = styled.section`
   background-color: ${theme.colors.white};
@@ -161,8 +161,12 @@ const BTN = styled.div`
   }
 `;
 
-function BannerSection({ openModal }) {
-  
+function BannerSection() {
+  const dispatch = useDispatch()
+
+  const handleOpenContact = () => {
+    dispatch(contactModal());
+  };
   return (
     <Container>
       <Left>
@@ -178,16 +182,15 @@ function BannerSection({ openModal }) {
           Desde Argentina al mundo: Líderes en el desarrollo de voces
           artificiales en nuestro idioma.
         </Resume>
-        <BTN onClick={openModal} >
-          <Details1Button buttonText="Contactanos" />
+        <BTN>
+          <Details1Button
+            buttonText="Contactanos"
+            handleClick={handleOpenContact}
+          />
         </BTN>
       </Right>
     </Container>
   );
 }
-BannerSection.propTypes = {
-  openModal: PropTypes.node.isRequired,
-  };
-
 
 export default BannerSection;

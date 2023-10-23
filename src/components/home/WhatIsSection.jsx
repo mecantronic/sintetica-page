@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import theme from "../../styles/theme";
-import Details2Button from "../buttons/Details2Button";
+import Details2Link from "../buttons/Details2Link";
 
 const Container = styled.section`
   color: ${theme.colors.electricindigo};
@@ -228,7 +228,7 @@ function WhatIsSection() {
               ideas en tu propio idioma.
             </ServiceResume>
             <PositionBTN>
-              <Details2Button rightArrow={true} to="/Maintenance" />
+              <Details2Link rightArrow={true} to="/Maintenance" />
             </PositionBTN>
           </ServiceCTA>
         </Service>
@@ -243,7 +243,7 @@ function WhatIsSection() {
               proyectos con voces familiares o icónicas en español rioplatense.
             </ServiceResume>
             <PositionBTN>
-              <Details2Button rightArrow={true} to="/VoiceCloning" />
+              <Details2Link rightArrow={true} to="/VoiceCloning" />
             </PositionBTN>
           </ServiceCTA>
         </Service>
@@ -261,7 +261,7 @@ function WhatIsSection() {
               inclusiva.
             </ServiceResume>
             <PositionBTN>
-              <Details2Button rightArrow={true} to="/Maintenance" />
+              <Details2Link rightArrow={true} to="/Maintenance" />
             </PositionBTN>
           </ServiceCTA>
         </Service>
@@ -279,7 +279,7 @@ function WhatIsSection() {
               idiomas? Lo hacemos posible.
             </ServiceResume>
             <PositionBTN>
-              <Details2Button rightArrow={true} to="/Maintenance" />
+              <Details2Link rightArrow={true} to="/Maintenance" />
             </PositionBTN>
           </ServiceCTA>
         </Service>

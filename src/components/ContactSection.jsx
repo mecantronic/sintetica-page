@@ -233,6 +233,7 @@ const ContatcButton = styled.button`
 
 function ContactSection() {
   const form = useRef();
+  // eslint-disable-next-line no-unused-vars
   const [formErrors, setFormErrors] = useState({});
   const [formData, setFormData] = useState({
     name: "",
@@ -250,6 +251,7 @@ function ContactSection() {
     e.preventDefault();
     const errors = {};
 
+    // eslint-disable-next-line no-useless-escape
     const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     if (!values.name) {
