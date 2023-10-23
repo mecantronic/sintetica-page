@@ -1,8 +1,6 @@
-// GlobalStyles.js
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
-  /* Define tus fuentes globales aquí */
   body {
     font-family: 'Montserrat', sans-serif;
     max-width: 100vw;
