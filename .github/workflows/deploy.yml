@@ -2,7 +2,7 @@ name: Generar build y despliegue en GitPage
 on:
   push:
     branches:
-      - react
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
