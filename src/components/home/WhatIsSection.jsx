@@ -40,18 +40,17 @@ function WhatIsSection() {
       </Banner>
       <Services>
         <Service>
-          <ServiceIcon
-            src="assets/home/card4.svg"
-            alt="text-icon"
-          />
+          <ServiceIcon src="assets/home/card4.svg" alt="text-icon" />
           <ServiceCTA>
-            <ServiceTitle>Tex To Speech - Español Latinoamericano</ServiceTitle>
+            <ServiceTitle>
+              Text To Speech - Español Latinoamericano
+            </ServiceTitle>
             <ServiceResume>
-              Nuestra tecnología te ofrece una experiencia de conversión a texto
-              única. Con acentos auténticos y entonaciones naturales tus
-              proyectos, presentaciones y aplicaciones serán sobresalientes.
-              Sumérgete en la nueva era del habla sintética y dale voz a tus
-              ideas en tu propio idioma.
+              Nuestra tecnología te ofrece una experiencia de conversión de
+              texto a discurso única. Con acentos auténticos y entonaciones
+              naturales tus proyectos, presentaciones y aplicaciones serán
+              sobresalientes. Sumérgete en la nueva era del habla sintética y
+              dale voz a tus ideas en tu propio idioma.
             </ServiceResume>
             <PositionBTN>
               <Details2Link rightArrow={true} to="/Maintenance" />

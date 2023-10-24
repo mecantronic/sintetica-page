@@ -21,7 +21,7 @@ function BannerSection() {
       <Right>
         <Title>Síntesis de voces potenciadas por AI</Title>
         <Resume>
-          Desde Argentina al mundo: Líderes en el desarrollo de voces
+          Desde Argentina al mundo: líderes en el desarrollo de voces
           artificiales en nuestro idioma.
         </Resume>
         <BTN>
