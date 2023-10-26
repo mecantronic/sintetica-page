@@ -6,6 +6,7 @@ import { useState } from "react";
 import Modal from "../components/Modal";
 import ContactForm from "../components/ContactForm";
 import { VoiceWrapper } from "../styles/pages/voiceCloning.style";
+import Footer from "../components/Footer";
 
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -31,6 +32,7 @@ function Home() {
           <ContactForm />
         </Modal>
       )}
+      <Footer />
     </VoiceWrapper>
   );
 }
