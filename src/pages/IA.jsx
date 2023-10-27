@@ -4,6 +4,7 @@ import WhySection from "../components/IA-salud/WhySection";
 import MiIdentidadVocal from "../components/IA-salud/MiIdentidadVocal";
 import NewsSection from "../components/IA-salud/NewsSection";
 import { IaWrapper } from "../styles/pages/ia.style";
+import Footer from "../components/Footer";
 
 function IA() {
   return (
@@ -13,6 +14,7 @@ function IA() {
       <MiIdentidadVocal />
       <NewsSection />
       <ContactSection />
+      <Footer />
     </IaWrapper>
   );
 }
