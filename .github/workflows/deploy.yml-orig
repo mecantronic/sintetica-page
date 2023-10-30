@@ -1,0 +1,63 @@
+name: Generar build y despliegue en GitPage
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build-main:
+    runs-on: ubuntu-latest
+    name: Build Producción
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Git-checkout
+        uses: actions/checkout@v3
+
+      - name: Instalación de todas las dependencias
+        run: npm install
+
+      - name: Build
+        run: npm run build # El comando de build de tu proyecto
+        env:
+          CI: false
+          VITE_EMAILJS_USER_ID: ${{ secrets.VITE_EMAILJS_USER_ID }}
+          VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
+          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
+
+      - name: Push
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: build # Nombre de la rama donde deseas realizar el push
+          FOLDER: dist # Directorio donde se generan tus activos
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MESSAGE: "Build ({sha}): {msg}"
+
+  build-develop:
+    runs-on: ubuntu-latest
+    name: Build y Push para develop
+    if: github.ref == 'refs/heads/develop' # Ejecutar solo en la rama develop
+    steps:
+      - name: Git-checkout
+        uses: actions/checkout@v3
+
+      - name: Instalación de todas las dependencias
+        run: npm install
+
+      - name: Build
+        run: npm run build # El comando de build de tu proyecto
+        env:
+          CI: false
+          VITE_EMAILJS_USER_ID: ${{ secrets.VITE_EMAILJS_USER_ID }}
+          VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
+          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
+
+      - name: Push
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: build-dev # Nombre de la rama donde deseas realizar el push
+          FOLDER: dist # Directorio donde se generan tus activos
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MESSAGE: "Build ({sha}): {msg}"
