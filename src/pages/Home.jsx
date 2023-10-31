@@ -8,6 +8,7 @@ import { useState } from "react";
 import Modal from "../components/Modal";
 import { BackcgroundImage, HomeWrapper } from "../styles/pages/home.style";
 import Footer from "../components/Footer";
+import { Helmet } from "react-helmet";
 
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -24,6 +25,31 @@ function Home() {
 
   return (
     <HomeWrapper>
+      <Helmet>
+        {/* Título de la página */}
+        <title>Sintética</title>
+        {/* Descripción de la página */}
+        <meta
+          name="description"
+          content="Este es un ejemplo de descripción de la página web para SEO"
+        />
+        {/* Palabras clave para motores de búsqueda */}
+        <meta
+          name="keywords"
+          content="SEO, etiquetas meta, palabras clave, HTML5"
+        />
+        {/* Etiqueta canónica */}
+        <meta name="canonical" href="https://www.ejemplo.com/mi-pagina" />
+        {/* Título que aparece al compartir en redes sociales */}
+        <meta name="og:title" content="Mi Página en Open Graph" />
+        {/* Descripción */}
+        <meta
+          name="og:description"
+          content="Una descripción especial para Open Graph"
+        />
+        <meta name="robots" content="index, follow" />
+
+      </Helmet>
       <Navbar />
       <BannerSection openModal={openModal} />
       <BackcgroundImage>

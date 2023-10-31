@@ -3,10 +3,12 @@ on:
   push:
     branches:
       - main
+      - develop
+
 jobs:
-  build:
+  build-and-push:
     runs-on: ubuntu-latest
-    name: Build y Push
+    name: Build production or staging
     steps:
       - name: Git-checkout
         uses: actions/checkout@v3
@@ -18,15 +20,13 @@ jobs:
         run: npm run build # The build command of your project
         env:
           CI: false
-          VITE_EMAILJS_USER_ID: ${{ secrets.VITE_EMAILJS_USER_ID }}
-          VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
-          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
 
       - name: Push
         uses: s0/git-publish-subdir-action@develop
         env:
           REPO: self
-          BRANCH: build # The branch name where you want to push the assets
-          FOLDER: dist # The directory where your assets are generated
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
-          MESSAGE: "Build ({sha}): {msg}" # The commit message
+          BRANCH: ${{ github.ref == 'refs/heads/main' && 'build-prod' || github.ref == 'refs/heads/develop' && 'build-dev' }}
+          FOLDER: dist # Directory where your assets are generated
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MESSAGE: "Build ({sha}): {msg}"
+
