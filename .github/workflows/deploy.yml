@@ -1,4 +1,4 @@
-name: Generar build y despliegue en GitPage
+name: Staging and production
 on:
   push:
     branches:
