@@ -31,24 +31,23 @@ function Home() {
         {/* Descripción de la página */}
         <meta
           name="description"
-          content="Este es un ejemplo de descripción de la página web para SEO"
+          content="Sintética es un laboratorio de síntesis de voces en español rioplatense. Nuestra pasión por la innovación está arraigada en el compromiso de transformar vidas. Impulsamos investigaciones vanguardistas, creamos productos revolucionarios y promovemos la inclusión en la salud."
         />
         {/* Palabras clave para motores de búsqueda */}
         <meta
           name="keywords"
-          content="SEO, etiquetas meta, palabras clave, HTML5"
+          content="Clonación de voz, español rioplatense, voice cloning, síntesis de voces, text to speech, voice bots"
         />
         {/* Etiqueta canónica */}
         <meta name="canonical" href="https://www.ejemplo.com/mi-pagina" />
         {/* Título que aparece al compartir en redes sociales */}
-        <meta name="og:title" content="Mi Página en Open Graph" />
+        <meta name="og:title" content="Sintética" />
         {/* Descripción */}
         <meta
           name="og:description"
-          content="Una descripción especial para Open Graph"
+          content="Sintética es un laboratorio de síntesis de voces en español rioplatense. Nuestra pasión por la innovación está arraigada en el compromiso de transformar vidas. Impulsamos investigaciones vanguardistas, creamos productos revolucionarios y promovemos la inclusión en la salud."
         />
         <meta name="robots" content="index, follow" />
-
       </Helmet>
       <Navbar />
       <BannerSection openModal={openModal} />
