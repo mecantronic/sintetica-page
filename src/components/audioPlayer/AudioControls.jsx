@@ -1,29 +1,8 @@
-import styled from "styled-components";
 import PropTypes from "prop-types";
-import theme from "../../styles/theme";
 import { RiPauseMiniLine, RiPlayMiniLine } from "react-icons/ri";
+import { BTNContainer, Container, Timer } from "../../styles/components/audioPlayer/audioControl.style";
 
-const Container = styled.div`
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-const Timer = styled.div`
-  font-size: 70%;
-  font-weight: 200;
-  color: ${(props) =>
-    props.light ? theme.colors.gray : theme.colors.lavender};
-`;
 
-const BTNContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-  color: ${(props) => (props.light ? theme.colors.gray : theme.colors.white)};
-  font-size: 180%;
-`;
 function AudioControls({ play, isPlaying, duration, currentTime, light }) {
   function secondsToHms(seconds) {
     if (!seconds) return "00m 00s";

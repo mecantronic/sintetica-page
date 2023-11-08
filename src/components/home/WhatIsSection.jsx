@@ -1,195 +1,21 @@
-import styled from "styled-components";
-import theme from "../../styles/theme";
 import Details2Link from "../buttons/Details2Link";
-
-const Container = styled.section`
-  color: ${theme.colors.electricindigo};
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-
-  @media (max-width: ${theme.bp.large}) {
-    padding-top: 100px ;
-  }
-  @media (max-width: ${theme.bp.medium}) {
-    flex-direction: column;
-  }
-  @media (max-width: ${theme.bp.small}) {
-    margin-top: 100px;
-  }
-`;
-
-const Banner = styled.div`
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  width: 80vw;
-  @media (max-width: ${theme.bp.medium}) {
-    flex-direction: column;
-  }
-`;
-const BalloonCloud = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 30%;
-  height: 400px;
-  @media (max-width: ${theme.bp.medium}) {
-    width: 90%;
-    height: 400px;
-  }
-  @media (max-width: ${theme.bp["x-small"]}) {
-    width: 90%;
-    height: 250px;
-  }
-`;
-
-const Balloons = styled.img`
-  position: relative;
-  width: 400px;
-  @media (max-width: ${theme.bp.large}) {
-    width: 350px;
-  }
-  @media (max-width: ${theme.bp.small}) {
-    width: 90vw;
-  }
-`;
-
-const Details = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 60%;
-  padding-left: 10%;
-
-  @media (max-width: ${theme.bp.large}) {
-    width: 90%;
-  }
-  @media (max-width: ${theme.bp.medium}) {
-    width: 90%;
-    padding: 0 ;
-  }
-`;
-
-const NameSection = styled.h3`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 700;
-  padding: 15px 30px;
-  margin: 0;
-  border-radius: 25px;
-  color: ${theme.colors.lavenderfloral};
-  background-color: ${theme.colors.lavender};
-`;
-
-const TitleWhat = styled.h3`
-  font-size: 46px;
-  line-height: 60px;
-  font-weight: 600;
-  letter-spacing: -1px;
-  color: ${theme.colors.raisinblack};
-  padding-top: 5px;
-  margin: 0;
-  text-align: left;
-  text-transform: uppercase;
-  
-  @media (max-width: ${theme.bp.small}) {
-    line-height: 44px;
-    font-size: 36px;
-  }
-  @media (max-width: ${theme.bp["x-small"]}) {
-    line-height: 36px;
-    font-size: 30px;
-  }
-`;
-const ResumeWhat = styled.div`
-  width: 100%;
-  text-align: left;
-  margin: 0;
-  padding: 20px 0px;
-  p {
-    font-size: 18px;
-    line-height: 30px;
-    color: ${theme.colors.gray};
-    margin: 0;
-  }
-`;
-
-const Services = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-`;
-
-const Service = styled.div`
-  display: flex;
-  flex-direction: row;
-  width: 60vw;
-
-  padding-bottom: 20px;
-  margin: 20px 0px;
-  border: 2px solid ${theme.colors.platinum};
-  background-color: ${theme.colors.seasalt};
-  border-radius: 20px;
-  padding: 15px;
-  padding-top: 40px;
-
-  @media (max-width: ${theme.bp.large}) {
-    width: 80vw;
-  }
-
-  @media (max-width: ${theme.bp.small}) {
-    width: 60vw;
-    flex-direction: column;
-    align-items: center;
-  }
-`;
-const ServiceIcon = styled.img`
-  width: 150px;
-  height: 150px;
-  padding-right: 15px;
-  @media (max-width: ${theme.bp.small}) {
-    padding: 0;
-  }
-`;
-
-const ServiceCTA = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const ServiceTitle = styled.h5`
-  font-size: 20px;
-  font-weight: 700;
-  color: ${theme.colors.raisinblack};
-  text-transform: uppercase;
-  margin: 0;
-  margin-bottom: 10px;
-`;
-const ServiceResume = styled.p`
-  font-size: 16px;
-  line-height: 30px;
-  color: ${theme.colors.gray};
-  padding-top: 3px;
-  margin: 0;
-`;
-
-const PositionBTN = styled.div`
-  height: 35px;
-  display: flex;
-  justify-content: flex-end;
-  padding-top: 50px;
-`;
+import {
+  BalloonCloud,
+  Balloons,
+  Banner,
+  Container,
+  Details,
+  NameSection,
+  PositionBTN,
+  ResumeWhat,
+  Service,
+  ServiceCTA,
+  ServiceIcon,
+  ServiceResume,
+  ServiceTitle,
+  Services,
+  TitleWhat,
+} from "../../styles/components/home/whatIsSection.style";
 
 function WhatIsSection() {
   return (
@@ -214,18 +40,17 @@ function WhatIsSection() {
       </Banner>
       <Services>
         <Service>
-          <ServiceIcon
-            src="../../../public/assets/home/card4.svg"
-            alt="text-icon"
-          />
+          <ServiceIcon src="assets/home/card4.svg" alt="text-icon" />
           <ServiceCTA>
-            <ServiceTitle>Tex To Speech - Español Latinoamericano</ServiceTitle>
+            <ServiceTitle>
+              Text To Speech - Español Latinoamericano
+            </ServiceTitle>
             <ServiceResume>
-              Nuestra tecnología te ofrece una experiencia de conversión a texto
-              única. Con acentos auténticos y entonaciones naturales tus
-              proyectos, presentaciones y aplicaciones serán sobresalientes.
-              Sumérgete en la nueva era del habla sintética y dale voz a tus
-              ideas en tu propio idioma.
+              Nuestra tecnología te ofrece una experiencia de conversión de
+              texto a discurso única. Con acentos auténticos y entonaciones
+              naturales tus proyectos, presentaciones y aplicaciones serán
+              sobresalientes. Sumérgete en la nueva era del habla sintética y
+              dale voz a tus ideas en tu propio idioma.
             </ServiceResume>
             <PositionBTN>
               <Details2Link rightArrow={true} to="/Maintenance" />
@@ -234,7 +59,10 @@ function WhatIsSection() {
         </Service>
 
         <Service>
-          <ServiceIcon src="assets/voiceCloning/bannerVoice.svg" alt="text-icon" />
+          <ServiceIcon
+            src="assets/voiceCloning/bannerVoice.svg"
+            alt="text-icon"
+          />
           <ServiceCTA>
             <ServiceTitle>Voice Cloning - Español Latinoamericano</ServiceTitle>
             <ServiceResume>

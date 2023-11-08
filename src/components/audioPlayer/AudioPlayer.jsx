@@ -1,41 +1,12 @@
-import styled from "styled-components";
-import theme from "../../styles/theme";
 import { useRef, useState } from "react";
 import AudioSlider from "./AudioSlider";
 import AudioControls from "./AudioControls";
 import PropTypes from "prop-types";
-import { RiDownload2Line } from "react-icons/ri";
+import {
+  AudioContainerLeft,
+  Container,
+} from "../../styles/components/audioPlayer/audioPlayer.style";
 
-const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-`;
-const AudioContainerLeft = styled.div`
-  width: 100%;
-  background-color: ${(props) =>
-    props.light ? theme.colors.lavender : theme.colors.onyx};
-  border-radius: 4px;
-  padding: 0 2%;
-  margin: 0;
-`;
-const DownloadButton = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 130%;
-  margin-left: 2%;
-  padding: 2%;
-  border-radius: 50%;
-
-  background-color: ${(props) =>
-    props.light ? theme.colors.lavender : theme.colors.onyx};
-  color: ${(props) =>
-    props.light ? theme.colors.gray : theme.colors.lavender};
-    cursor: pointer;
-`;
 function AudioPlayer({ light, audioSrc }) {
   const [percentage, setPercentage] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -103,9 +74,9 @@ function AudioPlayer({ light, audioSrc }) {
           light={light}
         />
       </AudioContainerLeft>
-      <DownloadButton light={light}>
+      {/* <DownloadButton light={light}>
         <RiDownload2Line />
-      </DownloadButton>
+      </DownloadButton> */}
     </Container>
   );
 }

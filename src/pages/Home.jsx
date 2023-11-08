@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import Navbar from "../components/Navbar";
 import BannerSection from "../components/home/BannerSection";
 import TechnologySection from "../components/home/TechnologySection";
@@ -7,42 +6,49 @@ import ContactSection from "../components/ContactSection";
 import ContactForm from "../components/ContactForm";
 import { useState } from "react";
 import Modal from "../components/Modal";
-
-const HomeWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  justify-content: flex-start;
-  min-height: 100vh;
-`;
-
-const BackcgroundImage = styled.div`
-  padding: 0;
-  margin: 0;
-
-  background-image: url("assets/backgrounds/Background3.svg");
-  background-size: 40%;
-  background-repeat: repeat;
-  background-position: top;
-`;
+import { BackcgroundImage, HomeWrapper } from "../styles/pages/home.style";
+import Footer from "../components/Footer";
+import { Helmet } from "react-helmet";
 
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
     setIsModalOpen(true);
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = "auto";
   };
 
   return (
     <HomeWrapper>
+      <Helmet>
+        {/* Título de la página */}
+        <title>Sintética</title>
+        {/* Descripción de la página */}
+        <meta
+          name="description"
+          content="Sintética es un laboratorio de síntesis de voces en español rioplatense. Nuestra pasión por la innovación está arraigada en el compromiso de transformar vidas. Impulsamos investigaciones vanguardistas, creamos productos revolucionarios y promovemos la inclusión en la salud."
+        />
+        {/* Palabras clave para motores de búsqueda */}
+        <meta
+          name="keywords"
+          content="Clonación de voz, español rioplatense, voice cloning, síntesis de voces, text to speech, voice bots"
+        />
+        {/* Etiqueta canónica */}
+        <meta name="canonical" href="https://www.ejemplo.com/mi-pagina" />
+        {/* Título que aparece al compartir en redes sociales */}
+        <meta name="og:title" content="Sintética" />
+        {/* Descripción */}
+        <meta
+          name="og:description"
+          content="Sintética es un laboratorio de síntesis de voces en español rioplatense. Nuestra pasión por la innovación está arraigada en el compromiso de transformar vidas. Impulsamos investigaciones vanguardistas, creamos productos revolucionarios y promovemos la inclusión en la salud."
+        />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       <Navbar />
       <BannerSection openModal={openModal} />
       <BackcgroundImage>
@@ -55,6 +61,7 @@ function Home() {
           <ContactForm />
         </Modal>
       )}
+      <Footer />
     </HomeWrapper>
   );
 }
