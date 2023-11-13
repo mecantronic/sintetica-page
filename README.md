@@ -1,6 +1,6 @@
 # SINTÉTICA - Landing Page 
 
-![Logo de la Startup](sinteticaHTML/static/img/logo.png)
+![Logo de la Startup](https://github.com/mecantronic/sintetica-page/blob/develop/public/assets/Sinte%CC%81tica_logo.svg)
 
 ## Descripción del Proyecto 📝
 
