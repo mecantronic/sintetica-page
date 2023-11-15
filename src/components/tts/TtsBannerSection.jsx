@@ -11,7 +11,7 @@ function TtsBanner() {
   return (
     <Container>
       <Graphic>
-        <HeroIMG src="assets/voiceCloning/bannerVoice.svg" />
+        <HeroIMG src="assets/home/card4.svg" />
       </Graphic>
       <Details>
         <TitleDetails>Ultricies integer quis auctor elit sed</TitleDetails>

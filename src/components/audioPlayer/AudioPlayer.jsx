@@ -6,6 +6,7 @@ import {
   AudioContainerLeft,
   Container,
 } from "../../styles/components/audioPlayer/audioPlayer.style";
+import DownloadButton from "../buttons/DownloadButton";
 
 function AudioPlayer({ light, audioSrc }) {
   const [percentage, setPercentage] = useState(0);
@@ -74,9 +75,8 @@ function AudioPlayer({ light, audioSrc }) {
           light={light}
         />
       </AudioContainerLeft>
-      {/* <DownloadButton light={light}>
-        <RiDownload2Line />
-      </DownloadButton> */}
+
+      <DownloadButton square={true} link="hola"/>
     </Container>
   );
 }
