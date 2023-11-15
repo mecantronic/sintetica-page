@@ -8,7 +8,7 @@ import GlobalStyles from "./styles/GlobalStyle";
 import Modal from "./components/Modal";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import Tts from "./pages/tts";
+import Tts from "./pages/TTS";
 
 const AppWrapper = styled.div`
 `;
