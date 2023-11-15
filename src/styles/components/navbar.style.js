@@ -120,3 +120,4 @@ export const UserButtons = styled.div`
   justify-content: center;
   gap: 1rem;
 `;
+
