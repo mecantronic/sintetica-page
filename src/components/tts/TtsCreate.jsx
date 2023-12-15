@@ -9,8 +9,6 @@ import {
   TtsInput,
   BNTSection,
   Options,
-  LoginToUse,
-  CTAText,
 } from "../../styles/components/tts/ttsCreate.style";
 import Select from "../Select";
 import AudioPlayer from "../audioPlayer/AudioPlayer";
@@ -77,10 +75,35 @@ function TtsCreate() {
           </OptionSection>
         </Container>
       ) : (
-        <LoginToUse>
-          <CTAText>¿Querés probareste servicio?</CTAText>
-          <Details1Button buttonText="Login" handleClick={handleOpenLogin} />
-        </LoginToUse>
+        <Container>
+          <Left>
+            <FileSection>
+              <AudioPlayer light={true} audioSrc={""} />
+            </FileSection>
+            <TextSection>
+              <TtsInput name="message" placeholder="Escribí acá el texto..." />
+            </TextSection>
+          </Left>
+          <OptionSection>
+            <Options>
+              <Select
+                label="Voz"
+                options={voicesOptions}
+                value={selectedVoice}
+                onChange={handleSelectVoice}
+              />
+              <Select
+                label="Lenguaje"
+                options={languageOptions}
+                value={selectedLanguage}
+                onChange={handleSelectLanguaje}
+              />
+            </Options>
+            <BNTSection>
+              <Details1Button buttonText="Iniciá sesión" square={true} handleClick={handleOpenLogin} />
+            </BNTSection>
+          </OptionSection>
+        </Container>
       )}
     </VewPort>
   );

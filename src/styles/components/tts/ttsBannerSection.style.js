@@ -8,7 +8,7 @@ export const Container = styled.section`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  max-width: 100%;
   height: 100vh;
   @media (max-width: ${theme.bp.large}) {
     height: auto;
