@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import theme from "../theme";
 
 export const IaWrapper = styled.div`
   display: flex;
@@ -7,5 +6,4 @@ export const IaWrapper = styled.div`
   align-items: center;
   justify-content: flex-start;
   min-height: 100vh;
-  background-color: ${theme.colors.white};
 `;

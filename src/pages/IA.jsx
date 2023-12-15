@@ -5,11 +5,13 @@ import MiIdentidadVocal from "../components/IA-salud/MiIdentidadVocal";
 import NewsSection from "../components/IA-salud/NewsSection";
 import { IaWrapper } from "../styles/pages/ia.style";
 import Footer from "../components/Footer";
+import IABanner from "../components/IA-salud/IABannerSection";
 
 function IA() {
   return (
     <IaWrapper>
       <Navbar />
+      <IABanner />
       <WhySection />
       <MiIdentidadVocal />
       <NewsSection />
