@@ -76,7 +76,7 @@ function AudioPlayer({ light, audioSrc }) {
         />
       </AudioContainerLeft>
 
-      <DownloadButton square={true} link="hola"/>
+      <DownloadButton square={true} link={audioSrc != "" ? audioSrc : ""}/>
     </Container>
   );
 }

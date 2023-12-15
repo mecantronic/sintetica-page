@@ -6,7 +6,7 @@ export const VewPort = styled.div`
   align-items: center;
   justify-content: center;
   min-width: 100vw;
-padding: 50px 0;
+  padding: 0px 0px 100px 0px;
 `;
 
 export const Container = styled.div`
@@ -136,18 +136,17 @@ export const BNTSection = styled.div`
   }
 `;
 
-
 export const LoginToUse = styled.div`
-height: 300px;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-text-align: center;
-gap: 20%;
-`
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 20%;
+`;
 
 export const CTAText = styled.span`
-font-size: 30px;
-color: ${theme.colors.lavenderfloral};
-`
+  font-size: 30px;
+  color: ${theme.colors.lavenderfloral};
+`;
