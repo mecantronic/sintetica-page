@@ -37,7 +37,7 @@ function Footer() {
                 <NavTitles>Navegación</NavTitles>
                 <NavLink to="/VoiceCloning">Voice Cloning</NavLink>
                 <NavLink to="/Maintenance">Experiencia TTS</NavLink>
-                <NavLink to="/Maintenance">AI & Salud</NavLink>
+                <NavLink to="/IA">AI & Salud</NavLink>
                 <NavLink to="/Maintenance">Investigación</NavLink>
                 <NavLink to="/Maintenance">Nosotros</NavLink>
               </Navigators>
