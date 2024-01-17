@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import TtsBanner from "../components/tts/TtsBannerSection";
 import TtsCreate from "../components/tts/TtsCreate";
@@ -9,6 +10,7 @@ function Tts() {
       <Navbar />
       <TtsBanner />
       <TtsCreate />
+      <Footer />
     </TtsWrapper>
   );
 }
