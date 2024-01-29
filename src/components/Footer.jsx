@@ -59,7 +59,7 @@ function Footer() {
                 <SocialIcon href="https://www.linkedin.com/company/mecantronic-sa/" target="_blank" rel="noreferrer">
                   <FaLinkedinIn />
                 </SocialIcon>
-                <SocialIcon href="https://www.instagram.com/mecantronic/?hl=es" target="_blank" rel="noreferrer">
+                <SocialIcon href="https://www.instagram.com/sintetica_tts/" target="_blank" rel="noreferrer">
                   <FaInstagram />
                 </SocialIcon>
               </Icons>

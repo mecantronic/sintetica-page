@@ -16,7 +16,6 @@ const AppWrapper = styled.div`
 function App() {
   const modalType = useSelector((state) => state.modal.modalType);
   useEffect(() => {}, [modalType])
-  
   return (
     <Router>
       <Modal />
