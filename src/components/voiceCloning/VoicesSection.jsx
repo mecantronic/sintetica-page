@@ -16,6 +16,7 @@ function VoicesSection() {
         <Item>
           <AudioItem controls>
             <source
+
               src="audios-voice/fem1.wav"
               type="audio/mpeg"
             />
@@ -28,6 +29,7 @@ function VoicesSection() {
         <Item>
           <AudioItem controls>
             <source
+
               src="audios-voice/fem1_cloned(enhanced).wav"
               type="audio/mpeg"
             />
@@ -40,6 +42,7 @@ function VoicesSection() {
         <Item>
           <AudioItem controls>
             <source
+
               src="audios-voice/mas1.wav"
               type="audio/mpeg"
             />
@@ -100,6 +103,7 @@ function VoicesSection() {
         <Item>
           <AudioItem controls>
             <source
+
               src="audios-voice/mas2_cloned(enhanced).wav"
               type="audio/mpeg"
             />

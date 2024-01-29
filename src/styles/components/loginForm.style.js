@@ -21,7 +21,7 @@ export const Container = styled.div`
     );
     z-index: 6;
     transform: translateX(
-      ${(props) => (props.formType === "login" ? "100%" : "0")}
+      ${(props) => (props.formtype === "login" ? "100%" : "0")}
     );
     transition: 1s ease-in-out;
   }
@@ -58,9 +58,9 @@ export const Login = styled.form`
   min-width: 238px;
   padding: 0 10px;
   opacity: 1;
-  opacity: ${(props) => (props.formType === "login" ? "1" : "0")};
+  opacity: ${(props) => (props.formtype === "login" ? "1" : "0")};
   @media (max-width: ${theme.bp["x-small"]}) {
-    display: ${(props) => (props.formType === "login" ? "flex" : "none")};
+    display: ${(props) => (props.formtype === "login" ? "flex" : "none")};
     width: 80%;
   }
 `;
@@ -73,9 +73,9 @@ export const SignUp = styled.form`
   width: 40%;
   min-width: 238px;
   padding: 0 10px;
-  opacity: ${(props) => (props.formType === "login" ? "0" : "1")};
+  opacity: ${(props) => (props.formtype === "login" ? "0" : "1")};
   @media (max-width: ${theme.bp["x-small"]}) {
-    display: ${(props) => (props.formType === "login" ? "none" : "flex")};
+    display: ${(props) => (props.formtype === "login" ? "none" : "flex")};
     width: 80%;
   }
 `;
@@ -234,9 +234,9 @@ export const LeftPanel = styled.div`
   z-index: 6;
   pointer-events: none;
   transform: translateX(
-    ${(props) => (props.formType === "login" ? "-200%" : "0")}
+    ${(props) => (props.formtype === "login" ? "-200%" : "0")}
   );
-  pointer-events: ${(props) => (props.formType === "login" ? "none" : "all")};
+  pointer-events: ${(props) => (props.formtype === "login" ? "none" : "all")};
 `;
 
 export const RightPanel = styled.div`
@@ -249,9 +249,9 @@ export const RightPanel = styled.div`
   padding: 0 10px;
   text-align: center;
   z-index: 6;
-  pointer-events: ${(props) => (props.formType === "login" ? "all" : "none")};
+  pointer-events: ${(props) => (props.formtype === "login" ? "all" : "none")};
   transform: translateX(
-    ${(props) => (props.formType === "login" ? "0" : "200%")}
+    ${(props) => (props.formtype === "login" ? "0" : "200%")}
   );
 `;
 

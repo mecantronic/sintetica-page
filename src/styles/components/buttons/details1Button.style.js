@@ -24,6 +24,7 @@ export const Button = styled.div`
     position: relative;
 
     &::before {
+      border-radius: 20px;
       content: "";
       position: absolute;
       bottom: 0px;

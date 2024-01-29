@@ -16,7 +16,7 @@ export const Button = styled.div`
     font-weight: 700;
     line-height: 36px;
     color: ${theme.colors.white};
-    border-radius: 20px;
+    border-radius: ${(props) => (props.square ? "8px" : "20px")};
     cursor: pointer;
     transition: all 0.4s ease-out 0s;
     background: linear-gradient(
@@ -28,6 +28,7 @@ export const Button = styled.div`
     position: relative;
 
     &::before {
+      border-radius: 20px;
       content: "";
       position: absolute;
       bottom: 0px;
