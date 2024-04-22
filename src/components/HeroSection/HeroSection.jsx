@@ -1,8 +1,9 @@
 import { Container, Graphic, HeroIMG, Details, TitleDetails, ResumeDetails, Right, BTN } from "./herosection.style";
 import Details2Button from "../buttons/Details2Button";
 import { useDispatch } from "react-redux";
+import { contactModal } from "../../redux/modalSlice";
 
-  function HeroSection() {
+  function HeroSection({imgPath, mainTitle, description, btnText, openModal=false}) {
     
     const dispatch = useDispatch();
     const handleOpenContact = () => {
@@ -12,22 +13,17 @@ import { useDispatch } from "react-redux";
     return (
         <Container>
           <Graphic>
-            <HeroIMG src="assets/voiceCloning/bannerVoice.svg" />
+            <HeroIMG src={imgPath} />
           </Graphic>
           <Details>
-            <TitleDetails>Inteligencia Artificial para alzar tu voz</TitleDetails>
-            <ResumeDetails>
-              Crea una copia digital de tu voz con nuestros sistemas de inteligencia
-              artificial para clonar voces. Desarrollamos modelos de IA
-              personalizados para capturar tu voz y darte la experiencia más
-              realista en tu propio idioma.
-            </ResumeDetails>
+          <TitleDetails>{mainTitle}</TitleDetails>
+          <ResumeDetails>{description}</ResumeDetails>
             <Right>
-              <BTN >
+              <BTN>
                 <Details2Button
-                  buttonText="Cloná tu voz "
+                  buttonText={btnText}
                   rightArrow={true}
-                  handleClick={handleOpenContact}
+                  handleClick={openModal ? handleOpenContact : () => {}}
                 />
               </BTN>
             </Right>
