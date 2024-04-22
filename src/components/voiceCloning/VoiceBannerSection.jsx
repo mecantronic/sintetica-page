@@ -5,7 +5,11 @@ import HeroSection from "../HeroSection/HeroSection";
 import data from "../HeroSection/keysHeroSection"
 
 function VoiceBanner({ openModal }) {
+
   const dispatch = useDispatch();
+  const handleOpenContact = () => {
+    dispatch(contactModal());
+  };
 
   const { img, textTitle, textDescription, textBtn } = data.contentVoiceCloning;
 
@@ -16,6 +20,7 @@ function VoiceBanner({ openModal }) {
       description={textDescription}
       btnText={textBtn}
       showButton={true}
+      handleClick={handleOpenContact}
     />
   
   );
