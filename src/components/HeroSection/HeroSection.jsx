@@ -3,7 +3,7 @@ import Details2Button from "../buttons/Details2Button";
 import { useDispatch } from "react-redux";
 import { contactModal } from "../../redux/modalSlice";
 
-  function HeroSection({imgPath, mainTitle, description, btnText, openModal=false}) {
+  function HeroSection({imgPath, mainTitle, description, btnText, showButton=false}) {
     
     const dispatch = useDispatch();
     const handleOpenContact = () => {
@@ -19,13 +19,15 @@ import { contactModal } from "../../redux/modalSlice";
           <TitleDetails>{mainTitle}</TitleDetails>
           <ResumeDetails>{description}</ResumeDetails>
             <Right>
-              <BTN>
+              {showButton && (
+                <BTN>
                 <Details2Button
                   buttonText={btnText}
                   rightArrow={true}
-                  handleClick={openModal ? handleOpenContact : () => {}}
+                  handleClick={handleOpenContact}
                 />
               </BTN>
+              )}
             </Right>
           </Details>
         </Container>
