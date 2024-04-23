@@ -17,6 +17,7 @@ export const Container = styled.section`
   }
   @media (max-width: ${theme.bp.small}) {
     padding-top: 50px;
+    margin-top: 50px;
   }
 `;
 
@@ -67,6 +68,7 @@ export const TitleDetails = styled.h3`
   margin: 0;
   @media (max-width: ${theme.bp["x-small"]}) {
     font-size: 40px;
+    margin-top: 20px;
   }
 `;
 export const ResumeDetails = styled.p`
@@ -77,6 +79,10 @@ export const ResumeDetails = styled.p`
   padding-bottom: 20px;
   padding-top: 20px;
   color: ${theme.colors.gray};
+
+  @media (max-width: ${theme.bp.small}) {
+    margin-top: 20px;
+  }
 `;
 
 export const Right = styled.div`
@@ -84,6 +90,12 @@ export const Right = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  @media (max-width: ${theme.bp.small}) {
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 50px
+  }
 `;
 
 export const BTN = styled.div`
@@ -94,5 +106,9 @@ export const BTN = styled.div`
   
   @media (max-width: ${theme.bp.medium}) {
     margin-right: 50px;
+  }
+  @media (max-width: ${theme.bp.small}) {
+    justify-content: center;
+    margin-left: 50px;
   }
 `;
