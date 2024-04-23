@@ -10,7 +10,7 @@ export const Container = styled.section`
   align-items: center;
   width: 100vw;
   height: 100vh;
-  border: 1px solid red;
+
   @media (max-width: ${theme.bp.large}) {
     height: auto;
     padding-top: 100px;
@@ -58,7 +58,7 @@ export const Details = styled.div`
 `;
 
 export const TitleDetails = styled.h3`
-  font-size: 60px;
+  font-size: 56px;
   line-height: 60px;
   font-weight: 600;
   letter-spacing: -1px;
@@ -71,7 +71,8 @@ export const TitleDetails = styled.h3`
 `;
 export const ResumeDetails = styled.p`
   font-size: 18px;
-  line-height: 30px;
+  line-height: 28px;
+  font-weight: 500;
   margin: 0;
   padding-bottom: 20px;
   padding-top: 20px;
@@ -86,11 +87,11 @@ export const Right = styled.div`
 `;
 
 export const BTN = styled.div`
-  height: 35px;
+  height: 52px;
   width: 100%;
   display: flex;
   justify-content: flex-end;
-
+  
   @media (max-width: ${theme.bp.medium}) {
     margin-right: 50px;
   }

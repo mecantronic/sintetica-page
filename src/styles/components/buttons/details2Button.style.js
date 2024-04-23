@@ -26,6 +26,7 @@ export const Button = styled.div`
     );
     text-decoration: none;
     position: relative;
+    height: 52px;
 
     &::before {
       border-radius: 20px;

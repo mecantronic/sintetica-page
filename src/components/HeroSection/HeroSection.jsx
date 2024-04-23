@@ -1,20 +1,36 @@
 import { Container, Graphic, HeroIMG, Details, TitleDetails, ResumeDetails, Right, BTN } from "./herosection.style";
 import Details2Button from "../buttons/Details2Button";
+import data from "./keysHeroSection";
 
-  function HeroSection({imgPath, mainTitle, description, btnText, handleClick}) {
+  function HeroSection({ keyName, handleClick}) {
     
+    const getContentStyle = (key) => {
+        switch (key) {
+          case 'contentExperienceTTS':
+            return data.contentExperienceTTS;
+          case 'contentVoiceCloning':
+            return data.contentVoiceCloning;
+          case 'contentMaintenance':
+            return data.contentMaintenance;
+          default:
+            return {};
+        }
+      };
+
+    const content = getContentStyle(keyName);
+
     return (
         <Container>
           <Graphic>
-            <HeroIMG src={imgPath} />
+            <HeroIMG src={content.img} />
           </Graphic>
           <Details>
-          <TitleDetails>{mainTitle}</TitleDetails>
-          <ResumeDetails>{description}</ResumeDetails>
+          <TitleDetails>{content.textTitle}</TitleDetails>
+          <ResumeDetails>{content.textDescription}</ResumeDetails>
             <Right>
                 <BTN>
                 <Details2Button
-                  buttonText={btnText}
+                  buttonText={content.textBtn}
                   rightArrow={true}
                   handleClick={handleClick}
                 />
