@@ -1,17 +1,40 @@
 import { Container, Graphic, HeroIMG, Details, TitleDetails, ResumeDetails, Right, BTN } from "./herosection.style";
 import Details2Button from "../buttons/Details2Button";
-import data from "./keysHeroSection";
+import { useTranslation } from "react-i18next";
 
   function HeroSection({ keyName, handleClick}) {
     
+    const { t } = useTranslation("data")
+
+    const contentVoiceCloning = {
+        img: "assets/voiceCloning/bannerVoice.svg",
+        textTitle: t('voiceCloning.title'),
+        textDescription: t('voiceCloning.description'),
+        textBtn: t('voiceCloning.button'),
+    }
+
+    const contentExperienceTTS = {
+        img: "assets/home/card4.svg",
+        textTitle: t('experienceTTS.title'),
+        textDescription: t('experienceTTS.description'),
+        textBtn: t('experienceTTS.button')
+    }
+
+    const contentMaintenance = {
+        img: "assets/backgrounds/maintenance.svg",
+        textTitle: t('maintenance.title'),
+        textDescription: t('maintenance.description'),
+        textBtn: t('maintenance.button'),
+    }
+
     const getContentStyle = (key) => {
         switch (key) {
           case 'contentExperienceTTS':
-            return data.contentExperienceTTS;
+            return contentExperienceTTS;
           case 'contentVoiceCloning':
-            return data.contentVoiceCloning;
+            return contentVoiceCloning;
           case 'contentMaintenance':
-            return data.contentMaintenance;
+            return contentMaintenance;
           default:
             return {};
         }
