@@ -1,4 +1,4 @@
-import { Container, Graphic, HeroIMG, Details, TitleDetails, ResumeDetails, Right, BTN } from "./herosection.style";
+import { Container, Graphic, HeroIMG, Details, TitleDetails, ResumeDetails, Right, BTN, ContentContainer } from "./herosection.style";
 import Details2Button from "../buttons/Details2Button";
 import { useTranslation } from "react-i18next";
 
@@ -43,24 +43,26 @@ import { useTranslation } from "react-i18next";
     const content = getContentStyle(keyName);
 
     return (
-        <Container>
-          <Graphic>
-            <HeroIMG src={content.img} />
-          </Graphic>
-          <Details>
+      <Container>
+      <ContentContainer>
+        <Graphic>
+          <HeroIMG src={content.img} />
+        </Graphic>
+        <Details>
           <TitleDetails>{content.textTitle}</TitleDetails>
           <ResumeDetails>{content.textDescription}</ResumeDetails>
-            <Right>
-                <BTN>
-                <Details2Button
-                  buttonText={content.textBtn}
-                  rightArrow={true}
-                  handleClick={handleClick}
-                />
-              </BTN>
-            </Right>
-          </Details>
-        </Container>
+          <Right>
+            <BTN>
+              <Details2Button
+                buttonText={content.textBtn}
+                rightArrow={true}
+                handleClick={handleClick}
+              />
+            </BTN>
+          </Right>
+        </Details>
+      </ContentContainer>
+    </Container>
     );
   }
   

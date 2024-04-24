@@ -71,6 +71,7 @@ const Navbar = () => {
                     <Details2Button
                       buttonText="Signup"
                       handleClick={handleOpenSignUp}
+                      small={true}
                     />
                   </>
                 )}
@@ -104,6 +105,7 @@ const Navbar = () => {
                 <Details2Button
                   buttonText="Signup"
                   handleClick={handleOpenSignUp}
+                  small={true}
                 />
               </>
             )}

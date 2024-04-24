@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
 import { Button } from "../../styles/components/buttons/details2Button.style";
 
-function Details2Button({ buttonText, handleClick, square }) {
+function Details2Button({ buttonText, handleClick, square, small }) {
+
   return (
-    <Button square={square}>
+    <Button square={square} small={small}>
       <button onClick={handleClick}>{buttonText}</button>
     </Button>
   );
@@ -13,6 +14,11 @@ Details2Button.propTypes = {
   buttonText: PropTypes.string,
   handleClick: PropTypes.func,
   square: PropTypes.bool,
+  small: PropTypes.bool,
 };
+
+Details2Button.defaultProps = {
+  small: false,
+}
 
 export default Details2Button;

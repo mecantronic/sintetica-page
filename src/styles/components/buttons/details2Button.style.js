@@ -26,7 +26,8 @@ export const Button = styled.div`
     );
     text-decoration: none;
     position: relative;
-    height: 52px;
+    height: ${(props) => (props.small ? "auto" : "42px")};
+    width: ${(props) => (props.small ? "auto" : "215px")};
 
     &::before {
       border-radius: 20px;
@@ -41,6 +42,10 @@ export const Button = styled.div`
     }
     &:hover:before {
       width: 100%;
+    }
+
+    @media screen and (max-width: ${theme.bp.small}) {
+      display: none;
     }
   }
 `;

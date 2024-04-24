@@ -8,7 +8,7 @@ export const Container = styled.section`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 
   @media (max-width: ${theme.bp.large}) {
@@ -18,6 +18,18 @@ export const Container = styled.section`
   @media (max-width: ${theme.bp.small}) {
     padding-top: 50px;
     margin-top: 50px;
+  }
+`;
+
+export const ContentContainer = styled.div`
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  flex-direction: row;
+  margin-right: auto;
+
+  @media (max-width: ${theme.bp.small}) {
+    flex-direction: column;
   }
 `;
 
