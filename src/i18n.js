@@ -7,9 +7,6 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: 'es',
-    interpolation: {
-      escapeValue: false, // not needed for react as it escapes by default
-    }
   });
 
 

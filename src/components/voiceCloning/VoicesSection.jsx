@@ -1,29 +1,24 @@
 import {
   AudioItem,
-  Container,
   Item,
   ItemText,
   ItemTitle,
-  Title,
   VocesContainer,
 } from "../../styles/components/voiceCloning/voicesSection.style";
 
 function VoicesSection() {
   return (
-    <Container>
-      <Title>Nuestras voces</Title>
       <VocesContainer>
         <Item>
           <AudioItem controls>
             <source
-
               src="audios-voice/fem1.wav"
               type="audio/mpeg"
             />
             Tu navegador no soporta la reproducción de audio.
           </AudioItem>
           <ItemTitle>Ana</ItemTitle>
-          <ItemText>Voz Real</ItemText>
+          <ItemText>Voz real</ItemText>
         </Item>
 
         <Item>
@@ -49,7 +44,7 @@ function VoicesSection() {
             Tu navegador no soporta la reproducción de audio.
           </AudioItem>
           <ItemTitle>Franco</ItemTitle>
-          <ItemText>Voz Real</ItemText>
+          <ItemText>Voz real</ItemText>
         </Item>
 
         <Item>
@@ -73,7 +68,7 @@ function VoicesSection() {
             Tu navegador no soporta la reproducción de audio.
           </AudioItem>
           <ItemTitle>Paula</ItemTitle>
-          <ItemText>Voz Real</ItemText>
+          <ItemText>Voz real</ItemText>
         </Item>
 
         <Item>
@@ -97,7 +92,7 @@ function VoicesSection() {
             Tu navegador no soporta la reproducción de audio.
           </AudioItem>
           <ItemTitle>Darío</ItemTitle>
-          <ItemText>Voz Real</ItemText>
+          <ItemText>Voz real</ItemText>
         </Item>
 
         <Item>
@@ -122,7 +117,7 @@ function VoicesSection() {
             Tu navegador no soporta la reproducción de audio.
           </AudioItem>
           <ItemTitle>Luciana</ItemTitle>
-          <ItemText>Voz Real</ItemText>
+          <ItemText>Voz real</ItemText>
         </Item>
 
         <Item>
@@ -146,7 +141,7 @@ function VoicesSection() {
             Tu navegador no soporta la reproducción de audio.
           </AudioItem>
           <ItemTitle>Hernán</ItemTitle>
-          <ItemText>Voz Real</ItemText>
+          <ItemText>Voz real</ItemText>
         </Item>
 
         <Item>
@@ -161,7 +156,6 @@ function VoicesSection() {
           <ItemText>Voz AI</ItemText>
         </Item>
       </VocesContainer>
-    </Container>
   );
 }
 

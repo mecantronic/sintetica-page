@@ -4,11 +4,11 @@ const theme = {
     seasalt: "#F9F9F9",
     lavender: "#EFECFF",
     platinum: "#E2DFDF",
-
+    mediumstateblue: "#7D55FF",
     gray: "#797979",
     raisinblack: "#242331",
     onyx: "#413F50",
-
+    jet: "#333333",
     lavenderfloral: "#B06EFE",
     electricindigo: "#5236FF",
   },

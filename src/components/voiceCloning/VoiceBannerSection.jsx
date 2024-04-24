@@ -14,7 +14,7 @@ function VoiceBanner() {
       keyName="contentVoiceCloning"
       handleClick={handleOpenContact}
     />
-  
+
   );
 }
 

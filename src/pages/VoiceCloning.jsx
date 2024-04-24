@@ -7,6 +7,7 @@ import Modal from "../components/Modal";
 import ContactForm from "../components/ContactForm";
 import { VoiceWrapper } from "../styles/pages/voiceCloning.style";
 import Footer from "../components/Footer";
+import Section from "../components/section/Section";
 
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -25,7 +26,9 @@ function Home() {
     <VoiceWrapper>
       <Navbar />
       <VoiceBanner openModal={openModal} />
-      <VoicesSection />
+      <Section title={"Nuestras voces"}>
+        <VoicesSection />
+      </Section>
       <ContactSection />
       {isModalOpen && (
         <Modal closeModal={closeModal}>
