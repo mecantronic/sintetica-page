@@ -22,7 +22,6 @@ export const Button = styled.div`
     background: ${theme.colors.onyx};
     text-decoration: none;
     position: relative;
-    height: 52px;
 
     &::before {
       border-radius: 20px;
