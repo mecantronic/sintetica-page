@@ -3,7 +3,6 @@ import { contactModal } from "../../redux/modalSlice";
 import HeroSection from "../HeroSection/HeroSection";
 
 function VoiceBanner() {
-
   const dispatch = useDispatch();
   const handleOpenContact = () => {
     dispatch(contactModal());
@@ -14,7 +13,6 @@ function VoiceBanner() {
       keyName="contentVoiceCloning"
       handleClick={handleOpenContact}
     />
-
   );
 }
 

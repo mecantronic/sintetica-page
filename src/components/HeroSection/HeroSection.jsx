@@ -67,7 +67,6 @@ function HeroSection({ keyName, handleClick }) {
     };
   }, []);
 
-
   return (
     <Container>
       <ContentContainer>

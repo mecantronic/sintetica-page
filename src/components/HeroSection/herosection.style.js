@@ -2,7 +2,11 @@ import styled from "styled-components";
 import theme from "../../styles/theme";
 
 export const Container = styled.section`
-  background: linear-gradient(25deg, rgba(165, 116, 255, 0.00) 29.65%, rgba(165, 116, 255, 0.50) 100%);
+  background: linear-gradient(
+    25deg,
+    rgba(165, 116, 255, 0) 29.65%,
+    rgba(165, 116, 255, 0.5) 100%
+  );
   color: ${theme.colors.electricindigo};
   display: flex;
   flex-wrap: wrap;
@@ -106,7 +110,7 @@ export const Right = styled.div`
   @media (max-width: ${theme.bp.small}) {
     justify-content: center;
     margin-top: 20px;
-    margin-bottom: 50px
+    margin-bottom: 50px;
   }
 `;
 
@@ -115,7 +119,7 @@ export const BTN = styled.div`
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  
+
   @media (max-width: ${theme.bp.medium}) {
     margin-right: 50px;
   }
