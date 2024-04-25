@@ -45,7 +45,7 @@ export const Button = styled.div`
     }
 
     @media screen and (max-width: ${theme.bp.small}) {
-      display: none;
+      display: ${(props) => (props.small ? "flex" : "none")};
     }
   }
 `;

@@ -4,9 +4,16 @@ import {
   ItemText,
   ItemTitle,
   VocesContainer,
+  ButtonContainer
 } from "../../styles/components/voiceCloning/voicesSection.style";
+import Details2Button from "../buttons/Details2Button";
+import { useTranslation } from "react-i18next";
+
 
 function VoicesSection() {
+
+  const { t } = useTranslation(["voiceCloning", "data"])
+
   return (
       <VocesContainer>
         <Item>
@@ -15,10 +22,10 @@ function VoicesSection() {
               src="audios-voice/fem1.wav"
               type="audio/mpeg"
             />
-            Tu navegador no soporta la reproducción de audio.
+           {t("error")}
           </AudioItem>
-          <ItemTitle>Ana</ItemTitle>
-          <ItemText>Voz real</ItemText>
+          <ItemTitle>{t("name.first")}</ItemTitle>
+          <ItemText>{t("voices.real")}</ItemText>
         </Item>
 
         <Item>
@@ -28,10 +35,10 @@ function VoicesSection() {
               src="audios-voice/fem1_cloned(enhanced).wav"
               type="audio/mpeg"
             />
-            Tu navegador no soporta la reproducción de audio.
+            {t("error")}
           </AudioItem>
-          <ItemTitle>Ana</ItemTitle>
-          <ItemText>Voz AI</ItemText>
+          <ItemTitle>{t("name.first")}</ItemTitle>
+          <ItemText>{t("voices.ia")}</ItemText>
         </Item>
 
         <Item>
@@ -41,10 +48,10 @@ function VoicesSection() {
               src="audios-voice/mas1.wav"
               type="audio/mpeg"
             />
-            Tu navegador no soporta la reproducción de audio.
+            {t("error")}
           </AudioItem>
-          <ItemTitle>Franco</ItemTitle>
-          <ItemText>Voz real</ItemText>
+          <ItemTitle>{t("name.second")}</ItemTitle>
+          <ItemText>{t("voices.real")}</ItemText>
         </Item>
 
         <Item>
@@ -53,10 +60,10 @@ function VoicesSection() {
               src="audios-voice/mas1_cloned(enhanced).wav"
               type="audio/mpeg"
             />
-            Tu navegador no soporta la reproducción de audio.
+            {t("error")}
           </AudioItem>
-          <ItemTitle>Franco</ItemTitle>
-          <ItemText>Voz AI</ItemText>
+          <ItemTitle>{t("name.second")}</ItemTitle>
+          <ItemText>{t("voices.ia")}</ItemText>
         </Item>
 
         <Item>
@@ -65,10 +72,10 @@ function VoicesSection() {
               src="audios-voice/fem2.wav"
               type="audio/mpeg"
             />
-            Tu navegador no soporta la reproducción de audio.
+            {t("error")}
           </AudioItem>
-          <ItemTitle>Paula</ItemTitle>
-          <ItemText>Voz real</ItemText>
+          <ItemTitle>{t("name.third")}</ItemTitle>
+          <ItemText>{t("voices.real")}</ItemText>
         </Item>
 
         <Item>
@@ -77,10 +84,10 @@ function VoicesSection() {
               src="audios-voice/fem2_cloned(enhanced).wav"
               type="audio/mpeg"
             />
-            Tu navegador no soporta la reproducción de audio.
+            {t("error")}
           </AudioItem>
-          <ItemTitle>Paula</ItemTitle>
-          <ItemText>Voz AI</ItemText>
+          <ItemTitle>{t("name.third")}</ItemTitle>
+          <ItemText>{t("voices.ia")}</ItemText>
         </Item>
 
         <Item>
@@ -89,10 +96,10 @@ function VoicesSection() {
               src="audios-voice/mas2.wav"
               type="audio/mpeg"
             />
-            Tu navegador no soporta la reproducción de audio.
+            {t("error")}
           </AudioItem>
-          <ItemTitle>Darío</ItemTitle>
-          <ItemText>Voz real</ItemText>
+          <ItemTitle>{t("name.fourth")}</ItemTitle>
+          <ItemText>{t("voices.real")}</ItemText>
         </Item>
 
         <Item>
@@ -102,10 +109,10 @@ function VoicesSection() {
               src="audios-voice/mas2_cloned(enhanced).wav"
               type="audio/mpeg"
             />
-            Tu navegador no soporta la reproducción de audio.
+            {t("error")}
           </AudioItem>
-          <ItemTitle>Darío</ItemTitle>
-          <ItemText>Voz AI</ItemText>
+          <ItemTitle>{t("name.fourth")}</ItemTitle>
+          <ItemText>{t("voices.ia")}</ItemText>
         </Item>
 
         <Item>
@@ -114,10 +121,10 @@ function VoicesSection() {
               src="audios-voice/fem3.wav"
               type="audio/mpeg"
             />
-            Tu navegador no soporta la reproducción de audio.
+            {t("error")}
           </AudioItem>
-          <ItemTitle>Luciana</ItemTitle>
-          <ItemText>Voz real</ItemText>
+          <ItemTitle>{t("name.fifth")}</ItemTitle>
+          <ItemText>{t("voices.real")}</ItemText>
         </Item>
 
         <Item>
@@ -126,10 +133,10 @@ function VoicesSection() {
               src="audios-voice/fem3_cloned(enhanced).wav"
               type="audio/mpeg"
             />
-            Tu navegador no soporta la reproducción de audio.
+            {t("error")}
           </AudioItem>
-          <ItemTitle>Luciana</ItemTitle>
-          <ItemText>Voz AI</ItemText>
+          <ItemTitle>{t("name.fifth")}</ItemTitle>
+          <ItemText>{t("voices.ia")}</ItemText>
         </Item>
 
         <Item>
@@ -138,10 +145,10 @@ function VoicesSection() {
               src="audios-voice/mas3.wav"
               type="audio/mpeg"
             />
-            Tu navegador no soporta la reproducción de audio.
+            {t("error")}
           </AudioItem>
-          <ItemTitle>Hernán</ItemTitle>
-          <ItemText>Voz real</ItemText>
+          <ItemTitle>{t("name.sixth")}</ItemTitle>
+          <ItemText>{t("voices.real")}</ItemText>
         </Item>
 
         <Item>
@@ -150,11 +157,14 @@ function VoicesSection() {
               src="audios-voice/mas3_cloned(enhanced).wav"
               type="audio/mpeg"
             />
-            Tu navegador no soporta la reproducción de audio.
+            {t("error")}
           </AudioItem>
-          <ItemTitle>Hernán</ItemTitle>
-          <ItemText>Voz AI</ItemText>
+          <ItemTitle>{t("name.sixth")}</ItemTitle>
+          <ItemText>{t("voices.ia")}</ItemText>
         </Item>
+        <ButtonContainer>
+          <Details2Button buttonText={"Cloná tu voz"} small={true}></Details2Button>
+       </ButtonContainer>
       </VocesContainer>
   );
 }

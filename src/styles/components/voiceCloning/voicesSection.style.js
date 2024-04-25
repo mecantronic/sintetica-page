@@ -40,3 +40,19 @@ export const ItemText = styled.span`
   margin: 0;
   color: ${theme.colors.mediumstateblue};
 `;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 15px;
+  margin-right: auto;
+  margin-top: 30px;
+  
+  @media (max-width: ${theme.bp.small}) {
+    flex-direction: column;
+  }
+`;
