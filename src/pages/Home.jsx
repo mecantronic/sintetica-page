@@ -8,7 +8,7 @@ import { useState } from "react";
 import Modal from "../components/Modal";
 import { BackcgroundImage, HomeWrapper } from "../styles/pages/home.style";
 import Footer from "../components/Footer";
-import { Helmet } from "react-helmet";
+import { HelmetProvider } from "react-helmet-async";
 
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -25,7 +25,7 @@ function Home() {
 
   return (
     <HomeWrapper>
-      <Helmet>
+      <HelmetProvider>
         {/* Título de la página */}
         <title>Sintética</title>
         {/* Descripción de la página */}
@@ -48,7 +48,7 @@ function Home() {
           content="Sintética es un laboratorio de síntesis de voces en español rioplatense. Nuestra pasión por la innovación está arraigada en el compromiso de transformar vidas. Impulsamos investigaciones vanguardistas, creamos productos revolucionarios y promovemos la inclusión en la salud."
         />
         <meta name="robots" content="index, follow" />
-      </Helmet>
+      </HelmetProvider>
       <Navbar />
       <BannerSection openModal={openModal} />
       <BackcgroundImage>

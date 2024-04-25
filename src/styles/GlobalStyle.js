@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
   body {
@@ -15,6 +15,10 @@ const GlobalStyles = createGlobalStyle`
   p {
     font-family: 'Inter';
   }
+  audio::-webkit-media-controls-play-button,
+     audio::-webkit-media-controls-panel {
+     background-color: #EFECFF;
+     }    
 `;
 
 export default GlobalStyles;
