@@ -8,11 +8,18 @@ import {
 } from "../../styles/components/voiceCloning/voicesSection.style";
 import Details2Button from "../buttons/Details2Button";
 import { useTranslation } from "react-i18next";
+import { useDispatch } from "react-redux";
+import { contactModal } from "../../redux/modalSlice";
 
 
 function VoicesSection() {
 
   const { t } = useTranslation(["voiceCloning", "data"])
+
+  const dispatch = useDispatch();
+  const handleOpenContact = () => {
+    dispatch(contactModal());
+  };
 
   return (
       <VocesContainer>
@@ -162,9 +169,12 @@ function VoicesSection() {
           <ItemTitle>{t("name.sixth")}</ItemTitle>
           <ItemText>{t("voices.ia")}</ItemText>
         </Item>
-        <ButtonContainer>
-          <Details2Button buttonText={"Cloná tu voz"} small={true}></Details2Button>
-       </ButtonContainer>
+          <ButtonContainer>
+            <Details2Button
+              buttonText={"Cloná tu voz"}
+              handleClick={handleOpenContact}
+            />
+          </ButtonContainer>
       </VocesContainer>
   );
 }
