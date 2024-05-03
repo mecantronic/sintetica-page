@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar";
+import Navbar from "../components/header/Navbar";
 import BannerSection from "../components/home/BannerSection";
 import TechnologySection from "../components/home/TechnologySection";
 import WhatIsSection from "../components/home/WhatIsSection";

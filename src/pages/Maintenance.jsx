@@ -1,6 +1,6 @@
 import Details2Link from "../components/buttons/Details2Link";
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/header/Navbar";
 import {
   BTN,
   Container,

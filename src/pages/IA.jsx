@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar";
+import Navbar from "../components/header/Navbar";
 import ContactSection from "../components/ContactSection";
 import WhySection from "../components/IA-salud/WhySection";
 import MiIdentidadVocal from "../components/IA-salud/MiIdentidadVocal";

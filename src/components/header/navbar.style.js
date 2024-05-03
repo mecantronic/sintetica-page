@@ -1,34 +1,44 @@
 import styled from "styled-components";
-import theme from "../theme";
+import theme from "../../styles/theme";
 import { Link } from "react-router-dom";
 
-export const NavbarContainer = styled.div`
+export const Header = styled.header`
   position: fixed;
   top: 0;
   left: 0;
+  width: 100vw;
+  padding: 0.3rem 0;
+  margin: 0;
+  z-index: 100;
+  filter: drop-shadow(0 0 24px rgba(51, 51, 51, 0.33));
+  background-color: ${theme.colors.seasalt};
+`;
+
+export const NavbarContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 32px;
-  width: 100vw;
-  padding: 1rem 0;
-  margin: 0;
-  z-index: 100;
+  padding: 0 90px;
 
-  background-color: ${theme.colors.seasalt};
+  @media (max-width: ${theme.bp.medium}) {
+    padding: 0 48px;
+  }
 
   @media (max-width: ${theme.bp["x-small"]}) {
-    height: 20px;
+    padding: 0 24px;
   }
 `;
 
 export const Logo = styled(Link)`
-  padding-left: 1rem;
   img {
-    height: 40px;
+    height: 58px;
+
+    @media (max-width: ${theme.bp.medium}) {
+      height: 56px;
+    }
 
     @media (max-width: ${theme.bp["x-small"]}) {
-      height: 30px;
+      height: 38px;
     }
   }
 `;
@@ -41,12 +51,31 @@ export const MenuButton = styled.button`
   cursor: pointer;
   display: none;
 
+  img {
+    @media (max-width: ${theme.bp.medium}) {
+      height: 42px;
+    }
+
+    @media (max-width: ${theme.bp["x-small"]}) {
+      height: 32px;
+    }
+  }
+
   @media (max-width: ${theme.bp.medium}) {
     display: block;
   }
 
   @media (max-width: ${theme.bp["x-small"]}) {
     font-size: 30px;
+  }
+`;
+
+export const ImgMenu = styled.div`
+  @media (max-width: ${theme.bp.medium}) {
+    height: 42px;
+  }
+  @media (max-width: ${theme.bp["x-small"]}) {
+    height: 32px;
   }
 `;
 
@@ -114,10 +143,8 @@ export const NavDiv = styled.div`
 `;
 
 export const UserButtons = styled.div`
-  padding-right: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
 `;
-
