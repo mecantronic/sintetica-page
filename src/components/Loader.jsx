@@ -1,4 +1,4 @@
-import { LoaderContainer } from "../styles/components/loader.style";
+import { LoaderContainer } from '../styles/components/loader.style';
 
 function Loader() {
   return <LoaderContainer />;

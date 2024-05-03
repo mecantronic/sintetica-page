@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import theme from "../../../styles/theme";
+import styled from 'styled-components';
+import theme from '../../../styles/theme';
 
 export const CtaContainer = styled.div`
   background: none;
@@ -35,7 +35,7 @@ export const Title = styled.h3`
     font-size: 24px;
     padding: 10px 0;
   }
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     line-height: 30px;
     font-size: 20px;
     padding: 5px 0;

@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import theme from "../../theme";
-import { Link } from "react-router-dom";
+import styled from 'styled-components';
+import theme from '../../theme';
+import { Link } from 'react-router-dom';
 
 export const ButtonContainer = styled(Link)`
-  display: ${(props) => (props.link ? "inline" : "none")};
+  display: ${(props) => (props.link ? 'inline' : 'none')};
   text-align: center;
   white-space: nowrap;
   text-transform: uppercase;
@@ -17,7 +17,7 @@ export const ButtonContainer = styled(Link)`
   font-weight: 700;
   line-height: 36px;
   color: ${theme.colors.white};
-  border-radius: ${(props) => (props.square ? "8px" : "20px")};
+  border-radius: ${(props) => (props.square ? '8px' : '20px')};
   cursor: pointer;
   transition: all 0.4s ease-out 0s;
   background: ${theme.colors.onyx};
@@ -25,8 +25,8 @@ export const ButtonContainer = styled(Link)`
   position: relative;
 
   &::before {
-    border-radius: ${(props) => (props.square ? "8px" : "20px")};
-    content: "";
+    border-radius: ${(props) => (props.square ? '8px' : '20px')};
+    content: '';
     position: absolute;
     bottom: 0px;
     left: 0px;

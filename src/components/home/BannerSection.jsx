@@ -1,7 +1,16 @@
-import Details1Button from "../buttons/Details1Button";
-import { useDispatch } from "react-redux";
-import { contactModal } from "../../redux/modalSlice";
-import { BTN, Container, Left, Resume, Right, Robot, TextLogo, Title } from "../../styles/components/home/bannerSection.style";
+import Details1Button from '../buttons/Details1Button';
+import { useDispatch } from 'react-redux';
+import { contactModal } from '../../redux/modalSlice';
+import {
+  BTN,
+  Container,
+  Left,
+  Resume,
+  Right,
+  Robot,
+  TextLogo,
+  Title,
+} from '../../styles/components/home/bannerSection.style';
 
 function BannerSection() {
   const dispatch = useDispatch();

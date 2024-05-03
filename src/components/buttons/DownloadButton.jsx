@@ -1,6 +1,6 @@
-import { RiDownload2Line } from "react-icons/ri";
-import { ButtonContainer } from "../../styles/components/buttons/downloadButton.style";
-import PropTypes from "prop-types";
+import { RiDownload2Line } from 'react-icons/ri';
+import { ButtonContainer } from '../../styles/components/buttons/downloadButton.style';
+import PropTypes from 'prop-types';
 
 const DownloadButton = ({ square = false, link }) => {
   const handleDownload = () => {};

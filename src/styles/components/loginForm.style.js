@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import theme from "../theme";
+import styled from 'styled-components';
+import theme from '../theme';
 
 export const Container = styled.div`
   position: relative;
@@ -8,7 +8,7 @@ export const Container = styled.div`
   background: ${theme.colors.white};
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: -50%;
@@ -21,7 +21,7 @@ export const Container = styled.div`
     );
     z-index: 6;
     transform: translateX(
-      ${(props) => (props.formtype === "login" ? "100%" : "0")}
+      ${(props) => (props.formtype === 'login' ? '100%' : '0')}
     );
     transition: 1s ease-in-out;
   }
@@ -29,7 +29,7 @@ export const Container = styled.div`
   @media (max-width: ${theme.bp.small}) {
     width: 95vw;
   }
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     height: 95vh;
     &::before {
       display: none;
@@ -58,9 +58,9 @@ export const Login = styled.form`
   min-width: 238px;
   padding: 0 10px;
   opacity: 1;
-  opacity: ${(props) => (props.formtype === "login" ? "1" : "0")};
-  @media (max-width: ${theme.bp["x-small"]}) {
-    display: ${(props) => (props.formtype === "login" ? "flex" : "none")};
+  opacity: ${(props) => (props.formtype === 'login' ? '1' : '0')};
+  @media (max-width: ${theme.bp['x-small']}) {
+    display: ${(props) => (props.formtype === 'login' ? 'flex' : 'none')};
     width: 80%;
   }
 `;
@@ -73,9 +73,9 @@ export const SignUp = styled.form`
   width: 40%;
   min-width: 238px;
   padding: 0 10px;
-  opacity: ${(props) => (props.formtype === "login" ? "0" : "1")};
-  @media (max-width: ${theme.bp["x-small"]}) {
-    display: ${(props) => (props.formtype === "login" ? "none" : "flex")};
+  opacity: ${(props) => (props.formtype === 'login' ? '0' : '1')};
+  @media (max-width: ${theme.bp['x-small']}) {
+    display: ${(props) => (props.formtype === 'login' ? 'none' : 'flex')};
     width: 80%;
   }
 `;
@@ -88,7 +88,7 @@ export const FormTitle = styled.h2`
 
 export const AccountText = styled.p`
   display: none;
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -128,7 +128,7 @@ export const InputContainer = styled.div`
     font-weight: 600;
     color: ${theme.colors.onyx};
   }
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     height: 30px;
   }
 `;
@@ -166,7 +166,7 @@ export const SubmitBTN = styled.button`
   position: relative;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0px;
     left: 0px;
@@ -217,7 +217,7 @@ export const PanelsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     display: none;
   }
 `;
@@ -234,9 +234,9 @@ export const LeftPanel = styled.div`
   z-index: 6;
   pointer-events: none;
   transform: translateX(
-    ${(props) => (props.formtype === "login" ? "-200%" : "0")}
+    ${(props) => (props.formtype === 'login' ? '-200%' : '0')}
   );
-  pointer-events: ${(props) => (props.formtype === "login" ? "none" : "all")};
+  pointer-events: ${(props) => (props.formtype === 'login' ? 'none' : 'all')};
 `;
 
 export const RightPanel = styled.div`
@@ -249,9 +249,9 @@ export const RightPanel = styled.div`
   padding: 0 10px;
   text-align: center;
   z-index: 6;
-  pointer-events: ${(props) => (props.formtype === "login" ? "all" : "none")};
+  pointer-events: ${(props) => (props.formtype === 'login' ? 'all' : 'none')};
   transform: translateX(
-    ${(props) => (props.formtype === "login" ? "0" : "200%")}
+    ${(props) => (props.formtype === 'login' ? '0' : '200%')}
   );
 `;
 
@@ -297,7 +297,7 @@ export const PanelBTN = styled.button`
   position: relative;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0px;
     left: 0px;

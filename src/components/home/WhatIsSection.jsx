@@ -1,4 +1,4 @@
-import Details2Link from "../buttons/Details2Link";
+import Details2Link from '../buttons/Details2Link';
 import {
   BalloonCloud,
   Balloons,
@@ -15,7 +15,7 @@ import {
   ServiceTitle,
   Services,
   TitleWhat,
-} from "../../styles/components/home/whatIsSection.style";
+} from '../../styles/components/home/whatIsSection.style';
 
 function WhatIsSection() {
   return (

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import theme from "../../theme";
+import styled from 'styled-components';
+import theme from '../../theme';
 
 export const Container = styled.section`
   background-color: ${theme.colors.onyx};
@@ -66,7 +66,7 @@ export const TitleWhy = styled.h3`
   letter-spacing: -1px;
   padding: 20px 0;
   margin: 0;
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     font-size: 40px;
     line-height: 50px;
   }
