@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const LoaderContainer = styled.div`
   border: 4px solid #f3f3f3; /* Light grey */

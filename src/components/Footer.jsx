@@ -1,4 +1,4 @@
-import { FaFacebook, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 import {
   Brand,
   Contact,
@@ -17,7 +17,7 @@ import {
   SocialIcon,
   SocialMedia,
   TextLogo,
-} from "../styles/components/footer.style";
+} from '../styles/components/footer.style';
 
 function Footer() {
   return (
@@ -43,9 +43,19 @@ function Footer() {
               </Navigators>
               <Contact>
                 <NavTitles>Contacto</NavTitles>
-                <NavA href="" rel="noreferrer">Belgrano, CABA.</NavA>
-                <NavA href="https://wa.me/5491157397834" target="_blank" rel="noreferrer">+54 9 11 5 739 7834</NavA>
-                <NavA href="mailto:info@mecantronic.com.ar">info@mecantronic.com.ar</NavA>
+                <NavA href="" rel="noreferrer">
+                  Belgrano, CABA.
+                </NavA>
+                <NavA
+                  href="https://wa.me/5491157397834"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  +54 9 11 5 739 7834
+                </NavA>
+                <NavA href="mailto:info@mecantronic.com.ar">
+                  info@mecantronic.com.ar
+                </NavA>
               </Contact>
             </Directions>
             <SocialMedia>
@@ -53,13 +63,25 @@ function Footer() {
               <p>Seguinos en nuestras</p>
               <p>redes sociales.</p>
               <Icons>
-                <SocialIcon href="https://www.facebook.com/mecantronic" target="_blank" rel="noreferrer">
+                <SocialIcon
+                  href="https://www.facebook.com/mecantronic"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FaFacebook />
                 </SocialIcon>
-                <SocialIcon href="https://www.linkedin.com/company/mecantronic-sa/" target="_blank" rel="noreferrer">
+                <SocialIcon
+                  href="https://www.linkedin.com/company/mecantronic-sa/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FaLinkedinIn />
                 </SocialIcon>
-                <SocialIcon href="https://www.instagram.com/sintetica_tts/" target="_blank" rel="noreferrer">
+                <SocialIcon
+                  href="https://www.instagram.com/sintetica_tts/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FaInstagram />
                 </SocialIcon>
               </Icons>

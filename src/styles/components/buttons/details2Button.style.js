@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import theme from "../../theme";
+import styled from 'styled-components';
+import theme from '../../theme';
 
 export const Button = styled.div`
   button {
@@ -16,7 +16,7 @@ export const Button = styled.div`
     font-weight: 700;
     line-height: 36px;
     color: ${theme.colors.white};
-    border-radius: ${(props) => (props.square ? "8px" : "20px")};
+    border-radius: ${(props) => (props.square ? '8px' : '20px')};
     cursor: pointer;
     transition: all 0.4s ease-out 0s;
     background: linear-gradient(
@@ -26,12 +26,12 @@ export const Button = styled.div`
     );
     text-decoration: none;
     position: relative;
-    height: ${(props) => (props.small ? "42px" : "auto")};
-    width: ${(props) => (props.small ? "215px" : "auto")};
+    height: ${(props) => (props.small ? '42px' : 'auto')};
+    width: ${(props) => (props.small ? '215px' : 'auto')};
 
     &::before {
       border-radius: 20px;
-      content: "";
+      content: '';
       position: absolute;
       bottom: 0px;
       left: 0px;

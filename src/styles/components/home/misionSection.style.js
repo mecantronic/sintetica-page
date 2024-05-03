@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import theme from "../../theme";
+import styled from 'styled-components';
+import theme from '../../theme';
 
 export const Container = styled.section`
   background: none;
@@ -57,7 +57,7 @@ export const TitleDetails = styled.h3`
   padding-top: 5px;
   margin: 0;
   margin-bottom: 50px;
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     font-size: 40px;
   }
 `;
@@ -67,7 +67,7 @@ export const Item = styled.div`
   flex-direction: row;
   padding-bottom: 20px;
 
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     flex-direction: column;
     align-items: center;
   }

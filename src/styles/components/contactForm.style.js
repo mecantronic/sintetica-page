@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import theme from "../theme";
+import styled from 'styled-components';
+import theme from '../theme';
 
 export const Container = styled.section`
   background: none;
@@ -10,7 +10,7 @@ export const Container = styled.section`
   align-items: center;
   padding: 20px;
 
-  background-image: url("assets/backgrounds/Background2.svg");
+  background-image: url('assets/backgrounds/Background2.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
@@ -39,7 +39,7 @@ export const Title = styled.h3`
     font-size: 24px;
     padding: 10px 0;
   }
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     line-height: 30px;
     font-size: 20px;
     padding: 5px 0;
@@ -79,7 +79,7 @@ export const InfoItem = styled.a`
   @media (max-width: ${theme.bp.medium}) {
     width: 85vw;
   }
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     height: 50px;
     width: 80vw;
   }
@@ -99,7 +99,7 @@ export const TagCTA = styled.h5`
   font-weight: 600;
   color: ${theme.colors.raisinblack};
 
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     display: none;
   }
 `;
@@ -114,7 +114,7 @@ export const TagInfo = styled.p`
 export const Icon = styled.img`
   align-items: flex-start;
   width: 50px;
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     width: 30px;
   }
 `;
@@ -142,7 +142,7 @@ export const Form = styled.form`
   @media (max-width: ${theme.bp.small}) {
     row-gap: 20px;
   }
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     row-gap: 10px;
   }
 `;
@@ -167,7 +167,7 @@ export const SmallInput = styled.input`
   @media (max-width: ${theme.bp.medium}) {
     width: calc(80% + 50px);
   }
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     width: 80%;
     height: 30px;
   }
@@ -186,7 +186,7 @@ export const BigInput = styled.textarea`
   color: ${theme.colors.onyx};
   padding: 10px 15px;
 
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     width: 80%;
   }
 
@@ -222,7 +222,7 @@ export const ContatcButton = styled.button`
   position: relative;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0px;
     left: 0px;

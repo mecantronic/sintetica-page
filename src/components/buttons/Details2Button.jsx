@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
-import { Button } from "../../styles/components/buttons/details2Button.style";
+import PropTypes from 'prop-types';
+import { Button } from '../../styles/components/buttons/details2Button.style';
 
 function Details2Button({ buttonText, handleClick, square, small }) {
   const smallStr = small.toString();

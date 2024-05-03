@@ -9,7 +9,7 @@ import {
   ItemText,
   ItemTitle,
   TitleDetails,
-} from "../../styles/components/home/misionSection.style";
+} from '../../styles/components/home/misionSection.style';
 
 function HeroSection() {
   return (

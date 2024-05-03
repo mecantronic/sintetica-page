@@ -4,7 +4,7 @@ import {
   Technologies,
   Technology,
   Title,
-} from "../../styles/components/home/technologySection.style";
+} from '../../styles/components/home/technologySection.style';
 
 function TechnologySection() {
   return (

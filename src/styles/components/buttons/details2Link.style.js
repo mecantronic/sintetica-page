@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import theme from "../../theme";
-import styled from "styled-components";
+import { Link } from 'react-router-dom';
+import theme from '../../theme';
+import styled from 'styled-components';
 
 export const Button = styled(Link)`
   text-align: center;
@@ -27,26 +27,27 @@ export const Button = styled(Link)`
   text-decoration: none;
   position: relative;
 
-&::before {
-  border-radius: 20px;
-  content: "";
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  width: 0px;
-  height: 100%;
-background: rgba(255, 255, 255, 0.3);    transition: all 1s ease;
-}
-&:hover:before {
-  width: 100%;
-}
+  &::before {
+    border-radius: 20px;
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 1s ease;
+  }
+  &:hover:before {
+    width: 100%;
+  }
 `;
 
 export const ButtonArrow = styled(Link)`
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
   text-align: center;
   white-space: nowrap;
   text-transform: uppercase;
@@ -70,18 +71,18 @@ gap: 20px;
   text-decoration: none;
   position: relative;
 
-&::before {
-  content: "";
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  width: 0px;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.3);    
-  transition: all 1s ease;
-}
-border-radius: 20px; /* Agregamos el border radius aquí */
-&:hover:before {
-  width: 100%;
-}
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 1s ease;
+  }
+  border-radius: 20px; /* Agregamos el border radius aquí */
+  &:hover:before {
+    width: 100%;
+  }
 `;

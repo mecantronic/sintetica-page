@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import theme from "../../theme";
+import styled from 'styled-components';
+import theme from '../../theme';
 
 export const Container = styled.section`
   color: ${theme.colors.electricindigo};
@@ -41,7 +41,7 @@ export const BalloonCloud = styled.div`
     width: 90%;
     height: 400px;
   }
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     width: 90%;
     height: 250px;
   }
@@ -104,7 +104,7 @@ export const TitleWhat = styled.h3`
     line-height: 44px;
     font-size: 36px;
   }
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     line-height: 36px;
     font-size: 30px;
   }

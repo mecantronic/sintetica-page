@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import theme from "../../theme";
+import styled from 'styled-components';
+import theme from '../../theme';
 
 export const Button = styled.div`
   button {
@@ -25,7 +25,7 @@ export const Button = styled.div`
 
     &::before {
       border-radius: 20px;
-      content: "";
+      content: '';
       position: absolute;
       bottom: 0px;
       left: 0px;

@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
-import { useMediaQuery } from "react-responsive";
-import Details1Button from "./buttons/Details1Button";
-import Details2Button from "./buttons/Details2Button";
-import theme from "../styles/theme";
-import { useDispatch, useSelector } from "react-redux";
-import { loginModal, signupModal } from "../redux/modalSlice";
+import { useEffect, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
+import Details1Button from './buttons/Details1Button';
+import Details2Button from './buttons/Details2Button';
+import theme from '../styles/theme';
+import { useDispatch, useSelector } from 'react-redux';
+import { loginModal, signupModal } from '../redux/modalSlice';
 import {
   Logo,
   MenuButton,
@@ -13,8 +13,8 @@ import {
   NavLinks,
   NavbarContainer,
   UserButtons,
-} from "../styles/components/navbar.style";
-import { removeUser } from "../redux/userSlice";
+} from '../styles/components/navbar.style';
+import { removeUser } from '../redux/userSlice';
 
 const Navbar = () => {
   const token = useSelector((state) => state.user.token);
@@ -48,7 +48,7 @@ const Navbar = () => {
       </Logo>
       {isMobile ? (
         <>
-          <MenuButton onClick={toggleMenu}>{showMenu ? "✕" : "☰"}</MenuButton>
+          <MenuButton onClick={toggleMenu}>{showMenu ? '✕' : '☰'}</MenuButton>
           {showMenu && (
             <NavLinks>
               <NavLink to="/VoiceCloning">Voice Cloning</NavLink>

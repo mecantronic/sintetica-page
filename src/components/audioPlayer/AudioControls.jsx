@@ -1,11 +1,14 @@
-import PropTypes from "prop-types";
-import { RiPauseMiniLine, RiPlayMiniLine } from "react-icons/ri";
-import { BTNContainer, Container, Timer } from "../../styles/components/audioPlayer/audioControl.style";
-
+import PropTypes from 'prop-types';
+import { RiPauseMiniLine, RiPlayMiniLine } from 'react-icons/ri';
+import {
+  BTNContainer,
+  Container,
+  Timer,
+} from '../../styles/components/audioPlayer/audioControl.style';
 
 function AudioControls({ play, isPlaying, duration, currentTime, light }) {
   function secondsToHms(seconds) {
-    if (!seconds) return "00m 00s";
+    if (!seconds) return '00m 00s';
 
     let duration = seconds;
     let hours = duration / 3600;
@@ -34,15 +37,19 @@ function AudioControls({ play, isPlaying, duration, currentTime, light }) {
 
   return (
     <Container className="control-panel">
-      <Timer className="timer" light={light}>{secondsToHms(currentTime)}</Timer>
+      <Timer className="timer" light={light}>
+        {secondsToHms(currentTime)}
+      </Timer>
       <BTNContainer className="btn-container" light={light}>
         {isPlaying ? (
-          <RiPauseMiniLine onClick={play} style={{ cursor: "pointer" }} />
+          <RiPauseMiniLine onClick={play} style={{ cursor: 'pointer' }} />
         ) : (
-          <RiPlayMiniLine onClick={play} style={{ cursor: "pointer" }} />
+          <RiPlayMiniLine onClick={play} style={{ cursor: 'pointer' }} />
         )}
       </BTNContainer>
-      <Timer className="timer" light={light} >{secondsToHms(duration)}</Timer>
+      <Timer className="timer" light={light}>
+        {secondsToHms(duration)}
+      </Timer>
     </Container>
   );
 }

@@ -1,26 +1,26 @@
-import Navbar from "../components/Navbar";
-import BannerSection from "../components/home/BannerSection";
-import TechnologySection from "../components/home/TechnologySection";
-import WhatIsSection from "../components/home/WhatIsSection";
-import ContactSection from "../components/ContactSection";
-import ContactForm from "../components/ContactForm";
-import { useState } from "react";
-import Modal from "../components/Modal";
-import { BackcgroundImage, HomeWrapper } from "../styles/pages/home.style";
-import Footer from "../components/Footer";
-import { HelmetProvider } from "react-helmet-async";
+import Navbar from '../components/Navbar';
+import BannerSection from '../components/home/BannerSection';
+import TechnologySection from '../components/home/TechnologySection';
+import WhatIsSection from '../components/home/WhatIsSection';
+import ContactSection from '../components/ContactSection';
+import ContactForm from '../components/ContactForm';
+import { useState } from 'react';
+import Modal from '../components/Modal';
+import { BackcgroundImage, HomeWrapper } from '../styles/pages/home.style';
+import Footer from '../components/Footer';
+import { HelmetProvider } from 'react-helmet-async';
 
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
     setIsModalOpen(true);
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow = 'hidden';
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
-    document.body.style.overflow = "auto";
+    document.body.style.overflow = 'auto';
   };
 
   return (

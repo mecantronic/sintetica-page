@@ -6,7 +6,7 @@ import {
   ResumeWhy,
   TitleWhy,
   Why,
-} from "../../styles/components/ia-salud/whySection.style";
+} from '../../styles/components/ia-salud/whySection.style';
 
 function WhySection() {
   return (
@@ -36,10 +36,7 @@ function WhySection() {
         </ResumeWhy>
       </Details>
       <ImageContainer>
-        <Image
-          src="assets/ia-salud/logo_1.png"
-          alt="Logo IA-salud"
-        />
+        <Image src="assets/ia-salud/logo_1.png" alt="Logo IA-salud" />
       </ImageContainer>
     </Container>
   );

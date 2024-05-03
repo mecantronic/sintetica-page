@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import theme from "../theme";
+import styled from 'styled-components';
+import theme from '../theme';
 
 export const Container = styled.section`
   background: none;
@@ -11,7 +11,7 @@ export const Container = styled.section`
   margin: 100px 0;
   width: 100vw;
 
-  background-image: url("assets/backgrounds/Background2.svg");
+  background-image: url('assets/backgrounds/Background2.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
@@ -53,7 +53,7 @@ export const Title = styled.h3`
     line-height: 44px;
     font-size: 36px;
   }
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     line-height: 36px;
     font-size: 30px;
   }
@@ -106,7 +106,7 @@ export const TagCTA = styled.h5`
   font-weight: 600;
   color: ${theme.colors.raisinblack};
 
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     display: none;
   }
 `;
@@ -161,7 +161,7 @@ export const SmallInput = styled.input`
   @media (max-width: ${theme.bp.medium}) {
     width: calc(80% + 50px);
   }
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     width: 80%;
   }
   &::placeholder {
@@ -177,7 +177,7 @@ export const BigInput = styled.textarea`
   border: 2px solid ${theme.colors.platinum};
   color: ${theme.colors.onyx};
   padding: 10px 15px;
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     width: 80%;
   }
   &::placeholder {
@@ -212,7 +212,7 @@ export const ContatcButton = styled.button`
   position: relative;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0px;
     left: 0px;

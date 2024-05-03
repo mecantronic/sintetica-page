@@ -1,6 +1,6 @@
-import { useDispatch } from "react-redux";
-import { contactModal } from "../../redux/modalSlice";
-import HeroSection from "../HeroSection/HeroSection";
+import { useDispatch } from 'react-redux';
+import { contactModal } from '../../redux/modalSlice';
+import HeroSection from '../HeroSection/HeroSection';
 
 function VoiceBanner() {
   const dispatch = useDispatch();

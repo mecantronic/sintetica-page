@@ -1,15 +1,15 @@
-import styled from "styled-components";
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import VoiceCloning from "./pages/VoiceCloning";
-import IA from "./pages/IA";
-import Maintenance from "./pages/Maintenance";
-import GlobalStyles from "./styles/GlobalStyle";
-import Modal from "./components/Modal";
-import { useEffect } from "react";
-import { useSelector } from "react-redux";
-import Tts from "./pages/TTS";
-import { Suspense } from "react";
+import styled from 'styled-components';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import VoiceCloning from './pages/VoiceCloning';
+import IA from './pages/IA';
+import Maintenance from './pages/Maintenance';
+import GlobalStyles from './styles/GlobalStyle';
+import Modal from './components/Modal';
+import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import Tts from './pages/TTS';
+import { Suspense } from 'react';
 
 const AppWrapper = styled.div``;
 

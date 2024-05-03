@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import theme from "../theme";
-import { Link } from "react-router-dom";
+import styled from 'styled-components';
+import theme from '../theme';
+import { Link } from 'react-router-dom';
 
 export const NavbarContainer = styled.div`
   position: fixed;
@@ -17,7 +17,7 @@ export const NavbarContainer = styled.div`
 
   background-color: ${theme.colors.seasalt};
 
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     height: 20px;
   }
 `;
@@ -27,7 +27,7 @@ export const Logo = styled(Link)`
   img {
     height: 40px;
 
-    @media (max-width: ${theme.bp["x-small"]}) {
+    @media (max-width: ${theme.bp['x-small']}) {
       height: 30px;
     }
   }
@@ -45,7 +45,7 @@ export const MenuButton = styled.button`
     display: block;
   }
 
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     font-size: 30px;
   }
 `;
@@ -57,7 +57,7 @@ export const NavLinks = styled.div`
   justify-content: center;
 
   @media (max-width: ${theme.bp.medium}) {
-    display: ${({ showMenu }) => (showMenu ? "none" : "flex")};
+    display: ${({ showMenu }) => (showMenu ? 'none' : 'flex')};
     flex-direction: column;
     position: absolute;
     top: 370px;
@@ -66,10 +66,10 @@ export const NavLinks = styled.div`
     width: 100%;
     padding: 10px;
     transform: ${({ showMenu }) =>
-      showMenu ? "translateY(0)" : "translateY(-100%)"};
+      showMenu ? 'translateY(0)' : 'translateY(-100%)'};
     transition: transform 0.3s ease-in-out;
   }
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     top: 360px;
   }
 `;
@@ -87,7 +87,7 @@ export const NavLink = styled(Link)`
   text-transform: uppercase;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0px;
     left: 0px;
@@ -120,4 +120,3 @@ export const UserButtons = styled.div`
   justify-content: center;
   gap: 1rem;
 `;
-

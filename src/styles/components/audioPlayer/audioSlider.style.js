@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import theme from "../../theme";
+import styled from 'styled-components';
+import theme from '../../theme';
 
 export const Container = styled.div`
   --progress-bar-height: 4px;
@@ -10,7 +10,7 @@ export const Container = styled.div`
   width: 100%;
 
   &::before {
-    content: "";
+    content: '';
     background-color: ${(props) =>
       props.light ? theme.colors.gray : theme.colors.white};
     width: 99%;
@@ -45,7 +45,7 @@ export const Thumb = styled.div`
   box-shadow: ${(props) =>
     props.light
       ? theme.colors.lavenderfloral
-      : "0px 0px 5px rgba(0, 0, 0, 0.753)"};
+      : '0px 0px 5px rgba(0, 0, 0, 0.753)'};
   z-index: 3;
   background: ${(props) =>
     props.light ? theme.colors.gray : theme.colors.white};

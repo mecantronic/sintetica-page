@@ -1,5 +1,5 @@
-import { Title, Container } from "./section.styles";
-
+import { Title, Container } from './section.styles';
+import PropTypes from 'prop-types';
 function Section({ children, title }) {
   return (
     <Container>
@@ -8,5 +8,9 @@ function Section({ children, title }) {
     </Container>
   );
 }
+Section.propTypes = {
+  children: PropTypes.element,
+  title: PropTypes.string,
+};
 
 export default Section;

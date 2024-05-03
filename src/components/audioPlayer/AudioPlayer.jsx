@@ -1,12 +1,12 @@
-import { useRef, useState } from "react";
-import AudioSlider from "./AudioSlider";
-import AudioControls from "./AudioControls";
-import PropTypes from "prop-types";
+import { useRef, useState } from 'react';
+import AudioSlider from './AudioSlider';
+import AudioControls from './AudioControls';
+import PropTypes from 'prop-types';
 import {
   AudioContainerLeft,
   Container,
-} from "../../styles/components/audioPlayer/audioPlayer.style";
-import DownloadButton from "../buttons/DownloadButton";
+} from '../../styles/components/audioPlayer/audioPlayer.style';
+import DownloadButton from '../buttons/DownloadButton';
 
 function AudioPlayer({ light, audioSrc }) {
   const [percentage, setPercentage] = useState(0);
@@ -76,7 +76,7 @@ function AudioPlayer({ light, audioSrc }) {
         />
       </AudioContainerLeft>
 
-      <DownloadButton square={true} link={audioSrc != "" ? audioSrc : ""}/>
+      <DownloadButton square={true} link={audioSrc != '' ? audioSrc : ''} />
     </Container>
   );
 }

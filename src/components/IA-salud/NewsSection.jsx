@@ -4,7 +4,7 @@ import {
   Item,
   Title,
   VocesContainer,
-} from "../../styles/components/ia-salud/newsSection.style";
+} from '../../styles/components/ia-salud/newsSection.style';
 
 function NewsSection() {
   return (

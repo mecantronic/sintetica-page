@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import theme from "../../styles/theme";
+import styled from 'styled-components';
+import theme from '../../styles/theme';
 
 export const Container = styled.section`
   background: linear-gradient(
@@ -82,7 +82,7 @@ export const TitleDetails = styled.h3`
   color: ${theme.colors.raisinblack};
   padding-top: 5px;
   margin: 0;
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     font-size: 40px;
     margin-top: 20px;
   }

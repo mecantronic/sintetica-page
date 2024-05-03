@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import theme from "../../theme";
+import styled from 'styled-components';
+import theme from '../../theme';
 
 export const Container = styled.div`
   display: flex;
@@ -17,4 +17,3 @@ export const AudioContainerLeft = styled.div`
   border-radius: 4px;
   padding: 6px 8px 4px 8px;
 `;
-
