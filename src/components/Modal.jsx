@@ -1,12 +1,12 @@
-import LoginForm from "./LoginForm";
-import { useSelector, useDispatch } from "react-redux";
-import { closeModal } from "../redux/modalSlice";
-import ContactForm from "./ContactForm";
+import LoginForm from './LoginForm';
+import { useSelector, useDispatch } from 'react-redux';
+import { closeModal } from '../redux/modalSlice';
+import ContactForm from './ContactForm';
 import {
   CloseIcon,
   ModalContent,
   ModalOverlay,
-} from "../styles/components/modal.style";
+} from '../styles/components/modal.style';
 
 const Modal = () => {
   const dispatch = useDispatch();
@@ -18,20 +18,20 @@ const Modal = () => {
   let contentToRender;
 
   switch (modalType) {
-    case "contact":
+    case 'contact':
       contentToRender = <ContactForm />;
       break;
-    case "login":
-      contentToRender = <LoginForm initialType={"login"} />;
+    case 'login':
+      contentToRender = <LoginForm initialType={'login'} />;
       break;
-    case "signup":
-      contentToRender = <LoginForm initialType={"signup"} />;
+    case 'signup':
+      contentToRender = <LoginForm initialType={'signup'} />;
       break;
     default:
       contentToRender = <></>;
   }
 
-  return modalType === "closed" ? (
+  return modalType === 'closed' ? (
     <></>
   ) : (
     <ModalOverlay>

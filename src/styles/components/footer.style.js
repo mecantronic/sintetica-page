@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import theme from "../theme";
-import { Link } from "react-router-dom";
+import styled from 'styled-components';
+import theme from '../theme';
+import { Link } from 'react-router-dom';
 
 export const FooterContainer = styled.div`
   display: flex;
@@ -33,7 +33,7 @@ export const Nav = styled.div`
   @media (max-width: ${theme.bp.small}) {
     width: 576px;
   }
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     width: 300px;
     flex-direction: column;
   }
@@ -93,7 +93,7 @@ export const Links = styled.div`
   display: flex;
   flex-direction: row;
   height: 200px;
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     width: 300px;
     flex-direction: column;
     height: 100%;
@@ -104,7 +104,7 @@ export const Directions = styled.div`
   display: flex;
   flex-direction: row;
   height: 100%;
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     width: 300px;
     flex-direction: column;
   }
@@ -126,7 +126,7 @@ export const Navigators = styled.div`
   @media (max-width: ${theme.bp.small}) {
     width: 192px;
   }
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     width: 300px;
   }
 `;
@@ -159,7 +159,7 @@ export const NavLink = styled(Link)`
   margin-bottom: 10px;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0px;
     left: 0px;
@@ -192,7 +192,7 @@ export const NavA = styled.a`
   margin-bottom: 10px;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0px;
     left: 0px;
@@ -230,7 +230,7 @@ export const Contact = styled.div`
   @media (max-width: ${theme.bp.small}) {
     width: 192px;
   }
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     width: 300px;
   }
 `;
@@ -260,7 +260,7 @@ export const SocialMedia = styled.div`
   @media (max-width: ${theme.bp.small}) {
     width: 192px;
   }
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     width: 300px;
   }
 `;
@@ -296,7 +296,7 @@ export const Copyright = styled.div`
   width: 100%;
   justify-content: space-between;
   border-top: 1px solid ${theme.colors.gray};
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     width: 300px;
     flex-direction: column;
     align-items: center;

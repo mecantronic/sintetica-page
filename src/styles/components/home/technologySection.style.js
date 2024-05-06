@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import theme from "../../theme";
-import styled from "styled-components";
+import { Link } from 'react-router-dom';
+import theme from '../../theme';
+import styled from 'styled-components';
 
 export const Container = styled.section`
   display: flex;
@@ -16,7 +16,7 @@ export const Container = styled.section`
   @media (max-width: ${theme.bp.small}) {
     margin-top: 80px;
   }
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     margin-top: 100px;
   }
 `;
@@ -46,7 +46,7 @@ export const Title = styled.h4`
   @media (max-width: ${theme.bp.small}) {
     font-size: 28px;
   }
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     font-size: 24px;
   }
 `;
@@ -102,7 +102,7 @@ export const Technology = styled(Link)`
     width: 400px;
   }
 
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     margin: 30px 0px;
     width: 300px;
     height: 400px;

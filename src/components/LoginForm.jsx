@@ -1,7 +1,5 @@
-/* eslint-disable no-useless-escape */
-/* eslint-disable no-unused-vars */
-import { useEffect, useState } from "react";
-import PropTypes from "prop-types";
+import { useState } from 'react';
+import PropTypes from 'prop-types';
 import {
   FaFacebook,
   FaGoogle,
@@ -10,9 +8,9 @@ import {
   FaPhoneAlt,
   FaTwitter,
   FaUser,
-} from "react-icons/fa";
-import { IoMdMail } from "react-icons/io";
-import { toast, ToastContainer } from "react-toastify";
+} from 'react-icons/fa';
+import { IoMdMail } from 'react-icons/io';
+import { toast, ToastContainer } from 'react-toastify';
 import {
   AccountText,
   Center,
@@ -32,37 +30,38 @@ import {
   SocialMedia,
   SocialText,
   SubmitBTN,
-} from "../styles/components/loginForm.style";
-import { loginRequest, registerRequest, setUser } from "../redux/userSlice";
-import { closeModal } from "../redux/modalSlice";
-import { useDispatch } from "react-redux";
-import Loader from "./Loader";
+} from '../styles/components/loginForm.style';
+import { loginRequest, registerRequest, setUser } from '../redux/userSlice';
+import { closeModal } from '../redux/modalSlice';
+import { useDispatch } from 'react-redux';
+import Loader from './Loader';
 
 function LoginForm({ initialType }) {
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
   const [formType, setFormType] = useState(initialType);
   const [formDataLogin, setFormDataLogin] = useState({
-    email: "",
-    password: "",
+    email: '',
+    password: '',
   });
   const [formDataRegister, setFormDataRegister] = useState({
-    userName: "",
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    password: "",
+    userName: '',
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    password: '',
   });
+  // eslint-disable-next-line no-unused-vars
   const [formErrors, setFormErrors] = useState({});
 
   const handleClick = () => {
-    if (formType === "login") {
-      setFormType("signup");
+    if (formType === 'login') {
+      setFormType('signup');
       return;
     }
-    if (formType === "signup") {
-      setFormType("login");
+    if (formType === 'signup') {
+      setFormType('login');
       return;
     }
   };
@@ -75,17 +74,18 @@ function LoginForm({ initialType }) {
     e.preventDefault();
     const errors = {};
     if (!formDataLogin.email) {
-      errors.email = "Por favor, completa tu dirección de correo electrónico.";
+      errors.email = 'Por favor, completa tu dirección de correo electrónico.';
       toast.error(errors.email);
     } else if (
+      // eslint-disable-next-line no-useless-escape
       !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formDataLogin.email)
     ) {
       errors.email =
-        "Por favor, ingresa una dirección de correo electrónico válida.";
+        'Por favor, ingresa una dirección de correo electrónico válida.';
       toast.error(errors.email);
     }
     if (!formDataLogin.password) {
-      errors.password = "Por favor, completa tu contraseña.";
+      errors.password = 'Por favor, completa tu contraseña.';
       toast.error(errors.password);
     } else if (
       formDataLogin.password.length < 8 ||
@@ -115,7 +115,7 @@ function LoginForm({ initialType }) {
           service: response.service,
           freeCredits: response.credits.freeCredits,
           premiumCredits: response.credits.premiumCredits,
-        })
+        }),
       );
       dispatch(closeModal());
       setIsLoading(false);
@@ -123,7 +123,10 @@ function LoginForm({ initialType }) {
   };
 
   const handleSetRegisterData = (e) => {
-    setFormDataRegister({ ...formDataRegister, [e.target.name]: e.target.value });
+    setFormDataRegister({
+      ...formDataRegister,
+      [e.target.name]: e.target.value,
+    });
   };
 
   const handleErrorsRegister = (e) => {
@@ -132,12 +135,12 @@ function LoginForm({ initialType }) {
 
     // username
     if (!formDataRegister.userName) {
-      errors.userName = "Por favor, completa tu nombre de usuario.";
+      errors.userName = 'Por favor, completa tu nombre de usuario.';
       toast.error(errors.userName);
     } else if (!/^[a-zA-Z0-9_]+$/.test(formDataRegister.userName)) {
       errors.userName =
-        "El nombre de usuario solo puede contener letras, números y guiones bajos.";
-        toast.error(errors.userName);
+        'El nombre de usuario solo puede contener letras, números y guiones bajos.';
+      toast.error(errors.userName);
     } else if (
       formDataRegister.userName.length < 2 ||
       formDataRegister.userName.length > 18
@@ -148,22 +151,25 @@ function LoginForm({ initialType }) {
 
     //name y surname
     if (!formDataRegister.firstName) {
-      errors.firstName = "Por favor, completa tu nombre.";
+      errors.firstName = 'Por favor, completa tu nombre.';
       toast.error(errors.firstName);
     }
     if (!formDataRegister.lastName) {
-      errors.lastName = "Por favor, completa tu apellido.";
+      errors.lastName = 'Por favor, completa tu apellido.';
       toast.error(errors.lastName);
     }
     if (!/^[a-zA-Z ]+$/.test(formDataRegister.name)) {
-      errors.firstName = "El nombre solo puede contener letras y espacios.";
+      errors.firstName = 'El nombre solo puede contener letras y espacios.';
       toast.error(errors.firstName);
     }
     if (!/^[a-zA-Z ]+$/.test(formDataRegister.lastName)) {
-      errors.lastName = "El apellido solo puede contener letras y espacios.";
+      errors.lastName = 'El apellido solo puede contener letras y espacios.';
       toast.error(errors.lastName);
     }
-    if (formDataRegister.firstName.length < 2 || formDataRegister.firstName.length > 18) {
+    if (
+      formDataRegister.firstName.length < 2 ||
+      formDataRegister.firstName.length > 18
+    ) {
       errors.firstName = `El nombre debe tener entre ${2} y ${18} caracteres.`;
       toast.error(errors.firstName);
     }
@@ -177,31 +183,32 @@ function LoginForm({ initialType }) {
 
     //email
     if (!formDataRegister.email) {
-      errors.email = "Por favor, completa tu dirección de correo electrónico.";
+      errors.email = 'Por favor, completa tu dirección de correo electrónico.';
       toast.error(errors.email);
     } else if (
+      // eslint-disable-next-line no-useless-escape
       !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
-        formDataRegister.email
+        formDataRegister.email,
       )
     ) {
       errors.email =
-        "Por favor, ingresa una dirección de correo electrónico válida.";
-        toast.error(errors.email);
+        'Por favor, ingresa una dirección de correo electrónico válida.';
+      toast.error(errors.email);
     }
 
     //phone
     if (!formDataRegister.phone) {
-      errors.phone = "Por favor, completa tu número de teléfono.";
+      errors.phone = 'Por favor, completa tu número de teléfono.';
       toast.error(errors.phone);
     } else if (!/^[0-9()-]+$/.test(formDataRegister.phone)) {
       errors.phone =
-        "El número de teléfono solo puede contener números, guiones y paréntesis.";
-        toast.error(errors.phone);
+        'El número de teléfono solo puede contener números, guiones y paréntesis.';
+      toast.error(errors.phone);
     }
 
     //password
     if (!formDataRegister.password) {
-      errors.password = "Por favor, completa tu contraseña.";
+      errors.password = 'Por favor, completa tu contraseña.';
       toast.error(errors.password);
     } else if (
       formDataRegister.password.length < 8 ||
@@ -228,16 +235,15 @@ function LoginForm({ initialType }) {
         setUser({
           token: response.token,
           userName: response.userName,
-          service: "free",
+          service: 'free',
           freeCredits: 10000,
           premiumCredits: 0,
-        })
+        }),
       );
       dispatch(closeModal());
       setIsLoading(false);
     }
   };
-
 
   return (
     <Container formtype={formType}>
@@ -299,7 +305,7 @@ function LoginForm({ initialType }) {
             </SocialIcon>
           </SocialMedia>
           <AccountText>
-            ¿No tienes una cuenta? {""}
+            ¿No tienes una cuenta? {''}
             <a href="#" onClick={handleClick} id="sign-up-btn2">
               Registrarse
             </a>
@@ -410,7 +416,7 @@ function LoginForm({ initialType }) {
             </SocialIcon>
           </SocialMedia>
           <AccountText>
-            ¿ Ya tienes una cuenta? {""}
+            ¿ Ya tienes una cuenta? {''}
             <a href="#" onClick={handleClick} id="sign-in-btn2">
               Ingresar
             </a>
@@ -438,16 +444,16 @@ function LoginForm({ initialType }) {
       </PanelsContainer>
       <ToastContainer
         style={{
-          position: "absolute",
-          bottom: "2vh",
-          right: "2vw",
+          position: 'absolute',
+          bottom: '2vh',
+          right: '2vw',
         }}
       />
     </Container>
   );
 }
 LoginForm.propTypes = {
-  initialType: PropTypes.oneOf(["login", "signup"]),
+  initialType: PropTypes.oneOf(['login', 'signup']),
 };
 
 export default LoginForm;

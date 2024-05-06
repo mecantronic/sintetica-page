@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import theme from "../../theme";
+import styled from 'styled-components';
+import theme from '../../theme';
 
 export const Container = styled.section`
   background-color: ${theme.colors.white};
@@ -34,7 +34,7 @@ export const Robot = styled.img`
   @media (max-width: ${theme.bp.small}) {
     width: 240px;
   }
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     width: 200px;
   }
 `;
@@ -63,7 +63,7 @@ export const TextLogo = styled.div`
       font-size: 22px;
     }
   }
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     h1 {
       font-size: 65px;
     }
@@ -83,7 +83,7 @@ export const Right = styled.div`
   width: 50vw;
   height: 60vh;
 
-  background-image: url("assets/backgrounds/Background1.svg");
+  background-image: url('assets/backgrounds/Background1.svg');
   background-size: 103%;
   background-repeat: no-repeat;
   background-position: right;
@@ -94,7 +94,7 @@ export const Right = styled.div`
     height: 40vh;
   }
 
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     background-size: 130%;
   }
 `;
@@ -116,7 +116,7 @@ export const Title = styled.h4`
     font-size: 28px;
   }
 
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     font-size: 20px;
   }
 `;
@@ -142,7 +142,7 @@ export const Resume = styled.p`
     font-size: 22px;
   }
 
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     padding: 20px 20px 20px 20px;
     font-size: 20px;
   }

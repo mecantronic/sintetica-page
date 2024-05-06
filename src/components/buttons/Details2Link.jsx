@@ -1,18 +1,18 @@
-import PropTypes from "prop-types";
-import { MdArrowForwardIos } from "react-icons/md";
-import { Button, ButtonArrow } from "../../styles/components/buttons/details2Link.style";
-
-
+import PropTypes from 'prop-types';
+import { MdArrowForwardIos } from 'react-icons/md';
+import {
+  Button,
+  ButtonArrow,
+} from '../../styles/components/buttons/details2Link.style';
 
 function Details2Link({ to, buttonText, rightArrow }) {
   return rightArrow ? (
     <ButtonArrow to={to}>
-      {buttonText}{<MdArrowForwardIos size={20} />}
+      {buttonText}
+      {<MdArrowForwardIos size={20} />}
     </ButtonArrow>
   ) : (
-    <Button to={to}>
-      {buttonText}
-    </Button>
+    <Button to={to}>{buttonText}</Button>
   );
 }
 

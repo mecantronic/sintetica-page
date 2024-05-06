@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import theme from "../../theme";
+import styled from 'styled-components';
+import theme from '../../theme';
 
 export const Button = styled.div`
   button {
@@ -19,13 +19,13 @@ export const Button = styled.div`
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.4s ease-out 0s;
-    background: ${theme.colors.onyx};
+    background: ${theme.colors.raisinblack};
     text-decoration: none;
     position: relative;
 
     &::before {
       border-radius: 20px;
-      content: "";
+      content: '';
       position: absolute;
       bottom: 0px;
       left: 0px;

@@ -1,6 +1,5 @@
-import PropTypes from "prop-types";
-import { Button } from "../../styles/components/buttons/details1Button.style";
-
+import PropTypes from 'prop-types';
+import { Button } from '../../styles/components/buttons/details1Button.style';
 
 function Details1Button({ buttonText, handleClick }) {
   return (

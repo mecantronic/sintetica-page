@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import theme from "../theme";
+import styled from 'styled-components';
+import theme from '../theme';
 
 export const MaintenanceWrapper = styled.div`
   display: flex;
@@ -48,7 +48,7 @@ export const Text = styled.div`
   @media (max-width: ${theme.bp.medium}) {
     width: 90vw;
   }
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     h2 {
       font-size: 50px;
       font-weight: 400;

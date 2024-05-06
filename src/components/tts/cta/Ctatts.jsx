@@ -1,9 +1,10 @@
-import Details2Button from "../../buttons/Details2Button";
-import { CtaContainer, Title } from "./ctatts.styles";
+import Details2Button from '../../buttons/Details2Button';
+import { CtaContainer, Title } from './ctatts.styles';
 
 function Ctatts() {
   const handleClick = () => {
-    window.location.href = "https://huggingface.co/spaces/mecantronic-ai/sintetica-TTS";
+    window.location.href =
+      'https://huggingface.co/spaces/mecantronic-ai/sintetica-TTS';
   };
   return (
     <CtaContainer>

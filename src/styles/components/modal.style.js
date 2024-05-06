@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import theme from "../theme";
+import styled from 'styled-components';
+import theme from '../theme';
 
 export const ModalOverlay = styled.div`
   position: sticky;
@@ -18,7 +18,9 @@ export const ModalContent = styled.div`
   position: relative;
   background-color: white;
   border-radius: 20px;
-  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3), 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 2px 10px 0 rgba(0, 0, 0, 0.3),
+    0 4px 10px 0 rgba(0, 0, 0, 0.3);
   overflow: hidden;
 `;
 

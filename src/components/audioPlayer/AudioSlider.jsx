@@ -1,12 +1,12 @@
-import { useRef, useState } from "react";
-import { useEffect } from "react";
-import PropTypes from "prop-types";
+import { useRef, useState } from 'react';
+import { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import {
   Container,
   ProgressBarCover,
   Range,
   Thumb,
-} from "../../styles/components/audioPlayer/audioSlider.style";
+} from '../../styles/components/audioPlayer/audioSlider.style';
 
 function AudioSlider({ percentage = 0, onChange, light }) {
   const [position, setPosition] = useState(0);

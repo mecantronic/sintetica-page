@@ -3,7 +3,7 @@ import {
   Resume,
   Title,
   Video,
-} from "../../styles/components/ia-salud/miIdentidadVocal.style";
+} from '../../styles/components/ia-salud/miIdentidadVocal.style';
 
 function MiIdentidadVocal() {
   return (
