@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
-import { useMediaQuery } from "react-responsive";
-import Details1Button from "../buttons/Details1Button";
-import Details2Button from "../buttons/Details2Button";
-import theme from "../../styles/theme";
-import { useDispatch, useSelector } from "react-redux";
-import { loginModal, signupModal } from "../../redux/modalSlice";
+import { useEffect, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
+import Details1Button from '../buttons/Details1Button';
+import Details2Button from '../buttons/Details2Button';
+import theme from '../../styles/theme';
+import { useDispatch, useSelector } from 'react-redux';
+import { loginModal, signupModal } from '../../redux/modalSlice';
 import {
   Logo,
   MenuButton,
@@ -15,8 +15,8 @@ import {
   UserButtons,
   Header,
   ImgMenu,
-} from "./navbar.style";
-import { removeUser } from "../../redux/userSlice";
+} from './navbar.style';
+import { removeUser } from '../../redux/userSlice';
 
 const Navbar = () => {
   const token = useSelector((state) => state.user.token);
@@ -53,7 +53,7 @@ const Navbar = () => {
           <>
             <MenuButton onClick={toggleMenu}>
               {showMenu ? (
-                "✕"
+                '✕'
               ) : (
                 <ImgMenu>
                   <img src="assets/menu.svg" alt="menu" />

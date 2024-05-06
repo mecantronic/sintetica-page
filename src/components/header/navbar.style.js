@@ -56,7 +56,7 @@ export const MenuButton = styled.button`
       height: 42px;
     }
 
-    @media (max-width: ${theme.bp["x-small"]}) {
+    @media (max-width: ${theme.bp['x-small']}) {
       height: 32px;
     }
   }
@@ -74,7 +74,7 @@ export const ImgMenu = styled.div`
   @media (max-width: ${theme.bp.medium}) {
     height: 42px;
   }
-  @media (max-width: ${theme.bp["x-small"]}) {
+  @media (max-width: ${theme.bp['x-small']}) {
     height: 32px;
   }
 `;
