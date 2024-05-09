@@ -1,21 +1,26 @@
 import styled from 'styled-components';
-import theme from '../theme';
+import theme from '../../styles/theme';
 import { Link } from 'react-router-dom';
 
-export const FooterContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+export const FooterContainer = styled.footer`
   width: 100vw;
   height: 100%;
   background-color: ${theme.colors.seasalt};
+
+  p {
+    font-family: 'Montserrat', sans-serif;
+  }
 `;
 
-export const FooterContent = styled.footer`
+export const FooterContent = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+
+  p {
+    font-size: 16px;
+    font-weight: 500;
+  }
 `;
 
 export const Nav = styled.div`
@@ -46,7 +51,7 @@ export const Brand = styled.div`
   justify-content: center;
   height: 200px;
   width: 138px;
-  margin-right: 0px;
+  margin-right: 60px;
 
   @media (max-width: ${theme.bp.large}) {
     width: 113px;
@@ -113,9 +118,8 @@ export const Directions = styled.div`
 export const Navigators = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 354px;
-  height: 100%;
+  width: 128px;
+  padding: 24px 0px;
 
   @media (max-width: ${theme.bp.large}) {
     width: 293px;
@@ -132,10 +136,10 @@ export const Navigators = styled.div`
 `;
 
 export const NavTitles = styled.h5`
-  font-size: 20px;
+  font-size: 18px;
   line-height: 20px;
   font-weight: 600;
-  padding: 15px 0;
+  padding-bottom: 16px;
   margin: 0;
 
   @media (max-width: ${theme.bp.small}) {
@@ -152,11 +156,11 @@ export const NavLink = styled(Link)`
   width: fit-content;
   font-size: 16px;
   line-height: 16px;
-  font-weight: 400;
+  font-weight: 500;
   position: relative;
   margin: 0;
   padding-bottom: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 
   &::before {
     content: '';
@@ -185,11 +189,11 @@ export const NavA = styled.a`
   width: fit-content;
   font-size: 16px !important;
   line-height: 16px !important;
-  font-weight: 400 !important;
+  font-weight: 500 !important;
   position: relative;
   margin: 0;
   padding-bottom: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 
   &::before {
     content: '';
@@ -216,10 +220,9 @@ export const NavA = styled.a`
 export const Contact = styled.div`
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 354px;
-  height: 100%;
+  width: 212px;
+  padding: 24px 0px;
+  margin: 0px 48px;
 
   @media (max-width: ${theme.bp.large}) {
     width: 293px;
@@ -238,8 +241,8 @@ export const Contact = styled.div`
 export const SocialMedia = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 354px;
+  width: 162px;
+  padding: 24px 0px;
 
   p {
     margin: 0;
@@ -268,8 +271,8 @@ export const SocialMedia = styled.div`
 export const Icons = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding-top: 20px;
+  justify-content: flex-start;
+  padding-top: 12px;
 `;
 
 export const SocialIcon = styled.a`
@@ -278,24 +281,19 @@ export const SocialIcon = styled.a`
   width: 40px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: ${theme.colors.raisinblack};
-  border: 1px solid ${theme.colors.raisinblack};
-  border-radius: 50px;
-  margin: 0 5px;
-
-  &:hover {
-    color: ${theme.colors.electricindigo};
-    border-color: ${theme.colors.electricindigo};
-  }
+  margin-right: 16px;
 `;
 
 export const Copyright = styled.div`
   display: flex;
   flex-direction: row;
-  width: 100%;
   justify-content: space-between;
-  border-top: 1px solid ${theme.colors.gray};
+  border-top: 1px solid ${theme.colors.mediumstateblue + '59'};
+  padding: 0 90px;
+  p {
+    font-size: 14px;
+    font-weight: 400;
+  }
   @media (max-width: ${theme.bp['x-small']}) {
     width: 300px;
     flex-direction: column;
