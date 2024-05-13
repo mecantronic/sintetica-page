@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 export const FooterContainer = styled.footer`
   width: 100vw;
   height: 100%;
+  filter: drop-shadow(0 0 24px rgba(51, 51, 51, 0.33));
   background-color: ${theme.colors.seasalt};
-
   p {
     font-family: 'Montserrat', sans-serif;
   }
