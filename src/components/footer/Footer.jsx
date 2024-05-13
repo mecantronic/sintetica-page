@@ -1,3 +1,4 @@
+import { useMediaQuery } from 'react-responsive';
 import {
   Brand,
   Contact,
@@ -14,9 +15,12 @@ import {
   SocialIcon,
   SocialMedia,
   TextLogo,
+  Hr,
 } from './footer.style';
+import theme from '../../styles/theme';
 
 function Footer() {
+  const isMobile = useMediaQuery({ maxWidth: theme.bp.m });
   return (
     <FooterContainer>
       <FooterContent>
@@ -27,6 +31,7 @@ function Footer() {
             <p>Laboratorio de voces</p>
           </TextLogo>
         </Brand>
+        {isMobile && <Hr></Hr>}
         <Links>
           <Navigators>
             <NavTitles>Navegación</NavTitles>
@@ -84,9 +89,19 @@ function Footer() {
           </SocialMedia>
         </Links>
       </FooterContent>
+      <Hr></Hr>
       <Copyright>
-        <p>Copyright © 2023 | Todos los derechos reservados</p>
-        <p>Mecantronic® 2023</p>
+        {isMobile ? (
+          <>
+            <p>Copyright © 2024 | Mecantronic</p>
+            <p>Todos los derechos reservados</p>
+          </>
+        ) : (
+          <>
+            <p>Copyright © 2024 | Todos los derechos reservados</p>
+            <p>Mecantronic® 2024</p>
+          </>
+        )}
       </Copyright>
     </FooterContainer>
     /* 1200 138 352 352 352 */
