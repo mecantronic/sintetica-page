@@ -10,11 +10,9 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h1, h2, h3, h4 ,h5 {
-    font-family: 'Inter';
+    font-family: 'Quicksand', sans-serif;
   }
-  p {
-    font-family: 'Inter';
-  }
+
   audio::-webkit-media-controls-play-button,
      audio::-webkit-media-controls-panel {
      background-color: #EFECFF;
