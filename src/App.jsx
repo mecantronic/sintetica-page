@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Tts from './pages/TTS';
 import { Suspense } from 'react';
+import AboutUs from './pages/AboutUs';
 
 const AppWrapper = styled.div``;
 
@@ -28,6 +29,7 @@ function App() {
             <Route exact path="/IA" element={<IA />} />
             <Route exact path="/TTS" element={<Tts />} />
             <Route exact path="/Maintenance" element={<Maintenance />} />
+            <Route exact path="/AboutUs" element={<AboutUs />} />
           </Routes>
         </AppWrapper>
       </Router>
