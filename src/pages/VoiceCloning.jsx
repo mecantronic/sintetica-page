@@ -6,7 +6,7 @@ import { useState } from 'react';
 import Modal from '../components/Modal';
 import ContactForm from '../components/ContactForm';
 import { VoiceWrapper } from '../styles/pages/voiceCloning.style';
-import Footer from '../components/Footer';
+import Footer from '../components/footer/Footer';
 import Section from '../components/section/Section';
 
 function Home() {

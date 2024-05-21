@@ -7,7 +7,7 @@ import ContactForm from '../components/ContactForm';
 import { useState } from 'react';
 import Modal from '../components/Modal';
 import { BackcgroundImage, HomeWrapper } from '../styles/pages/home.style';
-import Footer from '../components/Footer';
+import Footer from '../components/footer/Footer';
 import { HelmetProvider } from 'react-helmet-async';
 
 function Home() {
