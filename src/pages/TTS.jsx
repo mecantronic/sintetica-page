@@ -1,4 +1,4 @@
-import Footer from '../components/Footer';
+import Footer from '../components/footer/Footer';
 import Navbar from '../components/Navbar';
 import TtsBanner from '../components/tts/TtsBannerSection';
 //import TtsCreate from "../components/tts/TtsCreate";

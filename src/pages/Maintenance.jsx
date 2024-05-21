@@ -1,4 +1,4 @@
-import Footer from '../components/Footer';
+import Footer from '../components/footer/Footer';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection/HeroSection';
 import { useNavigate } from 'react-router-dom';
