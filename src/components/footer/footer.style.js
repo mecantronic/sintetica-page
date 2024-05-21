@@ -4,6 +4,8 @@ import theme from '../../styles/theme';
 export const FooterContainer = styled.footer`
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 100vw;
   height: 100%;
   box-shadow: 0px -4px 24px 0px rgba(51, 51, 51, 0.33);
@@ -18,28 +20,24 @@ export const FooterContainer = styled.footer`
 
 export const FooterContent = styled.div`
   display: flex;
-  flex-direction: column;
-`;
-
-export const LogoContent = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 1060px;
+  justify-content: space-between;
+  width: 1072px;
+  margin-bottom: 9px;
 
   p {
     font-size: 16px;
     font-weight: 500;
   }
 
+  @media (max-width: ${theme.bp.l}) {
+    width: 747px;
+  }
+
   @media (max-width: ${theme.bp.m}) {
     flex-direction: column;
+    width: 327px;
+    align-items: center;
   }
-`;
-
-export const Hr = styled.hr`
-  width: 100%;
-  border: 1px solid ${theme.colors.mediumstateblue + '59'};
 `;
 
 export const Brand = styled.div`
@@ -53,7 +51,10 @@ export const Brand = styled.div`
     margin-right: 0px;
     gap: 0px;
     flex-direction: column;
-    margin-bottom: 25px;
+    padding-bottom: 25px;
+
+    width: 327px;
+    border-bottom: 1px solid ${theme.colors.mediumstateblue + '59'};
   }
 `;
 export const Robot = styled.img`
@@ -61,7 +62,7 @@ export const Robot = styled.img`
 `;
 
 export const TextLogo = styled.div`
-  h1 {
+  h2 {
     text-align: center;
     margin: 0;
     font-size: 32px;
@@ -77,18 +78,6 @@ export const TextLogo = styled.div`
   }
 `;
 
-export const Links = styled.div`
-  display: flex;
-  flex-direction: row;
-
-  @media (max-width: ${theme.bp.m}) {
-    width: 300px;
-    flex-direction: column;
-    height: 100%;
-    align-items: center;
-  }
-`;
-
 export const NavTitles = styled.h5`
   font-size: 18px;
   line-height: 20px;
@@ -97,6 +86,7 @@ export const NavTitles = styled.h5`
   margin: 0;
 
   @media (max-width: ${theme.bp.m}) {
+    padding-bottom: 12px;
     color: ${theme.colors.lightSlateBlue};
   }
 `;
@@ -107,13 +97,12 @@ export const NavA = styled.a`
   text-decoration: none;
   text-align: center;
   width: fit-content;
-  font-size: 16px !important;
-  line-height: 16px !important;
-  font-weight: 500 !important;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
   position: relative;
-  margin: 0;
   padding-bottom: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 
   &::before {
     content: '';
@@ -129,7 +118,8 @@ export const NavA = styled.a`
   }
 
   @media (max-width: ${theme.bp.m}) {
-    margin-left: 24px;
+    padding-bottom: 5px;
+    margin-bottom: 11px;
   }
 `;
 
@@ -137,15 +127,13 @@ export const Contact = styled.div`
   display: flex;
   flex-direction: column;
   width: 212px;
-  margin: 0px 200px;
 
   @media (min-width: ${theme.bp.m}) and (max-width: ${theme.bp.l}) {
     margin: 0px 42px;
   }
   @media (max-width: ${theme.bp.m}) {
-    width: 300px;
-    padding: 0px;
-    margin: 16px 0px;
+    width: 279px;
+    margin: 16px 0 16px 0;
     align-items: center;
   }
 `;
@@ -160,9 +148,9 @@ export const SocialMedia = styled.div`
   }
 
   @media (max-width: ${theme.bp.m}) {
-    width: 300px;
-    padding: 0px;
+    width: 279px;
     align-items: center;
+    margin-bottom: 8px;
   }
 `;
 
@@ -172,6 +160,7 @@ export const Icons = styled.div`
   justify-content: space-between;
   padding-top: 12px;
   @media (max-width: ${theme.bp.m}) {
+    padding-top: 16px;
     gap: 16px;
   }
 `;
@@ -197,17 +186,25 @@ export const Copyright = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border-top: 1px solid ${theme.colors.mediumstateblue + '59'};
+  width: 1072px;
 
   p {
     font-size: 14px;
     font-weight: 400;
   }
+  @media (max-width: ${theme.bp.l}) {
+    width: 771px;
+  }
+
   @media (max-width: ${theme.bp.m}) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0 24px;
+    width: 327px;
+    padding-top: 4px;
+
     p {
       margin: 0;
     }
