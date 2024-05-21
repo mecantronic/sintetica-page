@@ -23,7 +23,7 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const dispatch = useDispatch();
 
-  const isMobile = useMediaQuery({ maxWidth: theme.bp.medium });
+  const isMobile = useMediaQuery({ maxWidth: theme.bp.l });
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
