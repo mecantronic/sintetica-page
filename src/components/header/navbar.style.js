@@ -83,7 +83,8 @@ export const NavLinks = styled.div`
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  width: 750px;
 
   @media (max-width: ${theme.bp.l}) {
     display: ${({ showMenu }) => (showMenu ? 'none' : 'flex')};

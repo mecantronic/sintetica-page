@@ -93,15 +93,10 @@ const Navbar = () => {
           <>
             <NavLinks>
               <NavLink to="/VoiceCloning">Voice Cloning</NavLink>
-              <NavDiv> </NavDiv>
               <NavLink to="/TTS">Experiencia TTS</NavLink>
-              <NavDiv> </NavDiv>
               <NavLink to="/Maintenance">AI & Salud</NavLink>
-              <NavDiv> </NavDiv>
               <NavLink to="/Maintenance">Investigación</NavLink>
-              <NavDiv> </NavDiv>
               <NavLink to="/Maintenance">Nosotros</NavLink>
-              <NavDiv> </NavDiv>
             </NavLinks>
             <UserButtons>
               {token ? (
