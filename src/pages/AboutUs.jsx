@@ -1,4 +1,4 @@
-import Navbar from '../components/Navbar';
+import Navbar from '../components/header/Navbar';
 import {
   SectionText,
   Container,
@@ -16,7 +16,7 @@ import {
   SubTitle,
   MainContainer
 } from '../styles/pages/aboutUs.style';
-import Footer from '../components/Footer';
+import Footer from '../components/footer/Footer';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
 import Details2Button from '../components/buttons/Details2Button';

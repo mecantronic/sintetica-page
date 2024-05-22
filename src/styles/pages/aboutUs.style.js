@@ -12,6 +12,7 @@ export const AboutUsWrapper = styled.div`
 
 export const MainContainer = styled.div`
 background: linear-gradient(5deg, rgba(165, 116, 255, 0.00) 65%, rgba(165, 116, 255, 0.50) 88.49%);
+padding-top: 86px;
 @media (max-width: 1440px) {
    background: ${theme.colors.white};
   }
@@ -39,7 +40,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items:  center;
-  margin: 24px 0px 80px 0px;
+  margin: 0 0 80px 0;
 `;
 
 export const SectionText = styled.div`
@@ -52,6 +53,10 @@ export const SectionText = styled.div`
    flex-wrap: wrap;
    justify-content: center;
   }
+
+  @media (max-width: 820px) {
+    flex-direction: column;
+   }
 `;
 
 export const Card = styled.div`
@@ -98,6 +103,9 @@ export const CardContainerRow = styled.div`
   display: flex;
   justify-content: center;
   gap: 32px;
+  @media (max-width: 820px) {
+    flex-direction: column;
+   }
 `;
 
 export const CardContainerSecondRow = styled.div`
@@ -106,6 +114,9 @@ export const CardContainerSecondRow = styled.div`
   gap: 32px;
   @media (max-width: 1440px) {
    flex-wrap: wrap;
+  }
+  @media (max-width: 820px) {
+   flex-direction: column;
   }
 `;
 

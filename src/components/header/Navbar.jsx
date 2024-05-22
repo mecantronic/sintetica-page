@@ -65,7 +65,7 @@ const Navbar = () => {
                 <NavLink to="/TTS">Experiencia TTS</NavLink>
                 <NavLink to="/Maintenance">AI & Salud</NavLink>
                 <NavLink to="/Maintenance">Investigación</NavLink>
-                <NavLink to="/Maintenance">Nosotros</NavLink>
+                <NavLink to="/AboutUs">Nosotros</NavLink>
                 <UserButtons>
                   {token ? (
                     <Details1Button
@@ -95,7 +95,7 @@ const Navbar = () => {
               <NavLink to="/TTS">Experiencia TTS</NavLink>
               <NavLink to="/Maintenance">AI & Salud</NavLink>
               <NavLink to="/Maintenance">Investigación</NavLink>
-              <NavLink to="/Maintenance">Nosotros</NavLink>
+              <NavLink to="/AboutUs">Nosotros</NavLink>
             </NavLinks>
             <UserButtons>
               {token ? (
