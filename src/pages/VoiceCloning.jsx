@@ -1,4 +1,4 @@
-import Navbar from '../components/Navbar';
+import Navbar from '../components/header/Navbar';
 import VoiceBanner from '../components/voiceCloning/VoiceBannerSection';
 import VoicesSection from '../components/voiceCloning/VoicesSection';
 import ContactSection from '../components/ContactSection';

@@ -19,7 +19,7 @@ export const Button = styled.div`
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.4s ease-out 0s;
-    background: ${theme.colors.onyx};
+    background: ${theme.colors.raisinblack};
     text-decoration: none;
     position: relative;
 

@@ -1,5 +1,5 @@
 import Footer from '../components/footer/Footer';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/header/Navbar';
 import TtsBanner from '../components/tts/TtsBannerSection';
 //import TtsCreate from "../components/tts/TtsCreate";
 import Ctatts from '../components/tts/cta/Ctatts';
