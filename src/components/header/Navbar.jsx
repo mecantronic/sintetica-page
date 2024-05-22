@@ -8,7 +8,6 @@ import { loginModal, signupModal } from '../../redux/modalSlice';
 import {
   Logo,
   MenuButton,
-  NavDiv,
   NavLink,
   NavLinks,
   NavbarContainer,

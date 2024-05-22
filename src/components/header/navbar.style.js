@@ -134,15 +134,6 @@ export const NavLink = styled(Link)`
   }
 `;
 
-export const NavDiv = styled.div`
-  width: 2px;
-  height: 40px;
-  padding: 0px 10px;
-  @media (max-width: ${theme.bp.l}) {
-    padding: 0px 0px;
-  }
-`;
-
 export const UserButtons = styled.div`
   display: flex;
   align-items: center;
