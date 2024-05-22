@@ -11,12 +11,16 @@ const theme = {
     jet: '#333333',
     lavenderfloral: '#B06EFE',
     electricindigo: '#5236FF',
+    lightSlateBlue: '#A574FF',
   },
   bp: {
     'x-small': '576px',
     small: '767px',
     medium: '992px',
     large: '1200px',
+    s: '375px',
+    m: '820px',
+    l: '1440px',
   },
 };
 

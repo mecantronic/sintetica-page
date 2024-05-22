@@ -1,4 +1,4 @@
-import Navbar from '../components/Navbar';
+import Navbar from '../components/header/Navbar';
 import VoiceBanner from '../components/voiceCloning/VoiceBannerSection';
 import VoicesSection from '../components/voiceCloning/VoicesSection';
 import ContactSection from '../components/ContactSection';
@@ -6,7 +6,7 @@ import { useState } from 'react';
 import Modal from '../components/Modal';
 import ContactForm from '../components/ContactForm';
 import { VoiceWrapper } from '../styles/pages/voiceCloning.style';
-import Footer from '../components/Footer';
+import Footer from '../components/footer/Footer';
 import Section from '../components/section/Section';
 
 function Home() {

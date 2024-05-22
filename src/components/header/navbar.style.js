@@ -1,34 +1,44 @@
 import styled from 'styled-components';
-import theme from '../theme';
+import theme from '../../styles/theme';
 import { Link } from 'react-router-dom';
 
-export const NavbarContainer = styled.div`
+export const Header = styled.header`
   position: fixed;
   top: 0;
   left: 0;
+  width: 100vw;
+  padding: 0.3rem 0;
+  margin: 0;
+  z-index: 100;
+  box-shadow: 0px -4px 24px 0px rgba(51, 51, 51, 0.33);
+  background-color: ${theme.colors.seasalt};
+`;
+
+export const NavbarContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 32px;
-  width: 100vw;
-  padding: 1rem 0;
-  margin: 0;
-  z-index: 100;
+  padding: 0 90px;
 
-  background-color: ${theme.colors.seasalt};
+  @media (max-width: ${theme.bp.l}) {
+    padding: 0 48px;
+  }
 
-  @media (max-width: ${theme.bp['x-small']}) {
-    height: 20px;
+  @media (max-width: ${theme.bp.m}) {
+    padding: 0 24px;
   }
 `;
 
 export const Logo = styled(Link)`
-  padding-left: 1rem;
   img {
-    height: 40px;
+    height: 58px;
 
-    @media (max-width: ${theme.bp['x-small']}) {
-      height: 30px;
+    @media (max-width: ${theme.bp.l}) {
+      height: 56px;
+    }
+
+    @media (max-width: ${theme.bp.m}) {
+      height: 38px;
     }
   }
 `;
@@ -41,12 +51,31 @@ export const MenuButton = styled.button`
   cursor: pointer;
   display: none;
 
-  @media (max-width: ${theme.bp.medium}) {
+  img {
+    @media (max-width: ${theme.bp.l}) {
+      height: 42px;
+    }
+
+    @media (max-width: ${theme.bp.m}) {
+      height: 32px;
+    }
+  }
+
+  @media (max-width: ${theme.bp.l}) {
     display: block;
   }
 
-  @media (max-width: ${theme.bp['x-small']}) {
+  @media (max-width: ${theme.bp.m}) {
     font-size: 30px;
+  }
+`;
+
+export const ImgMenu = styled.div`
+  @media (max-width: ${theme.bp.l}) {
+    height: 42px;
+  }
+  @media (max-width: ${theme.bp.m}) {
+    height: 32px;
   }
 `;
 
@@ -54,9 +83,10 @@ export const NavLinks = styled.div`
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  width: 750px;
 
-  @media (max-width: ${theme.bp.medium}) {
+  @media (max-width: ${theme.bp.l}) {
     display: ${({ showMenu }) => (showMenu ? 'none' : 'flex')};
     flex-direction: column;
     position: absolute;
@@ -69,7 +99,7 @@ export const NavLinks = styled.div`
       showMenu ? 'translateY(0)' : 'translateY(-100%)'};
     transition: transform 0.3s ease-in-out;
   }
-  @media (max-width: ${theme.bp['x-small']}) {
+  @media (max-width: ${theme.bp.m}) {
     top: 360px;
   }
 `;
@@ -99,22 +129,12 @@ export const NavLink = styled(Link)`
     width: 100%;
   }
 
-  @media (max-width: ${theme.bp.large}) {
+  @media (max-width: ${theme.bp.l}) {
     font-size: 12px;
   }
 `;
 
-export const NavDiv = styled.div`
-  width: 2px;
-  height: 40px;
-  padding: 0px 10px;
-  @media (max-width: ${theme.bp.large}) {
-    padding: 0px 0px;
-  }
-`;
-
 export const UserButtons = styled.div`
-  padding-right: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
