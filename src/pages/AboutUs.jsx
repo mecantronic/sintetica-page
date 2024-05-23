@@ -14,7 +14,7 @@ import {
   SectionContact,
   Title,
   SubTitle,
-  MainContainer
+  MainContainer,
 } from '../styles/pages/aboutUs.style';
 import Footer from '../components/footer/Footer';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
@@ -34,12 +34,8 @@ function AboutUs() {
     <MainContainer>
       <Navbar />
       <Container>
-        <Title>
-        Sintética
-        </Title>
-        <SubTitle>
-        Quienes somos
-        </SubTitle>
+        <Title>Sintética</Title>
+        <SubTitle>Quienes somos</SubTitle>
         <SectionText>
           <Card>
             <h4>Tecnología para la inclusión</h4>
@@ -65,21 +61,19 @@ function AboutUs() {
             </p>
           </Card>
           <Card>
-              <h4>Valor y compromiso</h4>
-              <p>
-                En el corazón de nuestro trabajo se encuentra un valor
-                fundamental: la pasión por la innovación responsable. Cada línea
-                de código, cada algoritmo y cada función que desarrollamos nace
-                desde un profundo compromiso con la ética y la integridad. Creemos
-                en el poder transformador de la tecnología cuando se utiliza con
-                responsabilidad y empatía.
-              </p>
+            <h4>Valor y compromiso</h4>
+            <p>
+              En el corazón de nuestro trabajo se encuentra un valor
+              fundamental: la pasión por la innovación responsable. Cada línea
+              de código, cada algoritmo y cada función que desarrollamos nace
+              desde un profundo compromiso con la ética y la integridad. Creemos
+              en el poder transformador de la tecnología cuando se utiliza con
+              responsabilidad y empatía.
+            </p>
           </Card>
         </SectionText>
         <SectionCards>
-          <SubTitle>
-          Nuestro equipo
-          </SubTitle>
+          <SubTitle>Nuestro equipo</SubTitle>
           <CardContainerRow>
             <UserCard>
               <CardImage>
@@ -89,29 +83,29 @@ function AboutUs() {
                 <h4>Hernán San Martín</h4>
                 <p>CEO</p>
               </CardText>
-                <Icons>
-                  <SocialIcon
-                    href="https://www.linkedin.com/in/hernan-dario-san-martin/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaLinkedinIn />
-                  </SocialIcon>
-                  <SocialIcon
-                    href="https://github.com/Hernan87"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaGithub />
-                  </SocialIcon>
-                  <SocialIcon
-                    href="hsanmartin@mecantronic.com.ar"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FiMail />
-                  </SocialIcon>
-                </Icons>
+              <Icons>
+                <SocialIcon
+                  href="https://www.linkedin.com/in/hernan-dario-san-martin/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaLinkedinIn />
+                </SocialIcon>
+                <SocialIcon
+                  href="https://github.com/Hernan87"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaGithub />
+                </SocialIcon>
+                <SocialIcon
+                  href="hsanmartin@mecantronic.com.ar"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FiMail />
+                </SocialIcon>
+              </Icons>
             </UserCard>
             <UserCard>
               <CardImage>
@@ -121,29 +115,29 @@ function AboutUs() {
                 <h4>Maximiliano Yommi</h4>
                 <p>CTO</p>
               </CardText>
-                <Icons>
-                  <SocialIcon
-                    href="https://www.linkedin.com/in/myommi"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaLinkedinIn />
-                  </SocialIcon>
-                  <SocialIcon
-                    href="https://github.com/maxiyommi"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaGithub />
-                  </SocialIcon>
-                  <SocialIcon
-                    href="myommi@mecantronic.com.ar"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FiMail />
-                  </SocialIcon>
-                </Icons>
+              <Icons>
+                <SocialIcon
+                  href="https://www.linkedin.com/in/myommi"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaLinkedinIn />
+                </SocialIcon>
+                <SocialIcon
+                  href="https://github.com/maxiyommi"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaGithub />
+                </SocialIcon>
+                <SocialIcon
+                  href="myommi@mecantronic.com.ar"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FiMail />
+                </SocialIcon>
+              </Icons>
             </UserCard>
           </CardContainerRow>
           <CardContainerSecondRow>
@@ -155,29 +149,29 @@ function AboutUs() {
                 <h4>Paula Ortega Riera</h4>
                 <p>Head Of IA</p>
               </CardText>
-                <Icons>
-                  <SocialIcon
-                    href="https://www.linkedin.com/in/paulaortegariera/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaLinkedinIn />
-                  </SocialIcon>
-                  <SocialIcon
-                    href="https://github.com/pauortegariera"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaGithub />
-                  </SocialIcon>
-                  <SocialIcon
-                    href="portega@mecantronic.com.ar"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FiMail />
-                  </SocialIcon>
-                </Icons>
+              <Icons>
+                <SocialIcon
+                  href="https://www.linkedin.com/in/paulaortegariera/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaLinkedinIn />
+                </SocialIcon>
+                <SocialIcon
+                  href="https://github.com/pauortegariera"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaGithub />
+                </SocialIcon>
+                <SocialIcon
+                  href="portega@mecantronic.com.ar"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FiMail />
+                </SocialIcon>
+              </Icons>
             </UserCard>
             <UserCard>
               <CardImage>
@@ -190,29 +184,29 @@ function AboutUs() {
                 <h4>Franco Bach</h4>
                 <p>Machine Learning Engineer</p>
               </CardText>
-                <Icons>
-                  <SocialIcon
-                    href="https://www.linkedin.com/in/franco-bach/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaLinkedinIn />
-                  </SocialIcon>
-                  <SocialIcon
-                    href="https://github.com/francobach47"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaGithub />
-                  </SocialIcon>
-                  <SocialIcon
-                    href="francobach47@gmail.com"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FiMail />
-                  </SocialIcon>
-                </Icons>
+              <Icons>
+                <SocialIcon
+                  href="https://www.linkedin.com/in/franco-bach/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaLinkedinIn />
+                </SocialIcon>
+                <SocialIcon
+                  href="https://github.com/francobach47"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaGithub />
+                </SocialIcon>
+                <SocialIcon
+                  href="francobach47@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FiMail />
+                </SocialIcon>
+              </Icons>
             </UserCard>
             <UserCard>
               <CardImage>
@@ -225,29 +219,29 @@ function AboutUs() {
                 <h4>Darío Andrés Paez</h4>
                 <p>Machine Learning Engineer</p>
               </CardText>
-                <Icons>
-                  <SocialIcon
-                    href="https://www.linkedin.com/in/dariopaezmlengineer/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaLinkedinIn />
-                  </SocialIcon>
-                  <SocialIcon
-                    href="https://github.com/dario248"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaGithub />
-                  </SocialIcon>
-                  <SocialIcon
-                    href="paezdario24@gmail.com"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FiMail />
-                  </SocialIcon>
-                </Icons>
+              <Icons>
+                <SocialIcon
+                  href="https://www.linkedin.com/in/dariopaezmlengineer/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaLinkedinIn />
+                </SocialIcon>
+                <SocialIcon
+                  href="https://github.com/dario248"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaGithub />
+                </SocialIcon>
+                <SocialIcon
+                  href="paezdario24@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FiMail />
+                </SocialIcon>
+              </Icons>
             </UserCard>
           </CardContainerSecondRow>
         </SectionCards>

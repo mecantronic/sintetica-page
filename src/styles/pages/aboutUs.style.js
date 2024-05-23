@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import theme from '../theme';
-import { Link } from 'react-router-dom';
 
 export const AboutUsWrapper = styled.div`
   display: flex;
@@ -11,35 +10,37 @@ export const AboutUsWrapper = styled.div`
 `;
 
 export const MainContainer = styled.div`
-background: linear-gradient(5deg, rgba(165, 116, 255, 0.00) 65%, rgba(165, 116, 255, 0.50) 88.49%);
-padding-top: 86px;
-@media (max-width: ${theme.bp.l}) {
-   background: ${theme.colors.white};
+  background: linear-gradient(
+    5deg,
+    rgba(165, 116, 255, 0) 65%,
+    rgba(165, 116, 255, 0.5) 88.49%
+  );
+  padding-top: 86px;
+  @media (max-width: ${theme.bp.l}) {
+    background: ${theme.colors.white};
   }
-`
-
+`;
 
 export const Title = styled.p`
-text-align: center;
-font-weight: 600;
-font-size: 48px;
-line-height: 63px;
-margin: 0px 0px 48px 0px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 63px;
+  margin: 0px 0px 48px 0px;
 `;
 
 export const SubTitle = styled.p`
-text-align: center;
-font-weight: 600;
-font-size: 24px;
-line-height: 26px;
-margin: 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 26px;
+  margin: 0;
 `;
-
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  align-items:  center;
+  align-items: center;
   margin: 0 0 80px 0;
 `;
 
@@ -50,13 +51,13 @@ export const SectionText = styled.div`
   gap: 40px;
   margin-top: 48px;
   @media (max-width: ${theme.bp.l}) {
-   flex-wrap: wrap;
-   justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   @media (max-width: ${theme.bp.m}) {
     flex-direction: column;
-   }
+  }
 `;
 
 export const Card = styled.div`
@@ -67,20 +68,19 @@ export const Card = styled.div`
   height: 266px;
   width: 401px;
   border-radius: 12px;
-  border: 2px solid  ${theme.colors.lavender};
-  background:  ${theme.colors.white};
+  border: 2px solid ${theme.colors.lavender};
+  background: ${theme.colors.white};
   box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.15);
   gap: 16px;
-
 
   @media (max-width: ${theme.bp.l}) {
     width: 302px;
     height: 346px;
-   }
+  }
   @media (max-width: ${theme.bp.m}) {
     width: 302px;
     height: max-content;
-   }
+  }
 
   h4 {
     color: ${theme.colors.lightSlateBlue};
@@ -102,14 +102,13 @@ export const Card = styled.div`
     @media (max-width: ${theme.bp.l}) {
       width: 258px;
       min-height: 350px;
-   }
-    
-    @media (max-width: ${theme.bp.m}) {
-        width: 274px;
-        min-height: 198px;
-        margin-bottom: 16px;
     }
 
+    @media (max-width: ${theme.bp.m}) {
+      width: 274px;
+      min-height: 198px;
+      margin-bottom: 16px;
+    }
   }
 `;
 
@@ -129,7 +128,7 @@ export const CardContainerRow = styled.div`
   gap: 32px;
   @media (max-width: ${theme.bp.m}) {
     flex-direction: column;
-   }
+  }
 `;
 
 export const CardContainerSecondRow = styled.div`
@@ -137,10 +136,10 @@ export const CardContainerSecondRow = styled.div`
   justify-content: center;
   gap: 32px;
   @media (max-width: ${theme.bp.l}) {
-   flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   @media (max-width: ${theme.bp.m}) {
-   flex-direction: column;
+    flex-direction: column;
   }
 `;
 
@@ -152,22 +151,20 @@ export const UserCard = styled.div`
   width: 401px;
   height: 307px;
   border-radius: 12px;
-  border: 2px solid  ${theme.colors.lavender};
-  background:  ${theme.colors.white};
+  border: 2px solid ${theme.colors.lavender};
+  background: ${theme.colors.white};
   box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.15);
 
   @media (max-width: ${theme.bp.l}) {
-   width: 335.5px;
-   height: 303px;
-   border: 1px solid ${theme.colors.lightSlateBlue};
+    width: 335.5px;
+    height: 303px;
+    border: 1px solid ${theme.colors.lightSlateBlue};
   }
   @media (max-width: ${theme.bp.m}) {
-   width: 325px;
-   height: 303px;
-   border: 1px solid ${theme.colors.lightSlateBlue};
+    width: 325px;
+    height: 303px;
+    border: 1px solid ${theme.colors.lightSlateBlue};
   }
-
-
 `;
 
 export const CardImage = styled.div`
@@ -222,12 +219,12 @@ export const SectionContact = styled.div`
   align-items: center;
   justify-content: center;
 
- @media (max-width: ${theme.bp.l}) {
-  h4{
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 26px;
-    text-align: center;
-  }
+  @media (max-width: ${theme.bp.l}) {
+    h4 {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 26px;
+      text-align: center;
+    }
   }
 `;
