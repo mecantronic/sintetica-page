@@ -13,7 +13,7 @@ export const AboutUsWrapper = styled.div`
 export const MainContainer = styled.div`
 background: linear-gradient(5deg, rgba(165, 116, 255, 0.00) 65%, rgba(165, 116, 255, 0.50) 88.49%);
 padding-top: 86px;
-@media (max-width: 1440px) {
+@media (max-width: ${theme.bp.l}) {
    background: ${theme.colors.white};
   }
 `
@@ -49,12 +49,12 @@ export const SectionText = styled.div`
   align-self: center;
   gap: 40px;
   margin-top: 48px;
-  @media (max-width: 1440px) {
+  @media (max-width: ${theme.bp.l}) {
    flex-wrap: wrap;
    justify-content: center;
   }
 
-  @media (max-width: 820px) {
+  @media (max-width: ${theme.bp.m}) {
     flex-direction: column;
    }
 `;
@@ -63,29 +63,53 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 270px;
-  width: 405px;
+  justify-content: flex-start;
+  height: 266px;
+  width: 401px;
   border-radius: 12px;
-  padding: 24px;
   border: 2px solid  ${theme.colors.lavender};
   background:  ${theme.colors.white};
   box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.15);
-  @media (max-width: 1440px) {
-   width: 300px;
-  min-height: 350px;
-  }
+  gap: 16px;
+
+
+  @media (max-width: ${theme.bp.l}) {
+    width: 302px;
+    height: 346px;
+   }
+  @media (max-width: ${theme.bp.m}) {
+    width: 302px;
+    height: max-content;
+   }
 
   h4 {
-    color: #a574ff;
+    color: ${theme.colors.lightSlateBlue};
     font-weight: 600;
     font-size: 18px;
+    margin: 0;
+    text-align: center;
+    margin-top: 24px;
   }
 
   p {
     text-align: center;
     font-size: 14px;
-    line-height: 22px;
     font-weight: 400;
+    margin: 0;
+    width: 357px;
+    line-height: 22px;
+
+    @media (max-width: ${theme.bp.l}) {
+      width: 258px;
+      min-height: 350px;
+   }
+    
+    @media (max-width: ${theme.bp.m}) {
+        width: 274px;
+        min-height: 198px;
+        margin-bottom: 16px;
+    }
+
   }
 `;
 
@@ -103,7 +127,7 @@ export const CardContainerRow = styled.div`
   display: flex;
   justify-content: center;
   gap: 32px;
-  @media (max-width: 820px) {
+  @media (max-width: ${theme.bp.m}) {
     flex-direction: column;
    }
 `;
@@ -112,10 +136,10 @@ export const CardContainerSecondRow = styled.div`
   display: flex;
   justify-content: center;
   gap: 32px;
-  @media (max-width: 1440px) {
+  @media (max-width: ${theme.bp.l}) {
    flex-wrap: wrap;
   }
-  @media (max-width: 820px) {
+  @media (max-width: ${theme.bp.m}) {
    flex-direction: column;
   }
 `;
@@ -123,21 +147,24 @@ export const CardContainerSecondRow = styled.div`
 export const UserCard = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 400px;
-  height: 300px;
+  width: 401px;
+  height: 307px;
   border-radius: 12px;
   border: 2px solid  ${theme.colors.lavender};
   background:  ${theme.colors.white};
   box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.15);
-  padding: 24px;
-  gap: 12px;
 
-  @media (max-width: 1440px) {
-   width: 330px;
-   height: 305px;
-   border: 1px solid #A574FF;
+  @media (max-width: ${theme.bp.l}) {
+   width: 335.5px;
+   height: 303px;
+   border: 1px solid ${theme.colors.lightSlateBlue};
+  }
+  @media (max-width: ${theme.bp.m}) {
+   width: 325px;
+   height: 303px;
+   border: 1px solid ${theme.colors.lightSlateBlue};
   }
 
 
@@ -148,18 +175,27 @@ export const CardImage = styled.div`
     border-radius: 50%;
     width: 125px;
     height: 125px;
+    margin-top: 24px;
   }
 `;
 
 export const CardText = styled.div`
   text-align: center;
+  margin: 16px 0 24px 0;
+  h4 {
+    margin: 0;
+    margin-bottom: 4px;
+  }
+  p {
+    margin: 0;
+  }
 `;
 
 export const Icons = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 20px;
+  margin-bottom: 24px;
 `;
 
 export const SocialIcon = styled.a`
@@ -186,24 +222,12 @@ export const SectionContact = styled.div`
   align-items: center;
   justify-content: center;
 
- @media (max-width: 1440px) {
+ @media (max-width: ${theme.bp.l}) {
   h4{
     font-size: 20px;
     font-weight: 600;
     line-height: 26px;
+    text-align: center;
   }
   }
-
-  /* margin-bottom: 80px */
-`;
-
-export const NavLink = styled(Link)`
-  padding: 8px 32px 8px 32px;
-  border-radius: 25px;
-  background: linear-gradient(to right, #5236ff 0%, #a574ff 100%);
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 36px;
-  text-decoration: none;
-  color: #fefeff;
 `;

@@ -65,15 +65,15 @@ function AboutUs() {
             </p>
           </Card>
           <Card>
-            <h4>Valor y compromiso</h4>
-            <p>
-              En el corazón de nuestro trabajo se encuentra un valor
-              fundamental: la pasión por la innovación responsable. Cada línea
-              de código, cada algoritmo y cada función que desarrollamos nace
-              desde un profundo compromiso con la ética y la integridad. Creemos
-              en el poder transformador de la tecnología cuando se utiliza con
-              responsabilidad y empatía.
-            </p>
+              <h4>Valor y compromiso</h4>
+              <p>
+                En el corazón de nuestro trabajo se encuentra un valor
+                fundamental: la pasión por la innovación responsable. Cada línea
+                de código, cada algoritmo y cada función que desarrollamos nace
+                desde un profundo compromiso con la ética y la integridad. Creemos
+                en el poder transformador de la tecnología cuando se utiliza con
+                responsabilidad y empatía.
+              </p>
           </Card>
         </SectionText>
         <SectionCards>
@@ -88,6 +88,7 @@ function AboutUs() {
               <CardText>
                 <h4>Hernán San Martín</h4>
                 <p>CEO</p>
+              </CardText>
                 <Icons>
                   <SocialIcon
                     href="https://www.linkedin.com/in/hernan-dario-san-martin/"
@@ -111,7 +112,6 @@ function AboutUs() {
                     <FiMail />
                   </SocialIcon>
                 </Icons>
-              </CardText>
             </UserCard>
             <UserCard>
               <CardImage>
@@ -120,6 +120,7 @@ function AboutUs() {
               <CardText>
                 <h4>Maximiliano Yommi</h4>
                 <p>CTO</p>
+              </CardText>
                 <Icons>
                   <SocialIcon
                     href="https://www.linkedin.com/in/myommi"
@@ -143,7 +144,6 @@ function AboutUs() {
                     <FiMail />
                   </SocialIcon>
                 </Icons>
-              </CardText>
             </UserCard>
           </CardContainerRow>
           <CardContainerSecondRow>
@@ -154,6 +154,7 @@ function AboutUs() {
               <CardText>
                 <h4>Paula Ortega Riera</h4>
                 <p>Head Of IA</p>
+              </CardText>
                 <Icons>
                   <SocialIcon
                     href="https://www.linkedin.com/in/paulaortegariera/"
@@ -177,7 +178,6 @@ function AboutUs() {
                     <FiMail />
                   </SocialIcon>
                 </Icons>
-              </CardText>
             </UserCard>
             <UserCard>
               <CardImage>
@@ -189,6 +189,7 @@ function AboutUs() {
               <CardText>
                 <h4>Franco Bach</h4>
                 <p>Machine Learning Engineer</p>
+              </CardText>
                 <Icons>
                   <SocialIcon
                     href="https://www.linkedin.com/in/franco-bach/"
@@ -212,7 +213,6 @@ function AboutUs() {
                     <FiMail />
                   </SocialIcon>
                 </Icons>
-              </CardText>
             </UserCard>
             <UserCard>
               <CardImage>
@@ -224,6 +224,7 @@ function AboutUs() {
               <CardText>
                 <h4>Darío Andrés Paez</h4>
                 <p>Machine Learning Engineer</p>
+              </CardText>
                 <Icons>
                   <SocialIcon
                     href="https://www.linkedin.com/in/dariopaezmlengineer/"
@@ -247,7 +248,6 @@ function AboutUs() {
                     <FiMail />
                   </SocialIcon>
                 </Icons>
-              </CardText>
             </UserCard>
           </CardContainerSecondRow>
         </SectionCards>
