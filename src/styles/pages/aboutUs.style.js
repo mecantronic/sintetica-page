@@ -15,9 +15,15 @@ export const MainContainer = styled.div`
     rgba(165, 116, 255, 0) 65%,
     rgba(165, 116, 255, 0.5) 88.49%
   );
-  padding-top: 86px;
+  padding-top: 98px;
+  
   @media (max-width: ${theme.bp.l}) {
     background: ${theme.colors.white};
+    padding-top: 96px;
+  }
+  @media (max-width: ${theme.bp.m}) {
+    background: ${theme.colors.white};
+    padding-top: 78px;
   }
 `;
 
@@ -64,22 +70,24 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  height: 266px;
-  width: 401px;
+  height: 270px;
+  width: 405px;
   border-radius: 12px;
   border: 2px solid ${theme.colors.lavender};
   background: ${theme.colors.white};
   box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.15);
   gap: 16px;
+  padding: 24px;
 
   @media (max-width: ${theme.bp.l}) {
-    width: 302px;
-    height: 346px;
+    width: 306px;
+    height: 350px;
+    gap: 8px;
   }
   @media (max-width: ${theme.bp.m}) {
-    width: 302px;
     height: max-content;
+    padding: 16px;
+    gap: 4px;
   }
 
   h4 {
@@ -88,7 +96,7 @@ export const Card = styled.div`
     font-size: 18px;
     margin: 0;
     text-align: center;
-    margin-top: 24px;
+    font-family: 'Montserrat';
   }
 
   p {
@@ -96,19 +104,8 @@ export const Card = styled.div`
     font-size: 14px;
     font-weight: 400;
     margin: 0;
-    width: 357px;
     line-height: 22px;
-
-    @media (max-width: ${theme.bp.l}) {
-      width: 258px;
-      min-height: 350px;
-    }
-
-    @media (max-width: ${theme.bp.m}) {
-      width: 274px;
-      min-height: 198px;
-      margin-bottom: 16px;
-    }
+    font-family: 'Montserrat';
   }
 `;
 
@@ -148,21 +145,22 @@ export const UserCard = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 401px;
-  height: 307px;
+  width: 405px;
+  height: 311px;
   border-radius: 12px;
   border: 2px solid ${theme.colors.lavender};
   background: ${theme.colors.white};
   box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.15);
+  padding: 24px;
 
   @media (max-width: ${theme.bp.l}) {
-    width: 335.5px;
-    height: 303px;
+    width: 337.5px;
+    height: 305px;
     border: 1px solid ${theme.colors.lightSlateBlue};
   }
   @media (max-width: ${theme.bp.m}) {
-    width: 325px;
-    height: 303px;
+    width: 327px;
+    height: 305px;
     border: 1px solid ${theme.colors.lightSlateBlue};
   }
 `;
@@ -172,19 +170,29 @@ export const CardImage = styled.div`
     border-radius: 50%;
     width: 125px;
     height: 125px;
-    margin-top: 24px;
   }
 `;
 
 export const CardText = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  margin: 16px 0 24px 0;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  gap: 4px;
+
+  @media (max-width: ${theme.bp.l}) {
+    margin-bottom: 18px;
+  }
+
   h4 {
     margin: 0;
-    margin-bottom: 4px;
+    font-family: 'Montserrat';
   }
   p {
     margin: 0;
+    font-family: 'Montserrat';
   }
 `;
 
@@ -192,7 +200,7 @@ export const Icons = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 24px;
+  gap: 10px;
 `;
 
 export const SocialIcon = styled.a`
@@ -205,7 +213,6 @@ export const SocialIcon = styled.a`
   color: ${theme.colors.raisinblack};
   border: 1px solid ${theme.colors.raisinblack};
   border-radius: 50px;
-  margin: 0 5px;
 
   &:hover {
     color: ${theme.colors.electricindigo};

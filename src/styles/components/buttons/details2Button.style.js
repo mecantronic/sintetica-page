@@ -12,6 +12,7 @@ export const Button = styled.div`
     -ms-user-select: none;
     border: 0px;
     padding: 0 32px;
+    font-family: 'Quicksand';
     font-size: 14px;
     font-weight: 700;
     line-height: 36px;

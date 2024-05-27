@@ -12,7 +12,15 @@ export const Header = styled.header`
   z-index: 100;
   box-shadow: 0px -4px 24px 0px rgba(51, 51, 51, 0.33);
   background-color: ${theme.colors.seasalt};
-  height: 62px;
+  height: 74px;
+  
+  @media (max-width: ${theme.bp.l}) {
+    height: 72px;
+  }
+
+  @media (max-width: ${theme.bp.m}) {
+    height: 54px;
+  };
 `;
 
 export const NavbarContainer = styled.nav`
