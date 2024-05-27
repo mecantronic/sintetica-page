@@ -1,4 +1,4 @@
-import Details1Button from '../buttons/Details1Button';
+import Details2Button from '../buttons/Details2Button';
 import { useDispatch } from 'react-redux';
 import { contactModal } from '../../redux/modalSlice';
 import {
@@ -23,7 +23,7 @@ function BannerSection() {
       <Left>
         <Robot src="assets/sintetica-black-logo.svg" alt="logo" />
         <TextLogo>
-          <h1>Sintética</h1>
+          <h2>Sintética</h2>
           <p>Laboratorio de voces</p>
         </TextLogo>
       </Left>
@@ -34,7 +34,7 @@ function BannerSection() {
           artificiales en nuestro idioma.
         </Resume>
         <BTN>
-          <Details1Button
+          <Details2Button
             buttonText="Contactanos"
             handleClick={handleOpenContact}
           />

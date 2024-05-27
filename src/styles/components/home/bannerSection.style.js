@@ -2,15 +2,16 @@ import styled from 'styled-components';
 import theme from '../../theme';
 
 export const Container = styled.section`
-  background-color: ${theme.colors.white};
+  /* background-color: ${theme.colors.white}; */
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
-  margin-top: 80px;
-  min-height: calc(100vh - 80px);
-  width: 100vw;
-
+  /* margin-top: 80px; */
+  /* min-height: calc(100vh - 80px);
+  width: 100vw; */
+  width: 1035px;
+  padding-top: 190px;
   @media (max-width: ${theme.bp.medium}) {
     flex-direction: column;
   }
@@ -22,7 +23,8 @@ export const Left = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 50vw;
+  width: 324px;
+  /* width: 50vw; */
 
   @media (max-width: ${theme.bp.medium}) {
     width: 100vw;
@@ -30,27 +32,29 @@ export const Left = styled.div`
 `;
 
 export const Robot = styled.img`
-  width: 300px;
-  @media (max-width: ${theme.bp.small}) {
+  width: 205px;
+  /* @media (max-width: ${theme.bp.small}) {
     width: 240px;
   }
   @media (max-width: ${theme.bp['x-small']}) {
     width: 200px;
-  }
+  } */
 `;
 
 export const TextLogo = styled.div`
-  h1 {
+  h2 {
     text-align: center;
     margin: 0;
-    font-size: 95px;
+    font-size: 56px;
+    font-weight: 700;
     color: ${theme.colors.raisinblack};
   }
   p {
     text-align: center;
     margin: 0;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 700;
+    line-height: 25.9px;
     color: ${theme.colors.electricindigo};
     text-transform: uppercase;
   }
@@ -78,15 +82,16 @@ export const Right = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  padding: 0px 30px 30px 30px;
-  width: 50vw;
-  height: 60vh;
+  /* text-align: center; */
+  width: 553px;
+  /* padding: 0px 30px 30px 30px; */
+  /* width: 50vw; */
+  /* height: 60vh; */
 
-  background-image: url('assets/backgrounds/Background1.svg');
+  /* background-image: url('assets/backgrounds/Background1.svg');
   background-size: 103%;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: right; */
 
   @media (max-width: ${theme.bp.medium}) {
     width: 100vw;
@@ -100,11 +105,12 @@ export const Right = styled.div`
 `;
 
 export const Title = styled.h4`
-  text-align: center;
+  text-align: left;
   margin: 0;
-  font-size: 32px;
+  font-size: 56px;
   font-weight: 600;
-  color: ${theme.colors.raisinblack};
+  line-height: 60px;
+  color: ${theme.colors.jet};
 
   @media (max-width: ${theme.bp.large}) {
     font-size: 28px;
@@ -123,11 +129,14 @@ export const Title = styled.h4`
 export const Resume = styled.p`
   text-align: left;
   margin: 0;
-  font-size: 24px;
-  font-weight: 500;
-  color: ${theme.colors.platinum};
-  padding: 30px 0px 30px 130px;
-  justify-content: flex-end;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-top: 20px;
+  margin-bottom: 37px;
+  color: ${theme.colors.jet};
+  /* padding: 30px 0px 30px 130px; */
+  /* justify-content: flex-end; */
 
   @media (max-width: ${theme.bp.large}) {
     padding: 10px 20px 10px 130px;

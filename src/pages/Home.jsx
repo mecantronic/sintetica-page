@@ -51,11 +51,11 @@ function Home() {
       </HelmetProvider>
       <Navbar />
       <BannerSection openModal={openModal} />
-      <BackcgroundImage>
+      {/* <BackcgroundImage> */}
         <TechnologySection />
         <WhatIsSection />
         <ContactSection />
-      </BackcgroundImage>
+      {/* </BackcgroundImage> */}
       {isModalOpen && (
         <Modal closeModal={closeModal}>
           <ContactForm />
