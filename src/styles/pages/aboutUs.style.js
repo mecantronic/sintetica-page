@@ -16,7 +16,7 @@ export const MainContainer = styled.div`
     rgba(165, 116, 255, 0.5) 88.49%
   );
   padding-top: 98px;
-  
+
   @media (max-width: ${theme.bp.l}) {
     background: ${theme.colors.white};
     padding-top: 96px;
