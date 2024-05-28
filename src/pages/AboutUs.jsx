@@ -72,8 +72,8 @@ function AboutUs() {
             </p>
           </Card>
         </SectionText>
+        <SubTitle>Nuestro equipo</SubTitle>
         <SectionCards>
-          <SubTitle>Nuestro equipo</SubTitle>
           <CardContainerRow>
             <UserCard>
               <CardImage>

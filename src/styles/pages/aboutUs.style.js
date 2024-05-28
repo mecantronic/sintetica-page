@@ -29,25 +29,47 @@ export const MainContainer = styled.div`
 
 export const Title = styled.p`
   text-align: center;
-  font-weight: 600;
-  font-size: 48px;
+  font-weight: 700;
+  font-size: 60px;
   line-height: 63px;
-  margin: 0px 0px 48px 0px;
+  margin: 0;
+
+  @media (max-width: ${theme.bp.l}) {
+    font-size: 42px;
+    line-height: 34px;
+  }
+
+  @media (max-width: ${theme.bp.m}) {
+    font-size: 32px;
+  }
 `;
 
 export const SubTitle = styled.p`
   text-align: center;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 26px;
   line-height: 26px;
   margin: 0;
+
+  @media (max-width: ${theme.bp.l}) {
+    font-size: 20px;
+  }
 `;
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 0 80px 0;
+  gap: 48px;
+  padding: 0 0 80px 0;
+  @media (max-width: ${theme.bp.l}) {
+    padding: 0 0 48px 0;
+    gap: 24px;
+  }
+
+  @media (max-width: ${theme.bp.m}) {
+    padding: 0 0 40px 0;
+  }
 `;
 
 export const SectionText = styled.div`
@@ -55,7 +77,6 @@ export const SectionText = styled.div`
   align-items: center;
   align-self: center;
   gap: 40px;
-  margin-top: 48px;
   @media (max-width: ${theme.bp.l}) {
     flex-wrap: wrap;
     justify-content: center;
@@ -63,6 +84,7 @@ export const SectionText = styled.div`
 
   @media (max-width: ${theme.bp.m}) {
     flex-direction: column;
+    gap: 32px;
   }
 `;
 
@@ -116,7 +138,14 @@ export const SectionCards = styled.div`
   align-items: center;
   flex-wrap: wrap;
   gap: 48px;
-  padding: 50px 0px;
+
+  @media (max-width: ${theme.bp.l}) {
+    gap: 32px;
+  }
+
+  @media (max-width: ${theme.bp.m}) {
+    gap: 24px;
+  }
 `;
 
 export const CardContainerRow = styled.div`
@@ -125,6 +154,7 @@ export const CardContainerRow = styled.div`
   gap: 32px;
   @media (max-width: ${theme.bp.m}) {
     flex-direction: column;
+    gap: 24px;
   }
 `;
 
@@ -137,6 +167,7 @@ export const CardContainerSecondRow = styled.div`
   }
   @media (max-width: ${theme.bp.m}) {
     flex-direction: column;
+    gap: 24px;
   }
 `;
 
@@ -225,13 +256,25 @@ export const SectionContact = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  gap: 48px;
   @media (max-width: ${theme.bp.l}) {
-    h4 {
+    gap: 24px;
+  }
+
+  h4 {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 26px;
+    text-align: center;
+    margin: 0;
+
+    @media (max-width: ${theme.bp.l}) {
       font-size: 20px;
-      font-weight: 600;
-      line-height: 26px;
-      text-align: center;
+    }
+
+    @media (max-width: ${theme.bp.m}) {
+      font-size: 14px;
+      width: 327px;
     }
   }
 `;
