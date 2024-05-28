@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
     scale: 1;
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4 ,h5 {

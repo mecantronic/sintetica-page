@@ -9,15 +9,6 @@ export const Container = styled.section`
   justify-content: center;
   align-items: center;
   padding: 20px;
-
-  background-image: url('assets/backgrounds/Background2.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right;
-
-  @media (max-width: ${theme.bp.large}) {
-    background-size: 30%;
-  }
 `;
 
 export const Title = styled.h3`

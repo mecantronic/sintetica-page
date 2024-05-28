@@ -27,7 +27,7 @@ export const ModalContent = styled.div`
 export const CloseIcon = styled.span`
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 20px;
   border: none;
   cursor: pointer;
   font-size: 20px;
