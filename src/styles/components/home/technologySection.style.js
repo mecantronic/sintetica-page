@@ -28,17 +28,19 @@ export const NameSection = styled.h3`
   text-align: center;
   font-size: 18px;
   font-weight: 700;
-  padding: 15px 30px;
+  padding: 15px 14px;
   margin: 0;
-  border-radius: 25px;
+  border-radius: 12px;
   color: ${theme.colors.lavenderfloral};
   background-color: ${theme.colors.lavender};
 `;
 
-export const Title = styled.h4`
+export const Title = styled.h4` 
+  width: 913px;
   text-align: center;
   font-size: 32px;
   font-weight: 700;
+  line-height: 34px;
   color: ${theme.colors.raisinblack};
   margin: 0;
   max-width: 90vw;
@@ -69,7 +71,7 @@ export const Technology = styled(Link)`
   align-items: center;
   text-decoration: none;
   height: 450px;
-  width: 300px;
+  width: 340px;
   background-color: ${theme.colors.white};
   border-radius: 10px;
   box-shadow: 0px 10px 10px 2px rgba(0, 0, 0, 0.15);
