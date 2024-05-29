@@ -6,7 +6,7 @@ const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
 }
   body {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     max-width: 100vw;
     scale: 1;
     padding: 0;

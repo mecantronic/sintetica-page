@@ -27,7 +27,7 @@ export const MainContainer = styled.div`
   }
 `;
 
-export const Title = styled.p`
+export const Title = styled.h2`
   text-align: center;
   font-weight: 700;
   font-size: 60px;
@@ -44,7 +44,7 @@ export const Title = styled.p`
   }
 `;
 
-export const SubTitle = styled.p`
+export const SubTitle = styled.h3`
   text-align: center;
   font-weight: 600;
   font-size: 26px;
