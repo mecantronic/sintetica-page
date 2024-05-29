@@ -160,7 +160,7 @@ export const SmallInput = styled.input`
 
   line-height: 24px;
   border-radius: 15px;
-  border: 2px solid ${theme.colors.platinum};
+  border: 2px solid ${props => props.borderColor};
   color: ${theme.colors.onyx};
   padding: 0 15px;
 
@@ -170,6 +170,11 @@ export const SmallInput = styled.input`
   @media (max-width: ${theme.bp['x-small']}) {
     width: 80%;
     height: 30px;
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid ${theme.colors.lightSlateBlue};
   }
 
   &::placeholder {
@@ -182,12 +187,17 @@ export const BigInput = styled.textarea`
   width: calc(80% + 50px);
   line-height: 24px;
   border-radius: 15px;
-  border: 2px solid ${theme.colors.platinum};
+  border: 2px solid ${props => props.borderColor};
   color: ${theme.colors.onyx};
   padding: 10px 15px;
 
   @media (max-width: ${theme.bp['x-small']}) {
     width: 80%;
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid ${theme.colors.lightSlateBlue};
   }
 
   &::placeholder {

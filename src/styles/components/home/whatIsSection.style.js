@@ -130,7 +130,7 @@ export const ResumeWhat = styled.div`
 
 export const Services = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 40px;
   justify-content: center;
   align-items: center;

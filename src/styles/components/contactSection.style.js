@@ -64,9 +64,9 @@ export const ContactInfo = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 60vw;
+  width: 824px;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   border-radius: 25px;
 
   @media (max-width: ${theme.bp.large}) {
@@ -87,7 +87,7 @@ export const InfoItem = styled.a`
 
   border-radius: 20px;
   padding: 0px 18px;
-  width: 50%;
+  width: 400px;
   height: 80px;
   @media (max-width: ${theme.bp.medium}) {
     width: 85vw;
@@ -130,11 +130,11 @@ export const ContactForm = styled.form`
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  width: 60vw;
+  width: 824px;
   border: 2px solid ${theme.colors.lightSlateBlue + '59'};
   border-radius: 20px;
   padding: 40px 0px 40px 0px;
-  row-gap: 50px;
+  row-gap: 48px;
   column-gap: 20px;
   background-color: ${theme.colors.white};
 
@@ -151,12 +151,12 @@ export const Center = styled.div`
 `;
 
 export const SmallInput = styled.input`
-  height: 40px;
-  width: 40%;
+  height: 45px;
+  width: 360px;
 
   line-height: 24px;
   border-radius: 15px;
-  border: 2px solid ${theme.colors.platinum};
+  border: 2px solid ${props => props.borderColor};
   color: ${theme.colors.onyx};
   padding: 0 15px;
 
@@ -166,6 +166,12 @@ export const SmallInput = styled.input`
   @media (max-width: ${theme.bp['x-small']}) {
     width: 80%;
   }
+
+  &:focus {
+    outline: none;
+    border: 2px solid ${theme.colors.lightSlateBlue};
+  }
+
   &::placeholder {
     opacity: 1;
     color: ${theme.colors.platinum};
@@ -173,15 +179,21 @@ export const SmallInput = styled.input`
 `;
 
 export const BigInput = styled.textarea`
-  width: calc(80% + 50px);
+  width: 744px;
   line-height: 24px;
   border-radius: 15px;
-  border: 2px solid ${theme.colors.platinum};
+  border: 2px solid ${props => props.borderColor};
   color: ${theme.colors.onyx};
   padding: 10px 15px;
   @media (max-width: ${theme.bp['x-small']}) {
     width: 80%;
   }
+
+  &:focus {
+    outline: none;
+    border: 2px solid ${theme.colors.lightSlateBlue};
+  }
+
   &::placeholder {
     opacity: 1;
     color: ${theme.colors.platinum};

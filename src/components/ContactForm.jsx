@@ -17,6 +17,7 @@ import {
   TagText,
   Title,
 } from '../styles/components/contactForm.style';
+import theme from '../styles/theme';
 
 emailjs.init(import.meta.env.VITE_EMAILJS_USER_ID);
 
@@ -31,6 +32,20 @@ function ContactForm() {
     subject: '',
     message: '',
   });
+
+  const [nameBorderColor, setNameBorderColor] = useState(theme.colors.platinum);
+  const [emailBorderColor, setEmailBorderColor] = useState(theme.colors.platinum);
+  const [phoneBorderColor, setPhoneBorderColor] = useState(theme.colors.platinum);
+  const [subjectBorderColor, setSubjectBorderColor] = useState(theme.colors.platinum);
+  const [messageBorderColor, setMessageBorderColor] = useState(theme.colors.platinum);
+
+  const onBlur = (value, colorSetter) => {
+    if (value) {
+      colorSetter(theme.colors.lightSlateBlue + '59');
+    } else {
+      colorSetter(theme.colors.platinum);
+    }
+  }
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -144,6 +159,8 @@ function ContactForm() {
           name="name"
           value={formData.name}
           onChange={handleChange}
+          borderColor={nameBorderColor}
+          onBlur={() => onBlur(formData.name, setNameBorderColor)}
         />
         <SmallInput
           type="text"
@@ -152,6 +169,8 @@ function ContactForm() {
           name="email"
           value={formData.email}
           onChange={handleChange}
+          borderColor={emailBorderColor}
+          onBlur={() => onBlur(formData.email, setEmailBorderColor)}
         />
         <SmallInput
           type="text"
@@ -160,6 +179,8 @@ function ContactForm() {
           name="phone"
           value={formData.phone}
           onChange={handleChange}
+          borderColor={phoneBorderColor}
+          onBlur={() => onBlur(formData.phone, setPhoneBorderColor)}
         />
         <SmallInput
           type="text"
@@ -168,6 +189,8 @@ function ContactForm() {
           name="subject"
           value={formData.subject}
           onChange={handleChange}
+          borderColor={subjectBorderColor}
+          onBlur={() => onBlur(formData.subject, setSubjectBorderColor)}
         />
         <BigInput
           name="message"
@@ -177,6 +200,8 @@ function ContactForm() {
           placeholder="Mensaje*"
           value={formData.message}
           onChange={handleChange}
+          borderColor={messageBorderColor}
+          onBlur={() => onBlur(formData.message, setMessageBorderColor)}
         />
         <Center>
           <ContatcButton type="submit">Enviar mensaje</ContatcButton>
