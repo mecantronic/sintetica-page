@@ -9,17 +9,9 @@ export const Container = styled.section`
   justify-content: center;
   align-items: center;
   margin-bottom: 60px;
-  /* margin: 100px 0; */
   width: 100vw;
   background: linear-gradient(183deg, rgba(165, 116, 255, 0.00) 12.07%, rgba(165, 116, 255, 0.30) 49.85%, rgba(165, 116, 255, 0.00) 87.52%);
-  /* background-image: url('assets/backgrounds/Background2.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right; */
 
-  @media (max-width: ${theme.bp.large}) {
-    background-size: 30%;
-  }
 `;
 
 export const NameSection = styled.h3`
@@ -50,13 +42,13 @@ export const Title = styled.h3`
   margin: 0;
   text-transform: uppercase;
 
-  @media (max-width: ${theme.bp.small}) {
-    line-height: 44px;
-    font-size: 36px;
+  @media (max-width: ${theme.bp.l}) {
+    line-height: 60px;
+    font-size: 42px;
   }
-  @media (max-width: ${theme.bp['x-small']}) {
-    line-height: 36px;
-    font-size: 30px;
+  @media (max-width: ${theme.bp.m}) {
+    line-height: 30px;
+    font-size: 24px;
   }
 `;
 
@@ -69,11 +61,12 @@ export const ContactInfo = styled.div`
   margin-bottom: 24px;
   border-radius: 25px;
 
-  @media (max-width: ${theme.bp.large}) {
-    width: 90vw;
+  @media (max-width: ${theme.bp.l}) {
+    width: 680px;
   }
-  @media (max-width: ${theme.bp.medium}) {
+  @media (max-width: ${theme.bp.m}) {
     flex-direction: column;
+    width: 327px;
   }
 `;
 
@@ -89,8 +82,11 @@ export const InfoItem = styled.a`
   padding: 0px 18px;
   width: 400px;
   height: 80px;
-  @media (max-width: ${theme.bp.medium}) {
-    width: 85vw;
+  @media (max-width: ${theme.bp.l}) {
+    width: 320px;
+  }
+  @media (max-width: ${theme.bp.l}) {
+    width: 327px;
   }
 `;
 
@@ -101,14 +97,18 @@ export const TagText = styled.div`
   align-items: center;
   text-align: center;
   justify-content: space-around;
+
+  @media (max-width: ${theme.bp.l}) {
+    justify-content: flex-start;
+  }
 `;
 
 export const TagCTA = styled.h5`
   font-size: 16px;
   font-weight: 600;
-  color: ${theme.colors.raisinblack};
+  color: ${theme.colors.jet};
 
-  @media (max-width: ${theme.bp['x-small']}) {
+  @media (max-width: ${theme.bp.l}) {
     display: none;
   }
 `;
@@ -117,7 +117,15 @@ export const TagInfo = styled.p`
   margin-left: auto;
   font-size: 16px;
   font-weight: 400;
-  color: ${theme.colors.gray};
+  color: ${theme.colors.jet};
+
+  @media (max-width: ${theme.bp.l}) {
+    margin: 0;
+  }
+  @media (max-width: ${theme.bp.m}) {
+    font-size: 12px;
+    line-height: 22px;
+  }
 `;
 
 export const Icon = styled.img`
@@ -138,8 +146,14 @@ export const ContactForm = styled.form`
   column-gap: 20px;
   background-color: ${theme.colors.white};
 
-  @media (max-width: ${theme.bp.large}) {
-    width: 90vw;
+  @media (max-width: ${theme.bp.l}) {
+    width: 680px;
+    gap: 32px;
+  }
+  @media (max-width: ${theme.bp.m}) {
+    width: 327px;
+    gap: 24px;
+    padding-top: 24px;
   }
 `;
 
@@ -154,17 +168,19 @@ export const SmallInput = styled.input`
   height: 45px;
   width: 360px;
 
-  line-height: 24px;
+  line-height: 17px;
+  font-size: 14px;
+  font-weight: 500;
   border-radius: 15px;
   border: 2px solid ${props => props.borderColor};
   color: ${theme.colors.onyx};
   padding: 0 15px;
 
-  @media (max-width: ${theme.bp.medium}) {
-    width: calc(80% + 50px);
+  @media (max-width: ${theme.bp.l}) {
+    width: 300px;
   }
-  @media (max-width: ${theme.bp['x-small']}) {
-    width: 80%;
+  @media (max-width: ${theme.bp.m}) {
+    width: 295px;
   }
 
   &:focus {
@@ -180,13 +196,20 @@ export const SmallInput = styled.input`
 
 export const BigInput = styled.textarea`
   width: 744px;
-  line-height: 24px;
+  line-height: 17px;
+  font-size: 14px;
+  font-weight: 500;
   border-radius: 15px;
   border: 2px solid ${props => props.borderColor};
   color: ${theme.colors.onyx};
   padding: 10px 15px;
-  @media (max-width: ${theme.bp['x-small']}) {
-    width: 80%;
+
+  @media (max-width: ${theme.bp.l}) {
+    width: 632px;
+  }
+
+  @media (max-width: ${theme.bp.m}) {
+    width: 295px;
   }
 
   &:focus {

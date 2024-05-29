@@ -16,9 +16,4 @@ flex-direction: column;
   padding: 0;
   margin: 0;
   gap: 60px;
-
-  /* background-image: url('assets/backgrounds/Background3.svg');
-  background-size: 40%;
-  background-repeat: repeat;
-  background-position: top; */
 `;

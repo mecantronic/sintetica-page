@@ -7,13 +7,15 @@ export const Container = styled.section`
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  /* margin-top: 80px; */
-  /* min-height: calc(100vh - 80px);
-  width: 100vw; */
   width: 1035px;
   padding-top: 190px;
-  @media (max-width: ${theme.bp.medium}) {
+  @media (max-width: ${theme.bp.l}) {
     flex-direction: column;
+    gap: 60px;
+    padding-top: 100px;
+  }
+  @media (max-width: ${theme.bp.m}) {
+    gap: 27px;
   }
 `;
 
@@ -24,30 +26,35 @@ export const Left = styled.div`
   align-items: center;
   text-align: center;
   width: 324px;
-  /* width: 50vw; */
 
-  @media (max-width: ${theme.bp.medium}) {
+  @media (max-width: ${theme.bp.m}) {
     width: 100vw;
   }
 `;
 
 export const Robot = styled.img`
   width: 205px;
-  /* @media (max-width: ${theme.bp.small}) {
-    width: 240px;
-  }
-  @media (max-width: ${theme.bp['x-small']}) {
-    width: 200px;
-  } */
 `;
 
 export const TextLogo = styled.div`
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    @media (max-width: ${theme.bp.m}) {
+      gap: 4px;
+    }
+
   h2 {
     text-align: center;
     margin: 0;
     font-size: 56px;
     font-weight: 700;
     color: ${theme.colors.raisinblack};
+
+    @media (max-width: ${theme.bp.m}) {
+      font-size: 40px;
+      line-height: 43px;
+    }
   }
   p {
     text-align: center;
@@ -57,16 +64,14 @@ export const TextLogo = styled.div`
     line-height: 25.9px;
     color: ${theme.colors.electricindigo};
     text-transform: uppercase;
+
+    @media (max-width: ${theme.bp.m}) {
+      font-size: 16px;
+      line-height: 26px;
+    }
   }
 
-  @media (max-width: ${theme.bp.small}) {
-    h1 {
-      font-size: 80px;
-    }
-    p {
-      font-size: 22px;
-    }
-  }
+
   @media (max-width: ${theme.bp['x-small']}) {
     h1 {
       font-size: 65px;
@@ -82,49 +87,37 @@ export const Right = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* text-align: center; */
   width: 553px;
-  /* padding: 0px 30px 30px 30px; */
-  /* width: 50vw; */
-  /* height: 60vh; */
 
-  /* background-image: url('assets/backgrounds/Background1.svg');
-  background-size: 103%;
-  background-repeat: no-repeat;
-  background-position: right; */
-
-  @media (max-width: ${theme.bp.medium}) {
-    width: 100vw;
-    background-size: 98%;
-    height: 40vh;
+  @media (max-width: ${theme.bp.l}) {
+    gap: 16px;
+    width: 628px;
   }
+  @media (max-width: ${theme.bp.m}) {
+    width: 295px;
 
-  @media (max-width: ${theme.bp['x-small']}) {
-    background-size: 130%;
   }
 `;
 
 export const Title = styled.h4`
   text-align: left;
+  align-self: flex-start;
   margin: 0;
   font-size: 56px;
   font-weight: 600;
   line-height: 60px;
   color: ${theme.colors.jet};
 
-  @media (max-width: ${theme.bp.large}) {
-    font-size: 28px;
+  @media (max-width: ${theme.bp.l}) {
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 600;
   }
-  @media (max-width: ${theme.bp.medium}) {
-    font-size: 32px;
-  }
-  @media (max-width: ${theme.bp.small}) {
-    font-size: 28px;
+  @media (max-width: ${theme.bp.m}) {
+    font-size: 24px;
+    line-height: 30px;
   }
 
-  @media (max-width: ${theme.bp['x-small']}) {
-    font-size: 20px;
-  }
 `;
 export const Resume = styled.p`
   text-align: left;
@@ -135,25 +128,16 @@ export const Resume = styled.p`
   margin-top: 20px;
   margin-bottom: 37px;
   color: ${theme.colors.jet};
-  /* padding: 30px 0px 30px 130px; */
-  /* justify-content: flex-end; */
 
-  @media (max-width: ${theme.bp.large}) {
-    padding: 10px 20px 10px 130px;
-    font-size: 20px;
+  @media (max-width: ${theme.bp.l}) {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
   }
 
-  @media (max-width: ${theme.bp.medium}) {
-    font-size: 22px;
-    padding: 30px 20px 30px 190px;
-  }
-  @media (max-width: ${theme.bp.small}) {
-    font-size: 22px;
-  }
-
-  @media (max-width: ${theme.bp['x-small']}) {
-    padding: 20px 20px 20px 20px;
-    font-size: 20px;
+  @media (max-width: ${theme.bp.m}) {
+    font-size: 18px;
+    line-height: 28px;
   }
 `;
 export const BTN = styled.div`
@@ -162,7 +146,7 @@ export const BTN = styled.div`
   display: flex;
   justify-content: flex-end;
 
-  @media (max-width: ${theme.bp.medium}) {
-    margin-right: 50px;
+  @media (max-width: ${theme.bp.l}) {
+    display: none;
   }
 `;

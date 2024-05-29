@@ -9,17 +9,11 @@ export const Container = styled.section`
   align-items: center;
   width: 100vw;
   margin-top: 183px;
-  /* min-height: 100vh; */
 
-  @media (max-width: ${theme.bp.medium}) {
-    flex-direction: column;
+  @media (max-width: ${theme.bp.l}) {
+    margin-top: 48px;
   }
-  @media (max-width: ${theme.bp.small}) {
-    margin-top: 80px;
-  }
-  @media (max-width: ${theme.bp['x-small']}) {
-    margin-top: 100px;
-  }
+
 `;
 
 export const NameSection = styled.h3`
@@ -45,12 +39,16 @@ export const Title = styled.h4`
   color: ${theme.colors.raisinblack};
   margin: 0;
   max-width: 90vw;
-  padding: 40px 0px 36px 0px;
-  @media (max-width: ${theme.bp.small}) {
-    font-size: 28px;
+  padding: 40px 0px 48px 0px;
+  @media (max-width: ${theme.bp.l}) {
+    font-size: 20px;
+    font-weight: 600;
+    width: 572px;
   }
-  @media (max-width: ${theme.bp['x-small']}) {
-    font-size: 24px;
+  @media (max-width: ${theme.bp.m}) {
+    font-size: 14px;
+    line-height: 19px;
+    width: 300px;
   }
 `;
 
@@ -60,7 +58,7 @@ export const Technologies = styled.div`
   align-items: center;
   width: 100vw;
   gap: 40px;
-  @media (max-width: ${theme.bp.medium}) {
+  @media (max-width: ${theme.bp.l}) {
     flex-direction: column;
   }
 `;
@@ -72,7 +70,7 @@ export const Technology = styled(Link)`
   align-items: center;
   text-decoration: none;
   height: 450px;
-  width: 340px;
+  width: 400px;
   background-color: ${theme.colors.white};
   border-radius: 10px;
   box-shadow: 0px 10px 10px 2px rgba(0, 0, 0, 0.15);
@@ -89,9 +87,14 @@ export const Technology = styled(Link)`
   h3 {
     font-size: 16px;
     font-weight: 600;
-    color: ${theme.colors.gray};
+    color: ${theme.colors.jet};
     margin: 0;
     text-transform: uppercase;
+
+    @media (max-width: ${theme.bp.m}) {
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
   &:hover {
     img {
@@ -100,17 +103,8 @@ export const Technology = styled(Link)`
     }
   }
 
-  @media (max-width: ${theme.bp.medium}) {
-    margin: 30px 0px;
-    width: 400px;
-  }
-
-  @media (max-width: ${theme.bp['x-small']}) {
-    margin: 30px 0px;
+  @media (max-width: ${theme.bp.m}) {
     width: 300px;
     height: 400px;
-    h3 {
-      font-size: 16px;
-    }
   }
 `;
