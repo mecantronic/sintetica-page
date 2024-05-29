@@ -8,13 +8,14 @@ export const Container = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 100px 0;
+  margin-bottom: 60px;
+  /* margin: 100px 0; */
   width: 100vw;
-
-  background-image: url('assets/backgrounds/Background2.svg');
+  background: linear-gradient(183deg, rgba(165, 116, 255, 0.00) 12.07%, rgba(165, 116, 255, 0.30) 49.85%, rgba(165, 116, 255, 0.00) 87.52%);
+  /* background-image: url('assets/backgrounds/Background2.svg');
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: right; */
 
   @media (max-width: ${theme.bp.large}) {
     background-size: 30%;
@@ -28,9 +29,9 @@ export const NameSection = styled.h3`
   text-align: center;
   font-size: 18px;
   font-weight: 700;
-  padding: 15px 30px;
+  padding: 15px 58px;
   margin: 0;
-  border-radius: 25px;
+  border-radius: 12px;
   color: ${theme.colors.lavenderfloral};
   background-color: ${theme.colors.lavender};
 `;
@@ -41,11 +42,11 @@ export const Title = styled.h3`
   justify-content: center;
   text-align: center;
   color: ${theme.colors.raisinblack};
-  font-size: 45px;
+  font-size: 48px;
   line-height: 60px;
   font-weight: 600;
   letter-spacing: -1px;
-  padding: 30px 0;
+  padding: 36px 0 34px 0;
   margin: 0;
   text-transform: uppercase;
 
@@ -66,7 +67,6 @@ export const ContactInfo = styled.div`
   width: 60vw;
   gap: 10px;
   margin-bottom: 20px;
-  background-color: ${theme.colors.white};
   border-radius: 25px;
 
   @media (max-width: ${theme.bp.large}) {
@@ -82,7 +82,9 @@ export const InfoItem = styled.a`
   gap: 10px;
   text-decoration: none;
   align-items: center;
-  border: 2px solid ${theme.colors.platinum};
+  border: 2px solid ${theme.colors.lightSlateBlue + '59'};
+  background-color: ${theme.colors.white};
+
   border-radius: 20px;
   padding: 0px 18px;
   width: 50%;
@@ -120,7 +122,7 @@ export const TagInfo = styled.p`
 
 export const Icon = styled.img`
   align-items: flex-start;
-  width: 50px;
+  width: 48px;
 `;
 
 export const ContactForm = styled.form`
@@ -129,7 +131,7 @@ export const ContactForm = styled.form`
   justify-content: center;
   flex-wrap: wrap;
   width: 60vw;
-  border: 2px solid ${theme.colors.platinum};
+  border: 2px solid ${theme.colors.lightSlateBlue + '59'};
   border-radius: 20px;
   padding: 40px 0px 40px 0px;
   row-gap: 50px;

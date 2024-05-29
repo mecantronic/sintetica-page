@@ -8,7 +8,8 @@ export const Container = styled.section`
   justify-content: center;
   align-items: center;
   width: 100vw;
-  min-height: 100vh;
+  margin-top: 183px;
+  /* min-height: 100vh; */
 
   @media (max-width: ${theme.bp.medium}) {
     flex-direction: column;
@@ -44,7 +45,7 @@ export const Title = styled.h4`
   color: ${theme.colors.raisinblack};
   margin: 0;
   max-width: 90vw;
-  padding: 15px 0px 70px 0px;
+  padding: 40px 0px 36px 0px;
   @media (max-width: ${theme.bp.small}) {
     font-size: 28px;
   }

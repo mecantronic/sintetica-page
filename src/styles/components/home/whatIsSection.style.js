@@ -82,15 +82,15 @@ export const NameSection = styled.h3`
   text-align: center;
   font-size: 18px;
   font-weight: 700;
-  padding: 15px 30px;
+  padding: 15px 14px;
   margin: 0;
-  border-radius: 25px;
+  border-radius: 12px;
   color: ${theme.colors.lavenderfloral};
   background-color: ${theme.colors.lavender};
 `;
 
 export const TitleWhat = styled.h3`
-  font-size: 46px;
+  font-size: 48px;
   line-height: 60px;
   font-weight: 600;
   letter-spacing: -1px;
@@ -115,33 +115,41 @@ export const ResumeWhat = styled.div`
   margin: 0;
   padding: 20px 0px;
   p {
+    width: 636px;
     font-size: 18px;
-    line-height: 30px;
-    color: ${theme.colors.gray};
+    line-height: 28px;
+    color: ${theme.colors.jet};
     margin: 0;
+
+    b{
+    color: ${theme.colors.jet};
+
+    }
   }
 `;
 
 export const Services = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px;
   justify-content: center;
   align-items: center;
 `;
 
 export const Service = styled.div`
   display: flex;
-  flex-direction: row;
-  width: 60vw;
+  flex-direction: column;
+  width: 900px;
+  height: 240px;
+  justify-content: space-between;
 
-  padding-bottom: 20px;
-  margin: 20px 0px;
-  border: 2px solid ${theme.colors.platinum};
+  /* padding-bottom: 20px; */
+  /* margin: 20px 0px; */
+  border: 2px solid ${theme.colors.lightSlateBlue + '59'};
   background-color: ${theme.colors.seasalt};
   border-radius: 20px;
-  padding: 15px;
-  padding-top: 40px;
+  padding: 24px 16px 16px 24px;
+  /* padding-top: 40px; */
 
   @media (max-width: ${theme.bp.large}) {
     width: 80vw;
@@ -164,7 +172,7 @@ export const ServiceIcon = styled.img`
 
 export const ServiceCTA = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 `;
 
 export const ServiceTitle = styled.h5`
@@ -173,19 +181,24 @@ export const ServiceTitle = styled.h5`
   color: ${theme.colors.raisinblack};
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 `;
 export const ServiceResume = styled.p`
   font-size: 16px;
-  line-height: 30px;
+  line-height: 28px;
   color: ${theme.colors.gray};
-  padding-top: 3px;
-  margin: 0;
+  /* padding-top: 3px; */
+  margin: 12px 0 18px 0;
 `;
 
 export const PositionBTN = styled.div`
-  height: 35px;
+  min-height: 32px;
   display: flex;
   justify-content: flex-end;
-  padding-top: 50px;
+  /* padding-top: 50px; */
 `;
+
+export const ResumeContainer = styled.div`
+display: flex;
+flex-direction: column;
+`

@@ -7,6 +7,7 @@ import {
   Details,
   NameSection,
   PositionBTN,
+  ResumeContainer,
   ResumeWhat,
   Service,
   ServiceCTA,
@@ -34,14 +35,15 @@ function WhatIsSection() {
               vidas. Impulsamos investigaciones vanguardistas, creamos productos
               revolucionarios y promovemos la inclusión en la salud.
             </p>
-            <p>Transformamos voces en posibilidades.</p>
+            <p><b>Transformamos voces en posibilidades.</b></p>
           </ResumeWhat>
         </Details>
       </Banner>
       <Services>
         <Service>
-          <ServiceIcon src="assets/home/card4.svg" alt="text-icon" />
           <ServiceCTA>
+          <ServiceIcon src="assets/home/card4.svg" alt="text-icon" />
+            <ResumeContainer>
             <ServiceTitle>
               Text To Speech - Español Latinoamericano
             </ServiceTitle>
@@ -52,33 +54,39 @@ function WhatIsSection() {
               sobresalientes. Sumérgete en la nueva era del habla sintética y
               dale voz a tus ideas en tu propio idioma.
             </ServiceResume>
+            </ResumeContainer>
+          </ServiceCTA>
             <PositionBTN>
               <Details2Link rightArrow={true} to="/Maintenance" />
             </PositionBTN>
-          </ServiceCTA>
         </Service>
 
         <Service>
+          <ServiceCTA>
           <ServiceIcon
             src="assets/voiceCloning/bannerVoice.svg"
             alt="text-icon"
           />
-          <ServiceCTA>
+          <ResumeContainer>
+
             <ServiceTitle>Voice Cloning - Español Latinoamericano</ServiceTitle>
             <ServiceResume>
               ¿Te imaginas poder replicar cualquier voz? Con nuestro sistema
               podés hacerlo realidad. Experimenta la libertad de dar vida a tus
               proyectos con voces familiares o icónicas en español rioplatense.
             </ServiceResume>
+          </ResumeContainer>
+          </ServiceCTA>
             <PositionBTN>
               <Details2Link rightArrow={true} to="/VoiceCloning" />
             </PositionBTN>
-          </ServiceCTA>
         </Service>
 
         <Service>
-          <ServiceIcon src="assets/home/card6.svg" alt="text-icon" />
           <ServiceCTA>
+          <ServiceIcon src="assets/home/card6.svg" alt="text-icon" />
+            <ResumeContainer>
+
             <ServiceTitle>
               AI al servicio de la salud y la inclusión
             </ServiceTitle>
@@ -88,16 +96,19 @@ function WhatIsSection() {
               personalizada. Explora cómo estamos redefiniendo la comunicación
               inclusiva.
             </ServiceResume>
+            </ResumeContainer>
+          </ServiceCTA>
             <PositionBTN>
               <Details2Link rightArrow={true} to="/Maintenance" />
             </PositionBTN>
-          </ServiceCTA>
         </Service>
 
         <Service>
-          <ServiceIcon src="assets/home/card7.svg" alt="text-icon" />
           <ServiceCTA>
+          <ServiceIcon src="assets/home/card7.svg" alt="text-icon" />
+            <ResumeContainer>
             <ServiceTitle>Toolkit para voces</ServiceTitle>
+
             <ServiceResume>
               Nuestro toolkit te brinda el control completo sobre tus archivos
               de audio, desde el inicio hasta el final. ¿Necesitas dividir
@@ -106,10 +117,11 @@ function WhatIsSection() {
               con precisión? Te cubrimos. ¿Quieres crear datasets en diferentes
               idiomas? Lo hacemos posible.
             </ServiceResume>
+            </ResumeContainer>
+          </ServiceCTA>
             <PositionBTN>
               <Details2Link rightArrow={true} to="/Maintenance" />
             </PositionBTN>
-          </ServiceCTA>
         </Service>
       </Services>
     </Container>

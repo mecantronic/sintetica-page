@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const HomeWrapper = styled.div`
   display: flex;
-  background: radial-gradient(100% 79.7% at 100% 0%, rgba(165, 116, 255, 0.50) 70.15%, rgba(165, 116, 255, 0.00) 96.44%);
   flex-direction: column;
   align-items: center;
   padding: 0;
@@ -12,8 +11,11 @@ export const HomeWrapper = styled.div`
 `;
 
 export const BackcgroundImage = styled.div`
+display: flex;
+flex-direction: column;
   padding: 0;
   margin: 0;
+  gap: 60px;
 
   /* background-image: url('assets/backgrounds/Background3.svg');
   background-size: 40%;
