@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import Details1Button from '../buttons/Details1Button';
-import Details2Button from '../buttons/Details2Button';
 import theme from '../../styles/theme';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginModal, signupModal } from '../../redux/modalSlice';
@@ -16,6 +14,7 @@ import {
   ImgMenu,
 } from './navbar.style';
 import { removeUser } from '../../redux/userSlice';
+import CustomButton from '../buttons/CustomButton';
 
 const Navbar = () => {
   const token = useSelector((state) => state.user.token);
@@ -68,17 +67,19 @@ const Navbar = () => {
                 <NavLink to="/Maintenance">Nosotros</NavLink>
                 <UserButtons>
                   {token ? (
-                    <Details1Button
+                    <CustomButton
                       buttonText="Logout"
                       handleClick={handleLogout}
+                      type="secondary"
                     />
                   ) : (
                     <>
-                      <Details1Button
+                      <CustomButton
                         buttonText="Login"
                         handleClick={handleOpenLogin}
+                        type="secondary"
                       />
-                      <Details2Button
+                      <CustomButton
                         buttonText="Signup"
                         handleClick={handleOpenSignUp}
                       />
@@ -99,17 +100,19 @@ const Navbar = () => {
             </NavLinks>
             <UserButtons>
               {token ? (
-                <Details1Button
+                <CustomButton
                   buttonText="Logout"
                   handleClick={handleLogout}
+                  type="secondary"
                 />
               ) : (
                 <>
-                  <Details1Button
+                  <CustomButton
                     buttonText="Login"
                     handleClick={handleOpenLogin}
+                    type="secondary"
                   />
-                  <Details2Button
+                  <CustomButton
                     buttonText="Signup"
                     handleClick={handleOpenSignUp}
                   />

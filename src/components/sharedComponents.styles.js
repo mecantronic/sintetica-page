@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 
-export const HomeWrapper = styled.div`
+export const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0;
-  margin: 0;
   justify-content: flex-start;
   min-height: 100vh;
 `;

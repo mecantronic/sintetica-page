@@ -10,4 +10,5 @@ Details1Link.propTypes = {
   buttonText: PropTypes.string,
 };
 
+
 export default Details1Link;

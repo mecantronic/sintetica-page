@@ -6,9 +6,9 @@ import ContactSection from '../components/ContactSection';
 import ContactForm from '../components/ContactForm';
 import { useState } from 'react';
 import Modal from '../components/Modal';
-import { BackcgroundImage, HomeWrapper } from '../styles/pages/home.style';
 import Footer from '../components/footer/Footer';
 import { HelmetProvider } from 'react-helmet-async';
+import { PageContainer } from '../components/sharedComponents.styles';
 
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -24,7 +24,7 @@ function Home() {
   };
 
   return (
-    <HomeWrapper>
+    <PageContainer>
       <HelmetProvider>
         {/* Título de la página */}
         <title>Sintética</title>
@@ -51,18 +51,18 @@ function Home() {
       </HelmetProvider>
       <Navbar />
       <BannerSection openModal={openModal} />
-      <BackcgroundImage>
-        <TechnologySection />
-        <WhatIsSection />
-        <ContactSection />
-      </BackcgroundImage>
+
+      <TechnologySection />
+      <WhatIsSection />
+      <ContactSection />
+
       {isModalOpen && (
         <Modal closeModal={closeModal}>
           <ContactForm />
         </Modal>
       )}
       <Footer />
-    </HomeWrapper>
+    </PageContainer>
   );
 }
 
