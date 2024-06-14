@@ -20,10 +20,15 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Quicksand', sans-serif;
   }
 
+  ::-webkit-scrollbar {
+        display: none;
+    }
+    
   audio::-webkit-media-controls-play-button,
      audio::-webkit-media-controls-panel {
      background-color: ${theme.colors.details.LavenderWeb};
-     }    
+     }
+      
 `;
 
 export default GlobalStyles;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { ButtonOrLink } from './ButtonOrLink';
-import theme from '../../styles/theme';
+import theme from '../../../styles/theme';
 
 export const CustomButtonStyle = styled(ButtonOrLink)`
   position: relative;

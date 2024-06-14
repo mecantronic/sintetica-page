@@ -1,17 +1,17 @@
 import Navbar from '../components/header/Navbar';
-import BannerSection from '../components/home/BannerSection';
-import TechnologySection from '../components/home/TechnologySection';
-import WhatIsSection from '../components/home/WhatIsSection';
-import ContactSection from '../components/ContactSection';
-import ContactForm from '../components/ContactForm';
-import { useState } from 'react';
-import Modal from '../components/Modal';
+//import TechnologySection from '../components/home/TechnologySection';
+//import WhatIsSection from '../components/home/WhatIsSection';
+//import ContactSection from '../components/ContactSection';
+//import ContactForm from '../components/ContactForm';
+//import { useState } from 'react';
+//import Modal from '../components/Modal';
 import Footer from '../components/footer/Footer';
 import { HelmetProvider } from 'react-helmet-async';
-import { PageContainer } from '../components/sharedComponents.styles';
+import { PageContainer } from '../components/shared/sharedComponents.styles';
+import HomeHeroSection from '../components/home/homeBanner/HomeHeroSection';
 
 function Home() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  /*   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -21,7 +21,7 @@ function Home() {
   const closeModal = () => {
     setIsModalOpen(false);
     document.body.style.overflow = 'auto';
-  };
+  }; */
 
   return (
     <PageContainer>
@@ -50,9 +50,9 @@ function Home() {
         <meta name="robots" content="index, follow" />
       </HelmetProvider>
       <Navbar />
-      <BannerSection openModal={openModal} />
+      <HomeHeroSection />
 
-      <TechnologySection />
+      {/* <TechnologySection />
       <WhatIsSection />
       <ContactSection />
 
@@ -60,7 +60,7 @@ function Home() {
         <Modal closeModal={closeModal}>
           <ContactForm />
         </Modal>
-      )}
+      )} */}
       <Footer />
     </PageContainer>
   );
