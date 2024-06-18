@@ -14,7 +14,7 @@ import {
   BrandTagLine,
 } from './homeHeroSection.style';
 import { contactModal } from '../../../redux/modalSlice';
-import CustomButton from '../../shared/buttons/CustomButton';
+import CustomButton from '../../shared/customButtons/CustomButton';
 
 function HomeHeroSection() {
   const dispatch = useDispatch();

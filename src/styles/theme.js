@@ -37,6 +37,7 @@ const theme = {
   },
   boxShadow: {
     primary: '0px -4px 24px 0px rgba(51, 51, 51, 0.33)',
+    card: '0px 8px 12px 0px rgba(0, 0, 0, 0.15)',
   },
   bp: {
     xs: '375px',

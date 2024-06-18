@@ -14,10 +14,12 @@ export const SectionContainer = styled.section`
   @media (max-width: ${theme.bp.l}) {
     height: auto;
     padding: 40px 0px 0px 0px;
+    margin-bottom: 58px;
   }
 
   @media (max-width: ${theme.bp.m}) {
     padding-top: 58px;
+    margin-bottom: 48px;
   }
 `;
 

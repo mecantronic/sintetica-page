@@ -14,7 +14,7 @@ import {
   ImgMenu,
 } from './navbar.style';
 import { removeUser } from '../../redux/userSlice';
-import CustomButton from '../shared/buttons/CustomButton';
+import CustomButton from '../shared/customButtons/CustomButton';
 
 const Navbar = () => {
   const token = useSelector((state) => state.user.token);

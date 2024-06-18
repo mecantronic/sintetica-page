@@ -1,5 +1,4 @@
 import Navbar from '../components/header/Navbar';
-//import TechnologySection from '../components/home/TechnologySection';
 //import WhatIsSection from '../components/home/WhatIsSection';
 //import ContactSection from '../components/ContactSection';
 //import ContactForm from '../components/ContactForm';
@@ -9,6 +8,8 @@ import Footer from '../components/footer/Footer';
 import { HelmetProvider } from 'react-helmet-async';
 import { PageContainer } from '../components/shared/sharedComponents.styles';
 import HomeHeroSection from '../components/home/homeBanner/HomeHeroSection';
+import CustomSection from '../components/shared/customSection/CustomSection';
+import OurObjectives from '../components/home/ourObjectives/OurObjectives';
 
 function Home() {
   /*   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -51,8 +52,10 @@ function Home() {
       </HelmetProvider>
       <Navbar />
       <HomeHeroSection />
-
-      {/* <TechnologySection />
+      <CustomSection sectionTitle="Nuestros objetivos">
+        <OurObjectives />
+      </CustomSection>
+      {/* <TechnologySection />b
       <WhatIsSection />
       <ContactSection />
 
