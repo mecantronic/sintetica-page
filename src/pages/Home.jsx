@@ -1,10 +1,8 @@
-import Navbar from '../components/header/Navbar';
 import ServicesSection from '../components/home/servicesSection/ServicesSection';
-//import ContactSection from '../components/ContactSection';
+import ContactForm from '../components/ContactForm';
 //import ContactForm from '../components/ContactForm';
 //import { useState } from 'react';
 //import Modal from '../components/Modal';
-import Footer from '../components/footer/Footer';
 import { HelmetProvider } from 'react-helmet-async';
 import { PageContainer } from '../components/shared/sharedComponents.styles';
 import HomeHeroSection from '../components/home/homeBanner/HomeHeroSection';
@@ -50,7 +48,6 @@ function Home() {
         />
         <meta name="robots" content="index, follow" />
       </HelmetProvider>
-      <Navbar />
       <HomeHeroSection />
       <CustomSection sectionTitle="Nuestros objetivos">
         <OurObjectives />
@@ -58,15 +55,9 @@ function Home() {
       <CustomSection sectionTitle="¿Qué es Sintética?">
         <ServicesSection />
       </CustomSection>
-      {/* <TechnologySection />b
-      <ContactSection />
-
-      {isModalOpen && (
-        <Modal closeModal={closeModal}>
-          <ContactForm />
-        </Modal>
-      )} */}
-      <Footer />
+      <CustomSection sectionTitle="Contacto">
+        <ContactForm />
+      </CustomSection>
     </PageContainer>
   );
 }

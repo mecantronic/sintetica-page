@@ -10,6 +10,8 @@ import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Tts from './pages/TTS';
 import { Suspense } from 'react';
+import Navbar from './components/header/Navbar';
+import Footer from './components/footer/Footer';
 
 const AppWrapper = styled.div``;
 
@@ -22,6 +24,7 @@ function App() {
         <Modal />
         <GlobalStyles />
         <AppWrapper>
+          <Navbar />
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/VoiceCloning" element={<VoiceCloning />} />
@@ -29,6 +32,7 @@ function App() {
             <Route exact path="/TTS" element={<Tts />} />
             <Route exact path="/Maintenance" element={<Maintenance />} />
           </Routes>
+          <Footer />
         </AppWrapper>
       </Router>
     </Suspense>

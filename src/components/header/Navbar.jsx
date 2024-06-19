@@ -70,14 +70,14 @@ const Navbar = () => {
                     <CustomButton
                       buttonText="Logout"
                       handleClick={handleLogout}
-                      type="secondary"
+                      buttontype="secondary"
                     />
                   ) : (
                     <>
                       <CustomButton
                         buttonText="Login"
                         handleClick={handleOpenLogin}
-                        type="secondary"
+                        buttontype="secondary"
                       />
                       <CustomButton
                         buttonText="Signup"
@@ -103,14 +103,14 @@ const Navbar = () => {
                 <CustomButton
                   buttonText="Logout"
                   handleClick={handleLogout}
-                  type="secondary"
+                  buttontype="secondary"
                 />
               ) : (
                 <>
                   <CustomButton
                     buttonText="Login"
                     handleClick={handleOpenLogin}
-                    type="secondary"
+                    buttontype="secondary"
                   />
                   <CustomButton
                     buttonText="Signup"

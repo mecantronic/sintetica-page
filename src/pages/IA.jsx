@@ -1,5 +1,5 @@
 import Navbar from '../components/header/Navbar';
-import ContactSection from '../components/ContactSection';
+import ContactForm from '../components/ContactForm';
 import WhySection from '../components/IA-salud/WhySection';
 import MiIdentidadVocal from '../components/IA-salud/MiIdentidadVocal';
 import NewsSection from '../components/IA-salud/NewsSection';
@@ -13,7 +13,7 @@ function IA() {
       <WhySection />
       <MiIdentidadVocal />
       <NewsSection />
-      <ContactSection />
+      <ContactForm />
       <Footer />
     </IaWrapper>
   );

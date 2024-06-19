@@ -10,6 +10,7 @@ function CustomButton({
   icon,
   device,
   pattern,
+  buttontype,
   type,
 }) {
   const [size, setSize] = useState('desktop');
@@ -39,9 +40,10 @@ function CustomButton({
       isLink={isLink}
       to={to}
       onClick={handleClick}
+      type={type}
       device={size}
       pattern={pattern}
-      type={type}
+      buttontype={buttontype}
     >
       {icon} {buttonText}
     </CustomButtonStyle>
@@ -55,14 +57,15 @@ CustomButton.propTypes = {
   buttonText: PropTypes.string,
   to: PropTypes.string,
   handleClick: PropTypes.func,
+  type: PropTypes.string,
   icon: PropTypes.element,
   device: PropTypes.oneOf(['desktop', 'tablet', 'mobile', 'all']),
   pattern: PropTypes.oneOf(['cto-rounded', 'rounded', 'square']),
-  type: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
+  buttontype: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
 };
 
 CustomButton.defaultProps = {
   isLink: false,
   pattern: 'rounded',
-  type: 'primary',
+  buttontype: 'primary',
 };

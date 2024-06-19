@@ -3,20 +3,20 @@ import emailjs from '@emailjs/browser';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {
-  BigInput,
-  Center,
+  FormContainer,
   ContactInfo,
   Container,
-  ContatcButton,
-  Form,
   Icon,
   InfoItem,
-  SmallInput,
   TagCTA,
   TagInfo,
   TagText,
   Title,
-} from '../styles/components/contactForm.style';
+  FormRow,
+  BackgroundFormContainer,
+} from '../styles/components/contactSection.style';
+import CustomInput from './shared/customInput/CustomInput';
+import CustomButton from './shared/customButtons/CustomButton';
 
 emailjs.init(import.meta.env.VITE_EMAILJS_USER_ID);
 
@@ -136,52 +136,55 @@ function ContactForm() {
           </TagText>
         </InfoItem>
       </ContactInfo>
-      <Form ref={form} onSubmit={(e) => handleErrors(e, formData)}>
-        <SmallInput
-          type="text"
-          placeholder="Nombre*"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-        />
-        <SmallInput
-          type="text"
-          placeholder="Email*"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-        />
-        <SmallInput
-          type="text"
-          placeholder="Teléfono*"
-          id="phone"
-          name="phone"
-          value={formData.phone}
-          onChange={handleChange}
-        />
-        <SmallInput
-          type="text"
-          placeholder="Asunto*"
-          id="subject"
-          name="subject"
-          value={formData.subject}
-          onChange={handleChange}
-        />
-        <BigInput
-          name="message"
-          id="message"
-          cols="30"
-          rows="5"
-          placeholder="Mensaje*"
-          value={formData.message}
-          onChange={handleChange}
-        />
-        <Center>
-          <ContatcButton type="submit">Enviar mensaje</ContatcButton>
-        </Center>
-      </Form>
+
+      <BackgroundFormContainer>
+        <FormContainer ref={form} onSubmit={(e) => handleErrors(e, formData)}>
+          <FormRow>
+            <CustomInput
+              placeHolder="Nombre*"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+            />
+            <CustomInput
+              placeHolder="Email*"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+          </FormRow>
+          <FormRow>
+            <CustomInput
+              placeHolder="Teléfono*"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+            />
+            <CustomInput
+              placeHolder="Asunto*"
+              id="subject"
+              name="subject"
+              value={formData.subject}
+              onChange={handleChange}
+            />
+          </FormRow>
+
+          <CustomInput
+            inputType="textArea"
+            name="message"
+            id="message"
+            cols="30"
+            rows="7"
+            placeHolder="Mensaje*"
+            value={formData.message}
+            onChange={handleChange}
+          />
+          <CustomButton type="submit" buttonText="Enviar mensaje" />
+        </FormContainer>
+      </BackgroundFormContainer>
       <ToastContainer position="bottom-right" />
     </Container>
   );

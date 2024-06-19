@@ -14,7 +14,7 @@ export default ObjectiveCard;
 
 ObjectiveCard.propTypes = {
   to: PropTypes.string,
-  cardTitle: PropTypes.element,
+  cardTitle: PropTypes.string,
   imgSrc: PropTypes.string,
   imgAlt: PropTypes.string,
 };
