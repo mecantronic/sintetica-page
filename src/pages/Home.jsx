@@ -1,5 +1,5 @@
 import Navbar from '../components/header/Navbar';
-//import WhatIsSection from '../components/home/WhatIsSection';
+import ServicesSection from '../components/home/servicesSection/ServicesSection';
 //import ContactSection from '../components/ContactSection';
 //import ContactForm from '../components/ContactForm';
 //import { useState } from 'react';
@@ -55,8 +55,10 @@ function Home() {
       <CustomSection sectionTitle="Nuestros objetivos">
         <OurObjectives />
       </CustomSection>
+      <CustomSection sectionTitle="¿Qué es Sintética?">
+        <ServicesSection />
+      </CustomSection>
       {/* <TechnologySection />b
-      <WhatIsSection />
       <ContactSection />
 
       {isModalOpen && (

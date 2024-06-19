@@ -11,19 +11,19 @@ function OurObjectives() {
       <CardsContainer>
         <ObjectiveCard
           to="/VoiceCloning"
-          title="Sistemas entrenados en Español Latinoamericano"
+          cardTitle="Sistemas entrenados en Español Latinoamericano"
           imgSrc="assets/home/card1.svg"
           imgAlt=""
         />
         <ObjectiveCard
           to="/Maintenance"
-          title="Inteligencia Artificial desarrollada desde la ética"
+          cardTitle="Inteligencia Artificial desarrollada desde la ética"
           imgSrc="assets/home/card2.svg"
           imgAlt=""
         />
         <ObjectiveCard
           to="/Maintenance"
-          title="Herramientas de impacto social, Salud e Inclusión"
+          cardTitle="Herramientas de impacto social, Salud e Inclusión"
           imgSrc="assets/home/card3.svg"
           imgAlt=""
         />
