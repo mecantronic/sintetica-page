@@ -3,6 +3,7 @@ import theme from '../../styles/theme';
 import { Link } from 'react-router-dom';
 
 export const Header = styled.header`
+  position: fixed;
   width: 100vw;
   height: 72px;
   display: flex;
@@ -111,6 +112,7 @@ export const NavLinks = styled.nav`
     transition: transform 0.3s ease-in-out;
     background-color: ${theme.colors.backgrounds.seasalt};
   }
+
   @media (max-width: ${theme.bp.m}) {
     top: 284px;
   }

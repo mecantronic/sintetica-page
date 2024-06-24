@@ -43,13 +43,13 @@ export const CustomButtonStyle = styled(ButtonOrLink)`
   line-height: ${(props) => (props.pattern === 'square' ? '24px' : '36px')};
   font-family: 'Quicksand', sans-serif;
   color: ${(props) =>
-    props.type === 'tertiary'
+    props.buttontype === 'tertiary'
       ? theme.colors.main.primary
       : theme.colors.backgrounds.white};
   background: ${(props) =>
-    props.type === 'tertiary'
+    props.buttontype === 'tertiary'
       ? theme.colors.details.LavenderWeb
-      : props.type === 'secondary'
+      : props.buttontype === 'secondary'
         ? theme.colors.grayScale[900]
         : theme.gradients.primary};
 

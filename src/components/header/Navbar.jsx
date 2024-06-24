@@ -44,7 +44,9 @@ const Navbar = () => {
   return (
     <Header>
       <NavbarContainer>
-        <Logo to="/">
+        <Logo to="/" onClick={() => {
+                    setShowMenu(false);;
+                  }}>
           <img src="assets/logotipo.svg" alt="Logo Sintética" />
         </Logo>
         {isMobile ? (
@@ -60,11 +62,46 @@ const Navbar = () => {
             </MenuButton>
             {showMenu && (
               <NavLinks>
-                <NavLink to="/VoiceCloning">Voice Cloning</NavLink>
-                <NavLink to="/TTS">Experiencia TTS</NavLink>
-                <NavLink to="/Maintenance">AI & Salud</NavLink>
-                <NavLink to="/Maintenance">Investigación</NavLink>
-                <NavLink to="/Maintenance">Nosotros</NavLink>
+                <NavLink
+                  to="/VoiceCloning"
+                  onClick={() => {
+                    toggleMenu();
+                  }}
+                >
+                  Voice Cloning
+                </NavLink>
+                <NavLink
+                  to="/TTS"
+                  onClick={() => {
+                    toggleMenu();
+                  }}
+                >
+                  Experiencia TTS
+                </NavLink>
+                <NavLink
+                  to="/Maintenance"
+                  onClick={() => {
+                    toggleMenu();
+                  }}
+                >
+                  AI & Salud
+                </NavLink>
+                <NavLink
+                  to="/Maintenance"
+                  onClick={() => {
+                    toggleMenu();
+                  }}
+                >
+                  Investigación
+                </NavLink>
+                <NavLink
+                  to="/Maintenance"
+                  onClick={() => {
+                    toggleMenu();
+                  }}
+                >
+                  Nosotros
+                </NavLink>
                 <UserButtons>
                   {token ? (
                     <CustomButton

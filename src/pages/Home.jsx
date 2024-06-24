@@ -1,8 +1,5 @@
 import ServicesSection from '../components/home/servicesSection/ServicesSection';
 import ContactForm from '../components/ContactForm';
-//import ContactForm from '../components/ContactForm';
-//import { useState } from 'react';
-//import Modal from '../components/Modal';
 import { HelmetProvider } from 'react-helmet-async';
 import { PageContainer } from '../components/shared/sharedComponents.styles';
 import HomeHeroSection from '../components/home/homeBanner/HomeHeroSection';
@@ -10,18 +7,6 @@ import CustomSection from '../components/shared/customSection/CustomSection';
 import OurObjectives from '../components/home/ourObjectives/OurObjectives';
 
 function Home() {
-  /*   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => {
-    setIsModalOpen(true);
-    document.body.style.overflow = 'hidden';
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-    document.body.style.overflow = 'auto';
-  }; */
-
   return (
     <PageContainer>
       <HelmetProvider>

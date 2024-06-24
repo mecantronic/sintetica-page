@@ -7,7 +7,8 @@ export const CardContainer = styled.div`
   justify-content: space-between;
 
   width: 900px;
-  height: 240px;
+  min-height: 240px;
+  height: fit-content;
   padding: 24px 16px 16px 24px;
   border-radius: 24px;
 
@@ -16,12 +17,11 @@ export const CardContainer = styled.div`
 
   @media (max-width: ${theme.bp.l}) {
     width: 720px;
-    height: 278px;
+    min-height: 278px;
   }
 
   @media (max-width: ${theme.bp.m}) {
     width: 320px;
-    height: fit-content;
     gap: 24px;
   }
 `;
