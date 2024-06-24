@@ -1,0 +1,14 @@
+{
+    "menuLinks": {
+        "voiceCloning": "Voice Cloning",
+        "tts": "Experiencia TTS",
+        "ai": "AI & Salud",
+        "research": "Investigación",
+        "our": "Nosotros"
+    },
+    "buttons": {
+        "login": "Login",
+        "logout": "Logout",
+        "signup": "Signup"
+    }
+}
