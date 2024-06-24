@@ -39,7 +39,7 @@ export const FooterContent = styled.div`
     min-width: 327px;
     width: 327px;
   }
-  `;
+`;
 
 export const Brand = styled.div`
   display: flex;
@@ -47,12 +47,12 @@ export const Brand = styled.div`
   justify-content: center;
   align-items: center;
   gap: 24px;
-  
+
   @media (max-width: ${theme.bp.m}) {
     height: 136;
     align-self: stretch;
   }
-  
+
   @media (max-width: ${theme.bp.s}) {
     height: fit-content;
     flex-direction: column;
@@ -60,7 +60,7 @@ export const Brand = styled.div`
     gap: 4px;
     padding-bottom: 16px;
   }
-  `;
+`;
 
 export const Robot = styled.img`
   width: 124px;

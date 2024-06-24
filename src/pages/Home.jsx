@@ -5,8 +5,11 @@ import { PageContainer } from '../components/shared/sharedComponents.styles';
 import HomeHeroSection from '../components/home/homeBanner/HomeHeroSection';
 import CustomSection from '../components/shared/customSection/CustomSection';
 import OurObjectives from '../components/home/ourObjectives/OurObjectives';
+import { useTranslation } from 'react-i18next';
 
 function Home() {
+  const { t: homeTranslation } = useTranslation(['home']);
+  const { t: contactTranslation } = useTranslation(['contact']);
   return (
     <PageContainer>
       <HelmetProvider>
@@ -34,13 +37,15 @@ function Home() {
         <meta name="robots" content="index, follow" />
       </HelmetProvider>
       <HomeHeroSection />
-      <CustomSection sectionTitle="Nuestros objetivos">
+      <CustomSection
+        sectionTitle={homeTranslation('ourObjectivesSection.title')}
+      >
         <OurObjectives />
       </CustomSection>
-      <CustomSection sectionTitle="¿Qué es Sintética?">
+      <CustomSection sectionTitle={homeTranslation('servicesSection.title')}>
         <ServicesSection />
       </CustomSection>
-      <CustomSection sectionTitle="Contacto">
+      <CustomSection sectionTitle={contactTranslation('sectionName')}>
         <ContactForm />
       </CustomSection>
     </PageContainer>

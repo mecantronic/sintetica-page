@@ -14,10 +14,17 @@ i18n
       escapeValue: false,
     },
     backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json',
+      loadPath: '/locale/{{lng}}/{{ns}}.json',
     },
-    ns: ['data', 'voiceCloning'],
-    defaultNS: 'data',
+    ns: [
+      'brand',
+      'home',
+      'navBar',
+      'footer',
+      'contact',
+      'data',
+      'voiceCloning',
+    ],
   });
 
 export default i18n;

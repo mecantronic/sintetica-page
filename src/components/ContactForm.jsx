@@ -17,10 +17,12 @@ import {
 } from '../styles/components/contactSection.style';
 import CustomInput from './shared/customInput/CustomInput';
 import CustomButton from './shared/customButtons/CustomButton';
+import { useTranslation } from 'react-i18next';
 
 emailjs.init(import.meta.env.VITE_EMAILJS_USER_ID);
 
 function ContactForm() {
+  const { t } = useTranslation(['contact']);
   const form = useRef();
   // eslint-disable-next-line no-unused-vars
   const [formErrors, setFormErrors] = useState({});
@@ -44,36 +46,34 @@ function ContactForm() {
     const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     if (!values.name) {
-      errors.name = 'Por favor, completa tu nombre';
+      errors.name = t('message.error.empty.name');
       toast.error(errors.name);
     }
     if (!values.email) {
-      errors.email = 'Por favor, completa tu email';
+      errors.email = t('message.error.empty.email');
       toast.error(errors.email);
     } else if (!regex.test(values.email)) {
-      errors.email = 'El formato del email no es valido';
+      errors.email = t('message.error.invalidFormat.email');
       toast.error(errors.email);
     }
     if (!values.message) {
-      errors.message = 'Por favor, contanos cómo podemos ayudarte';
+      errors.message = t('message.error.empty.message');
       toast.error(errors.message);
     }
     if (!values.phone) {
-      errors.phone = 'Por favor, completa tu teléfono';
+      errors.phone = t('message.error.empty.phone');
       toast.error(errors.phone);
     }
     if (!values.subject) {
-      errors.subject = 'Por favor, escribe un asunto';
+      errors.subject = t('message.error.empty.subject');
       toast.error(errors.subject);
     }
     if (values.message.length < 8) {
-      errors.message =
-        'Por favor, completa el mensaje con al menos 8 caracteres';
+      errors.message = t('message.error.tooShort');
       toast.error(errors.message);
     }
     if (values.message.length > 200) {
-      errors.message =
-        'Mensaje demasiado largo, debe contener menos de 200 caracteres';
+      errors.message = t('message.error.tooLong');
       toast.error(errors.message);
     }
     setFormErrors(errors);
@@ -85,7 +85,7 @@ function ContactForm() {
 
   const submitForm = () => {
     const { name, email, phone, subject, message } = formData;
-    toast.info('Enviando mensaje');
+    toast.info(t('message.sending'));
     emailjs
       .send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -96,15 +96,11 @@ function ContactForm() {
       .then(
         (result) => {
           console.log(result.text);
-          toast.success(
-            '¡Gracias por escribirnos, pronto estaremos respondiendo!',
-          );
+          toast.success(t('message.sent'));
         },
         (error) => {
           console.log(error.text);
-          toast.error(
-            'Error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.',
-          );
+          toast.error(t('message.error.notSent'));
         },
       );
     clearForm();
@@ -119,19 +115,19 @@ function ContactForm() {
 
   return (
     <Container>
-      <Title>Dejanos tu consulta</Title>
+      <Title>{t('cta.general')}</Title>
       <ContactInfo>
         <InfoItem href="tel:+61383766284">
           <Icon src="assets/icons/phoneicon.svg" alt="phone-icon" />
           <TagText>
-            <TagCTA>Llamanos</TagCTA>
+            <TagCTA>{t('cta.call')}</TagCTA>
             <TagInfo>+54 9 11 5 739 7834</TagInfo>
           </TagText>
         </InfoItem>
         <InfoItem href="info@mecantronic.com.ar">
           <Icon src="assets/icons/emailicon.svg" alt="phone-icon" />
           <TagText>
-            <TagCTA>Escribinos</TagCTA>
+            <TagCTA>{t('cta.write')}</TagCTA>
             <TagInfo>info@mecantronic.com.ar</TagInfo>
           </TagText>
         </InfoItem>
@@ -141,14 +137,14 @@ function ContactForm() {
         <FormContainer ref={form} onSubmit={(e) => handleErrors(e, formData)}>
           <FormRow>
             <CustomInput
-              placeHolder="Nombre*"
+              placeHolder={t('inputs.name.placeholder')}
               id="name"
               name="name"
               value={formData.name}
               onChange={handleChange}
             />
             <CustomInput
-              placeHolder="Email*"
+              placeHolder={t('inputs.email.placeholder')}
               id="email"
               name="email"
               value={formData.email}
@@ -157,14 +153,14 @@ function ContactForm() {
           </FormRow>
           <FormRow>
             <CustomInput
-              placeHolder="Teléfono*"
+              placeHolder={t('inputs.phone.placeholder')}
               id="phone"
               name="phone"
               value={formData.phone}
               onChange={handleChange}
             />
             <CustomInput
-              placeHolder="Asunto*"
+              placeHolder={t('inputs.subject.placeholder')}
               id="subject"
               name="subject"
               value={formData.subject}
@@ -178,11 +174,11 @@ function ContactForm() {
             id="message"
             cols="30"
             rows="7"
-            placeHolder="Mensaje*"
+            placeHolder={t('inputs.message.placeholder')}
             value={formData.message}
             onChange={handleChange}
           />
-          <CustomButton type="submit" buttonText="Enviar mensaje" />
+          <CustomButton type="submit" buttonText={t('sendButton')} />
         </FormContainer>
       </BackgroundFormContainer>
       <ToastContainer position="bottom-right" />

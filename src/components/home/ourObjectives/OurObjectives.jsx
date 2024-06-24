@@ -1,29 +1,29 @@
+import { useTranslation } from 'react-i18next';
 import ObjectiveCard from './ObjectiveCard';
 import { CardsContainer, Container, IntroText } from './ourObjectives.styles';
 
 function OurObjectives() {
+  const { t } = useTranslation(['home']);
+
   return (
     <Container>
-      <IntroText>
-        Queremos reducir la brecha tecnológica de las voces sintéticas en
-        nuestro idioma
-      </IntroText>
+      <IntroText>{t('ourObjectivesSection.resume')}</IntroText>
       <CardsContainer>
         <ObjectiveCard
           to="/VoiceCloning"
-          cardTitle="Sistemas entrenados en Español Latinoamericano"
+          cardTitle={t('ourObjectivesSection.cards.voiceCloning.title')}
           imgSrc="assets/home/card1.svg"
           imgAlt=""
         />
         <ObjectiveCard
           to="/Maintenance"
-          cardTitle="Inteligencia Artificial desarrollada desde la ética"
+          cardTitle={t('ourObjectivesSection.cards.ia.title')}
           imgSrc="assets/home/card2.svg"
           imgAlt=""
         />
         <ObjectiveCard
           to="/Maintenance"
-          cardTitle="Herramientas de impacto social, Salud e Inclusión"
+          cardTitle={t('ourObjectivesSection.cards.tts.title')}
           imgSrc="assets/home/card3.svg"
           imgAlt=""
         />

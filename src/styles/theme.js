@@ -34,7 +34,8 @@ const theme = {
   },
   gradients: {
     primary: 'linear-gradient(90deg, #5236FF 0%, #A574FF 100%)',
-    central: 'linear-gradient(183deg, rgba(165, 116, 255, 0.00) 12.07%, rgba(165, 116, 255, 0.30) 49.85%, rgba(165, 116, 255, 0.00) 87.52%)'
+    central:
+      'linear-gradient(183deg, rgba(165, 116, 255, 0.00) 12.07%, rgba(165, 116, 255, 0.30) 49.85%, rgba(165, 116, 255, 0.00) 87.52%)',
   },
   boxShadow: {
     primary: '0px -4px 24px 0px rgba(51, 51, 51, 0.33)',

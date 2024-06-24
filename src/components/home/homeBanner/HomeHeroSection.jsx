@@ -15,9 +15,12 @@ import {
 } from './homeHeroSection.style';
 import { contactModal } from '../../../redux/modalSlice';
 import CustomButton from '../../shared/customButtons/CustomButton';
+import { useTranslation } from 'react-i18next';
 
 function HomeHeroSection() {
   const dispatch = useDispatch();
+  const { t: homeTranslation } = useTranslation(['home']);
+  const { t: brandTranslation } = useTranslation(['brand']);
 
   const handleOpenContact = () => {
     dispatch(contactModal());
@@ -28,20 +31,19 @@ function HomeHeroSection() {
       <ContentContainer>
         <BrandContent>
           <SinteticaLogo src="assets/sintetica-black-logo.svg" alt="logo" />
-          <BrandName>Sintética</BrandName>
-          <BrandTagLine>Laboratorio de voces</BrandTagLine>
+          <BrandName>{brandTranslation('name')}</BrandName>
+          <BrandTagLine>{brandTranslation('tagLine')}</BrandTagLine>
         </BrandContent>
         <CTOContent>
           <TextContainer>
-            <EmphasisText>Síntesis de voces potenciados por IA</EmphasisText>
-            <SimpleText>
-              Desde Argentina al mundo: líderes en el desarrollo de voces
-              artificiales en nuestro idioma
-            </SimpleText>
+            <EmphasisText>
+              {homeTranslation('homeHeroSection.title')}
+            </EmphasisText>
+            <SimpleText>{homeTranslation('homeHeroSection.resume')}</SimpleText>
           </TextContainer>
           <ButtonContainer>
             <CustomButton
-              buttonText="contactanos"
+              buttonText={homeTranslation('homeHeroSection.button')}
               pattern="cto-rounded"
               handleClick={handleOpenContact}
             />

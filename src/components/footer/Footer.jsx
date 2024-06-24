@@ -22,8 +22,11 @@ import {
 import theme from '../../styles/theme';
 import { FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { TbWorld } from 'react-icons/tb';
+import { useTranslation } from 'react-i18next';
 
 function Footer() {
+  const { t: footerTranslation } = useTranslation(['footer']);
+  const { t: brandTranslation } = useTranslation(['brand']);
   const isMobile = useMediaQuery({ maxWidth: theme.bp.m });
   return (
     <>
@@ -33,13 +36,15 @@ function Footer() {
             <Brand>
               <Robot src="assets/logotipo.svg" alt="logo" />
               <BrandText>
-                <BrandName>Sintética</BrandName>
-                <BrandTagLine>Laboratorio de voces</BrandTagLine>
+                <BrandName>{brandTranslation('name')}</BrandName>
+                <BrandTagLine>{brandTranslation('tagLine')}</BrandTagLine>
               </BrandText>
             </Brand>
             <InfoSection>
               <Contact>
-                <NavTitles>Contacto</NavTitles>
+                <NavTitles>
+                  {footerTranslation('contactSection.title')}
+                </NavTitles>
                 <ColumnContainer>
                   <NavA href="" rel="noreferrer">
                     Belgrano, CABA.
@@ -57,9 +62,13 @@ function Footer() {
                 </ColumnContainer>
               </Contact>
               <SocialMedia>
-                <NavTitles>Nuestras redes</NavTitles>
+                <NavTitles>
+                  {footerTranslation('socialSection.title')}
+                </NavTitles>
                 <ColumnContainer>
-                  <SocialText>Unite a nosotros en redes sociales</SocialText>
+                  <SocialText>
+                    {footerTranslation('socialSection.resume')}
+                  </SocialText>
                   <Icons>
                     <SocialIcon
                       href="https://www.instagram.com/mecantronic/"
@@ -89,7 +98,9 @@ function Footer() {
           </FooterContent>
           <CopyrightContainer>
             <CopyrightText>Copyright © 2024 | Mecantronic</CopyrightText>
-            <CopyrightText>Todos los derechos reservados</CopyrightText>
+            <CopyrightText>
+              {footerTranslation('allRightsReserved')}
+            </CopyrightText>
           </CopyrightContainer>
         </FooterContainer>
       ) : (
@@ -98,12 +109,12 @@ function Footer() {
             <Brand>
               <Robot src="assets/logotipo.svg" alt="logo" />
               <BrandText>
-                <BrandName>Sintética</BrandName>
-                <BrandTagLine>Laboratorio de voces</BrandTagLine>
+                <BrandName>{brandTranslation('name')}</BrandName>
+                <BrandTagLine>{brandTranslation('tagLine')}</BrandTagLine>
               </BrandText>
             </Brand>
             <Contact>
-              <NavTitles>Contacto</NavTitles>
+              <NavTitles>{footerTranslation('contactSection.title')}</NavTitles>
               <ColumnContainer>
                 <NavA href="" rel="noreferrer">
                   Belgrano, CABA.
@@ -121,9 +132,11 @@ function Footer() {
               </ColumnContainer>
             </Contact>
             <SocialMedia>
-              <NavTitles>Nuestras redes</NavTitles>
+              <NavTitles>{footerTranslation('socialSection.title')}</NavTitles>
               <ColumnContainer>
-                <SocialText>Unite a nosotros en redes sociales</SocialText>
+                <SocialText>
+                  {footerTranslation('socialSection.resume')}
+                </SocialText>
                 <Icons>
                   <SocialIcon
                     href="https://www.instagram.com/mecantronic/"
@@ -152,7 +165,7 @@ function Footer() {
           </FooterContent>
           <CopyrightContainer>
             <CopyrightText>
-              Copyright © 2024 | Todos los derechos reservados
+              Copyright © 2024 | {footerTranslation('allRightsReserved')}
             </CopyrightText>
             <CopyrightText>Mecantronic® 2024</CopyrightText>
           </CopyrightContainer>
