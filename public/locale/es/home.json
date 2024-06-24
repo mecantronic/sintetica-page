@@ -1,0 +1,48 @@
+{
+  "homeHeroSection": {
+    "title": "Síntesis de voces potenciados por IA",
+    "resume": "Desde Argentina al mundo: líderes en el desarrollo de voces artificiales en nuestro idioma",
+    "button": "contactanos"
+  },
+  "ourObjectivesSection": {
+    "title": "Nuestros objetivos",
+    "resume": "Queremos reducir la brecha tecnológica de las voces sintéticas en nuestro idioma",
+    "cards": {
+      "voiceCloning": {
+        "title": "Sistemas entrenados en Español Latinoamericano"
+      },
+      "ia": {
+        "title": "Inteligencia Artificial desarrollada desde la ética"
+      },
+      "tts": {
+        "title": "Herramientas de impacto social, Salud e Inclusión"
+      }
+    }
+  },
+  "servicesSection": {
+    "title": "¿Qué es Sintética?",
+    "banner": {
+      "title": "Voces en Español Rioplatense",
+      "resume": "Sintética es un laboratorio de síntesis de voces. Nuestra pasión por la innovación está arraigada en el compromiso de transformar vidas. Impulsamos investigaciones de vanguardistas, creamos productos revolucionarios y promovemos la inclusión en la salud.",
+      "strokeResume": "Transformamos voces en posibilidades."
+    },
+    "cards": {
+      "tts": {
+        "title": "Text To Speech - Español Latinoamericano",
+        "resume": "Nuestra tecnología te ofrece una experiencia de conversión de texto a discurso única. Con acentos auténticos y entonaciones naturales tus proyectos, presentaciones y aplicaciones serán sobresalientes. Sumérgete en la nueva era del habla sintética y dale voz a tus ideas en tu propio idioma."
+      },
+      "voiceCloning": {
+        "title": "Voice Cloning - Español Latinoamericano",
+        "resume": "¿Te imaginas poder replicar cualquier voz? Con nuestro sistema podés hacerlo realidad. Experimenta la libertad de dar vida a tus proyectos con voces familiares o icónicas en español rioplatense."
+      },
+      "ai": {
+        "title": "AI al servicio de la salud y la inclusión",
+        "resume": "Nuestra clonación de voz es la herramienta que cambiará vidas, brindando independencia a través del habla sintética personalizada. Explora cómo estamos redefiniendo la comunicación inclusiva."
+      },
+      "toolkit": {
+        "title": "Toolkit para voces",
+        "resume": "Nuestro toolkit te brinda el control completo sobre tus archivos de audio, desde el inicio hasta el final. ¿Necesitas dividir automáticamente pistas largas? Hecho. ¿No cuentas con transcripciones? No hay problema. ¿Buscas validar transcripciones con precisión? Te cubrimos. ¿Quieres crear datasets en diferentes idiomas? Lo hacemos posible."
+      }
+    }
+  }
+}

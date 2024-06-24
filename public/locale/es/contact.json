@@ -1,0 +1,45 @@
+{
+  "sectionName": "Contacto",
+  "cta": {
+    "general": "Dejanos tu consulta",
+    "call": "Llamanos",
+    "write": "Escribinos"
+  },
+  "inputs": {
+    "name": {
+      "placeholder": "Nombre*"
+    },
+    "email": {
+      "placeholder": "Email*"
+    },
+    "phone": {
+      "placeholder": "Teléfono*"
+    },
+    "subject": {
+      "placeholder": "Asunto*"
+    },
+    "message": {
+      "placeholder": "Mensaje*"
+    }
+  },
+  "sendButton": "Enviar mensaje",
+  "message": {
+    "sent": "¡Gracias por escribirnos, pronto estaremos respondiendo!",
+    "sending": "Enviando mensaje",
+    "error": {
+      "notSent": "Error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.",
+      "empty": {
+        "name": "Por favor, completa tu nombre",
+        "email": "Por favor, completa tu email",
+        "message": "Por favor, contanos cómo podemos ayudarte",
+        "phone": "Por favor, completa tu teléfono",
+        "subject": "Por favor, escribe un asunto"
+      },
+      "invalidFormat": {
+        "email": "El formato del email no es valido"
+      },
+      "tooLong": "Mensaje demasiado largo, debe contener menos de 200 caracteres",
+      "tooShort": "Por favor, completa el mensaje con al menos 8 caracteres"
+    }
+  }
+}

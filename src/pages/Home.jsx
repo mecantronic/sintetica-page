@@ -1,30 +1,17 @@
-import Navbar from '../components/header/Navbar';
-import BannerSection from '../components/home/BannerSection';
-import TechnologySection from '../components/home/TechnologySection';
-import WhatIsSection from '../components/home/WhatIsSection';
-import ContactSection from '../components/ContactSection';
+import ServicesSection from '../components/home/servicesSection/ServicesSection';
 import ContactForm from '../components/ContactForm';
-import { useState } from 'react';
-import Modal from '../components/Modal';
-import { BackcgroundImage, HomeWrapper } from '../styles/pages/home.style';
-import Footer from '../components/footer/Footer';
 import { HelmetProvider } from 'react-helmet-async';
+import { PageContainer } from '../components/shared/sharedComponents.styles';
+import HomeHeroSection from '../components/home/homeBanner/HomeHeroSection';
+import CustomSection from '../components/shared/customSection/CustomSection';
+import OurObjectives from '../components/home/ourObjectives/OurObjectives';
+import { useTranslation } from 'react-i18next';
 
 function Home() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => {
-    setIsModalOpen(true);
-    document.body.style.overflow = 'hidden';
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-    document.body.style.overflow = 'auto';
-  };
-
+  const { t: homeTranslation } = useTranslation(['home']);
+  const { t: contactTranslation } = useTranslation(['contact']);
   return (
-    <HomeWrapper>
+    <PageContainer>
       <HelmetProvider>
         {/* Título de la página */}
         <title>Sintética</title>
@@ -49,20 +36,19 @@ function Home() {
         />
         <meta name="robots" content="index, follow" />
       </HelmetProvider>
-      <Navbar />
-      <BannerSection openModal={openModal} />
-      <BackcgroundImage>
-        <TechnologySection />
-        <WhatIsSection />
-        <ContactSection />
-      </BackcgroundImage>
-      {isModalOpen && (
-        <Modal closeModal={closeModal}>
-          <ContactForm />
-        </Modal>
-      )}
-      <Footer />
-    </HomeWrapper>
+      <HomeHeroSection />
+      <CustomSection
+        sectionTitle={homeTranslation('ourObjectivesSection.title')}
+      >
+        <OurObjectives />
+      </CustomSection>
+      <CustomSection sectionTitle={homeTranslation('servicesSection.title')}>
+        <ServicesSection />
+      </CustomSection>
+      <CustomSection sectionTitle={contactTranslation('sectionName')}>
+        <ContactForm />
+      </CustomSection>
+    </PageContainer>
   );
 }
 

@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import Details1Button from '../buttons/Details1Button';
-import Details2Button from '../buttons/Details2Button';
 import theme from '../../styles/theme';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginModal, signupModal } from '../../redux/modalSlice';
@@ -16,8 +14,11 @@ import {
   ImgMenu,
 } from './navbar.style';
 import { removeUser } from '../../redux/userSlice';
+import CustomButton from '../shared/customButtons/CustomButton';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
+  const { t } = useTranslation(['navBar']);
   const token = useSelector((state) => state.user.token);
   const [showMenu, setShowMenu] = useState(false);
   const dispatch = useDispatch();
@@ -45,7 +46,12 @@ const Navbar = () => {
   return (
     <Header>
       <NavbarContainer>
-        <Logo to="/">
+        <Logo
+          to="/"
+          onClick={() => {
+            setShowMenu(false);
+          }}
+        >
           <img src="assets/logotipo.svg" alt="Logo Sintética" />
         </Logo>
         {isMobile ? (
@@ -61,25 +67,62 @@ const Navbar = () => {
             </MenuButton>
             {showMenu && (
               <NavLinks>
-                <NavLink to="/VoiceCloning">Voice Cloning</NavLink>
-                <NavLink to="/TTS">Experiencia TTS</NavLink>
-                <NavLink to="/Maintenance">AI & Salud</NavLink>
-                <NavLink to="/Maintenance">Investigación</NavLink>
-                <NavLink to="/Maintenance">Nosotros</NavLink>
+                <NavLink
+                  to="/VoiceCloning"
+                  onClick={() => {
+                    toggleMenu();
+                  }}
+                >
+                  {t('menuLinks.voiceCloning')}
+                </NavLink>
+                <NavLink
+                  to="/TTS"
+                  onClick={() => {
+                    toggleMenu();
+                  }}
+                >
+                  {t('menuLinks.tts')}
+                </NavLink>
+                <NavLink
+                  to="/Maintenance"
+                  onClick={() => {
+                    toggleMenu();
+                  }}
+                >
+                  {t('menuLinks.ai')}
+                </NavLink>
+                <NavLink
+                  to="/Maintenance"
+                  onClick={() => {
+                    toggleMenu();
+                  }}
+                >
+                  {t('menuLinks.research')}
+                </NavLink>
+                <NavLink
+                  to="/Maintenance"
+                  onClick={() => {
+                    toggleMenu();
+                  }}
+                >
+                  {t('menuLinks.our')}
+                </NavLink>
                 <UserButtons>
                   {token ? (
-                    <Details1Button
-                      buttonText="Logout"
+                    <CustomButton
+                      buttonText={t('buttons.logout')}
                       handleClick={handleLogout}
+                      buttontype="secondary"
                     />
                   ) : (
                     <>
-                      <Details1Button
-                        buttonText="Login"
+                      <CustomButton
+                        buttonText={t('buttons.login')}
                         handleClick={handleOpenLogin}
+                        buttontype="secondary"
                       />
-                      <Details2Button
-                        buttonText="Signup"
+                      <CustomButton
+                        buttonText={t('buttons.signup')}
                         handleClick={handleOpenSignUp}
                       />
                     </>
@@ -91,26 +134,30 @@ const Navbar = () => {
         ) : (
           <>
             <NavLinks>
-              <NavLink to="/VoiceCloning">Voice Cloning</NavLink>
-              <NavLink to="/TTS">Experiencia TTS</NavLink>
-              <NavLink to="/Maintenance">AI & Salud</NavLink>
-              <NavLink to="/Maintenance">Investigación</NavLink>
-              <NavLink to="/Maintenance">Nosotros</NavLink>
+              <NavLink to="/VoiceCloning">
+                {t('menuLinks.voiceCloning')}
+              </NavLink>
+              <NavLink to="/TTS">{t('menuLinks.tts')}</NavLink>
+              <NavLink to="/Maintenance">{t('menuLinks.ai')}</NavLink>
+              <NavLink to="/Maintenance">{t('menuLinks.research')}</NavLink>
+              <NavLink to="/Maintenance">{t('menuLinks.our')}</NavLink>
             </NavLinks>
             <UserButtons>
               {token ? (
-                <Details1Button
-                  buttonText="Logout"
+                <CustomButton
+                  buttonText={t('buttons.logout')}
                   handleClick={handleLogout}
+                  buttontype="secondary"
                 />
               ) : (
                 <>
-                  <Details1Button
-                    buttonText="Login"
+                  <CustomButton
+                    buttonText={t('buttons.login')}
                     handleClick={handleOpenLogin}
+                    buttontype="secondary"
                   />
-                  <Details2Button
-                    buttonText="Signup"
+                  <CustomButton
+                    buttonText={t('buttons.signup')}
                     handleClick={handleOpenSignUp}
                   />
                 </>
