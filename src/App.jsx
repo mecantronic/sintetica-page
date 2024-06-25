@@ -12,6 +12,7 @@ import Tts from './pages/TTS';
 import { Suspense } from 'react';
 import Navbar from './components/header/Navbar';
 import Footer from './components/footer/Footer';
+import AboutUs from './pages/AboutUs';
 
 const AppWrapper = styled.div``;
 
@@ -27,10 +28,11 @@ function App() {
           <Navbar />
           <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route exact path="/VoiceCloning" element={<VoiceCloning />} />
-            <Route exact path="/IA" element={<IA />} />
-            <Route exact path="/TTS" element={<Tts />} />
-            <Route exact path="/Maintenance" element={<Maintenance />} />
+            <Route exact path="/voice-cloning" element={<VoiceCloning />} />
+            <Route exact path="/ia" element={<IA />} />
+            <Route exact path="/tts" element={<Tts />} />
+            <Route exact path="/maintenance" element={<Maintenance />} />
+            <Route exact path="/about-us" element={<AboutUs />} />
           </Routes>
           <Footer />
         </AppWrapper>
