@@ -1,15 +1,26 @@
 {
-  "error": "Tu navegador no soporta la reproducción de audio.",
-  "voices": {
-    "ia": "Voz IA",
-    "real": "Voz real"
+  "heroSection": {
+    "title": "Inteligencia Artificial para alzar tu voz",
+    "resume": "Generá una copia digital de tu voz con nuestra inteligencia artificial para clonar voces. Ofrecemos modelos de captura personalizados para una experiencia más realista en tu propio idioma.",
+    "buttonText": "Cloná tu voz"
   },
-  "name": {
-    "first": "Ana",
-    "second": "Franco",
-    "third": "Paula",
-    "fourth": "Darío",
-    "fifth": "Luciana",
-    "sixth": "Hernan"
-  }
+
+  "ourVoicesSection": {
+    "title": "Nuestras voces"
+  },
+  "voices": {
+    "type": {
+      "ia": "Voz IA",
+      "real": "Voz real"
+    },
+    "name": {
+      "first": "Ana",
+      "second": "Franco",
+      "third": "Paula",
+      "fourth": "Darío",
+      "fifth": "Luciana",
+      "sixth": "Hernan"
+    }
+  },
+  "error": "Tu navegador no soporta la reproducción de audio."
 }
