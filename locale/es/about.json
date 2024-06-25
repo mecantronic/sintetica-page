@@ -1,0 +1,22 @@
+{
+  "title": {
+    "who": "Quienes somos",
+    "team": "Nuestro equipo"
+  },
+  "card-info": {
+    "technology": {
+      "title": "Tecnología para la inclusión",
+      "content": "En Sintética fusionamos la innovación y la tecnología para crear soluciones impactantes. Nuestro equipo interdisciplinario está compuesto por ingenieros, expertos en inteligencia artificial, desarrolladores de software y talentos diversos que comparten una visión: desarrollar tecnología para mejorar la vida de las personas."
+    },
+    "mission": {
+      "title": "Nuestra misión es clara",
+      "content": "Impulsar la excelencia en la síntesis del discurso y el clonado de voces en nuestro idioma, el doblaje en tiempo real y otras aplicaciones vanguardistas. Desde la generación de contenido para el entretenimiento hasta la creación de herramientas inclusivas para personas con discapacidades, estamos comprometidos a ofrecer soluciones que impacten positivamente en la sociedad."
+    },
+    "value": {
+      "title": "Valor y compromiso",
+      "content": "En el corazón de nuestro trabajo se encuentra un valor fundamental: la pasión por la innovación responsable. Cada línea de código, cada algoritmo y cada función que desarrollamos nace desde un profundo compromiso con la ética y la integridad. Creemos en el poder transformador de la tecnología cuando se utiliza con responsabilidad y empatía."
+    }
+  },
+  "paragraph": "Unite a nosotros en este viaje hacia el futuro de la tecnología del habla",
+  "buttonText": "Formá parte de sintética"
+}
