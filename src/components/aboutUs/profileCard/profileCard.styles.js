@@ -13,7 +13,7 @@ export const CardContainer = styled.div`
   background: ${theme.colors.backgrounds.white};
   box-shadow: ${theme.boxShadow.card};
 
-  @media (max-width: ${theme.bp.m}){
+  @media (max-width: ${theme.bp.m}) {
     width: 100%;
     height: fit-content;
   }
