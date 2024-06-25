@@ -1,11 +1,11 @@
 import ServicesSection from '../components/home/servicesSection/ServicesSection';
-import ContactForm from '../components/ContactForm';
 import { HelmetProvider } from 'react-helmet-async';
 import { PageContainer } from '../components/shared/sharedComponents.styles';
 import HomeHeroSection from '../components/home/homeBanner/HomeHeroSection';
 import CustomSection from '../components/shared/customSection/CustomSection';
 import OurObjectives from '../components/home/ourObjectives/OurObjectives';
 import { useTranslation } from 'react-i18next';
+import ContactForm from '../components/shared/contactForm/ContactForm';
 
 function Home() {
   const { t: homeTranslation } = useTranslation(['home']);
