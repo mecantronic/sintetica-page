@@ -1,5 +1,5 @@
-import HeroSection from '../components/HeroSection/HeroSection';
 import { useNavigate } from 'react-router-dom';
+import HeroSection from '../components/shared/HeroSection/HeroSection';
 
 function Maintenance() {
   const Navigate = useNavigate();

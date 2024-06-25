@@ -3,31 +3,22 @@ import {
   Item,
   ItemText,
   ItemTitle,
-  VocesContainer,
-  ButtonContainer,
-} from '../../styles/components/voiceCloning/voicesSection.style';
-import Details2Button from '../buttons/Details2Button';
+  VoicesContainer,
+} from './voicesSection.style';
 import { useTranslation } from 'react-i18next';
-import { useDispatch } from 'react-redux';
-import { contactModal } from '../../redux/modalSlice';
 
 function VoicesSection() {
   const { t } = useTranslation(['voiceCloning', 'data']);
 
-  const dispatch = useDispatch();
-  const handleOpenContact = () => {
-    dispatch(contactModal());
-  };
-
   return (
-    <VocesContainer>
+    <VoicesContainer>
       <Item>
         <AudioItem controls>
           <source src="audios-voice/fem1.wav" type="audio/mpeg" />
           {t('error')}
         </AudioItem>
-        <ItemTitle>{t('name.first')}</ItemTitle>
-        <ItemText>{t('voices.real')}</ItemText>
+        <ItemTitle>{t('voices.name.first')}</ItemTitle>
+        <ItemText>{t('voices.type.real')}</ItemText>
       </Item>
 
       <Item>
@@ -38,8 +29,8 @@ function VoicesSection() {
           />
           {t('error')}
         </AudioItem>
-        <ItemTitle>{t('name.first')}</ItemTitle>
-        <ItemText>{t('voices.ia')}</ItemText>
+        <ItemTitle>{t('voices.name.first')}</ItemTitle>
+        <ItemText>{t('voices.type.ia')}</ItemText>
       </Item>
 
       <Item>
@@ -47,8 +38,8 @@ function VoicesSection() {
           <source src="audios-voice/mas1.wav" type="audio/mpeg" />
           {t('error')}
         </AudioItem>
-        <ItemTitle>{t('name.second')}</ItemTitle>
-        <ItemText>{t('voices.real')}</ItemText>
+        <ItemTitle>{t('voices.name.second')}</ItemTitle>
+        <ItemText>{t('voices.type.real')}</ItemText>
       </Item>
 
       <Item>
@@ -59,8 +50,8 @@ function VoicesSection() {
           />
           {t('error')}
         </AudioItem>
-        <ItemTitle>{t('name.second')}</ItemTitle>
-        <ItemText>{t('voices.ia')}</ItemText>
+        <ItemTitle>{t('voices.name.second')}</ItemTitle>
+        <ItemText>{t('voices.type.ia')}</ItemText>
       </Item>
 
       <Item>
@@ -68,8 +59,8 @@ function VoicesSection() {
           <source src="audios-voice/fem2.wav" type="audio/mpeg" />
           {t('error')}
         </AudioItem>
-        <ItemTitle>{t('name.third')}</ItemTitle>
-        <ItemText>{t('voices.real')}</ItemText>
+        <ItemTitle>{t('voices.name.third')}</ItemTitle>
+        <ItemText>{t('voices.type.real')}</ItemText>
       </Item>
 
       <Item>
@@ -80,8 +71,8 @@ function VoicesSection() {
           />
           {t('error')}
         </AudioItem>
-        <ItemTitle>{t('name.third')}</ItemTitle>
-        <ItemText>{t('voices.ia')}</ItemText>
+        <ItemTitle>{t('voices.name.third')}</ItemTitle>
+        <ItemText>{t('voices.type.ia')}</ItemText>
       </Item>
 
       <Item>
@@ -89,8 +80,8 @@ function VoicesSection() {
           <source src="audios-voice/mas2.wav" type="audio/mpeg" />
           {t('error')}
         </AudioItem>
-        <ItemTitle>{t('name.fourth')}</ItemTitle>
-        <ItemText>{t('voices.real')}</ItemText>
+        <ItemTitle>{t('voices.name.fourth')}</ItemTitle>
+        <ItemText>{t('voices.type.real')}</ItemText>
       </Item>
 
       <Item>
@@ -101,8 +92,8 @@ function VoicesSection() {
           />
           {t('error')}
         </AudioItem>
-        <ItemTitle>{t('name.fourth')}</ItemTitle>
-        <ItemText>{t('voices.ia')}</ItemText>
+        <ItemTitle>{t('voices.name.fourth')}</ItemTitle>
+        <ItemText>{t('voices.type.ia')}</ItemText>
       </Item>
 
       <Item>
@@ -110,8 +101,8 @@ function VoicesSection() {
           <source src="audios-voice/fem3.wav" type="audio/mpeg" />
           {t('error')}
         </AudioItem>
-        <ItemTitle>{t('name.fifth')}</ItemTitle>
-        <ItemText>{t('voices.real')}</ItemText>
+        <ItemTitle>{t('voices.name.fifth')}</ItemTitle>
+        <ItemText>{t('voices.type.real')}</ItemText>
       </Item>
 
       <Item>
@@ -122,8 +113,8 @@ function VoicesSection() {
           />
           {t('error')}
         </AudioItem>
-        <ItemTitle>{t('name.fifth')}</ItemTitle>
-        <ItemText>{t('voices.ia')}</ItemText>
+        <ItemTitle>{t('voices.name.fifth')}</ItemTitle>
+        <ItemText>{t('voices.type.ia')}</ItemText>
       </Item>
 
       <Item>
@@ -131,8 +122,8 @@ function VoicesSection() {
           <source src="audios-voice/mas3.wav" type="audio/mpeg" />
           {t('error')}
         </AudioItem>
-        <ItemTitle>{t('name.sixth')}</ItemTitle>
-        <ItemText>{t('voices.real')}</ItemText>
+        <ItemTitle>{t('voices.name.sixth')}</ItemTitle>
+        <ItemText>{t('voices.type.real')}</ItemText>
       </Item>
 
       <Item>
@@ -143,16 +134,10 @@ function VoicesSection() {
           />
           {t('error')}
         </AudioItem>
-        <ItemTitle>{t('name.sixth')}</ItemTitle>
-        <ItemText>{t('voices.ia')}</ItemText>
+        <ItemTitle>{t('voices.name.sixth')}</ItemTitle>
+        <ItemText>{t('voices.type.ia')}</ItemText>
       </Item>
-      <ButtonContainer>
-        <Details2Button
-          buttonText={'Cloná tu voz'}
-          handleClick={handleOpenContact}
-        />
-      </ButtonContainer>
-    </VocesContainer>
+    </VoicesContainer>
   );
 }
 

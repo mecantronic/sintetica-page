@@ -23,11 +23,6 @@ const GlobalStyles = createGlobalStyle`
   ::-webkit-scrollbar {
         display: none;
     }
-    
-  audio::-webkit-media-controls-play-button,
-     audio::-webkit-media-controls-panel {
-     background-color: ${theme.colors.details.LavenderWeb};
-     }
       
 `;
 

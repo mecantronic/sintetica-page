@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import theme from '../theme';
-import { quicksandMixin } from '../mixins';
+import theme from '../../../styles/theme';
+import { quicksandMixin } from '../../../styles/mixins';
 
 export const Container = styled.section`
   display: flex;
@@ -74,6 +74,7 @@ export const Icon = styled.img`
     width: 24px;
   }
 `;
+
 export const TagText = styled.div`
   display: flex;
   width: 100%;
@@ -146,20 +147,6 @@ export const FormContainer = styled.form`
     max-width: 584px;
     width: 85vw;
     height: 584px;
-    gap: 24px;
-  }
-`;
-
-export const InputsContainer = styled.div`
-  width: 100%;
-  height: fit-content;
-  gap: 48px;
-
-  @media (max-width: ${theme.bp.l}) {
-    gap: 32px;
-  }
-
-  @media (max-width: ${theme.bp.m}) {
     gap: 24px;
   }
 `;

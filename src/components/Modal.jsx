@@ -1,12 +1,12 @@
 import LoginForm from './LoginForm';
 import { useSelector, useDispatch } from 'react-redux';
 import { closeModal } from '../redux/modalSlice';
-import ContactForm from './ContactForm';
 import {
   CloseIcon,
   ModalContent,
   ModalOverlay,
 } from '../styles/components/modal.style';
+import ContactForm from './shared/contactForm/ContactForm';
 
 const Modal = () => {
   const dispatch = useDispatch();

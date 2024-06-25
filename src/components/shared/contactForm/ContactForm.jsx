@@ -14,9 +14,10 @@ import {
   Title,
   FormRow,
   BackgroundFormContainer,
-} from '../styles/components/contactSection.style';
-import CustomInput from './shared/customInput/CustomInput';
-import CustomButton from './shared/customButtons/CustomButton';
+} from './contactSection.style';
+import CustomButton from '../customButtons/CustomButton';
+import CustomInput from '../customInput/CustomInput';
+
 import { useTranslation } from 'react-i18next';
 
 emailjs.init(import.meta.env.VITE_EMAILJS_USER_ID);

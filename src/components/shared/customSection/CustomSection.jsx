@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function CustomSection({ sectionTitle, children }) {
   return (
     <SectionContainer>
-      <SectionName>{sectionTitle}</SectionName>
+      {sectionTitle && <SectionName>{sectionTitle}</SectionName>}
       {children}
     </SectionContainer>
   );
