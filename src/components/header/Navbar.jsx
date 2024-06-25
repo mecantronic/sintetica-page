@@ -68,7 +68,7 @@ const Navbar = () => {
             {showMenu && (
               <NavLinks>
                 <NavLink
-                  to="/VoiceCloning"
+                  to="/voice-cloning"
                   onClick={() => {
                     toggleMenu();
                   }}
@@ -76,7 +76,7 @@ const Navbar = () => {
                   {t('menuLinks.voiceCloning')}
                 </NavLink>
                 <NavLink
-                  to="/TTS"
+                  to="/tts"
                   onClick={() => {
                     toggleMenu();
                   }}
@@ -84,7 +84,7 @@ const Navbar = () => {
                   {t('menuLinks.tts')}
                 </NavLink>
                 <NavLink
-                  to="/Maintenance"
+                  to="/maintenance"
                   onClick={() => {
                     toggleMenu();
                   }}
@@ -92,7 +92,7 @@ const Navbar = () => {
                   {t('menuLinks.ai')}
                 </NavLink>
                 <NavLink
-                  to="/Maintenance"
+                  to="/maintenance"
                   onClick={() => {
                     toggleMenu();
                   }}
@@ -100,7 +100,7 @@ const Navbar = () => {
                   {t('menuLinks.research')}
                 </NavLink>
                 <NavLink
-                  to="/Maintenance"
+                  to="/about-us"
                   onClick={() => {
                     toggleMenu();
                   }}
@@ -134,13 +134,13 @@ const Navbar = () => {
         ) : (
           <>
             <NavLinks>
-              <NavLink to="/VoiceCloning">
+              <NavLink to="/voice-cloning">
                 {t('menuLinks.voiceCloning')}
               </NavLink>
-              <NavLink to="/TTS">{t('menuLinks.tts')}</NavLink>
-              <NavLink to="/Maintenance">{t('menuLinks.ai')}</NavLink>
-              <NavLink to="/Maintenance">{t('menuLinks.research')}</NavLink>
-              <NavLink to="/Maintenance">{t('menuLinks.our')}</NavLink>
+              <NavLink to="/tts">{t('menuLinks.tts')}</NavLink>
+              <NavLink to="/maintenance">{t('menuLinks.ai')}</NavLink>
+              <NavLink to="/maintenance">{t('menuLinks.research')}</NavLink>
+              <NavLink to="/about-us">{t('menuLinks.our')}</NavLink>
             </NavLinks>
             <UserButtons>
               {token ? (

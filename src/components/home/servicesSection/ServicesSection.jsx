@@ -27,14 +27,14 @@ function ServicesSection() {
       </Banner>
       <Services>
         <ServiceCard
-          to="/Maintenance"
+          to="/maintenance"
           imgSrc="assets/home/card4.svg"
           imgAlt="text-icon"
           cardTitle={t('servicesSection.cards.tts.title')}
           resume={t('servicesSection.cards.tts.resume')}
         />
         <ServiceCard
-          to="/VoiceCloning"
+          to="/voice-cloning"
           imgSrc="assets/voiceCloning/bannerVoice.svg"
           imgAlt="text-icon"
           cardTitle={t('servicesSection.cards.voiceCloning.title')}
@@ -42,14 +42,14 @@ function ServicesSection() {
         />
 
         <ServiceCard
-          to="/Maintenance"
+          to="/maintenance"
           imgSrc="assets/home/card6.svg"
           imgAlt="text-icon"
           cardTitle={t('servicesSection.cards.ai.title')}
           resume={t('servicesSection.cards.ai.resume')}
         />
         <ServiceCard
-          to="/Maintenance"
+          to="/maintenance"
           imgSrc="assets/home/card7.svg"
           imgAlt="text-icon"
           cardTitle={t('servicesSection.cards.toolkit.title')}

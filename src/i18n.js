@@ -22,6 +22,7 @@ i18n
       'navBar',
       'footer',
       'contact',
+      'about',
       'data',
       'voiceCloning',
     ],
