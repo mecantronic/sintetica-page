@@ -18,15 +18,20 @@ function HeroSection({
   heroResume,
   buttonText,
   handleClick,
+  isMaintenance,
 }) {
   return (
     <Container>
-      <ContentContainer>
+      <ContentContainer className="mi-contenedor">
         <HeroIMG src={imgSrc} alt={imgAlt} />
         <Details>
-          <TextContainer>
-            <TitleDetails>{heroTitle}</TitleDetails>
-            <ResumeDetails>{heroResume}</ResumeDetails>
+          <TextContainer isMaintenance={isMaintenance}>
+            <TitleDetails isMaintenance={isMaintenance}>
+              {heroTitle}
+            </TitleDetails>
+            <ResumeDetails isMaintenance={isMaintenance}>
+              {heroResume}
+            </ResumeDetails>
           </TextContainer>
           <ButtonContainer>
             <CustomButton
@@ -49,6 +54,11 @@ HeroSection.propTypes = {
   heroTitle: PropTypes.string,
   heroResume: PropTypes.string,
   buttonText: PropTypes.string,
+  isMaintenance: PropTypes.bool,
+};
+
+HeroSection.defaultProps = {
+  isMaintenance: false,
 };
 
 export default HeroSection;
