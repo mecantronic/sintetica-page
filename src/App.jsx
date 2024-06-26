@@ -13,6 +13,7 @@ import { Suspense } from 'react';
 import Navbar from './components/header/Navbar';
 import Footer from './components/footer/Footer';
 import AboutUs from './pages/AboutUs';
+import Error from './pages/Error';
 
 const AppWrapper = styled.div``;
 
@@ -33,6 +34,7 @@ function App() {
             <Route exact path="/tts" element={<Tts />} />
             <Route exact path="/maintenance" element={<Maintenance />} />
             <Route exact path="/about-us" element={<AboutUs />} />
+            <Route exact path="*" element={<Error />} />
           </Routes>
           <Footer />
         </AppWrapper>

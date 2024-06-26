@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import HeroSection from '../components/shared/HeroSection/HeroSection';
 import { PageContainer } from '../components/shared/sharedComponents.styles';
 
-function Maintenance() {
+function Error() {
   const Navigate = useNavigate();
 
   const handleGoBack = () => {
@@ -12,11 +12,10 @@ function Maintenance() {
   return (
     <PageContainer>
       <HeroSection
-        isMaintenance={true}
-        imgSrc="assets/images/maintenance.png"
+        imgSrc="../../public/assets/images/error.png"
         imgAlt=""
-        heroTitle="¡Lo sentimos!"
-        heroResume="Sección en mantenimiento."
+        heroTitle={`¡Ups!\n Parece que no hay NADA por aquí`}
+        heroResume="¡Error 404! Este enlace ya no existe o no está disponible ahora mismo. Pedimos disculpas"
         buttonText="Volver a sintética"
         handleClick={handleGoBack}
       />
@@ -24,4 +23,4 @@ function Maintenance() {
   );
 }
 
-export default Maintenance;
+export default Error;

@@ -118,7 +118,7 @@ function ContactForm() {
     <Container>
       <Title>{t('cta.general')}</Title>
       <ContactInfo>
-        <InfoItem href="tel:+61383766284">
+        <InfoItem href="tel:+5491157397834">
           <Icon src="assets/icons/phoneicon.svg" alt="phone-icon" />
           <TagText>
             <TagCTA>{t('cta.call')}</TagCTA>

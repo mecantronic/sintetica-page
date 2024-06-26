@@ -38,7 +38,8 @@ export const ContentContainer = styled.div`
   }
 
   @media (max-width: ${theme.bp.m}) {
-    width: 100%;
+    width: 100vw;
+    min-width: 375px;
     padding: 24px;
   }
 `;
@@ -76,10 +77,11 @@ export const Details = styled.div`
 
 export const TitleDetails = styled.h3`
   color: ${theme.colors.black.jet};
-  font-size: 56px;
+  font-size: ${(props) => (props.isMaintenance ? '60px' : '56px')};
   font-style: normal;
   font-weight: 600;
   line-height: 60px;
+  white-space: pre-line;
 
   @media (max-width: ${theme.bp.l}) {
     font-size: 48px;
@@ -89,21 +91,30 @@ export const TitleDetails = styled.h3`
   @media (max-width: ${theme.bp.m}) {
     font-size: 42px;
     line-height: 48px;
+    width: 100%;
   }
 `;
 export const ResumeDetails = styled.p`
   color: ${theme.colors.black.jet};
-  font-size: 18px;
+  font-size: ${(props) => (props.isMaintenance ? '42px' : '18px')};
   font-style: normal;
   font-weight: 400;
   line-height: 28px;
+
+  @media (max-width: ${theme.bp.l}) {
+    ${(props) => (props.isMaintenance ? '36px' : '18px')}
+  }
+
+  @media (max-width: ${theme.bp.l}) {
+    ${(props) => (props.isMaintenance ? '24px' : '18px')}
+  }
 `;
 
 export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
+  gap: ${(props) => (props.isMaintenance ? '32px' : '16px')};
 `;
 
 export const ButtonContainer = styled.div`

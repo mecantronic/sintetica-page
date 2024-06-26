@@ -12,10 +12,18 @@ import InfoCard from '../infoCard/InfoCard';
 
 import teamInfo from '../teamInfo';
 import ProfileCard from '../profileCard/ProfileCard';
+import { useDispatch } from 'react-redux';
+import { contactModal } from '../../../redux/modalSlice';
 
 function AboutUsContent() {
   const { t: brandTranslation } = useTranslation(['brand']);
   const { t: aboutTranslation } = useTranslation(['about']);
+  const dispatch = useDispatch();
+
+  const handleOpenContact = () => {
+    dispatch(contactModal());
+  };
+
   return (
     <>
       <Container>
@@ -69,6 +77,7 @@ function AboutUsContent() {
         <CustomButton
           buttonText={aboutTranslation('buttonText')}
           pattern="cto-rounded"
+          handleClick={handleOpenContact}
         />
       </Container>
       <BackgroundGradient />
