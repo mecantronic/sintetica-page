@@ -25,6 +25,7 @@ i18n
       'about',
       'data',
       'voiceCloning',
+      'tts'
     ],
   });
 
