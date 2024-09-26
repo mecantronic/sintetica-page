@@ -34,7 +34,7 @@ function TtsForm ({ speach, setSpeach, speed, speachers, formMethods }) {
 
         <CustomSelect
           value={speach.value}
-          onChange={(event) => {
+          onChange={event => {
             setSpeach(
               SPEACHERS.find(({ value }) => value === event.target.value)
             )
