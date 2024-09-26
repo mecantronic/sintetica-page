@@ -11,8 +11,7 @@ function CustomButton({
   device,
   pattern,
   buttontype,
-  type,
-  ...props
+  type
 }) {
   const [size, setSize] = useState('desktop');
 
@@ -45,7 +44,6 @@ function CustomButton({
       device={size}
       pattern={pattern}
       buttontype={buttontype}
-      {...props}
     >
       {icon} {buttonText}
     </CustomButtonStyle>
