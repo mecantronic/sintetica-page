@@ -39,7 +39,7 @@ CustomInput.propTypes = {
   placeHolder: PropTypes.string,
   id: PropTypes.string,
   name: PropTypes.string,
-  value: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   onChange: PropTypes.func,
   cols: PropTypes.string,
   rows: PropTypes.string,
