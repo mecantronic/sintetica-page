@@ -11,6 +11,9 @@ function CustomInput({
   onChange,
   cols,
   rows,
+  readOnly,
+  required,
+  maxLength
 }) {
   return (
     <Input
@@ -23,6 +26,9 @@ function CustomInput({
       onChange={onChange}
       cols={cols}
       rows={rows}
+      readOnly={readOnly}
+      required={required}
+      maxLength={maxLength}
     />
   );
 }
@@ -37,11 +43,16 @@ CustomInput.propTypes = {
   onChange: PropTypes.func,
   cols: PropTypes.string,
   rows: PropTypes.string,
+  readOnly: PropTypes.bool,
+  required: PropTypes.bool,
+  maxLength: PropTypes.number
 };
 
 CustomInput.defaultProps = {
   contentType: 'text',
   inputType: 'input',
+  readOnly: false,
+  required: false
 };
 
 export default CustomInput;
