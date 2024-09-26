@@ -6,7 +6,7 @@ export const StyledTtsForm = styled.form`
   border: 1.5px solid;
   border-color: ${theme.colors.details.LavenderWeb};
   border-radius: 12px;
-  width: 748px;
+  width: 100%;
   box-shadow: 0px 8px 12px 0px #00000026;
 
   display: grid;
@@ -14,6 +14,11 @@ export const StyledTtsForm = styled.form`
   grid-template-rows: repeat(3, auto);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+
+  @media (max-width: ${theme.bp.s}) {
+    display: flex;
+    flex-direction: column;
+  }
 
   h3 {
     color: ${theme.colors.details.tropicalIndigo};

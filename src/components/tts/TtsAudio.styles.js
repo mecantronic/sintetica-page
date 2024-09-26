@@ -9,7 +9,7 @@ const StyledTtsAudio = styled.div`
   min-height: 112px;
   overflow: hidden;
   position: relative;
-  width: 748px;
+  width: 100%;
   padding-left: 1.5rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;

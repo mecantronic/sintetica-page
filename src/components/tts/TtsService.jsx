@@ -16,8 +16,8 @@ const StyledTtsService = styled.div`
   gap: 2rem;
   width: 100%;
   align-items: center;
-  /* padding: 0px 24px; */
-  /* align-items: center;  */
+  padding: 0px 24px;
+  max-width: 1160px;
 `;
 
 function TtsService() {
@@ -80,7 +80,7 @@ function TtsService() {
       {blob &&
         <AudioVisualizer
           blob={blob}
-          width={500}
+          width={200}
           height={75}
         />
       }

@@ -10,20 +10,12 @@ export const StyledTtsLanguage = styled.div`
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   box-shadow: 0px 8px 12px 0px #00000026;
-  width: 748px;
+  width: 100%;
 
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  `;
-  
-    // @media (max-width: ${theme.bp.l}) {
-    //   width: 720px;
-    // }
-  
-    // @media (max-width: ${theme.bp.m}) {
-    //   width: 320px;
-    // }
+`;
 
 export const StyledTtsHeader = styled.div`
   h3 {
@@ -45,6 +37,11 @@ export const Options = styled.div`
   flex: 0 0 auto;
   gap: 12px;
   position: relative;
+
+  @media (max-width: ${theme.bp.s}) {
+    gap: 8px;
+    flex-direction: column;
+  }
 `;
 
 export const StyledOption = styled.button`
@@ -56,6 +53,11 @@ export const StyledOption = styled.button`
   display: inline-flex;
   gap: 0.5rem;
   align-items: center;
+
+  @media (max-width: ${theme.bp.s}) {
+    padding: 0.25rem 0.5rem;
+    gap: 0.25rem;
+  }
 
   .ball {
     background-color: ${props => props.active ? theme.colors.details.mediumSlateBlue : '#f1f0f6'};
