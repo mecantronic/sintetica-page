@@ -6,19 +6,6 @@ import {
   StyledTtsLanguage
 } from "./TtsLanguage.styles";
 
-function Option ({ children, onClick, active }) {
-  return (
-    <StyledOption onClick={onClick} active={active}>
-      {children}
-    </StyledOption>
-  )
-}
-Option.propTypes = {
-  children: PropTypes.element,
-  active: PropTypes.bool,
-  onClick: PropTypes.func
-}
-
 function TtsLanguage ({ language, setLanguage, options }) {
   return (
     <StyledTtsLanguage>
@@ -31,7 +18,7 @@ function TtsLanguage ({ language, setLanguage, options }) {
         {options.map((option) => (
           <StyledOption
             key={option.value}
-            active={language.value === option.value}
+            $active={language.value === option.value}
             onClick={() => setLanguage(option)}
             >
             <div className="ball" />
