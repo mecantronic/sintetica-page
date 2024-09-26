@@ -54,6 +54,10 @@ export const StyledLeft = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.87rem;
+
+  @media (max-width: ${theme.bp.s}) {
+    padding-bottom: 1.5rem;
+  }
 `;
 
 export const StyledRight = styled.div`
