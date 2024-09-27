@@ -76,7 +76,7 @@ function TtsForm ({ speach, setSpeach, speed, speachers, formMethods }) {
           buttonText='Limpiar'
           buttontype='tertiary'
           type='reset'
-          onClick={formMethods.onReset}
+          handleClick={formMethods.onReset}
         />
       </StyledFooter>
     </StyledTtsForm>
