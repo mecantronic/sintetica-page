@@ -71,6 +71,7 @@ function TtsService() {
       />
       <TtsForm
         speach={speach}
+        setSpeach={setSpeach}
         speed={speed}
         speachers={SPEACHERS}
         formMethods={formMethods}
