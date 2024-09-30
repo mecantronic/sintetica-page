@@ -35,6 +35,7 @@ import { loginRequest, registerRequest, setUser } from '../redux/userSlice';
 import { closeModal } from '../redux/modalSlice';
 import { useDispatch } from 'react-redux';
 import Loader from './Loader';
+import AUTH_ERRORS from './AuthErrors';
 
 function LoginForm({ initialType }) {
   const dispatch = useDispatch();
@@ -129,99 +130,95 @@ function LoginForm({ initialType }) {
     });
   };
 
-  const handleErrorsRegister = (e) => {
-    // e.preventDefault();
+  const handleErrorsRegister = (formObj) => {
     const errors = {};
 
     // username
-    if (!formDataRegister.userName) {
-      errors.userName = 'Por favor, completa tu nombre de usuario.';
+    if (!formObj.userName) {
+      errors.userName = AUTH_ERRORS.username.required;
       toast.error(errors.userName);
-    } else if (!/^[a-zA-Z0-9_]+$/.test(formDataRegister.userName)) {
-      errors.userName =
-        'El nombre de usuario solo puede contener letras, números y guiones bajos.';
+    } else if (!/^[a-zA-Z0-9_]+$/.test(formObj.userName)) {
+      errors.userName = AUTH_ERRORS.username.pattern;
       toast.error(errors.userName);
     } else if (
-      formDataRegister.userName.length < 2 ||
-      formDataRegister.userName.length > 18
+      formObj.userName.length < 2 ||
+      formObj.userName.length > 18
     ) {
-      errors.userName = `El nombre de usuario debe tener entre ${2} y ${18} caracteres.`;
+      errors.userName = AUTH_ERRORS.username.length;
       toast.error(errors.userName);
     }
 
     //name y surname
-    if (!formDataRegister.firstName) {
-      errors.firstName = 'Por favor, completa tu nombre.';
+    if (!formObj.firstName) {
+      errors.firstName = AUTH_ERRORS.firstName.required;
       toast.error(errors.firstName);
-    }
-    if (!formDataRegister.lastName) {
-      errors.lastName = 'Por favor, completa tu apellido.';
-      toast.error(errors.lastName);
-    }
-    if (!/^[a-zA-Z ]+$/.test(formDataRegister.name)) {
-      errors.firstName = 'El nombre solo puede contener letras y espacios.';
+    } else if (!/^[a-zA-Z ]+$/.test(formObj.firstName)) {
+      errors.firstName = AUTH_ERRORS.firstName.pattern;
       toast.error(errors.firstName);
-    }
-    if (!/^[a-zA-Z ]+$/.test(formDataRegister.lastName)) {
-      errors.lastName = 'El apellido solo puede contener letras y espacios.';
-      toast.error(errors.lastName);
-    }
-    if (
-      formDataRegister.firstName.length < 2 ||
-      formDataRegister.firstName.length > 18
+    } else if (
+      formObj.firstName.length < 2 ||
+      formObj.firstName.length > 18
     ) {
-      errors.firstName = `El nombre debe tener entre ${2} y ${18} caracteres.`;
+      errors.firstName = AUTH_ERRORS.firstName.length;
       toast.error(errors.firstName);
     }
-    if (
-      formDataRegister.lastName.length < 2 ||
-      formDataRegister.lastName.length > 8
+
+    if (!formObj.lastName) {
+      errors.lastName = AUTH_ERRORS.lastName.required;
+      toast.error(errors.lastName);
+    } else if (!/^[a-zA-Z ]+$/.test(formObj.lastName)) {
+      errors.lastName = AUTH_ERRORS.lastName.pattern;
+      toast.error(errors.lastName);
+    } else if (
+      formObj.lastName.length < 2 ||
+      formObj.lastName.length > 18
     ) {
-      errors.lastName = `El apellido debe tener entre ${2} y ${8} caracteres.`;
+      errors.lastName = AUTH_ERRORS.lastName.length;
       toast.error(errors.lastName);
     }
 
     //email
-    if (!formDataRegister.email) {
-      errors.email = 'Por favor, completa tu dirección de correo electrónico.';
+    if (!formObj.email) {
+      errors.email = AUTH_ERRORS.email.required;
       toast.error(errors.email);
     } else if (
       // eslint-disable-next-line no-useless-escape
       !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
-        formDataRegister.email,
+        formObj.email,
       )
     ) {
-      errors.email =
-        'Por favor, ingresa una dirección de correo electrónico válida.';
+      errors.email = AUTH_ERRORS.email.pattern;
       toast.error(errors.email);
     }
 
     //phone
-    if (!formDataRegister.phone) {
-      errors.phone = 'Por favor, completa tu número de teléfono.';
+    if (!formObj.phone) {
+      errors.phone = AUTH_ERRORS.phone.required;
       toast.error(errors.phone);
-    } else if (!/^[0-9()-]+$/.test(formDataRegister.phone)) {
-      errors.phone =
-        'El número de teléfono solo puede contener números, guiones y paréntesis.';
+    } else if (!/^[0-9()-]+$/.test(formObj.phone)) {
+      errors.phone = AUTH_ERRORS.phone.pattern;
       toast.error(errors.phone);
     }
 
     //password
-    if (!formDataRegister.password) {
-      errors.password = 'Por favor, completa tu contraseña.';
+    if (!formObj.password) {
+      errors.password = AUTH_ERRORS.password.required;
       toast.error(errors.password);
     } else if (
-      formDataRegister.password.length < 8 ||
-      formDataRegister.password.length > 50
+      formObj.password.length < 8 ||
+      formObj.password.length > 50
     ) {
-      errors.password = `La contraseña debe tener entre ${8} y ${50} caracteres.`;
+      errors.password = AUTH_ERRORS.password.length;
       toast.error(errors.password);
     }
     setFormErrors(errors);
     if (Object.keys(errors).length === 0) {
-      registerInit();
+      // registerInit();
       setFormErrors({});
+      return false
     }
+
+    return true
   };
 
   const registerInit = async () => {
@@ -251,11 +248,13 @@ function LoginForm({ initialType }) {
     if (formType !== 'signup') return
 
     const formData = new FormData(e.target);
-    const formDataObj = Object.fromEntries(formData.entries());
+    const FormObj = Object.fromEntries(formData.entries());
 
-    handleErrorsRegister(e)
+    if (handleErrorsRegister(FormObj)) return
+
+    // registerInit()
     
-    console.log(formDataObj)
+    console.log(FormObj)
   }
 
   return (
