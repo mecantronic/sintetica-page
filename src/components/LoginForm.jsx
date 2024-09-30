@@ -130,7 +130,7 @@ function LoginForm({ initialType }) {
   };
 
   const handleErrorsRegister = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const errors = {};
 
     // username
@@ -245,6 +245,19 @@ function LoginForm({ initialType }) {
     }
   };
 
+  const handleSignUp = (e) => {
+    e.preventDefault()
+
+    if (formType !== 'signup') return
+
+    const formData = new FormData(e.target);
+    const formDataObj = Object.fromEntries(formData.entries());
+
+    handleErrorsRegister(e)
+    
+    console.log(formDataObj)
+  }
+
   return (
     <Container formtype={formType}>
       <SignupLogin>
@@ -311,7 +324,7 @@ function LoginForm({ initialType }) {
             </a>
           </AccountText>
         </Login>
-        <SignUp action="" formtype={formType}>
+        <SignUp onSubmit={handleSignUp} formtype={formType}>
           <FormTitle>Registro</FormTitle>
           <InputContainer>
             <InputIcon>
@@ -394,7 +407,7 @@ function LoginForm({ initialType }) {
               <SubmitBTN
                 type="submit"
                 value="Sign up"
-                onClick={handleErrorsRegister}
+                // onClick={handleErrorsRegister}
               >
                 Registrarse
               </SubmitBTN>
