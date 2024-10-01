@@ -36,7 +36,7 @@ import { closeModal } from '../redux/modalSlice';
 import { useDispatch } from 'react-redux';
 import Loader from './Loader';
 import HANDLE_FORMDATA from './AuthErrors';
-import { t } from 'i18next';
+// import { t } from 'i18next';
 
 function LoginForm({ initialType }) {
   const dispatch = useDispatch();
@@ -46,16 +46,8 @@ function LoginForm({ initialType }) {
     email: '',
     password: '',
   });
-  const [formDataRegister, setFormDataRegister] = useState({
-    userName: '',
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    password: '',
-  });
   // eslint-disable-next-line no-unused-vars
-  const [formErrors, setFormErrors] = useState({});
+  // const [formErrors, setFormErrors] = useState({});
 
   const handleClick = () => {
     if (formType === 'login') {
@@ -96,10 +88,10 @@ function LoginForm({ initialType }) {
       errors.password = `La contraseña debe tener entre ${8} y ${50} caracteres.`;
       toast.error(errors.password);
     }
-    setFormErrors(errors);
+    // setFormErrors(errors);
     if (Object.keys(errors).length === 0) {
       loginInit();
-      setFormErrors({});
+      // setFormErrors({});
     }
   };
 
@@ -124,13 +116,6 @@ function LoginForm({ initialType }) {
     }
   };
 
-  const handleSetRegisterData = (e) => {
-    setFormDataRegister({
-      ...formDataRegister,
-      [e.target.name]: e.target.value,
-    });
-  };
-
   const handleErrorsRegister = (formObj) => {
     const errors = {};
 
@@ -153,19 +138,19 @@ function LoginForm({ initialType }) {
       if (errors[key]) toast.error(errors[key]);
     }
 
-    setFormErrors(errors);
+    // setFormErrors(errors);
     if (Object.keys(errors).length === 0) {
       // registerInit();
-      setFormErrors({});
+      // setFormErrors({});
       return false
     }
 
     return true
   };
 
-  const registerInit = async () => {
+  const registerInit = async (formObj) => {
     setIsLoading(true);
-    const response = await registerRequest(formDataRegister);
+    const response = await registerRequest(formObj);
     if (response.error) {
       toast.error(response.error.message);
       setIsLoading(false);
@@ -190,13 +175,11 @@ function LoginForm({ initialType }) {
     if (formType !== 'signup') return
 
     const formData = new FormData(e.target);
-    const FormObj = Object.fromEntries(formData.entries());
+    const formObj = Object.fromEntries(formData.entries());
 
-    if (handleErrorsRegister(FormObj)) return
+    if (handleErrorsRegister(formObj)) return
 
-    // registerInit()
-    
-    console.log(FormObj)
+    registerInit(formObj)
   }
 
   return (
@@ -275,8 +258,6 @@ function LoginForm({ initialType }) {
               type="text"
               placeholder="Nombre"
               name="firstName"
-              value={formDataRegister.firstName}
-              onChange={handleSetRegisterData}
             />
           </InputContainer>
           <InputContainer>
@@ -287,8 +268,6 @@ function LoginForm({ initialType }) {
               type="text"
               placeholder="Apellido"
               name="lastName"
-              value={formDataRegister.lastName}
-              onChange={handleSetRegisterData}
             />
           </InputContainer>
           <InputContainer>
@@ -299,8 +278,6 @@ function LoginForm({ initialType }) {
               type="text"
               placeholder="Teléfono"
               name="phone"
-              value={formDataRegister.phone}
-              onChange={handleSetRegisterData}
             />
           </InputContainer>
           <InputContainer>
@@ -311,8 +288,6 @@ function LoginForm({ initialType }) {
               type="text"
               placeholder="Usuario"
               name="userName"
-              value={formDataRegister.userName}
-              onChange={handleSetRegisterData}
             />
           </InputContainer>
           <InputContainer>
@@ -323,8 +298,6 @@ function LoginForm({ initialType }) {
               type="text"
               placeholder="Email"
               name="email"
-              value={formDataRegister.email}
-              onChange={handleSetRegisterData}
             />
           </InputContainer>
           <InputContainer>
@@ -335,8 +308,6 @@ function LoginForm({ initialType }) {
               type="password"
               placeholder="Contraseña"
               name="password"
-              value={formDataRegister.password}
-              onChange={handleSetRegisterData}
             />
           </InputContainer>
           <Center>
