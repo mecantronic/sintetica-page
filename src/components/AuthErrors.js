@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 const AUTH_ERRORS = {
   username: {
     required: 'Por favor, completa tu nombre de usuario.',
@@ -24,8 +25,38 @@ const AUTH_ERRORS = {
   },
   password: {
     required: 'Por favor, completa tu contraseña.',
-    pattern: 'La contraseña debe tener entre 8 y 50 caracteres.',
+    length: 'La contraseña debe tener entre 8 y 50 caracteres.',
   },
 }
 
-export default AUTH_ERRORS
+const formDataTypes = {
+  firstName: {
+    required: AUTH_ERRORS.firstName.required,
+    pattern: [/^[a-zA-Z ]+$/, AUTH_ERRORS.firstName.pattern],
+    length: [2, 18, AUTH_ERRORS.firstName.length]
+  },
+  lastName: {
+    required: AUTH_ERRORS.lastName.required,
+    pattern: [/^[a-zA-Z ]+$/, AUTH_ERRORS.lastName.pattern],
+    length: [2, 18, AUTH_ERRORS.lastName.length]
+  },
+  email: {
+    required: AUTH_ERRORS.email.required,
+    pattern: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, AUTH_ERRORS.email.pattern],
+  },
+  phone: {
+    required: AUTH_ERRORS.phone.required,
+    pattern: [/^[0-9()-]+$/, AUTH_ERRORS.phone.pattern],
+  },
+  password: {
+    required: AUTH_ERRORS.password.required,
+    length: [8, 50, AUTH_ERRORS.password.length]
+  },
+  userName: {
+    required: AUTH_ERRORS.username.required,
+    pattern: [/^[a-zA-Z0-9_]+$/, AUTH_ERRORS.username.pattern],
+    length: [2, 18, AUTH_ERRORS.username.length]
+  },
+};
+
+export default formDataTypes

@@ -35,7 +35,8 @@ import { loginRequest, registerRequest, setUser } from '../redux/userSlice';
 import { closeModal } from '../redux/modalSlice';
 import { useDispatch } from 'react-redux';
 import Loader from './Loader';
-import AUTH_ERRORS from './AuthErrors';
+import HANDLE_FORMDATA from './AuthErrors';
+import { t } from 'i18next';
 
 function LoginForm({ initialType }) {
   const dispatch = useDispatch();
@@ -133,84 +134,25 @@ function LoginForm({ initialType }) {
   const handleErrorsRegister = (formObj) => {
     const errors = {};
 
-    // username
-    if (!formObj.userName) {
-      errors.userName = AUTH_ERRORS.username.required;
-      toast.error(errors.userName);
-    } else if (!/^[a-zA-Z0-9_]+$/.test(formObj.userName)) {
-      errors.userName = AUTH_ERRORS.username.pattern;
-      toast.error(errors.userName);
-    } else if (
-      formObj.userName.length < 2 ||
-      formObj.userName.length > 18
-    ) {
-      errors.userName = AUTH_ERRORS.username.length;
-      toast.error(errors.userName);
+    for (const key in formObj) {
+      if (!formObj[key]) errors[key] = HANDLE_FORMDATA[key].required;
+      else if (
+        HANDLE_FORMDATA[key].pattern &&
+        !HANDLE_FORMDATA[key]?.pattern[0].test(formObj[key])
+      ) {
+        errors[key] = HANDLE_FORMDATA[key].pattern[1];
+      }
+      else if (
+        HANDLE_FORMDATA[key].length &&
+        (formObj[key].length < HANDLE_FORMDATA[key]?.length[0] ||
+          formObj[key].length > HANDLE_FORMDATA[key]?.length[1])
+      ) {
+        errors[key] = HANDLE_FORMDATA[key].length[2];
+      }
+
+      if (errors[key]) toast.error(errors[key]);
     }
 
-    //name y surname
-    if (!formObj.firstName) {
-      errors.firstName = AUTH_ERRORS.firstName.required;
-      toast.error(errors.firstName);
-    } else if (!/^[a-zA-Z ]+$/.test(formObj.firstName)) {
-      errors.firstName = AUTH_ERRORS.firstName.pattern;
-      toast.error(errors.firstName);
-    } else if (
-      formObj.firstName.length < 2 ||
-      formObj.firstName.length > 18
-    ) {
-      errors.firstName = AUTH_ERRORS.firstName.length;
-      toast.error(errors.firstName);
-    }
-
-    if (!formObj.lastName) {
-      errors.lastName = AUTH_ERRORS.lastName.required;
-      toast.error(errors.lastName);
-    } else if (!/^[a-zA-Z ]+$/.test(formObj.lastName)) {
-      errors.lastName = AUTH_ERRORS.lastName.pattern;
-      toast.error(errors.lastName);
-    } else if (
-      formObj.lastName.length < 2 ||
-      formObj.lastName.length > 18
-    ) {
-      errors.lastName = AUTH_ERRORS.lastName.length;
-      toast.error(errors.lastName);
-    }
-
-    //email
-    if (!formObj.email) {
-      errors.email = AUTH_ERRORS.email.required;
-      toast.error(errors.email);
-    } else if (
-      // eslint-disable-next-line no-useless-escape
-      !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
-        formObj.email,
-      )
-    ) {
-      errors.email = AUTH_ERRORS.email.pattern;
-      toast.error(errors.email);
-    }
-
-    //phone
-    if (!formObj.phone) {
-      errors.phone = AUTH_ERRORS.phone.required;
-      toast.error(errors.phone);
-    } else if (!/^[0-9()-]+$/.test(formObj.phone)) {
-      errors.phone = AUTH_ERRORS.phone.pattern;
-      toast.error(errors.phone);
-    }
-
-    //password
-    if (!formObj.password) {
-      errors.password = AUTH_ERRORS.password.required;
-      toast.error(errors.password);
-    } else if (
-      formObj.password.length < 8 ||
-      formObj.password.length > 50
-    ) {
-      errors.password = AUTH_ERRORS.password.length;
-      toast.error(errors.password);
-    }
     setFormErrors(errors);
     if (Object.keys(errors).length === 0) {
       // registerInit();
@@ -406,7 +348,6 @@ function LoginForm({ initialType }) {
               <SubmitBTN
                 type="submit"
                 value="Sign up"
-                // onClick={handleErrorsRegister}
               >
                 Registrarse
               </SubmitBTN>
