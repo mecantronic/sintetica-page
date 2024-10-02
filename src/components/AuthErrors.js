@@ -32,12 +32,12 @@ const AUTH_ERRORS = {
 const formDataTypes = {
   firstName: {
     required: AUTH_ERRORS.firstName.required,
-    pattern: [/^[a-zA-Z ]+$/, AUTH_ERRORS.firstName.pattern],
+    pattern: [/^[a-zA-ZñÑ ]+$/, AUTH_ERRORS.firstName.pattern],
     length: [2, 18, AUTH_ERRORS.firstName.length]
   },
   lastName: {
     required: AUTH_ERRORS.lastName.required,
-    pattern: [/^[a-zA-Z ]+$/, AUTH_ERRORS.lastName.pattern],
+    pattern: [/^[a-zA-ZñÑ ]+$/, AUTH_ERRORS.lastName.pattern],
     length: [2, 18, AUTH_ERRORS.lastName.length]
   },
   email: {
