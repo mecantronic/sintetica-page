@@ -155,17 +155,20 @@ function LoginForm({ initialType }) {
       toast.error(response.error.message);
       setIsLoading(false);
     } else {
-      dispatch(
-        setUser({
-          token: response.token,
-          userName: response.userName,
-          service: 'free',
-          freeCredits: 10000,
-          premiumCredits: 0,
-        }),
-      );
-      dispatch(closeModal());
       setIsLoading(false);
+      toast.success('Te registraste con exito!');
+      setTimeout(() => {   
+        dispatch(
+          setUser({
+            token: response.token,
+            userName: response.userName,
+            service: 'free',
+            freeCredits: 10000,
+            premiumCredits: 0,
+          }),
+        );
+        dispatch(closeModal());
+      }, 1000);
     }
   };
 
