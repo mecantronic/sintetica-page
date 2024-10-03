@@ -151,13 +151,14 @@ function LoginForm({ initialType }) {
   const registerInit = async (formObj) => {
     setIsLoading(true);
     const response = await registerRequest(formObj);
+    console.log(response)
     if (response.error) {
-      toast.error(response.error.message);
+      toast.error(response.error.detail);
       setIsLoading(false);
     } else {
       setIsLoading(false);
-      toast.success('Te registraste con exito!');
-      setTimeout(() => {   
+      toast.success(response.message);
+      setTimeout(() => {
         dispatch(
           setUser({
             token: response.token,

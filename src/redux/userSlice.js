@@ -37,18 +37,18 @@ export const { setUser, removeUser } = userSlice.actions;
 export const loginRequest = async (credentials) => {
   try {
     const { data } = await api.post('/auth/login', credentials);
-    return data.data;
+    return data;
   } catch (error) {
-    return { error: error };
+    return { error };
   }
 };
 
 export const registerRequest = async (credentials) => {
   try {
     const { data } = await api.post('/auth/register', credentials);
-    return data.data;
+    return data;
   } catch (error) {
-    return { error: error };
+    return { error };
   }
 };
 
