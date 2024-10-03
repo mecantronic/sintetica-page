@@ -42,12 +42,6 @@ function LoginForm({ initialType }) {
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
   const [formType, setFormType] = useState(initialType);
-  const [formDataLogin, setFormDataLogin] = useState({
-    email: '',
-    password: '',
-  });
-  // eslint-disable-next-line no-unused-vars
-  // const [formErrors, setFormErrors] = useState({});
 
   const handleClick = () => {
     if (formType === 'login') {
@@ -60,63 +54,7 @@ function LoginForm({ initialType }) {
     }
   };
 
-  const handleSetLoginData = (e) => {
-    setFormDataLogin({ ...formDataLogin, [e.target.name]: e.target.value });
-  };
-
-  const handleErrorsLogin = (e) => {
-    e.preventDefault();
-    const errors = {};
-    if (!formDataLogin.email) {
-      errors.email = 'Por favor, completa tu dirección de correo electrónico.';
-      toast.error(errors.email);
-    } else if (
-      // eslint-disable-next-line no-useless-escape
-      !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formDataLogin.email)
-    ) {
-      errors.email =
-        'Por favor, ingresa una dirección de correo electrónico válida.';
-      toast.error(errors.email);
-    }
-    if (!formDataLogin.password) {
-      errors.password = 'Por favor, completa tu contraseña.';
-      toast.error(errors.password);
-    } else if (
-      formDataLogin.password.length < 8 ||
-      formDataLogin.password.length > 50
-    ) {
-      errors.password = `La contraseña debe tener entre ${8} y ${50} caracteres.`;
-      toast.error(errors.password);
-    }
-    // setFormErrors(errors);
-    if (Object.keys(errors).length === 0) {
-      loginInit();
-      // setFormErrors({});
-    }
-  };
-
-  const loginInit = async () => {
-    setIsLoading(true);
-    const response = await loginRequest(formDataLogin);
-    if (response.error) {
-      toast.error(response.error.message);
-      setIsLoading(false);
-    } else {
-      dispatch(
-        setUser({
-          token: response.token,
-          userName: response.userName,
-          service: response.service,
-          freeCredits: response.credits.freeCredits,
-          premiumCredits: response.credits.premiumCredits,
-        }),
-      );
-      dispatch(closeModal());
-      setIsLoading(false);
-    }
-  };
-
-  const handleErrorsRegister = (formObj) => {
+  const handleErrors = (formObj) => {
     const errors = {};
 
     for (const key in formObj) {
@@ -138,14 +76,43 @@ function LoginForm({ initialType }) {
       if (errors[key]) toast.error(errors[key]);
     }
 
-    // setFormErrors(errors);
-    if (Object.keys(errors).length === 0) {
-      // registerInit();
-      // setFormErrors({});
-      return false
-    }
+    if (Object.keys(errors).length === 0) return false
 
     return true
+  };
+
+  const loginInit = async (formObj) => {
+    setIsLoading(true);
+    const response = await loginRequest(formObj);
+    if (response.error) {
+      toast.error(response.error.message);
+      setIsLoading(false);
+    } else {
+      dispatch(
+        setUser({
+          token: response.token,
+          userName: response.userName,
+          service: response.service,
+          freeCredits: response.credits.freeCredits,
+          premiumCredits: response.credits.premiumCredits,
+        }),
+      );
+      dispatch(closeModal());
+      setIsLoading(false);
+    }
+  };
+
+  const handleLogin = (e) => {
+    e.preventDefault()
+
+    if (formType !== 'login') return
+
+    const formData = new FormData(e.target);
+    const formObj = Object.fromEntries(formData.entries());
+
+    if (handleErrors(formObj)) return
+
+    loginInit(formObj)
   };
 
   const registerInit = async (formObj) => {
@@ -181,7 +148,7 @@ function LoginForm({ initialType }) {
     const formData = new FormData(e.target);
     const formObj = Object.fromEntries(formData.entries());
 
-    if (handleErrorsRegister(formObj)) return
+    if (handleErrors(formObj)) return
 
     registerInit(formObj)
   }
@@ -189,7 +156,7 @@ function LoginForm({ initialType }) {
   return (
     <Container formtype={formType}>
       <SignupLogin>
-        <Login action="" formtype={formType}>
+        <Login onSubmit={handleLogin} formtype={formType}>
           <FormTitle>Log In</FormTitle>
           <InputContainer>
             <InputIcon>
@@ -199,8 +166,6 @@ function LoginForm({ initialType }) {
               type="text"
               placeholder="Email"
               name="email"
-              value={formDataLogin.email}
-              onChange={handleSetLoginData}
             />
           </InputContainer>
           <InputContainer>
@@ -211,8 +176,6 @@ function LoginForm({ initialType }) {
               type="password"
               placeholder="Contraseña"
               name="password"
-              value={formDataLogin.password}
-              onChange={handleSetLoginData}
             />
           </InputContainer>
           <Center>
@@ -224,7 +187,6 @@ function LoginForm({ initialType }) {
               <SubmitBTN
                 type="submit"
                 value="Login"
-                onClick={handleErrorsLogin}
               >
                 Ingresar
               </SubmitBTN>
