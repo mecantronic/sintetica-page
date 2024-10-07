@@ -91,11 +91,15 @@ export const StyledButtons = styled.div`
 
   button {
     background-color: ${theme.colors.backgrounds.white};
-    border: 1.5px solid;
-    border-color: ${theme.colors.details.LavenderWeb};
-    border-radius: 8px;
+    border: 1px solid rgba(165, 116, 255, 0.50);
+    border-radius: 0.25rem;
     padding: 0.5rem 1rem;
     width: 38px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Inter;
   }
 
   button:hover {
@@ -104,7 +108,10 @@ export const StyledButtons = styled.div`
 
   input {
     width: 4rem;
+    border-radius: 0.25rem;
     text-align: center;
+    border: 1px solid #E5E7EB;
+    font-family: Inter;
   }
 
   /* Chrome, Safari, Edge, Opera */
