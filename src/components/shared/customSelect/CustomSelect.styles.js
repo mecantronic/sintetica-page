@@ -7,7 +7,7 @@ const StyledCustomSelect = styled.select`
   padding: 9px 13px;
   margin: 0;
   border-radius: 15px;
-  border: 2px solid ${theme.colors.grayScale[300]};
+  border: 1.5px solid ${theme.colors.details.LavenderWeb};
   background-color: ${theme.colors.backgrounds.white};
   ${montserratMixin}
 `;
