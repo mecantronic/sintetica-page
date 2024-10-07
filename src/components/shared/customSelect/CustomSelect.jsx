@@ -1,11 +1,16 @@
 import PropTypes from "prop-types"
-import StyledCustomSelect from "./CustomSelect.styles"
+import { IconContainer, SelectContainer, StyledSelect } from "./CustomSelect.styles"
 
 function CustomSelect ({ children, value, onChange }) {
   return (
-    <StyledCustomSelect value={value} onChange={onChange}>
-      {children}
-    </StyledCustomSelect>
+    <SelectContainer value={value} onChange={onChange}>
+      <StyledSelect>
+        {children}
+      </StyledSelect>
+      <IconContainer>
+        <img src="/assets/tts/arrow-down.svg" alt="" width="12px" height="12px" />
+      </IconContainer>
+    </SelectContainer>
   )
 }
 
