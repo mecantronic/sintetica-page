@@ -77,7 +77,11 @@ export const StyledFooter = styled.div`
   padding: 0.75rem 1.5rem 1.5rem 1.5rem;
 
   display: flex;
-  gap: 0.75rem;
+  gap: 3rem;
+
+  @media (max-width: ${theme.bp.s}) {
+    gap: 2rem;
+  }
 
   button {
     width: 100%;
