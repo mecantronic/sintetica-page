@@ -13,7 +13,7 @@ const StyledTtsAudio = styled.div`
   padding-left: 1.5rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  box-shadow: 0px 8px 12px 0px #00000026;
+  box-shadow: ${theme.boxShadow.card};
 
   div {
     position: absolute;

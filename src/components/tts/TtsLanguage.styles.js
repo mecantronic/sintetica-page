@@ -1,8 +1,9 @@
 import styled from "styled-components"
 import theme from "../../styles/theme"
-import { montserratMixin } from "../../styles/mixins"
+import { montserratMixin, quicksandMixin } from "../../styles/mixins"
 
 export const StyledTtsLanguage = styled.div`
+  color: ${theme.colors.black.jet};
   background-color: ${theme.colors.backgrounds.white};
   border: 1.5px solid;
   border-color: ${theme.colors.details.LavenderWeb};
@@ -10,7 +11,7 @@ export const StyledTtsLanguage = styled.div`
   padding-left: 1.5rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  box-shadow: 0px 8px 12px 0px #00000026;
+  box-shadow: ${theme.boxShadow.card};
   width: 100%;
 
   display: flex;
@@ -20,9 +21,11 @@ export const StyledTtsLanguage = styled.div`
 
 export const StyledTtsHeader = styled.div`
   h3 {
+    ${quicksandMixin}
     color: ${theme.colors.details.tropicalIndigo};
     font-weight: 600;
     line-height: 19.6px;
+    font-size: 16px;
   }
   p {
     font-size: 14px;
@@ -49,6 +52,7 @@ export const StyledOption = styled.button`
   background-color: ${theme.colors.backgrounds.white};
   border: 1px solid;
   border-color: ${props => props.$active ? theme.colors.details.tropicalIndigo : '#ede5fb'};
+  color: ${props => props.$active ? theme.colors.black.night : '#545353'};
   padding: 0.38rem 0.75rem;
   border-radius: 8px;
   display: inline-flex;

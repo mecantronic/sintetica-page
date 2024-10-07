@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import theme from "../../styles/theme";
+import { montserratMixin } from "../../styles/mixins";
 
 export const StyledTtsForm = styled.form`
   background-color: ${theme.colors.backgrounds.white};
@@ -7,7 +8,7 @@ export const StyledTtsForm = styled.form`
   border-color: ${theme.colors.details.LavenderWeb};
   border-radius: 12px;
   width: 100%;
-  box-shadow: 0px 8px 12px 0px #00000026;
+  box-shadow: ${theme.boxShadow.card};
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -22,6 +23,7 @@ export const StyledTtsForm = styled.form`
 
   h3 {
     color: ${theme.colors.details.tropicalIndigo};
+    font-size: 16px;
     font-weight: 600;
     line-height: 19.6px;
   }
@@ -36,7 +38,7 @@ export const StyledHeader = styled.div`
 
   textarea {
     background-color: ${theme.colors.backgrounds.white};
-    font-family: 'Montserrat', sans-serif;
+    ${montserratMixin};
     border: 1.5px solid;
     border-color: ${theme.colors.details.LavenderWeb};
     border-radius: 8px;
@@ -44,6 +46,7 @@ export const StyledHeader = styled.div`
     height: 160px;
     padding: 0.5rem;
     resize: none;
+    line-height: 19.6px;
   }
 `;
 
