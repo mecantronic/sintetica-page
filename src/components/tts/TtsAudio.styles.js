@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import theme from "../../styles/theme";
+import { montserratMixin } from "../../styles/mixins";
 
 const StyledTtsAudio = styled.div`
   background-color: ${theme.colors.backgrounds.white};
@@ -26,11 +27,13 @@ const StyledTtsAudio = styled.div`
     border-style: solid;
     border-color: ${theme.colors.details.LavenderWeb};
     border-radius:  0 0 8px;
-    padding: 0.5rem 0.75rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    ${montserratMixin}
 
     img {
-      width: 20px;
-      height: 20px;
+      width: 0.75rem;
+      height: 0.75rem;
     }
     span {
       font-size: 14px;
