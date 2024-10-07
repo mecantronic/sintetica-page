@@ -71,12 +71,14 @@ function TtsForm ({ speach, setSpeach, speed, speachers, formMethods }) {
         <CustomButton
           buttonText='Procesar'
           type='submit'
+          pattern='square'
         />
         <CustomButton
           buttonText='Limpiar'
           buttontype='tertiary'
           type='reset'
           handleClick={formMethods.onReset}
+          pattern='square'
         />
       </StyledFooter>
     </StyledTtsForm>
