@@ -44,7 +44,6 @@ export const Options = styled.div`
 
   @media (max-width: ${theme.bp.s}) {
     gap: 8px;
-    flex-direction: column;
   }
 `;
 
