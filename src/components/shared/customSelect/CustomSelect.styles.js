@@ -20,7 +20,7 @@ export const StyledSelect = styled.select`
   cursor: pointer;
 
   &:focus {
-    border-color: #007bff;
+    border-color: ${theme.colors.details.tropicalIndigo};
   }
 `;
 
