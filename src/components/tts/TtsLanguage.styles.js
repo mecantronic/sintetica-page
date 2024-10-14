@@ -48,7 +48,7 @@ export const Options = styled.div`
 `;
 
 export const StyledOption = styled.button`
-  background-color: ${theme.colors.backgrounds.white};
+  background-color: ${props => props.$active ? theme.colors.backgrounds.white : theme.colors.details.LavenderWeb};
   border: 1px solid;
   border-color: ${props => props.$active ? theme.colors.details.tropicalIndigo : '#ede5fb'};
   color: ${props => props.$active ? theme.colors.black.night : '#545353'};
