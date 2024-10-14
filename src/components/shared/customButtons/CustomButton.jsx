@@ -11,7 +11,7 @@ function CustomButton({
   device,
   pattern,
   buttontype,
-  type,
+  type
 }) {
   const [size, setSize] = useState('desktop');
 
