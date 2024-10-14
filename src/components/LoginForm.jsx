@@ -292,18 +292,18 @@ function LoginForm({ initialType }) {
           </Center>
           <SocialText>O registrate con</SocialText>
           <SocialMedia>
-            <SocialIcon href="#">
+            {/* <SocialIcon href="#">
               <FaFacebook />
             </SocialIcon>
             <SocialIcon href="">
               <FaTwitter />
-            </SocialIcon>
+            </SocialIcon> */}
             <SocialIcon href="">
               <FaGoogle />
             </SocialIcon>
-            <SocialIcon href="">
+            {/* <SocialIcon href="">
               <FaLinkedinIn />
-            </SocialIcon>
+            </SocialIcon> */}
           </SocialMedia>
           <AccountText>
             ¿ Ya tienes una cuenta? {''}

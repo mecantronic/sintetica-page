@@ -148,18 +148,19 @@ export const SocialText = styled.p`
 export const SocialMedia = styled.div`
   display: flex;
   justify-content: center;
+  width: 100%;
 `;
 
 export const SocialIcon = styled.a`
   text-decoration: none;
-  height: 45px;
-  width: 45px;
+  height: 40px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: ${theme.colors.raisinblack};
   border: 1px solid ${theme.colors.raisinblack};
-  border-radius: 50px;
+  border-radius: 15px;
   margin: 0 5px;
 
   &:hover {
