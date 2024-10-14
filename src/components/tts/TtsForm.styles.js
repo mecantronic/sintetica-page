@@ -114,7 +114,7 @@ export const StyledButtons = styled.div`
     width: 4rem;
     border-radius: 0.25rem;
     text-align: center;
-    border: 1px solid #E5E7EB;
+    border: 1px solid ${theme.colors.details.tropicalIndigo};
     font-family: Inter;
   }
 
