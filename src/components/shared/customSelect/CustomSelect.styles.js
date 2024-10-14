@@ -18,6 +18,7 @@ export const StyledSelect = styled.select`
   appearance: none; /* Oculta la flecha predeterminada */
   outline: none;
   cursor: pointer;
+  -webkit-appearance: none;
 
   &:focus {
     border-color: ${theme.colors.details.tropicalIndigo};
